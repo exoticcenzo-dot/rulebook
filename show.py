@@ -204,6 +204,113 @@ def gym():
 
 BUILDERS = dict(gym=gym, desk=desk, mansion=mansion, hotel=hotel, gameroom=gameroom, plane=plane, tokyo=tokyo, paris=paris, dubai=dubai, harare=harare)
 
+
+def label(i, tx, x, y, sc, col, bg=None):
+    (w, h), _ = cv2.getTextSize(tx, cv2.FONT_HERSHEY_DUPLEX, sc, max(1, int(sc * 2)))
+    if bg is not None: rect(i, x - 12, y - h - 12, x + w + 12, y + 12, bg)
+    cv2.putText(i, tx, (x, y), cv2.FONT_HERSHEY_DUPLEX, sc, col, max(1, int(sc * 2)), cv2.LINE_AA)
+
+def shopfront(i, x, w, top, wall, name, awn):
+    rect(i, x, top, x + w, FLOOR, wall)
+    label(i, name, x + 14, top + 58, .95, (30, 30, 34), (235, 235, 225))
+    for wx in range(x + 18, x + w - 70, 92):
+        rect(i, wx, top + 110, wx + 72, FLOOR - 130, (95, 80, 60)); rect(i, wx + 4, top + 114, wx + 68, FLOOR - 134, (150, 130, 90))
+    for ax in range(x, x + w, 34):
+        quad(i, [(ax, top + 78), (ax + 34, top + 78), (ax + 42, top + 120), (ax + 8, top + 120)], awn if (ax - x) // 34 % 2 == 0 else (235, 235, 235))
+    rect(i, x + w - 76, FLOOR - 190, x + w - 18, FLOOR, (46, 64, 92))
+
+def kombi(i, x, y):
+    rect(i, x, y - 110, x + 300, y - 22, (235, 235, 240)); rect(i, x, y - 60, x + 300, y - 40, (170, 90, 30))
+    for k in range(4): rect(i, x + 16 + k * 70, y - 100, x + 74 + k * 70, y - 66, (120, 90, 60))
+    for e_ in (x + 60, x + 240): circle(i, (e_, y - 18), 25, (24, 24, 28)); circle(i, (e_, y - 18), 11, (150, 150, 158))
+
+def jacaranda(i, tx, sc):
+    cv2.line(i, (tx, FLOOR), (tx, FLOOR - int(330 * sc)), (40, 60, 86), int(22 * sc))
+    r = random.Random(tx)
+    for _ in range(26):
+        cv2.circle(i, (tx + r.randint(-140, 140), FLOOR - int((330 + r.randint(0, 150)) * sc)), r.randint(30, 62), (190 + r.randint(-20, 20), 90, 165), -1, cv2.LINE_AA)
+
+def powerline(i):
+    for px_ in (70, 720):
+        cv2.line(i, (px_, FLOOR), (px_, 420), (50, 56, 66), 12); cv2.line(i, (px_ - 60, 450), (px_ + 60, 450), (50, 56, 66), 8)
+    cv2.line(i, (0, 470), (W, 470), (40, 44, 50), 3, cv2.LINE_AA); cv2.line(i, (0, 500), (W, 492), (40, 44, 50), 3, cv2.LINE_AA)
+
+def road(i, base_col=(82, 96, 112)):
+    rect(i, 0, FLOOR - 26, W, H, base_col)
+    rect(i, 0, FLOOR - 26, W, FLOOR + 40, (150, 158, 166))
+    for k in range(-1, 9): rect(i, 60 + k * 170, FLOOR + 130, 160 + k * 170, FLOOR + 148, (235, 235, 230))
+
+def harare():
+    i = base((210, 165, 110), (170, 210, 245))
+    for bx, w, h in ((120, 150, 660), (300, 130, 560), (470, 180, 720), (690, 140, 610)):
+        rect(i, bx, FLOOR - h, bx + w, FLOOR, (172, 164, 150))
+        for wy in range(FLOOR - h + 24, FLOOR - 320, 54):
+            for wx in range(bx + 14, bx + w - 24, 40): rect(i, wx, wy, wx + 24, wy + 32, (120, 106, 84))
+    x = -10
+    for n_, w, c, a in (("TUCKSHOP", 260, (110, 170, 215), (40, 40, 200)), ("SALON", 210, (170, 200, 150), (150, 60, 150)), ("BAKERY", 230, (135, 190, 225), (30, 140, 230)), ("HARDWARE", 290, (150, 170, 190), (40, 140, 60)), ("BUTCHERY", 260, (130, 150, 200), (40, 40, 180))):
+        shopfront(i, x, w, FLOOR - 360, c, n_, a); x += w
+    jacaranda(i, 140, .95); jacaranda(i, 880, 1.1); powerline(i); road(i); kombi(i, 690, FLOOR + 10)
+    label(i, "HARARE", 410, 320, 1.6, (255, 255, 255))
+    return i, None
+
+def bulawayo():
+    i = base((225, 185, 130), (150, 205, 245))
+    x = -10
+    for n_, w, c in (("GENERAL DEALER", 370, (160, 200, 225)), ("TAILOR", 240, (140, 175, 205)), ("CAFE", 240, (170, 210, 180)), ("CHEMIST", 300, (195, 200, 150))):
+        rect(i, x, FLOOR - 470, x + w, FLOOR, c); label(i, n_, x + 16, FLOOR - 410, .9, (35, 35, 40))
+        rect(i, x, FLOOR - 340, x + w, FLOOR - 316, (235, 235, 230))
+        for px_ in range(x + 24, x + w, 80): rect(i, px_, FLOOR - 316, px_ + 12, FLOOR, (235, 235, 230))
+        for wx in range(x + 46, x + w - 40, 80): rect(i, wx, FLOOR - 280, wx + 46, FLOOR - 120, (95, 80, 62))
+        x += w
+    for tx in (190, 620, 990):
+        cv2.line(i, (tx, FLOOR), (tx, FLOOR - 420), (54, 72, 92), 14)
+        for a in range(0, 360, 40):
+            cv2.ellipse(i, (tx, FLOOR - 430), (120, 26), a, 0, 180, (60, 130, 70), -1, cv2.LINE_AA)
+    road(i, (96, 116, 140)); label(i, "BULAWAYO", 370, 340, 1.5, (255, 255, 255))
+    return i, None
+
+def train():
+    i = base((132, 138, 142), (92, 96, 100))
+    for x in range(40, W, 260):
+        rect(i, x, 560, x + 200, 860, (190, 170, 130)); rect(i, x + 6, 566, x + 194, 854, (205, 190, 150))
+        pts = np.array([(x + 6, 780), (x + 70, 690), (x + 130, 740), (x + 194, 670), (x + 194, 854), (x + 6, 854)], np.int32)
+        cv2.fillPoly(i, [pts], (70, 120, 80), cv2.LINE_AA)
+    rect(i, 0, 470, W, 500, (58, 58, 64))
+    for x in range(30, W, 120): cv2.line(i, (x, 500), (x, 540), (150, 150, 158), 4); cv2.ellipse(i, (x, 550), (16, 12), 0, 0, 360, (150, 150, 158), 4, cv2.LINE_AA)
+    i[FLOOR - 25:] = base((70, 58, 50), (32, 28, 26))[FLOOR - 25:]
+    for x in (240, 760):
+        rect(i, x - 110, FLOOR - 560, x + 110, FLOOR - 50, (40, 90, 150)); rect(i, x - 110, FLOOR - 172, x + 130, FLOOR - 60, (56, 110, 170))
+    return i, None
+
+def ship():
+    i = base((230, 180, 120), (200, 170, 140))
+    rect(i, 0, 980, W, FLOOR - 120, (150, 110, 60))
+    r = random.Random(4)
+    for _ in range(80):
+        x = r.randint(0, W); y = r.randint(990, FLOOR - 140); cv2.line(i, (x, y), (x + r.randint(20, 60), y), (205, 165, 110), 2, cv2.LINE_AA)
+    cv2.circle(i, (830, 960), 90, (150, 225, 255), -1, cv2.LINE_AA)
+    for k in range(7):
+        x = r.randint(60, W - 60); y = r.randint(420, 760); cv2.ellipse(i, (x, y), (22, 12), 0, 180, 360, (245, 245, 245), 3, cv2.LINE_AA); cv2.ellipse(i, (x + 42, y), (22, 12), 0, 180, 360, (245, 245, 245), 3, cv2.LINE_AA)
+    rect(i, 0, FLOOR - 120, W, H, (120, 150, 180))
+    for x in range(-20, W, 110): cv2.line(i, (x, FLOOR - 120), (x, FLOOR - 230), (235, 235, 235), 8)
+    cv2.line(i, (0, FLOOR - 230), (W, FLOOR - 230), (235, 235, 235), 8); cv2.line(i, (0, FLOOR - 175), (W, FLOOR - 175), (235, 235, 235), 5)
+    cv2.circle(i, (90, FLOOR - 170), 44, (40, 40, 220), 16, cv2.LINE_AA)
+    return i, None
+
+def home():
+    i = base((60, 96, 130), (36, 56, 80))
+    window_pane(i, 360, 500, 360, 390, (205, 170, 120), (235, 235, 235))
+    rect(i, 300, 400, 360, 930, (40, 40, 190)); rect(i, 720, 400, 780, 930, (40, 40, 190))
+    for x, y, w, h in ((60, 480, 180, 240), (830, 480, 190, 230)):
+        rect(i, x, y, x + w, y + h, (70, 90, 110)); rect(i, x + 12, y + 12, x + w - 12, y + h - 12, (150, 195, 225))
+    rect(i, 60, 790, 240, 900, (60, 80, 110))
+    label(i, "HOME", 465, 455, 1.2, (240, 240, 240))
+    i[FLOOR - 30:] = base((80, 110, 140), (30, 40, 56))[FLOOR - 30:]
+    sofa(i, 160, 900, FLOOR, (60, 130, 170), (42, 100, 135))
+    return i, None
+
+BUILDERS.update(harare=harare, bulawayo=bulawayo, train=train, ship=ship, home=home)
+
 def get_set(n):
     if n not in SETS: SETS[n] = BUILDERS[n]()
     return SETS[n]
@@ -219,6 +326,94 @@ POSES_X = {
     "eat": dict(hip=(0, -130), neck=(16, -278), head=(30, -336), hF=(76, -300), hB=(84, -238), fF=(90, 0), fB=(70, 0)),
     "game": dict(hip=(0, -135), neck=(22, -278), head=(42, -332), hF=(96, -212), hB=(78, -208), fF=(112, 0), fB=(82, 0)),
 }
+
+
+SKIN = [(52, 74, 102), (40, 58, 84), (66, 92, 128), (34, 48, 70), (84, 116, 156), (120, 158, 205)]
+CLOTH = [(60, 60, 200), (190, 120, 40), (70, 170, 90), (40, 170, 230), (150, 60, 150), (215, 215, 220), (50, 50, 60), (30, 110, 200), (120, 200, 200), (100, 90, 180)]
+
+def npc(i, x, y, sc, skin, shirt, pants, phase, kind="walk", dir_=1, hat=None):
+    """A background person. y = feet, sc = size."""
+    leg = 72 * sc; torso = 92 * sc; hd = 22 * sc; th = max(3, 15 * sc)
+    hip = (x, y - leg * 1.05); nk = (x, hip[1] - torso)
+    if kind == "walk":
+        w = math.sin(phase) * 32 * sc
+        lf, rf, la, ra = (x + w, y), (x - w, y), (x - w * .8, hip[1] - 8 * sc), (x + w * .8, hip[1] - 8 * sc)
+    elif kind == "run":
+        w = math.sin(phase * 1.6) * 42 * sc
+        lf, rf, la, ra = (x + w, y - abs(w) * .2), (x - w, y - abs(w) * .2), (x - w, nk[1] + 40 * sc), (x + w, nk[1] + 40 * sc)
+    elif kind == "stand":
+        lf, rf, la, ra = (x - 15 * sc, y), (x + 15 * sc, y), (x - 26 * sc, hip[1]), (x + 26 * sc, hip[1])
+    elif kind == "press":
+        v = (math.sin(phase) + 1) / 2 * 42 * sc
+        lf, rf, la, ra = (x - 22 * sc, y), (x + 22 * sc, y), (x - 42 * sc, nk[1] - 34 * sc - v), (x + 42 * sc, nk[1] - 34 * sc - v)
+    elif kind == "squat":
+        v = (math.sin(phase) + 1) / 2 * 34 * sc
+        hip = (x, hip[1] + v); nk = (x, hip[1] - torso)
+        lf, rf, la, ra = (x - 28 * sc, y), (x + 28 * sc, y), (x - 34 * sc, nk[1] + 2), (x + 34 * sc, nk[1] + 2)
+    elif kind == "sit":
+        hip = (x, y); nk = (x, y - torso); lf, rf = (x + 30 * sc * dir_, y + 22 * sc), (x + 20 * sc * dir_, y + 22 * sc)
+        v = math.sin(phase) * 5 * sc
+        la, ra = (x + 34 * sc * dir_, nk[1] + 44 * sc + v), (x + 24 * sc * dir_, nk[1] + 48 * sc)
+    else:
+        lf, rf, la, ra = (x, y), (x, y), (x + 26 * sc, nk[1] + 34 * sc), (x - 24 * sc, hip[1])
+    line(i, hip, lf, th, pants); line(i, hip, rf, th, pants)
+    line(i, hip, nk, th * 1.5, shirt)
+    line(i, nk, la, th * .8, shirt); line(i, nk, ra, th * .8, shirt)
+    if kind == "press":
+        line(i, (x - 70 * sc, la[1]), (x + 70 * sc, la[1]), max(2, 5 * sc), (150, 150, 160))
+        for e_ in (x - 70 * sc, x + 70 * sc): circle(i, (e_, la[1]), 13 * sc, (50, 50, 60))
+    if kind == "squat":
+        line(i, (x - 74 * sc, nk[1] + 3), (x + 74 * sc, nk[1] + 3), max(2, 5 * sc), (150, 150, 160))
+        for e_ in (x - 74 * sc, x + 74 * sc): circle(i, (e_, nk[1] + 3), 14 * sc, (50, 50, 60))
+    hc = (nk[0], nk[1] - hd * 1.05); circle(i, hc, hd, skin)
+    if hat is not None:
+        quad(i, [(hc[0] - hd, hc[1] - 4 * sc), (hc[0] - hd * .7, hc[1] - hd * 1.1), (hc[0] + hd * .7, hc[1] - hd * 1.1), (hc[0] + hd, hc[1] - 4 * sc)], hat)
+    circle(i, (hc[0] + 7 * sc * dir_, hc[1] - 3 * sc), max(1.2, 2.6 * sc), (15, 15, 18))
+
+def extras(img, sh, t, ep):
+    """Everyday people who belong in this place; a different crowd each episode."""
+    name = sh["set"]; shot_s = abs(hash(("x", name, ep, sh.get("card", "")))) % 100000
+    r = random.Random(ep * 97 + shot_s)
+    outdoors = name in ("tokyo", "paris", "dubai", "harare", "bulawayo", "port")
+    want = sh.get("crowd", 0)
+    pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo") else SKIN + SKIN[3:]), r.choice(CLOTH), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
+    if outdoors:
+        for k in range(want or (r.randint(14, 22) if name in ("harare", "bulawayo") else r.randint(12, 18))):
+            skin, shirt, pants = pick(); layer = r.random()
+            y = FLOOR - 95 - layer * 200; sc = .62 + (1 - layer) * .55; spd = r.uniform(26, 62) * r.choice((-1, 1)); x0 = r.uniform(0, W + 200)
+            x = (x0 + spd * t) % (W + 240) - 120
+            npc(img, x, y, sc, skin, shirt, pants, t * (4 + r.random() * 3) + k, r.choice(("walk", "walk", "walk", "stand")), 1 if spd > 0 else -1, r.choice((None, None, r.choice(CLOTH))))
+    elif name == "gym":
+        spots = [(120, "run"), (300, "press"), (470, "squat"), (640, "press"), (800, "squat"), (960, "run")]
+        for k, (x, kind) in enumerate(spots):
+            skin, shirt, pants = pick(); npc(img, x + r.uniform(-25, 25), FLOOR - 230, .78, skin, shirt, pants, t * (2.6 + k * .3) + k, kind)
+        for k in range(want or 3):
+            skin, shirt, pants = pick(); x = (r.uniform(0, W) + r.uniform(20, 50) * t) % (W + 200) - 100
+            npc(img, x, FLOOR - 130, .95, skin, shirt, pants, t * 5 + k, "walk")
+        ix = 540 + math.sin(t * .8) * 260
+        npc(img, ix, FLOOR - 170, 1.0, SKIN[1], (30, 30, 200), (40, 40, 48), t * 4, "walk", 1, (30, 30, 200))
+        text(img, "COACH", ix, FLOOR - 410, 22, col=(30, 30, 220), track=1, glow=0)
+    elif name == "hotel":
+        for k, x in enumerate((110, 330, 760, 970)):
+            skin, shirt, pants = pick(); npc(img, x, FLOOR - 340, .72, skin, shirt, pants, t * 3 + k, "sit", 1 if k % 2 == 0 else -1)
+            rect(img, x - 60, FLOOR - 322, x + 60, FLOOR - 300, (225, 228, 235))
+        wx = (r.uniform(0, W) + 70 * t) % (W + 200) - 100
+        npc(img, wx, FLOOR - 205, .95, SKIN[0], (240, 240, 245), (28, 28, 34), t * 5, "tray"); rect(img, wx + 2, FLOOR - 395, wx + 60, FLOOR - 387, (205, 205, 212))
+    elif name in ("plane", "train"):
+        for k in range(want or 6):
+            skin, shirt, pants = pick(); x = 80 + k * 180 + r.uniform(-20, 20)
+            npc(img, x, FLOOR - 225, .8, skin, shirt, pants, t * 2 + k, "sit", r.choice((1, -1)))
+        cx = (r.uniform(0, W) + 44 * t) % (W + 200) - 100
+        npc(img, cx, FLOOR - 40, 1.05, SKIN[2], (150, 60, 40), (40, 30, 30), t * 4, "tray", 1, (150, 60, 40))
+    elif name == "ship":
+        for k in range(want or 9):
+            skin, shirt, pants = pick(); x = (r.uniform(0, W) + r.uniform(-30, 30) * t) % W
+            npc(img, x, FLOOR - 95 - r.uniform(0, 70), r.uniform(.7, .95), skin, shirt, pants, t * 3 + k, r.choice(("walk", "stand", "stand")))
+    elif name in ("mansion", "home", "gameroom", "desk"):
+        n_ = want or 2
+        for k in range(n_):
+            skin, shirt, pants = pick(); x = (70 if k % 2 == 0 else 1010) + r.uniform(-25, 25) + (k // 2) * (90 if k % 2 == 0 else -90)
+            npc(img, x, FLOOR - 28, .86, skin, shirt, pants, t * 2.2 + k, "stand", 1 if k % 2 == 0 else -1)
 
 class Cam2:
     def __init__(s, ox, fy, z=Z): s.ox, s.fy, s.z = ox, fy, z
@@ -380,6 +575,8 @@ class Show:
             if a <= t and len(ln) > 2:
                 cast[ln[0]].update(ln[2])
         img = back.copy()
+        if not sh.get("promo") and not sh.get("credit"):
+            extras(img, sh, t, s.n)
         spk = cur[2][0] if cur else None
         order = list(cast.values())
         for c in order:

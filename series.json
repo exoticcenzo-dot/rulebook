@@ -4,12 +4,12 @@
   "premise": "ME, CLYDE & 1 MISSING RULE BOOK. EXOTICCENZO and his best friend CLYDE find only the gutted cover and one page of an old trader's Rule Book, and hunt its pages across the world. They believe it has 99 pages. Episodes 1-100 are THE SEARCH: the complete Rule Book is found at exactly Episode 100, where they discover it really has 884 pages. Episode 101 onward is PART TWO: discovering and understanding the book now in their hands, and it never concludes.",
   "rules_for_daily_scripts": [
     "STORY FIRST. This is an adventure about EXOTICCENZO, Clyde and 1 missing Rule Book: the hunt for pages, Solo's race, Mtoriro's missing uncle. Plot, friendships, places and jokes lead every episode. It is never a trading class. Viewer ideas and trends add to the story and never replace it.",
-    "THE 100-EPISODE PLAN. Chapters are exactly 10 episodes and follow masterplan.chapters. Every episode moves the hunt forward. Number collected pages in order. Everyone believes the book has 99 pages. The complete Rule Book is found at exactly Episode 100, not before, and is revealed to have 884 pages. Episode 101 onward is about discovering and understanding it, and the story never concludes.",
-    "THE LESSON. One lesson per episode, mixing mindset, money and trading, at the level the chapter sets. Only EXOTICCENZO explains or names it; everyone else sets it up, reacts or asks. Usually it grows out of something silly Clyde does. Vary the format: some episodes show a trading session first with the lesson after it; others teach through what happens in the scene. Hide it: do not foreshadow the rule, and reveal it late as a surprise connection.",
+    "THE 100-EPISODE PLAN. Chapters are exactly 10 episodes and follow masterplan.chapters. Every episode moves the hunt forward with a page or clue. By Episode 100 they have travelled the whole world by train, plane and ship. Number collected pages in order. Everyone believes the book has 99 pages. The final piece is found in their Zimbabwe homeland at exactly Episode 100, not before; the complete book has 884 pages. Episode 100 delivers the most powerful lesson of the series and changes more than 100 characters on screen. Episode 101 onward is about discovering and understanding the book, and the story never concludes.",
+    "THE LESSON. One lesson per episode, mixing mindset, money, relationships, work and trading, at the level the chapter sets. Only EXOTICCENZO explains it, but anyone can cause or learn it: Clyde, friends, strangers, gym regulars, shopkeepers, kombi drivers, fans. It comes from a random, funny, unexpected moment. Viewers must not guess it until EXOTICCENZO breaks it down at the end. Vary the format, including trading sessions with the lesson after. Write moments so true to everyday life that viewers feel they are watching their own reality.",
     "OPENING. Set a short shock hook on screen. The first spoken line is conflict or stakes, never scene-setting. Every episode must make sense alone, so give new viewers the setup in the first or second line without a slow recap.",
     "PACING. About 20-25 seconds of story, 8-10 lines at most, each under 50 characters. Change something every 3 to 5 seconds and add a small surprise near 15 seconds.",
     "ENDING. Close on a cliffhanger that pays off next episode, mostly an open question; cut mid-action only when the next episode truly delivers. Then the outro: EXOTICCENZO alone, thanking viewers or telling a fresh joke that fits the lesson. The Future credit follows automatically.",
-    "WORLD AND CAST. Change setting about every 3 episodes, mixing countries with everyday scenes: eating, games, sofas, travel, the gym, trading sessions. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
+    "WORLD AND CAST. EXOTICCENZO and Clyde live together in Zimbabwe, between Harare and Bulawayo. Home is the base and the most-used setting. Every few episodes they travel abroad by train, plane or ship, then return home. Everyday scenes are constant: eating, games, sofas, kombis, shops, the gym, trading sessions. Every place is full of ordinary people going about their lives. Give background people moments of their own when funny. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
     "THE VIBE. EXOTICCENZO and Clyde are permanently chilled, shown only by red eyes and jokes: sleepy, hungry, Clyde forgetting what he was saying. Keep it implied. Never show, name or refer to weed, smoking or any drug in the video, caption or hashtags.",
     "GLOW-UP. Appearance changes automatically every 10 episodes from Episode 11: EXOTICCENZO gets bigger and more cut; Clyde barely changes, just slightly taller than Cenzo. One or two gym episodes each chapter, starting Episodes 8-10, so it feels earned. Gym scenes still move the hunt forward.",
     "FANS. Commenters can become recurring side characters. Roles are positive or friendly-funny; never mock them, make them villains or let them teach.",
@@ -167,70 +167,80 @@
         "eps": "1-10",
         "place": "Home and Tokyo",
         "lessons": "survive, fewer better trades, walk away, know your exit, don't chase",
-        "note": "Gym begins in episodes 8-10."
+        "note": "After Tokyo they return to Harare. Gym begins episodes 8-10.",
+        "locations": "Harare and Bulawayo; Tokyo by plane"
       },
       {
         "ch": 2,
         "eps": "11-20",
-        "place": "Paris",
+        "place": "Zimbabwe, then Paris",
         "lessons": "position sizing, risk and reward, patience",
-        "note": "First glow-up."
+        "note": "First glow-up. Travel by plane and across Europe by train.",
+        "locations": "Harare; Paris"
       },
       {
         "ch": 3,
         "eps": "21-30",
-        "place": "Dubai",
+        "place": "Zimbabwe, then Dubai and the Middle East",
         "lessons": "greed, leverage, lifestyle traps",
-        "note": "Solo offers a tempting deal."
+        "note": "Solo offers a tempting deal.",
+        "locations": "Bulawayo; Dubai"
       },
       {
         "ch": 4,
         "eps": "31-40",
-        "place": "Harare",
-        "lessons": "routines, journaling, discipline",
-        "note": "Mtoriro's home; the uncle's trail heats up."
+        "place": "Across Southern Africa",
+        "lessons": "routines, journaling, discipline, family pressure",
+        "note": "By train from Bulawayo; Victoria Falls. Mtoriro's family; the uncle's trail heats up.",
+        "locations": "Harare, Bulawayo, Victoria Falls"
       },
       {
         "ch": 5,
         "eps": "41-50",
-        "place": "New York",
+        "place": "Zimbabwe, then New York and the Americas",
         "lessons": "market structure, liquidity, news",
-        "note": "Build a new set."
+        "note": "Cross the ocean by ship. Build new sets.",
+        "locations": "New York"
       },
       {
         "ch": 6,
         "eps": "51-60",
-        "place": "Cape Town",
-        "lessons": "psychology of winning and losing streaks",
-        "note": "Build a new set. The crew is tested."
+        "place": "Zimbabwe, then Rio and South America",
+        "lessons": "winning and losing streaks, envy, friendship and money",
+        "note": "Build new sets. The crew is tested.",
+        "locations": "Rio"
       },
       {
         "ch": 7,
         "eps": "61-70",
-        "place": "London",
+        "place": "Zimbabwe, then London and Europe",
         "lessons": "backtesting, data, finding an edge",
-        "note": "Build a new set."
+        "note": "Build new sets.",
+        "locations": "London"
       },
       {
         "ch": 8,
         "eps": "71-80",
-        "place": "Istanbul",
+        "place": "Zimbabwe, then India, China and Asia",
         "lessons": "systems, automation, rules over feelings",
-        "note": "Build a new set. Solo's true goal appears."
+        "note": "Build new sets. Solo's true goal appears.",
+        "locations": "India, China"
       },
       {
         "ch": 9,
         "eps": "81-90",
-        "place": "Solo's stronghold",
-        "lessons": "drawdown recovery, managing a real portfolio",
-        "note": "The biggest setback of the search."
+        "place": "Australia, the far corners, Solo's stronghold",
+        "lessons": "drawdown recovery, starting over, real portfolios",
+        "note": "The biggest setback of the search. Build new sets.",
+        "locations": "Australia"
       },
       {
         "ch": 10,
         "eps": "91-100",
-        "place": "The final trail",
+        "place": "The road home to Zimbabwe",
         "lessons": "everything combined",
-        "note": "All threads meet. Episode 100: the complete Rule Book is found and it has 884 pages."
+        "note": "All threads meet. Great Zimbabwe. Episode 100: the final piece is found at home and its lesson changes 100+ characters. Use crowd 120 or more.",
+        "locations": "Harare, Bulawayo, Great Zimbabwe"
       }
     ]
   }
