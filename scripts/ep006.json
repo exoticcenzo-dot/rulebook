@@ -12,60 +12,186 @@
    "set": "tokyo",
    "crowd": 40,
    "cast": [
-    {"who": "clyde", "x": 280, "pose": "walk", "face": "r", "mood": "happy"},
-    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+    {
+     "who": "clyde",
+     "x": 280,
+     "pose": "walk",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
    ],
    "lines": [
-    ["clyde", "WET INK! THE BOOK'S WRITER IS IN TOKYO!"],
-    ["cenzo", "CLYDE, MTORIRO'S UNCLE VANISHED."]
+    [
+     "clyde",
+     "WET INK! THE BOOK'S WRITER IS IN TOKYO!",
+     {
+      "tr": "濡れたインク！本の作者は東京だ！"
+     }
+    ],
+    [
+     "cenzo",
+     "CLYDE, MTORIRO'S UNCLE VANISHED.",
+     {
+      "tr": "クライド、ムトリロのおじさんは消えたんだ。"
+     }
+    ]
    ]
   },
   {
    "set": "tokyo",
    "cast": [
-    {"who": "clyde", "x": 240, "pose": "stand", "face": "r", "mood": "happy"},
-    {"who": "maya", "x": 590, "pose": "stand", "face": "l", "mood": "smug"},
-    {"who": "cenzo", "x": 840, "pose": "stand", "face": "l", "mood": "neutral"}
+    {
+     "who": "clyde",
+     "x": 240,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "maya",
+     "x": 590,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 840,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
    ],
    "lines": [
-    ["clyde", "A MAN SOLD ME HIS ADDRESS! ALL MY MONEY!"],
-    ["maya", "CLYDE. THAT ADDRESS IS A CAR PARK."]
+    [
+     "clyde",
+     "A MAN SOLD ME HIS ADDRESS! ALL MY MONEY!",
+     {
+      "tr": "男に住所を売られた！全財産だ！"
+     }
+    ],
+    [
+     "maya",
+     "CLYDE. THAT ADDRESS IS A CAR PARK.",
+     {
+      "tr": "クライド。その住所は駐車場だよ。"
+     }
+    ]
    ]
   },
   {
    "set": "tokyo",
    "cast": [
-    {"who": "clyde", "x": 260, "pose": "stand", "face": "r", "mood": "shock"},
-    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
    ],
    "card": "RULE 6\nSURE IS\nNOT PROOF",
    "lines": [
-    ["cenzo", "HE SOUNDED SURE, SO YOU PAID."],
-    ["cenzo", "SAME AS THAT TRADING TIP IN THE GROUP CHAT."],
-    ["cenzo", "CHECK IT FIRST. SURE IS NOT PROOF."]
+    [
+     "cenzo",
+     "HE SOUNDED SURE, SO YOU PAID.",
+     {
+      "tr": "自信ありげだったから払ったんだな。"
+     }
+    ],
+    [
+     "cenzo",
+     "SAME AS THAT TRADING TIP IN THE GROUP CHAT.",
+     {
+      "tr": "グループチャットの投資話と同じだ。"
+     }
+    ],
+    [
+     "cenzo",
+     "CHECK IT FIRST. SURE IS NOT PROOF.",
+     {
+      "tr": "まず確かめろ。自信は証拠じゃない。"
+     }
+    ]
    ]
   },
   {
    "set": "tokyo",
    "cast": [
-    {"who": "maya", "x": 310, "pose": "stand", "face": "r", "mood": "shock"},
-    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "shock"}
+    {
+     "who": "maya",
+     "x": 310,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
    ],
    "end": "WHY WITH SOLO?",
    "lines": [
-    ["maya", "THE GUARD FOUND THIS. HIS BOARDING PASS."],
-    ["cenzo", "TOKYO TO HARARE. THIS MORNING."],
-    ["maya", "AND THE SEAT NEXT TO HIS? SOLO."]
+    [
+     "maya",
+     "THE GUARD FOUND THIS. HIS BOARDING PASS.",
+     {
+      "tr": "警備員が見つけた。彼の搭乗券。"
+     }
+    ],
+    [
+     "cenzo",
+     "TOKYO TO HARARE. THIS MORNING.",
+     {
+      "tr": "東京からハラレ。今朝の便だ。"
+     }
+    ],
+    [
+     "maya",
+     "AND THE SEAT NEXT TO HIS? SOLO.",
+     {
+      "tr": "しかも隣の席は？ソロ。"
+     }
+    ]
    ]
   },
   {
    "set": "tokyo",
    "cast": [
-    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
    ],
    "outro": true,
    "lines": [
-    ["cenzo", "THE CAR PARK MAN SENT CLYDE A LOYALTY CARD."]
+    [
+     "cenzo",
+     "THE CAR PARK MAN SENT CLYDE A LOYALTY CARD.",
+     {
+      "tr": "駐車場の男がクライドにポイントカードを送ってきた。"
+     }
+    ]
    ]
   }
  ]

@@ -534,6 +534,44 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
 
 def duration(tx): return .65 + len(tx) / 16.0
 
+
+BUBBLE_COLORS = [(250, 250, 252), (205, 240, 255), (215, 245, 215), (250, 225, 215), (245, 215, 245), (190, 235, 255), (225, 225, 255)]
+SET_LANG = {"tokyo": "ja", "paris": "fr", "dubai": "ar"}
+_DJ = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+_CJK = "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc"
+LANG_FONT = {"ja": (_CJK, 0), "ko": (_CJK, 1), "zh": (_CJK, 2)}
+RTL = {"ar", "he", "fa", "ur"}
+_tr_cache = {}
+
+def tr_mask(tx, lang, size=44, maxw=660):
+    """Render a translated line to a mask, wrapped to the bubble."""
+    from PIL import Image, ImageDraw, ImageFont
+    key = (tx, lang, size)
+    if key in _tr_cache: return _tr_cache[key]
+    path, idx = LANG_FONT.get(lang, (_DJ, 0))
+    font = ImageFont.truetype(path, size, index=idx, layout_engine=ImageFont.Layout.RAQM)
+    kw = dict(direction="rtl", language=lang) if lang in RTL else dict(language=lang)
+    words = list(tx) if lang in LANG_FONT else tx.split(" ")
+    sep = "" if lang in LANG_FONT else " "
+    lines, cur = [], ""
+    for w in words:
+        t2 = (cur + sep + w) if cur else w
+        if font.getlength(t2, **kw) > maxw and cur:
+            lines.append(cur); cur = w
+        else:
+            cur = t2
+    if cur: lines.append(cur)
+    lh = int(size * 1.34); wd = int(max(font.getlength(l, **kw) for l in lines)) + 8; ht = lh * len(lines) + 8
+    im = Image.new("L", (wd, ht), 0); d = ImageDraw.Draw(im)
+    for i, l in enumerate(lines):
+        d.text(((wd - font.getlength(l, **kw)) / 2, i * lh), l, font=font, fill=255, **kw)
+    a = np.asarray(im, np.float32) / 255
+    _tr_cache[key] = a
+    return a
+
+def font_ok(lang):
+    return lang not in LANG_FONT or os.path.exists(LANG_FONT[lang][0])
+
 def trap_bed(N, sr, seed):
     """Original dark trap instrumental. Generated fresh per episode; no existing song or melody."""
     r = np.random.default_rng(1000 + seed)
@@ -707,10 +745,16 @@ class Show:
         a, b, ln = cur
         who, tx = ln[0], ln[1]
         c = cast[who]; L = CAST[who]
-        lines = textwrap.wrap(tx, 17)
-        n = len(lines); fs = 50; lh = int(fs * 1.2)
-        cw = 30.5
-        wd = int(max(len(l) for l in lines) * cw) + 96; ht = lh * n + 92
+        opts = ln[2] if len(ln) > 2 else {}
+        tr = opts.get("tr"); shot_set = s.shot_at(t)["sh"]["set"]
+        lang = s.shot_at(t)["sh"].get("lang") or SET_LANG.get(shot_set)
+        if tr and not (lang and font_ok(lang)): tr = None
+        fs = 30 if tr else 50; cw = 18.5 if tr else 30.5
+        lines = textwrap.wrap(tx, 34 if tr else 17)
+        n = len(lines); lh = int(fs * 1.2)
+        trm = tr_mask(tr, lang) if tr else None
+        trh = (trm.shape[0] + 12) if tr else 0
+        wd = max(int(max(len(l) for l in lines) * cw), trm.shape[1] if tr else 0) + 96; ht = lh * n + 92 + trh
         seated = c["pose"] != "stand" and c["pose"] != "walk"
         hy = FLOOR - (360 if seated else 412) * Z * glowup(who, CAST[who]).get("scale", 1) - 88
         hy = FLOOR - (FLOOR - hy) * getattr(s, "_z", 1)
@@ -718,7 +762,7 @@ class Show:
         bot = min(hy, 980); y0 = int(bot - ht); x0 = int(cx - wd / 2)
         p = out((t - a) / .12)
         ov = img.copy()
-        col = (250, 250, 252)
+        col = BUBBLE_COLORS[(hash_str(tx) + s.n) % len(BUBBLE_COLORS)]
         cv2.rectangle(ov, (x0 + 26, y0), (x0 + wd - 26, y0 + ht), col, -1, cv2.LINE_AA)
         cv2.rectangle(ov, (x0, y0 + 26), (x0 + wd, y0 + ht - 26), col, -1, cv2.LINE_AA)
         for q in ((x0 + 26, y0 + 26), (x0 + wd - 26, y0 + 26), (x0 + 26, y0 + ht - 26), (x0 + wd - 26, y0 + ht - 26)):
@@ -732,6 +776,12 @@ class Show:
         img[:] = cv2.addWeighted(ov, p, img, 1 - p, 0)
         if p < .5: return
         text(img, name, nx + nw / 2, y0 - 22, 30, col=(20, 20, 24), glow=0, track=2)
+        if tr:
+            mh, mw = trm.shape; px0 = int(cx - mw / 2); py0 = y0 + 40
+            al = trm[..., None]; roi = img[py0:py0 + mh, px0:px0 + mw].astype(np.float32)
+            img[py0:py0 + mh, px0:px0 + mw] = (roi * (1 - al) + np.array((24, 22, 28), np.float32) * al).astype(np.uint8)
+            text(img, "\n".join(lines), cx, y0 + 40 + mh + 2, fs, col=(70, 70, 78), track=0, glow=0)
+            return
         chars = "".join(lines); typed_n = (t - a - .08) / max(.3, s.info[a][0]) * len(chars) * 1.15
         text(img, "\n".join(lines), cx, y0 + 42, fs, col=(24, 22, 28), n=clamp(typed_n, 0, len(chars)), track=0, glow=0)
 

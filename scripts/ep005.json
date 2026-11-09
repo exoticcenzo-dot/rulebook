@@ -33,11 +33,17 @@
    "lines": [
     [
      "clyde",
-     "THE NOTE SAYS THE PAGE IS ON THAT TRAIN! RUN!"
+     "THE NOTE SAYS THE PAGE IS ON THAT TRAIN! RUN!",
+     {
+      "tr": "メモによると、ページはあの電車だ！走れ！"
+     }
     ],
     [
      "cenzo",
-     "CLYDE. THAT TRAIN ALREADY LEFT."
+     "CLYDE. THAT TRAIN ALREADY LEFT.",
+     {
+      "tr": "クライド。あの電車はもう出たぞ。"
+     }
     ]
    ]
   },
@@ -69,15 +75,24 @@
    "lines": [
     [
      "clyde",
-     "IT LEFT! I RAN FIVE BLOCKS!"
+     "IT LEFT! I RAN FIVE BLOCKS!",
+     {
+      "tr": "行っちゃった！五ブロックも走った！"
+     }
     ],
     [
      "clyde",
-     "I'LL CATCH IT AT THE NEXT STATION!"
+     "I'LL CATCH IT AT THE NEXT STATION!",
+     {
+      "tr": "次の駅で追いつく！"
+     }
     ],
     [
      "cenzo",
-     "HE SAW IT MOVE. NOW HE CAN'T STOP."
+     "HE SAW IT MOVE. NOW HE CAN'T STOP.",
+     {
+      "tr": "動くのを見たら、もう止まれないんだ。"
+     }
     ]
    ]
   },
@@ -103,15 +118,24 @@
    "lines": [
     [
      "cenzo",
-     "YOU CHASED IT AFTER IT LEFT."
+     "YOU CHASED IT AFTER IT LEFT.",
+     {
+      "tr": "出発した後で追いかけたな。"
+     }
     ],
     [
      "cenzo",
-     "SAME WITH A CANDLE THAT ALREADY RAN."
+     "SAME WITH A CANDLE THAT ALREADY RAN.",
+     {
+      "tr": "もう上がったローソク足も同じだ。"
+     }
     ],
     [
      "cenzo",
-     "MISS IT? WAIT. ANOTHER ONE COMES."
+     "MISS IT? WAIT. ANOTHER ONE COMES.",
+     {
+      "tr": "逃した？待て。次がまた来る。"
+     }
     ]
    ]
   },
@@ -137,15 +161,24 @@
    "lines": [
     [
      "maya",
-     "CENZO. TURN THE NOTE OVER."
+     "CENZO. TURN THE NOTE OVER.",
+     {
+      "tr": "チェンゾ。メモを裏返して。"
+     }
     ],
     [
      "cenzo",
-     "THAT'S THE WRITING FROM THE BOOK."
+     "THAT'S THE WRITING FROM THE BOOK.",
+     {
+      "tr": "あの本の文字だ。"
+     }
     ],
     [
      "maya",
-     "AND THE INK IS STILL WET."
+     "AND THE INK IS STILL WET.",
+     {
+      "tr": "しかもインクがまだ乾いてない。"
+     }
     ]
    ]
   },
@@ -164,7 +197,10 @@
    "lines": [
     [
      "cenzo",
-     "CLYDE STILL THINKS THAT TRAIN OWES HIM MONEY."
+     "CLYDE STILL THINKS THAT TRAIN OWES HIM MONEY.",
+     {
+      "tr": "クライドはまだ、あの電車に金を貸したつもりだ。"
+     }
     ]
    ]
   }

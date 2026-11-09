@@ -25,19 +25,31 @@
    "lines": [
     [
      "clyde",
-     "CENZO! I WENT INTO THE STATION!"
+     "CENZO! I WENT INTO THE STATION!",
+     {
+      "tr": "チェンゾ！駅に入っちゃった！"
+     }
     ],
     [
      "clyde",
-     "THERE ARE TWO HUNDRED EXITS!"
+     "THERE ARE TWO HUNDRED EXITS!",
+     {
+      "tr": "出口が二百個もある！"
+     }
     ],
     [
      "cenzo",
-     "DID YOU CHECK WHERE TO GET OUT?"
+     "DID YOU CHECK WHERE TO GET OUT?",
+     {
+      "tr": "どこから出るか確認した？"
+     }
     ],
     [
      "clyde",
-     "THAT'S FOR LATER, RIGHT?"
+     "THAT'S FOR LATER, RIGHT?",
+     {
+      "tr": "それは後でいいだろ？"
+     }
     ]
    ]
   },
@@ -69,19 +81,31 @@
    "lines": [
     [
      "maya",
-     "I FILMED THAT. YOU LOOKED SO LOST."
+     "I FILMED THAT. YOU LOOKED SO LOST.",
+     {
+      "tr": "撮っちゃった。迷子だったね。"
+     }
     ],
     [
      "cenzo",
-     "CLYDE, YOU WENT IN WITH NO EXIT."
+     "CLYDE, YOU WENT IN WITH NO EXIT.",
+     {
+      "tr": "クライド、出口を決めずに入ったな。"
+     }
     ],
     [
      "cenzo",
-     "LIKE A STOP LOSS. SET IT BEFORE YOU ENTER."
+     "LIKE A STOP LOSS. SET IT BEFORE YOU ENTER.",
+     {
+      "tr": "損切りと同じ。入る前に決めるんだ。"
+     }
     ],
     [
      "clyde",
-     "WHO KEEPS FINDING US?!"
+     "WHO KEEPS FINDING US?!",
+     {
+      "tr": "なんで毎回見つかるんだ？！"
+     }
     ]
    ],
    "card": "RULE 4\nKNOW YOUR EXIT"
@@ -107,15 +131,24 @@
    "lines": [
     [
      "maya",
-     "LOOKING FOR THE PAGE? SOLO WAS HERE."
+     "LOOKING FOR THE PAGE? SOLO WAS HERE.",
+     {
+      "tr": "ページを探してる？ソロが来たよ。"
+     }
     ],
     [
      "cenzo",
-     "HE'S ALREADY GOT IT?"
+     "HE'S ALREADY GOT IT?",
+     {
+      "tr": "もう手に入れたのか？"
+     }
     ],
     [
      "maya",
-     "NO. HE LEFT YOU A NOTE."
+     "NO. HE LEFT YOU A NOTE.",
+     {
+      "tr": "いいえ。君にメモを残したよ。"
+     }
     ]
    ],
    "end": "WHAT DOES IT SAY?"
@@ -135,11 +168,17 @@
    "lines": [
     [
      "cenzo",
-     "MY STOP LOSS? LEAVING BEFORE CLYDE ORDERS."
+     "MY STOP LOSS? LEAVING BEFORE CLYDE ORDERS.",
+     {
+      "tr": "俺の損切り？クライドが注文する前に帰る。"
+     }
     ],
     [
      "cenzo",
-     "THANKS FOR WATCHING, FAM."
+     "THANKS FOR WATCHING, FAM.",
+     {
+      "tr": "見てくれてありがとう、みんな。"
+     }
     ]
    ]
   }

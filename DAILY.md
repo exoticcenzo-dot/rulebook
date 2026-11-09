@@ -11,6 +11,7 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, cr
 - Background people appear automatically and differ each episode. For a bigger crowd set `crowd` on a shot, for example 40; Episode 100 uses 120 or more on outdoor sets.
 - hook: 2 lines at most, under 14 characters per line.
 - card: the rule, spoken by EXOTICCENZO.
+- Abroad: add `{"tr": "translated line"}` as each line's options, including the outro. tokyo=Japanese, paris=French, dubai=Arabic; on new countries set `lang` on the shot (ISO code) and add its font to LANG_FONT in show.py if not Latin, Cyrillic, Greek, Arabic or CJK. If no font exists, leave English and say so in the summary. Bubble colours change automatically.
 - The story shot before the outro needs `end`: the cliffhanger question.
 - Last shot has `"outro": true`: EXOTICCENZO alone, happy, same set, 1 short line.
 
