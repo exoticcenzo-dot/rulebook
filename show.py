@@ -248,7 +248,7 @@ class Show:
                 x = V.say("cenzo", sh["card"]); d = max(2.2, len(x) / 44100 + .55)
                 s.sp.append((t + .2, x)); card = (t, t + d); t += d
             if sh.get("end"):
-                x = V.say("narrator", sh["end"]); y = V.say("narrator", f"Episode {s.n + 1}. Tomorrow.")
+                x = V.say("narrator", sh["end"]); s.next = s.e.get("next", "NEXT EPISODE TOMORROW"); y = V.say("narrator", s.next)
                 s.sp.append((t + .15, x)); s.sp.append((t + .25 + len(x) / 44100, y))
                 d = max(2.8, (len(x) + len(y)) / 44100 + .75); end = (t, t + d); t += d
             s.tl.append(dict(a=a, b=t, sh=sh, lines=lines, card=card, end=end))
@@ -307,7 +307,7 @@ class Show:
             img = (img * (1 - .78 * k)).astype(np.uint8)
             text(img, sh["end"], 505, 560, 92, alpha=k, n=typed(sh["end"], t, x["end"][0] + .05, 30))
             if t > x["end"][0] + .9:
-                text(img, f"EP {s.n + 1} TOMORROW", 505, 760, 44, col=A, alpha=ease((t - x["end"][0] - .9) / .2), track=4)
+                text(img, s.next, 505, 760, 44, col=A, alpha=ease((t - x["end"][0] - .9) / .2), track=4)
                 text(img, S["handle"], 505, 850, 52, alpha=ease((t - x["end"][0] - 1.1) / .2), track=5)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
