@@ -3,7 +3,7 @@
  "chapter": "TOKYO",
  "title": "THE LAST TRAIN",
  "lesson": "Don't chase",
- "caption": "Clyde chased a train that had already left. Ever done that with a candle? Comment CAST ME to join the story. #stickman #tradingpsychology #tokyo #loadingreveal #exoticcenzo",
+ "caption": "Clyde chased a train that had already left. Ever chased a candle that already ran? Yes or no? Comment CAST ME to join the story. #stickman #tradingpsychology #tokyo #loadingreveal #exoticcenzo",
  "shots": [
   {
    "set": "tokyo",
@@ -32,27 +32,12 @@
    ],
    "lines": [
     [
-     "maya",
-     "HERE. SOLO SAID TO GIVE YOU THIS."
+     "clyde",
+     "THE NOTE SAYS THE PAGE IS ON THAT TRAIN! RUN!"
     ],
     [
      "cenzo",
-     "IT SAYS THE PAGE LEFT ON THE SIX O'CLOCK TRAIN."
-    ],
-    [
-     "clyde",
-     "THAT'S NOW! THE TRAIN IS LEAVING NOW!",
-     {
-      "mood": "shock"
-     }
-    ],
-    [
-     "clyde",
-     "PLAN LOADING... PLAN LOADED. RUN!",
-     {
-      "pose": "walk",
-      "mood": "focus"
-     }
+     "CLYDE. THAT TRAIN ALREADY LEFT."
     ]
    ]
   },
@@ -184,5 +169,6 @@
    ]
   }
  ],
- "credit_song": "Worst Day"
+ "credit_song": "Worst Day",
+ "hook": "HE CHASED\nTHE TRAIN"
 }

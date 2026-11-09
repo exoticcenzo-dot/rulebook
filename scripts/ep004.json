@@ -2,41 +2,8 @@
  "chapter": "TOKYO",
  "title": "LOST IN TOKYO",
  "lesson": "Know your exit",
- "caption": "Clyde walked into Tokyo with no plan to get out. Sound like your last trade? #stickman #tradingpsychology #tokyo #exoticcenzo",
+ "caption": "Clyde walked into Tokyo with no plan to get out. Ever entered a trade with no exit? Yes or no? #stickman #tradingpsychology #tokyo #exoticcenzo",
  "shots": [
-  {
-   "set": "plane",
-   "cast": [
-    {
-     "who": "cenzo",
-     "x": 300,
-     "pose": "seat2",
-     "face": "r",
-     "mood": "neutral"
-    },
-    {
-     "who": "clyde",
-     "x": 680,
-     "pose": "eat",
-     "face": "l",
-     "mood": "happy"
-    }
-   ],
-   "lines": [
-    [
-     "clyde",
-     "THESE TINY PLANE SNACKS ARE ELITE."
-    ],
-    [
-     "cenzo",
-     "WE LAND IN TOKYO IN TEN MINUTES."
-    ],
-    [
-     "clyde",
-     "RELAX. I DON'T NEED A PLAN."
-    ]
-   ]
-  },
   {
    "set": "tokyo",
    "cast": [
@@ -179,5 +146,6 @@
  ],
  "ep": 4,
  "next": "NEXT EPISODE TONIGHT",
- "credit_song": "Turn On the Lights"
+ "credit_song": "Turn On the Lights",
+ "hook": "LOST IN\nTOKYO!"
 }

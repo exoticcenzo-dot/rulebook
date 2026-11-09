@@ -289,24 +289,23 @@ class Show:
             a = t; lines = []
             for ln in sh["lines"]:
                 x = V.say(ln[0], ln[1]); au = len(x) / 44100
-                d = au + .32; s.info[t] = (au, V.envelope(x))
+                d = au + .16; s.info[t] = (au, V.envelope(x))
                 s.sp.append((t + .08, x)); lines.append((t, t + d, ln)); t += d
             card = end = None
             if sh.get("card"):
-                x = V.say("cenzo", sh["card"]); d = max(2.2, len(x) / 44100 + .55)
+                x = V.say("cenzo", sh["card"]); d = max(1.6, len(x) / 44100 + .4)
                 s.sp.append((t + .2, x)); card = (t, t + d); t += d
             if sh.get("end"):
                 x = V.say("narrator", sh["end"]); s.next = s.e.get("next", "NEXT EPISODE TOMORROW"); y = V.say("narrator", s.next)
                 s.sp.append((t + .15, x)); s.sp.append((t + .25 + len(x) / 44100, y))
-                d = max(2.8, (len(x) + len(y)) / 44100 + .75); end = (t, t + d); t += d
+                d = max(1.9, (len(x) + len(y)) / 44100 + .45); end = (t, t + d); t += d
             s.tl.append(dict(a=a, b=t, sh=sh, lines=lines, card=card, end=end))
         if s.e.get("promo"):
             x = V.say("cenzo", "NEED A VIDEO LIKE THIS FOR YOUR BUSINESS? MESSAGE ME. WE MAKE THEM.")
             s.sp.append((t + .25, x)); d = max(4.5, len(x) / 44100 + 1.0)
             s.tl.append(dict(a=t, b=t + d, sh=dict(set=s.e["shots"][-1]["set"], cast=[], lines=[], promo=True), lines=[], card=None, end=None)); t += d
         if s.e.get("credit_song"):
-            x = V.say("cenzo", "RESPECT TO FUTURE. REGARDS, EXOTICCENZO.")
-            s.sp.append((t + .25, x)); d = max(4.2, len(x) / 44100 + 1.4)
+            d = 2.2
             s.tl.append(dict(a=t, b=t + d, sh=dict(set=s.e["shots"][-1]["set"], cast=[], lines=[], credit=True), lines=[], card=None, end=None)); t += d
         s.D = t + .15
 
@@ -344,14 +343,26 @@ class Show:
             rect(img, bx, by, bx + 150, by + 100, (40, 80, 140)); rect(img, bx + 12, by + 8, bx + 140, by + 92, (70, 130, 200))
             rect(img, bx + 60, by + 34, bx + 95, by + 62, (120, 220, 255))
         # slow push in
-        z = 1 + .035 * clamp(st / max(.1, x["b"] - x["a"]))
-        M = np.array([[z, 0, (1 - z) * W / 2], [0, z, (1 - z) * FLOOR]], np.float32)
+        pv, i_, pr = W / 2, 0, clamp(st / max(.1, x["b"] - x["a"]))
+        tx = 0.
+        if cur:
+            i_ = [q[0] for q in x["lines"]].index(cur[0]); pv = cast[spk]["x"]
+            pr = clamp((t - cur[0]) / max(.1, cur[1] - cur[0]))
+            if cast[spk].get("mood") == "shock" and t - cur[0] < .3:
+                tx = math.sin(t * 70) * 11
+        z = 1.05 + .09 * (i_ % 2) + .025 * pr
+        s._z = z
+        M = np.array([[z, 0, (1 - z) * pv + tx], [0, z, (1 - z) * FLOOR]], np.float32)
         img = cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_LINEAR)
         img = (img.astype(np.float32) * F.vignette()).astype(np.uint8)
         A = (50, 190, 255)
         shade = np.ones((H, 1, 1), np.float32); shade[:300] = np.linspace(.38, 1, 300, dtype=np.float32)[..., None, None]
         img = (img.astype(np.float32) * shade).astype(np.uint8)
-        text(img, f"EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
+        hk = s.e.get("hook")
+        if hk and t < 2.2:
+            text(img, hk, 505, 175, 108, alpha=1 - ease((t - 2.05) / .15))
+        else:
+            text(img, f"EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
         if cur:
             s.bubble(img, cur, t, cast, A)
         if x["card"] and x["card"][0] <= t < x["card"][1]:
@@ -397,6 +408,7 @@ class Show:
         wd = int(max(len(l) for l in lines) * cw) + 96; ht = lh * n + 92
         seated = c["pose"] != "stand" and c["pose"] != "walk"
         hy = FLOOR - (360 if seated else 412) * Z - 88
+        hy = FLOOR - (FLOOR - hy) * getattr(s, "_z", 1)
         cx = clamp(c["x"], wd / 2 + 56, 930 - wd / 2)
         bot = min(hy, 980); y0 = int(bot - ht); x0 = int(cx - wd / 2)
         p = out((t - a) / .12)

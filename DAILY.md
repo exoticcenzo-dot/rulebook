@@ -22,3 +22,5 @@ Trends: `trends.json` lists current trends mapped to the story. Use one when it 
 Music and credit: every video plays a freshly generated original trap beat. Set `credit_song` to a Future song whose mood or title fits the episode (for example Honest, Mask Off, Turn On the Lights, Worst Day, Magic, Tony Montana). Do not use the real recording or copy its melody. Do not reuse the same song within 7 episodes. The credit card is added automatically after the outro.
 
 Paid service advert: switched OFF while the account grows. Do not set `promo` or mention paid services until Vincenzo says to turn it back on.
+
+Retention rules: viewers leave in the first seconds. Set `hook` to a 2-line max, under-14-characters-per-line shock headline. The FIRST spoken line must be conflict or money at risk, never scene-setting. Keep the story to about 20-25 seconds: 8-10 lines maximum, one outro line. Captions ask a question viewers can answer easily, such as Yes or no?
