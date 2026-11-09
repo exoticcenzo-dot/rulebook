@@ -20,3 +20,5 @@ Outro: after the shot with `end`, add one last shot with `"outro": true`: EXOTIC
 Trends: `trends.json` lists current trends mapped to the story. Use one when it fits naturally, as a scene or joke format. Never add copyrighted songs to the video file.
 
 Music and credit: every video plays a freshly generated original trap beat. Set `credit_song` to a Future song whose mood or title fits the episode (for example Honest, Mask Off, Turn On the Lights, Worst Day, Magic, Tony Montana). Do not use the real recording or copy its melody. Do not reuse the same song within 7 episodes. The credit card is added automatically after the outro.
+
+Paid service advert: every 18:00 episode sets `"promo": true`, which adds a card offering animated ads and explainers. Its caption also ends with: Need animated videos for your business? Message me. Do not put prices on it. 10:00 episodes have no advert.

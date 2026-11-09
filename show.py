@@ -300,6 +300,10 @@ class Show:
                 s.sp.append((t + .15, x)); s.sp.append((t + .25 + len(x) / 44100, y))
                 d = max(2.8, (len(x) + len(y)) / 44100 + .75); end = (t, t + d); t += d
             s.tl.append(dict(a=a, b=t, sh=sh, lines=lines, card=card, end=end))
+        if s.e.get("promo"):
+            x = V.say("cenzo", "NEED A VIDEO LIKE THIS FOR YOUR BUSINESS? MESSAGE ME. WE MAKE THEM.")
+            s.sp.append((t + .25, x)); d = max(4.5, len(x) / 44100 + 1.0)
+            s.tl.append(dict(a=t, b=t + d, sh=dict(set=s.e["shots"][-1]["set"], cast=[], lines=[], promo=True), lines=[], card=None, end=None)); t += d
         if s.e.get("credit_song"):
             x = V.say("cenzo", "RESPECT TO FUTURE. REGARDS, EXOTICCENZO.")
             s.sp.append((t + .25, x)); d = max(4.2, len(x) / 44100 + 1.4)
@@ -361,6 +365,13 @@ class Show:
             if t > x["end"][0] + .9:
                 text(img, s.next, 505, 760, 44, col=A, alpha=ease((t - x["end"][0] - .9) / .2), track=4)
                 text(img, S["handle"], 505, 850, 52, alpha=ease((t - x["end"][0] - 1.1) / .2), track=5)
+        if sh.get("promo"):
+            k = ease(st / .2)
+            img = (img * (1 - .84 * k)).astype(np.uint8)
+            text(img, "NEED A VIDEO\nLIKE THIS FOR\nYOUR BUSINESS?", 505, 420, 84, alpha=k)
+            text(img, "ANIMATED ADS AND EXPLAINERS", 505, 800, 38, col=A, alpha=k, track=2, glow=.25)
+            text(img, "WITH REAL VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
+            text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
         if sh.get("credit"):
             k = ease(st / .25)
             img = (img * (1 - .86 * k)).astype(np.uint8)
