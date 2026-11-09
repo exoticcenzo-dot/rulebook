@@ -410,6 +410,7 @@ class Show:
             text(img, "NAYVADIUS DEMUN WILBURN", 505, 950, 38, alpha=k, track=2, glow=.2)
             text(img, "AKA PLUTO · FUTURE HENDRIX · MEATHEAD", 505, 1010, 28, alpha=k, track=1, glow=.2)
             text(img, "ORIGINAL INSTRUMENTAL", 505, 1090, 26, alpha=k, track=3, glow=.15)
+        text(img, "@exoticcenzo", 505, 1440, 38, alpha=.62, track=3, glow=.2)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
         return img
