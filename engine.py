@@ -8,7 +8,7 @@ from film import W, H, FPS, FLOOR, BH, BW, clamp, ease, out, mix, Cam, line, cir
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = HERE + "/out"
-BANK = json.load(open(HERE + "/stories.json"))
+BANK = {"handle": "@EXOTICCENZO", "arcs": []}
 ARCS = BANK["arcs"]
 DUR = [14.0, 13.0, 16.0]
 CY = .44
