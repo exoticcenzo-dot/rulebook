@@ -1,0 +1,152 @@
+{
+ "chapter": "HOME",
+ "title": "DINNER AT THE GRAND HOTEL",
+ "lesson": "Overtrading",
+ "caption": "Clyde ordered the whole menu. A stranger explained his trading account. #stickman #tradingpsychology #storytime #exoticcenzo",
+ "shots": [
+  {
+   "set": "hotel",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 235,
+     "pose": "seat",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "clyde",
+     "x": 805,
+     "pose": "eat",
+     "face": "l",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "I ORDERED THE WHOLE MENU."
+    ],
+    [
+     "cenzo",
+     "THE WHOLE MENU, CLYDE?"
+    ],
+    [
+     "clyde",
+     "IF ONE PLATE IS GOOD, TEN IS BETTER."
+    ],
+    [
+     "clyde",
+     "...I DON'T FEEL SO GOOD.",
+     {
+      "mood": "shock",
+      "pose": "seat"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "hotel",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 235,
+     "pose": "seat",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "nia",
+     "x": 520,
+     "pose": "seat",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "clyde",
+     "x": 805,
+     "pose": "seat",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "nia",
+     "YOU LOOK TERRIBLE, MY FRIEND."
+    ],
+    [
+     "clyde",
+     "AND WHO ARE YOU?!"
+    ],
+    [
+     "nia",
+     "MTORIRO. WHAT HAPPENED TO HIM?"
+    ],
+    [
+     "cenzo",
+     "HE JUST OVERTRADED HIS DINNER."
+    ],
+    [
+     "clyde",
+     "OVERTRADED?"
+    ],
+    [
+     "cenzo",
+     "TOO MANY PLATES. TOO MANY TRADES."
+    ],
+    [
+     "cenzo",
+     "FEWER TRADES. BETTER TRADES."
+    ]
+   ],
+   "card": "RULE 2\nFEWER. BETTER."
+  },
+  {
+   "set": "hotel",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 235,
+     "pose": "seat",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "nia",
+     "x": 520,
+     "pose": "seat",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "clyde",
+     "x": 805,
+     "pose": "seat",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "nia",
+     "THAT BOOK BELONGED TO MY UNCLE."
+    ],
+    [
+     "cenzo",
+     "YOUR UNCLE? WHERE IS HE?"
+    ],
+    [
+     "nia",
+     "HE VANISHED LOOKING FOR PAGE 99."
+    ],
+    [
+     "clyde",
+     "COOL. WHO'S PAYING THIS BILL?"
+    ]
+   ],
+   "end": "WHERE DID HE GO?"
+  }
+ ],
+ "ep": 2
+}

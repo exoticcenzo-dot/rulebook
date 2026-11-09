@@ -1,0 +1,108 @@
+{
+ "chapter": "HOME",
+ "title": "THE BOOK UNDER THE SOFA",
+ "lesson": "Survive first",
+ "caption": "Clyde put everything on one trade. Then the sofa coughed up a secret. Part 2 tomorrow. #stickman #tradingpsychology #storytime #exoticcenzo",
+ "shots": [
+  {
+   "set": "mansion",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 330,
+     "pose": "sit",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "clyde",
+     "x": 700,
+     "pose": "sit",
+     "face": "l",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "CENZO. I PUT ALL MY MONEY ON ONE TRADE."
+    ],
+    [
+     "cenzo",
+     "ALL OF IT?!",
+     {
+      "mood": "shock"
+     }
+    ],
+    [
+     "clyde",
+     "BRO, IT CAN'T GO DOWN."
+    ],
+    [
+     "cenzo",
+     "CLYDE. IT CAN ALWAYS GO DOWN."
+    ],
+    [
+     "clyde",
+     "...IT WENT DOWN.",
+     {
+      "mood": "shock"
+     }
+    ],
+    [
+     "cenzo",
+     "ONE TRADE SHOULD NEVER END YOU."
+    ],
+    [
+     "clyde",
+     "THEN TEACH ME, BIG MAN."
+    ],
+    [
+     "cenzo",
+     "RISK SMALL. STAY IN THE GAME."
+    ]
+   ],
+   "card": "RULE 1\nSURVIVE FIRST"
+  },
+  {
+   "set": "mansion",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 330,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "clyde",
+     "x": 700,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "prop": "book",
+   "lines": [
+    [
+     "clyde",
+     "WAIT. WHAT WAS UNDER THIS CUSHION?"
+    ],
+    [
+     "cenzo",
+     "\"THE RULE BOOK. 99 PAGES.\""
+    ],
+    [
+     "clyde",
+     "ONLY ONE PAGE IS LEFT IN HERE!"
+    ],
+    [
+     "cenzo",
+     "IT SAYS PAGE 2 IS AT THE GRAND HOTEL."
+    ]
+   ],
+   "end": "WHO HID IT?"
+  }
+ ],
+ "ep": 1
+}

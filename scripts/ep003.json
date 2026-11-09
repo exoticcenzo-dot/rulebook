@@ -1,0 +1,140 @@
+{
+ "chapter": "HOME",
+ "title": "REMATCH",
+ "lesson": "Revenge trading",
+ "caption": "Rematch number six. This is exactly what revenge trading looks like. #stickman #tradingpsychology #gaming #exoticcenzo",
+ "shots": [
+  {
+   "set": "gameroom",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 250,
+     "pose": "game",
+     "face": "r",
+     "mood": "angry"
+    },
+    {
+     "who": "cenzo",
+     "x": 560,
+     "pose": "game",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "YOU BEAT ME AGAIN? REMATCH!"
+    ],
+    [
+     "cenzo",
+     "THAT'S FIVE REMATCHES, BRO."
+    ],
+    [
+     "clyde",
+     "I'LL WIN IT ALL BACK THIS TIME!"
+    ],
+    [
+     "clyde",
+     "HOW DID I LOSE EVEN BIGGER?!",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "gameroom",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 250,
+     "pose": "seat2",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 560,
+     "pose": "seat2",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "nia",
+     "x": 800,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "nia",
+     "WHY IS HE SHOUTING AT THE TV?"
+    ],
+    [
+     "clyde",
+     "I JUST WANT MY WINS BACK!"
+    ],
+    [
+     "cenzo",
+     "THAT'S REVENGE TRADING, CLYDE."
+    ],
+    [
+     "cenzo",
+     "ANGRY PLAYERS PLAY BADLY."
+    ],
+    [
+     "clyde",
+     "SO WHAT DO I DO AFTER A LOSS?"
+    ],
+    [
+     "cenzo",
+     "STOP. BREATHE. COME BACK TOMORROW."
+    ]
+   ],
+   "card": "RULE 3\nLOST? WALK AWAY."
+  },
+  {
+   "set": "gameroom",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 330,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "zeke",
+     "x": 790,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "THAT BOOK IS MINE."
+    ],
+    [
+     "cenzo",
+     "AND YOU ARE?"
+    ],
+    [
+     "zeke",
+     "SOLO. THE NEXT PAGE IS IN TOKYO."
+    ],
+    [
+     "zeke",
+     "TRY TO KEEP UP."
+    ]
+   ],
+   "end": "THE RACE BEGINS"
+  }
+ ],
+ "ep": 3
+}

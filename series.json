@@ -1,0 +1,113 @@
+{
+  "title": "THE RULE BOOK",
+  "handle": "@EXOTICCENZO",
+  "premise": "EXOTICCENZO and his best friend CLYDE find an old trader's Rule Book with its pages scattered across the world. Every page sends them somewhere new, and every page is a lesson. Page 99 has never been found, and every answer reveals another missing page, so the story never ends.",
+  "rules_for_daily_scripts": [
+    "EXOTICCENZO always teaches the lesson. Only he explains or names the rule; everyone else sets it up, reacts, or asks.",
+    "Every episode teaches exactly one lesson, shown by something silly Clyde does in real life, then named as a trading or life rule.",
+    "Never end the story. Every episode closes on a cliffhanger leading into the next one.",
+    "A new location or chapter every 3 episodes. Mix countries with everyday scenes: eating, games, sofas, travel.",
+    "Characters talk like friends. Lines stay under 50 characters. No profit promises and no specific buy or sell calls.",
+    "Add a new recurring character every chapter or two, and bring old ones back."
+  ],
+  "characters": {
+    "cenzo": {
+      "name": "EXOTICCENZO",
+      "bio": "The main man. Calm, sharp, loyal. Learns by doing.",
+      "suit": [
+        245,
+        245,
+        245
+      ],
+      "accent": [
+        50,
+        190,
+        255
+      ],
+      "gear": [
+        "cape"
+      ],
+      "hair": "spiky",
+      "voice": 180
+    },
+    "clyde": {
+      "name": "CLYDE",
+      "bio": "Best friend. Always hungry, always all-in, loyal to the end.",
+      "suit": [
+        235,
+        240,
+        225
+      ],
+      "accent": [
+        240,
+        150,
+        50
+      ],
+      "gear": [
+        "headphones",
+        "scarf"
+      ],
+      "hair": "beanie",
+      "voice": 125
+    },
+    "nia": {
+      "name": "MTORIRO",
+      "bio": "From Harare. His uncle wrote the Rule Book and vanished. Holds the book's history, but leaves the teaching to Cenzo.",
+      "suit": [
+        250,
+        238,
+        245
+      ],
+      "accent": [
+        220,
+        90,
+        190
+      ],
+      "gear": [
+        "scarf"
+      ],
+      "hair": "afro",
+      "voice": 300
+    },
+    "zeke": {
+      "name": "SOLO",
+      "bio": "Rival page hunter. Works alone. Polished, smug, always one step ahead.",
+      "suit": [
+        205,
+        205,
+        220
+      ],
+      "accent": [
+        70,
+        70,
+        235
+      ],
+      "gear": [
+        "tie",
+        "glasses"
+      ],
+      "hair": "neat",
+      "voice": 95
+    },
+    "maya": {
+      "name": "JAMAL",
+      "bio": "Tokyo-based creator who films everything. Knows every shortcut.",
+      "suit": [
+        240,
+        248,
+        250
+      ],
+      "accent": [
+        120,
+        220,
+        90
+      ],
+      "gear": [
+        "headphones"
+      ],
+      "hair": "cap",
+      "voice": 350
+    }
+  },
+  "episodes_log": []
+}

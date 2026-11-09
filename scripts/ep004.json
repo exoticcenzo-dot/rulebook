@@ -1,0 +1,158 @@
+{
+ "chapter": "TOKYO",
+ "title": "LOST IN TOKYO",
+ "lesson": "Know your exit",
+ "caption": "Clyde walked into Tokyo with no plan to get out. Sound like your last trade? #stickman #tradingpsychology #tokyo #exoticcenzo",
+ "shots": [
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 300,
+     "pose": "seat2",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "clyde",
+     "x": 680,
+     "pose": "eat",
+     "face": "l",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "THESE TINY PLANE SNACKS ARE ELITE."
+    ],
+    [
+     "cenzo",
+     "WE LAND IN TOKYO IN TEN MINUTES."
+    ],
+    [
+     "clyde",
+     "RELAX. I DON'T NEED A PLAN."
+    ]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "walk",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 700,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "CENZO! I WENT INTO THE STATION!"
+    ],
+    [
+     "clyde",
+     "THERE ARE TWO HUNDRED EXITS!"
+    ],
+    [
+     "cenzo",
+     "DID YOU CHECK WHERE TO GET OUT?"
+    ],
+    [
+     "clyde",
+     "THAT'S FOR LATER, RIGHT?"
+    ]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 230,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "maya",
+     "x": 540,
+     "pose": "stand",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 830,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "maya",
+     "I FILMED THAT. YOU LOOKED SO LOST."
+    ],
+    [
+     "cenzo",
+     "CLYDE, YOU WENT IN WITH NO EXIT."
+    ],
+    [
+     "cenzo",
+     "LIKE A STOP LOSS. SET IT BEFORE YOU ENTER."
+    ],
+    [
+     "clyde",
+     "WHO KEEPS FINDING US?!"
+    ]
+   ],
+   "card": "RULE 4\nKNOW YOUR EXIT"
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "maya",
+     "x": 310,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "maya",
+     "LOOKING FOR THE PAGE? SOLO WAS HERE."
+    ],
+    [
+     "cenzo",
+     "HE'S ALREADY GOT IT?"
+    ],
+    [
+     "maya",
+     "NO. HE LEFT YOU A NOTE."
+    ]
+   ],
+   "end": "WHAT DOES IT SAY?"
+  }
+ ],
+ "ep": 4
+}
