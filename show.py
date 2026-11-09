@@ -370,7 +370,7 @@ class Show:
             img = (img * (1 - .84 * k)).astype(np.uint8)
             text(img, "NEED A VIDEO\nLIKE THIS FOR\nYOUR BUSINESS?", 505, 420, 84, alpha=k)
             text(img, "ANIMATED ADS AND EXPLAINERS", 505, 800, 38, col=A, alpha=k, track=2, glow=.25)
-            text(img, "WITH REAL VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
+            text(img, "WITH CHARACTER VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
         if sh.get("credit"):
             k = ease(st / .25)
