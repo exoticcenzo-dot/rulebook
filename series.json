@@ -141,6 +141,14 @@
       "rule": "Know your exit",
       "cliffhanger": "Solo reached the page first and left them a note. Ep 5 must reveal the note.",
       "time": "10:00"
+    },
+    {
+      "ep": 5,
+      "date": "2026-11-10",
+      "time": "18:00",
+      "set": "tokyo",
+      "rule": "Don't chase",
+      "cliffhanger": "Back of Solo's note is in the Rule Book's handwriting and the ink is still wet. Ep 6 must answer whether Mtoriro's uncle is in Tokyo."
     }
   ]
 }

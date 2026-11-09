@@ -1,0 +1,188 @@
+{
+ "ep": 5,
+ "chapter": "TOKYO",
+ "title": "THE LAST TRAIN",
+ "lesson": "Don't chase",
+ "caption": "Clyde chased a train that had already left. Ever done that with a candle? Comment CAST ME to join the story. #stickman #tradingpsychology #tokyo #loadingreveal #exoticcenzo",
+ "shots": [
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "maya",
+     "x": 230,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "cenzo",
+     "x": 540,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "clyde",
+     "x": 830,
+     "pose": "stand",
+     "face": "l",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "maya",
+     "HERE. SOLO SAID TO GIVE YOU THIS."
+    ],
+    [
+     "cenzo",
+     "IT SAYS THE PAGE LEFT ON THE SIX O'CLOCK TRAIN."
+    ],
+    [
+     "clyde",
+     "THAT'S NOW! THE TRAIN IS LEAVING NOW!",
+     {
+      "mood": "shock"
+     }
+    ],
+    [
+     "clyde",
+     "PLAN LOADING... PLAN LOADED. RUN!",
+     {
+      "pose": "walk",
+      "mood": "focus"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "walk",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "maya",
+     "x": 600,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 840,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "IT LEFT! I RAN FIVE BLOCKS!"
+    ],
+    [
+     "clyde",
+     "I'LL CATCH IT AT THE NEXT STATION!"
+    ],
+    [
+     "cenzo",
+     "HE SAW IT MOVE. NOW HE CAN'T STOP."
+    ]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "card": "RULE 5\nDON'T CHASE",
+   "lines": [
+    [
+     "cenzo",
+     "YOU CHASED IT AFTER IT LEFT."
+    ],
+    [
+     "cenzo",
+     "SAME WITH A CANDLE THAT ALREADY RAN."
+    ],
+    [
+     "cenzo",
+     "MISS IT? WAIT. ANOTHER ONE COMES."
+    ]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "maya",
+     "x": 310,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "end": "UNCLE IN TOKYO?",
+   "lines": [
+    [
+     "maya",
+     "CENZO. TURN THE NOTE OVER."
+    ],
+    [
+     "cenzo",
+     "THAT'S THE WRITING FROM THE BOOK."
+    ],
+    [
+     "maya",
+     "AND THE INK IS STILL WET."
+    ]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "CLYDE STILL THINKS THAT TRAIN OWES HIM MONEY."
+    ]
+   ]
+  }
+ ],
+ "credit_song": "Worst Day"
+}
