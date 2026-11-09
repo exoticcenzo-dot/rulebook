@@ -14,3 +14,7 @@ Rules: see `rules_for_daily_scripts` in `series.json`. EXOTICCENZO alone teaches
 End card: set `next` to NEXT EPISODE TONIGHT for a 10:00 episode. Leave it unset for an 18:00 episode, which says NEXT EPISODE TOMORROW.
 
 Fans: `fans.json` tracks comments already read, the fan cast, ideas, and anyone who asked to be removed. A fan character is a `series.json` entry with their TikTok username as the name.
+
+Outro: after the shot with `end`, add one last shot with `"outro": true`: EXOTICCENZO alone, happy, in the same set, with 1-2 short lines. Either thank viewers or tell a joke that fits that episode's lesson.
+
+Trends: `trends.json` lists current trends mapped to the story. Use one when it fits naturally, as a scene or joke format. Never add copyrighted songs to the video file.

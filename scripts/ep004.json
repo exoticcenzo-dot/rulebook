@@ -152,6 +152,29 @@
     ]
    ],
    "end": "WHAT DOES IT SAY?"
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "MY STOP LOSS? LEAVING BEFORE CLYDE ORDERS."
+    ],
+    [
+     "cenzo",
+     "THANKS FOR WATCHING, FAM."
+    ]
+   ]
   }
  ],
  "ep": 4,

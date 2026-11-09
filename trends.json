@@ -1,0 +1,35 @@
+{
+  "checked": "2026-11-09",
+  "note": "Use a trend's format and joke inside the story. Do not put copyrighted songs in the video file.",
+  "sources": [
+    "https://www.socialpilot.co/blog/tiktok-trends",
+    "https://buffer.com/resources/trending-songs-tiktok/",
+    "https://virlo.ai/blog/current-tiktok-trends"
+  ],
+  "fits": [
+    {
+      "trend": "Rock paper scissors food challenge (rising)",
+      "use": "Cenzo and Clyde play for one plate at the Grand Hotel; Clyde bets the whole plate on one throw"
+    },
+    {
+      "trend": "Loading reveal (rising)",
+      "use": "Clyde's plan loading... then cut to the disaster, or a trade or disguise loading before a page heist"
+    },
+    {
+      "trend": "Clapping cat handshake deal (peaking)",
+      "use": "Solo offers a too-good deal and shakes on it"
+    },
+    {
+      "trend": "I'm so sorry reveal (current)",
+      "use": "Build-up to Clyde's masterpiece, final reveal is a mess, caption I'm so sorry"
+    },
+    {
+      "trend": "AI vs handmade (current)",
+      "use": "Plan vs reality: Cenzo's clean plan beside Clyde's real attempt"
+    },
+    {
+      "trend": "Be OK money confession (current)",
+      "use": "On-screen confession about money, cheerful punchline by Clyde"
+    }
+  ]
+}
