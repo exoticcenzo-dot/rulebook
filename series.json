@@ -1,14 +1,17 @@
 {
   "title": "THE RULE BOOK",
   "handle": "@EXOTICCENZO",
-  "premise": "EXOTICCENZO and his best friend CLYDE find an old trader's Rule Book with its pages scattered across the world. Every page sends them somewhere new, and every page is a lesson. Page 99 has never been found, and every answer reveals another missing page, so the story never ends.",
+  "premise": "EXOTICCENZO and his best friend CLYDE find an old trader's Rule Book with its pages scattered across the world. Every page sends them somewhere new, and every page is a lesson. They believe it has 99 pages. When they finally reach Page 99 they discover it was only Volume 1: the true Rule Book runs to 884 pages. Page 884 is never reached without another mystery opening, so the story never ends.",
   "rules_for_daily_scripts": [
     "EXOTICCENZO always teaches the lesson. Only he explains or names the rule; everyone else sets it up, reacts, or asks.",
     "Every episode teaches exactly one lesson, shown by something silly Clyde does in real life, then named as a trading or life rule.",
     "Never end the story. Every episode closes on a cliffhanger leading into the next one.",
     "A new location or chapter every 3 episodes. Mix countries with everyday scenes: eating, games, sofas, travel.",
     "Characters talk like friends. Lines stay under 50 characters. No profit promises and no specific buy or sell calls.",
-    "Add a new recurring character every chapter or two, and bring old ones back."
+    "Add a new recurring character every chapter or two, and bring old ones back.",
+    "Stay on the main story at all times: Cenzo, Clyde, the Rule Book, the hunt for pages, Solo's race, Mtoriro's missing uncle. Viewer ideas add to this story and never replace it.",
+    "Keep the 99 pages belief going until the story reaches Page 99, then reveal Volume 1 and the 884-page truth. Number each new page in order.",
+    "Fans can become recurring side characters. Roles must be positive or funny-friendly, never mocked or made a villain, and they never teach the lesson."
   ],
   "characters": {
     "cenzo": {
@@ -136,7 +139,8 @@
       "date": "2026-11-10",
       "set": "plane,tokyo",
       "rule": "Know your exit",
-      "cliffhanger": "Solo reached the page first and left them a note. Ep 5 must reveal the note."
+      "cliffhanger": "Solo reached the page first and left them a note. Ep 5 must reveal the note.",
+      "time": "10:00"
     }
   ]
 }

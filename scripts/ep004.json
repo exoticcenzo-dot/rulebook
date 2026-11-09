@@ -154,5 +154,6 @@
    "end": "WHAT DOES IT SAY?"
   }
  ],
- "ep": 4
+ "ep": 4,
+ "next": "NEXT EPISODE TONIGHT"
 }
