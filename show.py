@@ -187,7 +187,22 @@ def desk():
     for kx in (240, 690): rect(f, kx, 1104, kx + 170, 1120, (42, 42, 50, 255))
     return i, f
 
-BUILDERS = dict(desk=desk, mansion=mansion, hotel=hotel, gameroom=gameroom, plane=plane, tokyo=tokyo, paris=paris, dubai=dubai, harare=harare)
+def gym():
+    i = base((40, 42, 46), (20, 20, 24))
+    for x in range(60, W, 330):
+        rect(i, x, 380, x + 280, 1010, (86, 84, 76)); rect(i, x + 8, 388, x + 272, 1002, (120, 112, 96))
+        cv2.line(i, (x + 40, 960), (x + 170, 430), (150, 142, 124), 8, cv2.LINE_AA)
+    for lx in (220, 860):
+        rect(i, lx - 150, 240, lx + 150, 254, (235, 245, 255))
+    i = glow(i, 22, .6)
+    i[FLOOR - 30:] = base((58, 56, 60), (18, 18, 22))[FLOOR - 30:]
+    rect(i, 30, FLOOR - 260, 70, FLOOR - 30, (52, 54, 60)); rect(i, 960, FLOOR - 260, 1000, FLOOR - 30, (52, 54, 60)); rect(i, 30, FLOOR - 196, 1000, FLOOR - 182, (52, 54, 60))
+    for dx in range(100, 960, 96):
+        cv2.line(i, (dx - 24, FLOOR - 210), (dx + 24, FLOOR - 210), (120, 120, 128), 8, cv2.LINE_AA)
+        for e_ in (dx - 24, dx + 24): circle(i, (e_, FLOOR - 210), 14, (46, 46, 54))
+    return i, None
+
+BUILDERS = dict(gym=gym, desk=desk, mansion=mansion, hotel=hotel, gameroom=gameroom, plane=plane, tokyo=tokyo, paris=paris, dubai=dubai, harare=harare)
 
 def get_set(n):
     if n not in SETS: SETS[n] = BUILDERS[n]()
@@ -198,18 +213,27 @@ SEAT = 130
 POSES_X = {
     "sit": dict(hip=(0, -135), neck=(10, -282), head=(16, -342), hF=(70, -176), hB=(46, -170), fF=(112, 0), fB=(82, 0)),
     "seat": dict(hip=(0, -130), neck=(14, -278), head=(24, -338), hF=(96, -254), hB=(70, -240), fF=(90, 0), fB=(70, 0)),
+    "lift": dict(hip=(0, -176), neck=(2, -322), head=(6, -382), hF=(78, -470), hB=(-70, -470), fF=(42, 0), fB=(-42, 0)),
+    "curl": dict(hip=(0, -176), neck=(4, -322), head=(10, -382), hF=(56, -300), hB=(40, -176), fF=(34, 0), fB=(-34, 0)),
     "seat2": dict(hip=(0, -135), neck=(10, -282), head=(16, -342), hF=(70, -176), hB=(46, -170), fF=(112, 0), fB=(82, 0)),
     "eat": dict(hip=(0, -130), neck=(16, -278), head=(30, -336), hF=(76, -300), hB=(84, -238), fF=(90, 0), fB=(70, 0)),
     "game": dict(hip=(0, -135), neck=(22, -278), head=(42, -332), hF=(96, -212), hB=(78, -208), fF=(112, 0), fB=(82, 0)),
 }
 
 class Cam2:
-    z = Z
-    def __init__(s, ox, fy): s.ox, s.fy = ox, fy
-    def p(s, x, y): return (s.ox + x * Z, s.fy + y * Z)
+    def __init__(s, ox, fy, z=Z): s.ox, s.fy, s.z = ox, fy, z
+    def p(s, x, y): return (s.ox + x * s.z, s.fy + y * s.z)
+
+CURRENT_EP = 1
+def glowup(who, base_):
+    """Appearance by chapter: changes every 10 episodes, starting at episode 11."""
+    L = dict(base_); stage = max(0, (CURRENT_EP - 1) // 10)
+    if who == "cenzo": L["muscle"] = min(1.0, stage * .34)
+    if who == "clyde": L["scale"] = 1 + min(.09, stage * .03)
+    return L
 
 def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
-    L = CAST[c["who"]]
+    L = glowup(c["who"], CAST[c["who"]])
     pose = c["pose"]
     P = POSES.get(pose) or POSES_X.get(pose) or POSES["stand"]
     P = {k: v for k, v in P.items()}
@@ -218,6 +242,10 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
         P["fF"] = (w, 0); P["fB"] = (-w, 0); P["hF"] = (-w * .6, -176); P["hB"] = (w * .6, -176)
     if pose == "eat":
         P["hF"] = (70, -290 + math.sin(shot_t * 7) * 28)
+    if pose == "lift":
+        v = (math.sin(shot_t * 3.2) + 1) / 2 * 80; P["hF"] = (78, -390 - v); P["hB"] = (-70, -390 - v)
+    if pose == "curl":
+        v = (math.sin(shot_t * 4) + 1) / 2; P["hF"] = (56 - 8 * v, -190 - 130 * v)
     if pose == "game":
         j = math.sin(shot_t * 19) * 5; P["hF"] = (P["hF"][0] + j, P["hF"][1]); P["hB"] = (P["hB"][0] - j, P["hB"][1])
     if speaking:
@@ -231,7 +259,16 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     m = c.get("mood", "neutral")
     if speaking:
         m = "shock" if mouth else "neutral"
-    hand = E.fig(patch, Cam2(ox, fy), 0, 0, P, L, t, m)
+    hand = E.fig(patch, Cam2(ox, fy, Z * L.get("scale", 1)), 0, 0, P, L, t, m)
+    if pose == "lift":
+        hy_ = int(hand[1]); bx0 = int(ox - 240); bx1 = int(ox + 240)
+        cv2.line(patch, (bx0, hy_), (bx1, hy_), (150, 150, 158), 11, cv2.LINE_AA)
+        for px_ in (bx0 + 10, bx0 + 36, bx1 - 10, bx1 - 36):
+            cv2.line(patch, (px_, hy_ - 62), (px_, hy_ + 62), (60, 60, 70), 22, cv2.LINE_AA)
+    if pose == "curl":
+        hx_, hy_ = int(hand[0]), int(hand[1])
+        cv2.line(patch, (hx_ - 40, hy_), (hx_ + 40, hy_), (120, 120, 128), 11, cv2.LINE_AA)
+        for px_ in (hx_ - 40, hx_ + 40): cv2.circle(patch, (px_, hy_), 22, (60, 60, 70), -1, cv2.LINE_AA)
     if pose == "game":
         rect(patch, hand[0] - 18, hand[1] - 14, hand[0] + 58, hand[1] + 26, (36, 36, 44))
     if pose == "eat":
@@ -299,7 +336,8 @@ def trap_bed(N, sr, seed):
 
 class Show:
     def __init__(s, ep):
-        s.e = json.load(open(f"{HERE}/scripts/ep{ep:03d}.json")); s.n = ep
+        global CURRENT_EP
+        s.e = json.load(open(f"{HERE}/scripts/ep{ep:03d}.json")); s.n = ep; CURRENT_EP = ep
         t = 0; s.tl = []; s.ev = []; s.info = {}; s.sp = []
         for sh in s.e["shots"]:
             a = t; lines = []
@@ -378,7 +416,7 @@ class Show:
         if hk and t < 2.2:
             text(img, hk, 505, 175, 108, alpha=1 - ease((t - 2.05) / .15))
         else:
-            text(img, f"EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
+            text(img, f"CH {(s.n - 1) // 10 + 1}  ·  EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
         if cur:
             s.bubble(img, cur, t, cast, A)
         if x["card"] and x["card"][0] <= t < x["card"][1]:
@@ -424,7 +462,7 @@ class Show:
         cw = 30.5
         wd = int(max(len(l) for l in lines) * cw) + 96; ht = lh * n + 92
         seated = c["pose"] != "stand" and c["pose"] != "walk"
-        hy = FLOOR - (360 if seated else 412) * Z - 88
+        hy = FLOOR - (360 if seated else 412) * Z * glowup(who, CAST[who]).get("scale", 1) - 88
         hy = FLOOR - (FLOOR - hy) * getattr(s, "_z", 1)
         cx = clamp(c["x"], wd / 2 + 56, 930 - wd / 2)
         bot = min(hy, 980); y0 = int(bot - ht); x0 = int(cx - wd / 2)

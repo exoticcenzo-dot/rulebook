@@ -1,17 +1,17 @@
 {
   "title": "THE RULE BOOK",
   "handle": "@EXOTICCENZO",
-  "premise": "EXOTICCENZO and his best friend CLYDE find an old trader's Rule Book with its pages scattered across the world. Every page sends them somewhere new, and every page is a lesson. They believe it has 99 pages. When they finally reach Page 99 they discover it was only Volume 1: the true Rule Book runs to 884 pages. Page 884 is never reached without another mystery opening, so the story never ends.",
+  "premise": "ME, CLYDE & 1 MISSING RULE BOOK. EXOTICCENZO and his best friend CLYDE find only the gutted cover and one page of an old trader's Rule Book, and hunt its pages across the world. They believe it has 99 pages. Episodes 1-100 are THE SEARCH: the complete Rule Book is found at exactly Episode 100, where they discover it really has 884 pages. Episode 101 onward is PART TWO: discovering and understanding the book now in their hands, and it never concludes.",
   "rules_for_daily_scripts": [
     "Story first: this is an adventure about EXOTICCENZO, Clyde and the Rule Book. The plot, friendships, places and jokes lead every episode. The lesson comes out of what happens and mixes mindset, money and trading; never turn an episode into a trading class.",
     "EXOTICCENZO always teaches the lesson. Only he explains or names the rule; everyone else sets it up, reacts, or asks.",
     "Every episode teaches exactly one lesson, shown by something silly Clyde does in real life, then named as a trading or life rule.",
     "Never end the story. Every episode closes on a cliffhanger leading into the next one.",
-    "A new location or chapter every 3 episodes. Mix countries with everyday scenes: eating, games, sofas, travel.",
+    "A chapter is exactly 10 episodes and follows masterplan.chapters. Change location or setting about every 3 episodes inside the chapter, mixing countries with everyday scenes: eating, games, sofas, travel, the gym.",
     "Characters talk like friends. Lines stay under 50 characters. No profit promises and no specific buy or sell calls.",
     "Add a new recurring character every chapter or two, and bring old ones back.",
     "Stay on the main story at all times: Cenzo, Clyde, the Rule Book, the hunt for pages, Solo's race, Mtoriro's missing uncle. Viewer ideas add to this story and never replace it.",
-    "Keep the 99 pages belief going until the story reaches Page 99, then reveal Volume 1 and the 884-page truth. Number each new page in order.",
+    "The complete Rule Book must not be found, handed over, or fully recovered before Episode 100, and must be found at exactly Episode 100. Every episode moves the hunt forward, and chapter 10 builds to it. Number collected pages in order. Keep the 99-page belief until Episode 100, then reveal the true 884 pages.",
     "Fans can become recurring side characters. Roles must be positive or funny-friendly, never mocked or made a villain, and they never teach the lesson.",
     "Vary the teaching format: some episodes show a trading session first and the lesson comes after it; others have Cenzo teach through something happening in the scene.",
     "Hide the lesson: viewers should not be able to guess it until EXOTICCENZO says it. Do not foreshadow the rule, and put the reveal late in the episode as a surprise connection.",
@@ -20,7 +20,9 @@
     "Search: the first words of every caption name the mindset, money or trading topic people would search (for example: Can't stop overspending? or Trading with no exit plan?). A character says that topic out loud in the video, and the on-screen hook or rule card shows it. Use 2 or 3 specific hashtags only: one topic, one more topic, and #stickman. Never #fyp or #viral.",
     "Change something every 3 to 5 seconds and add a small surprise around the 15-second mark, such as a twist, a gag or a sudden turn.",
     "Cliffhangers must pay off in the next episode. Mostly end on an open question; use a mid-action cut only when the next episode truly delivers.",
-    "Write for shares: at least one line per episode a trader would send to a friend, and make Clyde's mistake instantly recognisable."
+    "Write for shares: at least one line per episode a trader would send to a friend, and make Clyde's mistake instantly recognisable.",
+    "Lessons get more advanced each chapter, as masterplan.chapters sets out. Each chapter's first episode opens a new stage with a noticeably upgraded look.",
+    "Glow-up: appearance is handled automatically by chapter from Episode 11. EXOTICCENZO gets bigger and more cut every chapter; Clyde barely changes, just slightly taller than Cenzo. Include one or two gym episodes each chapter, starting Episodes 8-10, so the change is earned. Use set gym with poses lift or curl. Gym scenes must still move the Rule Book hunt forward."
   ],
   "characters": {
     "cenzo": {
@@ -163,5 +165,81 @@
       "cliffhanger": "Back of Solo's note is in the Rule Book's handwriting and the ink is still wet. Ep 6 must answer whether Mtoriro's uncle is in Tokyo.",
       "credit_song": "Worst Day"
     }
-  ]
+  ],
+  "masterplan": {
+    "part_one": "THE SEARCH, episodes 1-100",
+    "part_two": "UNDERSTANDING THE BOOK, episode 101 onward",
+    "chapters": [
+      {
+        "ch": 1,
+        "eps": "1-10",
+        "place": "Home and Tokyo",
+        "lessons": "survive, fewer better trades, walk away, know your exit, don't chase",
+        "note": "Gym begins in episodes 8-10."
+      },
+      {
+        "ch": 2,
+        "eps": "11-20",
+        "place": "Paris",
+        "lessons": "position sizing, risk and reward, patience",
+        "note": "First glow-up."
+      },
+      {
+        "ch": 3,
+        "eps": "21-30",
+        "place": "Dubai",
+        "lessons": "greed, leverage, lifestyle traps",
+        "note": "Solo offers a tempting deal."
+      },
+      {
+        "ch": 4,
+        "eps": "31-40",
+        "place": "Harare",
+        "lessons": "routines, journaling, discipline",
+        "note": "Mtoriro's home; the uncle's trail heats up."
+      },
+      {
+        "ch": 5,
+        "eps": "41-50",
+        "place": "New York",
+        "lessons": "market structure, liquidity, news",
+        "note": "Build a new set."
+      },
+      {
+        "ch": 6,
+        "eps": "51-60",
+        "place": "Cape Town",
+        "lessons": "psychology of winning and losing streaks",
+        "note": "Build a new set. The crew is tested."
+      },
+      {
+        "ch": 7,
+        "eps": "61-70",
+        "place": "London",
+        "lessons": "backtesting, data, finding an edge",
+        "note": "Build a new set."
+      },
+      {
+        "ch": 8,
+        "eps": "71-80",
+        "place": "Istanbul",
+        "lessons": "systems, automation, rules over feelings",
+        "note": "Build a new set. Solo's true goal appears."
+      },
+      {
+        "ch": 9,
+        "eps": "81-90",
+        "place": "Solo's stronghold",
+        "lessons": "drawdown recovery, managing a real portfolio",
+        "note": "The biggest setback of the search."
+      },
+      {
+        "ch": 10,
+        "eps": "91-100",
+        "place": "The final trail",
+        "lessons": "everything combined",
+        "note": "All threads meet. Episode 100: the complete Rule Book is found and it has 884 pages."
+      }
+    ]
+  }
 }

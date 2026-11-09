@@ -88,13 +88,28 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
     hip, neck = P["hip"], P["neck"]
     sh = (mix(hip[0], neck[0], .93), mix(hip[1], neck[1], .93))
     gear = L.get("gear", [])
+    mb = L.get("muscle", 0)
     if "cape" in gear:
         wv = math.sin(t * 7) * 18
         quad(img, [Wp(sh), Wp((sh[0] + 12, sh[1])), Wp((hip[0] - 42 + wv * .4, hip[1] + 90)), Wp((hip[0] - 118 + wv, hip[1] + 70))], ac)
     for n, root, l1, l2, b in (("fB", hip, 96, 96, -1), ("hB", sh, 84, 84, 1)):
         j = ik(root, P[n], l1, l2, b)
-        line(img, Wp(root), Wp(j), 25 * z, bk); line(img, Wp(j), Wp(P[n]), 22 * z, bk)
-    line(img, Wp(hip), Wp(neck), 40 * z, suit)
+        line(img, Wp(root), Wp(j), (25 + 15 * mb) * z, bk); line(img, Wp(j), Wp(P[n]), (22 + 7 * mb) * z, bk)
+    line(img, Wp(hip), Wp(neck), (40 + 10 * mb) * z, suit)
+    if mb > 0:
+        sw, hw = 26 + 40 * mb, 22 + 4 * mb
+        quad(img, [Wp((sh[0] - sw, sh[1])), Wp((sh[0] + sw, sh[1])), Wp((hip[0] + hw, hip[1])), Wp((hip[0] - hw, hip[1]))], suit)
+        circle(img, Wp((sh[0] - sw, sh[1] + 6)), (20 + 14 * mb) * z, suit); circle(img, Wp((sh[0] + sw, sh[1] + 6)), (20 + 14 * mb) * z, suit)
+        cut = dim(suit, .62); tw = max(1.5, 3.5 * z)
+        lerp = lambda k: (mix(sh[0], hip[0], k), mix(sh[1], hip[1], k))
+        if mb >= .3:
+            cx, cy = lerp(.24)
+            line(img, Wp((cx - sw * .72, cy)), Wp((cx + sw * .72, cy)), tw, cut); line(img, Wp(lerp(.05)), Wp(lerp(.24)), tw, cut)
+        if mb >= .6:
+            line(img, Wp(lerp(.3)), Wp(lerp(.92)), tw, cut)
+            for k in (.46, .62, .78):
+                ax, ay = lerp(k); w_ = 20 + 6 * mb
+                line(img, Wp((ax - w_, ay)), Wp((ax + w_, ay)), tw, cut)
     # belt and tie
     line(img, Wp((hip[0] - 18, hip[1])), Wp((hip[0] + 18, hip[1])), 12 * z, ac)
     if "tie" in gear:
@@ -159,7 +174,7 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
             cv2.circle(img, ipt(e), int(10.5 * z * 8), ac, max(1, int(4 * z)), cv2.LINE_AA, 3)
     for n, root, l1, l2, b in (("fF", hip, 96, 96, -1), ("hF", sh, 84, 84, 1)):
         j = ik(root, P[n], l1, l2, b)
-        line(img, Wp(root), Wp(j), 28 * z, suit); line(img, Wp(j), Wp(P[n]), 24 * z, suit)
+        line(img, Wp(root), Wp(j), (28 + 18 * mb) * z, suit); line(img, Wp(j), Wp(P[n]), (24 + 9 * mb) * z, suit)
         circle(img, Wp(P[n]), 15 * z, ac if n == "hF" else suit)
     return Wp(P["hF"])
 
