@@ -424,7 +424,7 @@ class Show:
             add(fx, x["a"], kick(.4), .4)
         sp = np.zeros(N, np.float32)
         for a, y in s.sp: add(sp, a, y)
-        z = m * .40 + fx * .26 + sp; z *= np.minimum(1, (s.D - t) / .3)
+        z = m * .15 + fx * .16 + sp; z *= np.minimum(1, (s.D - t) / .3)
         z = np.tanh(z * 1.05) / np.tanh(1.05) * .94
         pcm = (np.stack([z, z], 1) * 32767).astype(np.int16)
         with wave.open(path, "wb") as w:
