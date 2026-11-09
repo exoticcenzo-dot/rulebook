@@ -1,0 +1,11 @@
+{
+  "how": "Tracks stats and milestones already announced, so alerts only fire once.",
+  "levels": {
+    "video_views": [100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000],
+    "video_likes": [10, 50, 100, 500, 1000, 5000, 10000, 50000],
+    "followers": [10, 50, 100, 250, 500, 1000, 2500, 5000, 10000, 50000, 100000],
+    "total_likes": [100, 500, 1000, 5000, 10000, 50000, 100000]
+  },
+  "announced": [],
+  "alerted_comment_ids": []
+}
