@@ -309,7 +309,32 @@ def home():
     sofa(i, 160, 900, FLOOR, (60, 130, 170), (42, 100, 135))
     return i, None
 
-BUILDERS.update(harare=harare, bulawayo=bulawayo, train=train, ship=ship, home=home)
+def alley():
+    i = base((30, 26, 22), (10, 10, 12))
+    for x, w, h in ((-10, 300, 900), (280, 250, 780), (520, 270, 960), (780, 320, 860)):
+        rect(i, x, FLOOR - h, x + w, FLOOR, (40, 44, 50))
+        for k in range(40):
+            r_ = random.Random(x * k); bx, by = r_.randint(x, x + w - 50), r_.randint(FLOOR - h, FLOOR - 60); rect(i, bx, by, bx + 44, by + 20, (46 + r_.randint(0, 14), 50, 58))
+        for wy in range(FLOOR - h + 60, FLOOR - 240, 150): rect(i, x + 60, wy, x + 130, wy + 80, (22, 24, 28)); rect(i, x + 60, wy + 76, x + 130, wy + 80, (70, 70, 74))
+    cv2.circle(i, (560, 700), 240, (40, 70, 110), -1, cv2.LINE_AA); i = cv2.GaussianBlur(i, (0, 0), 2)
+    rect(i, 540, 520, 552, FLOOR, (30, 30, 34)); circle(i, (546, 510), 18, (120, 210, 255))
+    rect(i, 780, FLOOR - 150, 930, FLOOR - 28, (40, 58, 56)); rect(i, 780, FLOOR - 150, 930, FLOOR - 134, (60, 80, 78))
+    for x in (120, 640): rect(i, x, FLOOR - 92, x + 76, FLOOR - 28, (34, 38, 44))
+    rect(i, 0, FLOOR - 26, W, H, (26, 28, 32))
+    return i, None
+
+def villa():
+    i = base((200, 150, 95), (170, 205, 235))
+    rect(i, 80, 700, 1000, FLOOR - 26, (236, 240, 244)); quad(i, [(40, 700), (1040, 700), (920, 560), (160, 560)], (70, 90, 130))
+    for x in (160, 400, 640, 830): rect(i, x, 780, x + 120, 1090, (120, 130, 110)); rect(i, x + 8, 788, x + 112, 1082, (190, 170, 120))
+    for x in range(110, 1000, 120): rect(i, x, 1120, x + 14, FLOOR - 26, (245, 245, 248))
+    for tx in (50, 1040):
+        for k in range(5): cv2.ellipse(i, (tx, FLOOR - 120 - k * 90), (56 - k * 8, 64), 0, 0, 360, (50, 110, 60), -1, cv2.LINE_AA)
+    rect(i, 0, FLOOR - 26, W, H, (90, 130, 90))
+    rect(i, 0, FLOOR + 120, W, H, (150, 158, 165))
+    return i, None
+
+BUILDERS.update(alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, ship=ship, home=home)
 
 def get_set(n):
     if n not in SETS: SETS[n] = BUILDERS[n]()
@@ -370,39 +395,46 @@ def npc(i, x, y, sc, skin, shirt, pants, phase, kind="walk", dir_=1, hat=None):
         quad(i, [(hc[0] - hd, hc[1] - 4 * sc), (hc[0] - hd * .7, hc[1] - hd * 1.1), (hc[0] + hd * .7, hc[1] - hd * 1.1), (hc[0] + hd, hc[1] - 4 * sc)], hat)
     circle(i, (hc[0] + 7 * sc * dir_, hc[1] - 3 * sc), max(1.2, 2.6 * sc), (15, 15, 18))
 
+LOCAL_STYLE = {"tokyo": [(30, 30, 34), (60, 60, 66), (235, 235, 240), (160, 90, 200), (70, 170, 220)],
+ "paris": [(40, 44, 60), (120, 130, 150), (230, 225, 215), (40, 40, 46), (70, 60, 130)],
+ "dubai": [(245, 245, 245), (230, 235, 240), (30, 30, 36), (210, 225, 235)],
+ "alley": [(26, 26, 30), (42, 44, 50), (34, 36, 54), (20, 20, 24)],
+ "villa": [(230, 230, 235), (40, 90, 170), (190, 200, 210), (30, 40, 60)]}
+
 def extras(img, sh, t, ep):
     """Everyday people who belong in this place; a different crowd each episode."""
     name = sh["set"]; shot_s = abs(hash(("x", name, ep, sh.get("card", "")))) % 100000
     r = random.Random(ep * 97 + shot_s)
-    outdoors = name in ("tokyo", "paris", "dubai", "harare", "bulawayo", "port")
+    outdoors = name in ("tokyo", "paris", "dubai", "harare", "bulawayo", "port", "alley", "villa")
     want = sh.get("crowd", 0)
-    pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo") else SKIN + SKIN[3:]), r.choice(CLOTH), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
+    style = LOCAL_STYLE.get(name, CLOTH)
+    pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo", "alley") else SKIN + SKIN[3:]), r.choice(style), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
     if outdoors:
         for k in range(want or (r.randint(14, 22) if name in ("harare", "bulawayo") else r.randint(12, 18))):
             skin, shirt, pants = pick(); layer = r.random()
-            y = FLOOR - 95 - layer * 200; sc = .62 + (1 - layer) * .55; spd = r.uniform(26, 62) * r.choice((-1, 1)); x0 = r.uniform(0, W + 200)
+            y = FLOOR - 22 - layer * 34; sc = .78 + (1 - layer) * .34; spd = r.uniform(26, 62) * r.choice((-1, 1)); x0 = r.uniform(0, W + 200)
             x = (x0 + spd * t) % (W + 240) - 120
-            npc(img, x, y, sc, skin, shirt, pants, t * (4 + r.random() * 3) + k, r.choice(("walk", "walk", "walk", "stand")), 1 if spd > 0 else -1, r.choice((None, None, r.choice(CLOTH))))
+            npc(img, x, y, sc, skin, shirt, pants, t * (4 + r.random() * 3) + k, r.choice(("walk", "walk", "walk", "stand")), 1 if spd > 0 else -1, r.choice((None, None, r.choice(CLOTH))) if name != "alley" else (28, 28, 34))
     elif name == "gym":
         spots = [(120, "run"), (300, "press"), (470, "squat"), (640, "press"), (800, "squat"), (960, "run")]
         for k, (x, kind) in enumerate(spots):
-            skin, shirt, pants = pick(); npc(img, x + r.uniform(-25, 25), FLOOR - 230, .78, skin, shirt, pants, t * (2.6 + k * .3) + k, kind)
+            skin, shirt, pants = pick(); npc(img, x + r.uniform(-25, 25), FLOOR - 34, .82, skin, shirt, pants, t * (2.6 + k * .3) + k, kind)
         for k in range(want or 3):
             skin, shirt, pants = pick(); x = (r.uniform(0, W) + r.uniform(20, 50) * t) % (W + 200) - 100
-            npc(img, x, FLOOR - 130, .95, skin, shirt, pants, t * 5 + k, "walk")
+            npc(img, x, FLOOR - 26, .95, skin, shirt, pants, t * 5 + k, "walk")
         ix = 540 + math.sin(t * .8) * 260
-        npc(img, ix, FLOOR - 170, 1.0, SKIN[1], (30, 30, 200), (40, 40, 48), t * 4, "walk", 1, (30, 30, 200))
-        text(img, "COACH", ix, FLOOR - 410, 22, col=(30, 30, 220), track=1, glow=0)
+        npc(img, ix, FLOOR - 30, 1.0, SKIN[1], (30, 30, 200), (40, 40, 48), t * 4, "walk", 1, (30, 30, 200))
+        text(img, "COACH", ix, FLOOR - 265, 22, col=(30, 30, 220), track=1, glow=0)
     elif name == "hotel":
         for k, x in enumerate((110, 330, 760, 970)):
-            skin, shirt, pants = pick(); npc(img, x, FLOOR - 340, .72, skin, shirt, pants, t * 3 + k, "sit", 1 if k % 2 == 0 else -1)
-            rect(img, x - 60, FLOOR - 322, x + 60, FLOOR - 300, (225, 228, 235))
+            skin, shirt, pants = pick(); npc(img, x, FLOOR - 140, .72, skin, shirt, pants, t * 3 + k, "sit", 1 if k % 2 == 0 else -1)
+            rect(img, x - 62, FLOOR - 120, x + 62, FLOOR - 100, (225, 228, 235)); rect(img, x - 8, FLOOR - 100, x + 8, FLOOR - 30, (120, 120, 128))
         wx = (r.uniform(0, W) + 70 * t) % (W + 200) - 100
-        npc(img, wx, FLOOR - 205, .95, SKIN[0], (240, 240, 245), (28, 28, 34), t * 5, "tray"); rect(img, wx + 2, FLOOR - 395, wx + 60, FLOOR - 387, (205, 205, 212))
+        npc(img, wx, FLOOR - 30, .95, SKIN[0], (240, 240, 245), (28, 28, 34), t * 5, "tray"); rect(img, wx + 2, FLOOR - 222, wx + 60, FLOOR - 214, (205, 205, 212))
     elif name in ("plane", "train"):
-        for k in range(want or 6):
-            skin, shirt, pants = pick(); x = 80 + k * 180 + r.uniform(-20, 20)
-            npc(img, x, FLOOR - 225, .8, skin, shirt, pants, t * 2 + k, "sit", r.choice((1, -1)))
+        for k in range(want or 3):
+            skin, shirt, pants = pick(); x = (30, 500, 1040)[k % 3]
+            rect(img, x - 62, FLOOR - 380, x + 62, FLOOR - 40, (92, 72, 60)); npc(img, x, FLOOR - 175, .92, skin, shirt, pants, t * 2 + k, "sit", r.choice((1, -1)))
         cx = (r.uniform(0, W) + 44 * t) % (W + 200) - 100
         npc(img, cx, FLOOR - 40, 1.05, SKIN[2], (150, 60, 40), (40, 30, 30), t * 4, "tray", 1, (150, 60, 40))
     elif name == "ship":
@@ -420,11 +452,32 @@ class Cam2:
     def p(s, x, y): return (s.ox + x * s.z, s.fy + y * s.z)
 
 CURRENT_EP = 1
+def hash_str(t_): return sum(ord(c) * (i + 1) for i, c in enumerate(t_))
+# Outfit eras, every 20 episodes. Styles only, no real logos.
+OUTFITS = {
+ "cenzo": [dict(top=(34, 34, 40), pants=(46, 46, 54), gear=["chain"]),
+           dict(top=(150, 55, 120), pants=(38, 38, 44), gear=["chain", "fur"], fur=(24, 24, 28)),
+           dict(top=(232, 232, 236), pants=(32, 32, 38), gear=["chain"]),
+           dict(top=(26, 26, 30), pants=(26, 26, 30), gear=["chain", "fur"], fur=(60, 190, 240))],
+ "clyde": [dict(top=(40, 130, 240), pants=(238, 238, 240), gear=["chain", "headphones"]),
+           dict(top=(70, 220, 190), pants=(160, 90, 220), gear=["chain", "fur"], fur=(235, 225, 245)),
+           dict(top=(220, 110, 220), pants=(245, 245, 245), gear=["chain"]),
+           dict(top=(245, 245, 245), pants=(240, 170, 60), gear=["chain", "fur"], fur=(90, 220, 240))],
+}
 def glowup(who, base_):
     """Appearance by chapter: changes every 10 episodes, starting at episode 11."""
     L = dict(base_); stage = max(0, (CURRENT_EP - 1) // 10)
     if who == "cenzo": L["muscle"] = min(1.0, stage * .34)
     if who == "clyde": L["scale"] = 1 + min(.09, stage * .03)
+    look = (CURRENT_EP - 1) // 20
+    fits = OUTFITS.get(who)
+    if fits and look > 0:
+        fit = fits[min(look, len(fits)) - 1]
+        L.update({k: v for k, v in fit.items() if k != "gear"})
+        L["gear"] = fit.get("gear", L.get("gear", []))
+    elif not fits and look > 0:
+        r_ = random.Random(hash_str(who) + look * 31)
+        L["top"], L["pants"] = r_.choice(CLOTH), r_.choice(CLOTH)
     return L
 
 def draw_char(canvas, c, t, speaking, shot_t, mouth=False):

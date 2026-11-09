@@ -10,11 +10,13 @@
     "PACING. About 20-25 seconds of story, 8-10 lines at most, each under 50 characters. Change something every 3 to 5 seconds and add a small surprise near 15 seconds.",
     "ENDING. Close on a cliffhanger that pays off next episode, mostly an open question; cut mid-action only when the next episode truly delivers. Then the outro: EXOTICCENZO alone, thanking viewers or telling a fresh joke that fits the lesson. The Future credit follows automatically.",
     "WORLD AND CAST. EXOTICCENZO and Clyde live together in Zimbabwe, between Harare and Bulawayo. Home is the base and the most-used setting. Every few episodes they travel abroad by train, plane or ship, then return home. Everyday scenes are constant: eating, games, sofas, kombis, shops, the gym, trading sessions. Every place is full of ordinary people going about their lives. Give background people moments of their own when funny. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
-    "THE VIBE. EXOTICCENZO and Clyde are permanently chilled, shown only by red eyes and jokes: sleepy, hungry, Clyde forgetting what he was saying. Keep it implied. Never show, name or refer to weed, smoking or any drug in the video, caption or hashtags.",
+    "THE VIBE. EXOTICCENZO and Clyde are permanently chilled, shown only by red eyes and jokes: sleepy, hungry, Clyde forgetting what he was saying. Shady dealers exist in the world, in dark alleys and, unexpectedly, in nice houses (sets alley, villa), but keep it implied: only unmarked packages, whispers and the word dealer. Never show, name or refer to weed, smoking or any drug by name in the video, caption or hashtags.",
     "GLOW-UP. Appearance changes automatically every 10 episodes from Episode 11: EXOTICCENZO gets bigger and more cut; Clyde barely changes, just slightly taller than Cenzo. One or two gym episodes each chapter, starting Episodes 8-10, so it feels earned. Gym scenes still move the hunt forward.",
     "FANS. Commenters can become recurring side characters. Roles are positive or friendly-funny; never mock them, make them villains or let them teach.",
     "CAPTIONS AND SEARCH. The first words name the mindset, money or trading topic people search, such as Can't stop overspending? or Trading with no exit plan? A character says it out loud, and the hook or rule card shows it. Ask an easy question such as Yes or no? Use 2 or 3 specific hashtags, ending with #stickman, never #fyp or #viral. Write at least one line per episode someone would send to a friend.",
-    "SAFETY. No profit promises, no specific buy or sell calls, and no paid-service adverts until Vincenzo turns them back on."
+    "SAFETY. No profit promises, no specific buy or sell calls, and no paid-service adverts until Vincenzo turns them back on.",
+    "THE LONG GAME. Each chapter sets up one thing viewers expect at its start, then something unexpected happens at the last moment in its final episodes. Across the chapter, plant small hidden hints in the background or in throwaway lines that viewers will not notice. Characters seen in separate episodes later turn out to be connected. In the payoff, EXOTICCENZO links the hints together: it becomes a lesson nobody saw coming and uncovers a Rule Book clue. Record the planned twist and each hint in series.json plot_threads with its episode, and pay every one off.",
+    "LOOKS. Every 20 episodes, EXOTICCENZO's and Clyde's outfits change automatically: EXOTICCENZO in a Future-inspired style, Clyde in a Gunna-inspired style, generic with no real logos. Other characters wear random outfits by era, and background people dress for the place they are in, so research what is worn there when building a new country. Everyone stands on the ground in a place that makes sense."
   ],
   "characters": {
     "cenzo": {
@@ -252,5 +254,6 @@
         "locations": "Harare, Bulawayo, Great Zimbabwe"
       }
     ]
-  }
+  },
+  "plot_threads": []
 }

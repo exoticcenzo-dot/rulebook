@@ -89,12 +89,14 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
     sh = (mix(hip[0], neck[0], .93), mix(hip[1], neck[1], .93))
     gear = L.get("gear", [])
     mb = L.get("muscle", 0)
+    top = tuple(L.get("top", suit)); pants = tuple(L.get("pants", suit)); suit = top
     if "cape" in gear:
         wv = math.sin(t * 7) * 18
         quad(img, [Wp(sh), Wp((sh[0] + 12, sh[1])), Wp((hip[0] - 42 + wv * .4, hip[1] + 90)), Wp((hip[0] - 118 + wv, hip[1] + 70))], ac)
     for n, root, l1, l2, b in (("fB", hip, 96, 96, -1), ("hB", sh, 84, 84, 1)):
         j = ik(root, P[n], l1, l2, b)
-        line(img, Wp(root), Wp(j), (25 + 15 * mb) * z, bk); line(img, Wp(j), Wp(P[n]), (22 + 7 * mb) * z, bk)
+        bk_ = dim(pants) if n[0] == "f" else dim(top)
+        line(img, Wp(root), Wp(j), (25 + 15 * mb) * z, bk_); line(img, Wp(j), Wp(P[n]), (22 + 7 * mb) * z, bk_)
     line(img, Wp(hip), Wp(neck), (40 + 10 * mb) * z, suit)
     if mb > 0:
         sw, hw = 26 + 40 * mb, 22 + 4 * mb
@@ -119,6 +121,14 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
         line(img, Wp((neck[0] - 18, neck[1] + 10)), Wp((neck[0] + 20, neck[1] + 8)), 20 * z, ac)
         wv = math.sin(t * 8) * 10
         line(img, Wp((neck[0] - 12, neck[1] + 14)), Wp((neck[0] - 74, neck[1] + 34 + wv)), 15 * z, ac)
+    if "fur" in gear:
+        for a_ in range(-3, 4):
+            circle(img, Wp((neck[0] + a_ * 16, neck[1] + 8 + abs(a_) * 2)), 19 * z, tuple(L.get("fur", (235, 235, 240))))
+    if "chain" in gear:
+        for k_ in range(9):
+            a_ = -1 + k_ / 4
+            circle(img, Wp((neck[0] + a_ * 26, neck[1] + 16 + (1 - a_ * a_) * 38)), 5.2 * z, (55, 195, 245))
+        circle(img, Wp((neck[0], neck[1] + 60)), 11 * z, (70, 215, 255))
     hc, R = Wp(P["head"]), 46 * z
     hair = L.get("hair")
     if hair == "afro":
@@ -174,7 +184,8 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
             cv2.circle(img, ipt(e), int(10.5 * z * 8), ac, max(1, int(4 * z)), cv2.LINE_AA, 3)
     for n, root, l1, l2, b in (("fF", hip, 96, 96, -1), ("hF", sh, 84, 84, 1)):
         j = ik(root, P[n], l1, l2, b)
-        line(img, Wp(root), Wp(j), (28 + 18 * mb) * z, suit); line(img, Wp(j), Wp(P[n]), (24 + 9 * mb) * z, suit)
+        c_ = pants if n[0] == "f" else top
+        line(img, Wp(root), Wp(j), (28 + 18 * mb) * z, c_); line(img, Wp(j), Wp(P[n]), (24 + 9 * mb) * z, c_)
         circle(img, Wp(P[n]), 15 * z, ac if n == "hF" else suit)
     return Wp(P["hF"])
 

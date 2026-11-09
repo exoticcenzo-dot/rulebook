@@ -5,7 +5,7 @@ One new episode per run, two runs a day. Episodes publish at 10:00 and 18:00 Afr
 ## Script format
 Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, credit_song, optional next, and shots[]. Each shot has set, cast (who, x, pose, face, mood), lines ([who, text, optional {mood, pose}]), and optional card, end, outro.
 - who: cenzo, clyde, nia (displays MTORIRO), zeke (displays SOLO), maya (displays JAMAL). New characters go in `series.json` and `voices.py`.
-- sets: harare, bulawayo, home, mansion, hotel, gameroom, gym, desk, plane, train, ship, tokyo, paris, dubai. Build every new country before using it, with its landmarks, shops and street life. Add new ones in `show.py` BUILDERS.
+- sets: harare, bulawayo, home, alley, villa, mansion, hotel, gameroom, gym, desk, plane, train, ship, tokyo, paris, dubai. Build every new country before using it, with its landmarks, shops and street life. Add new ones in `show.py` BUILDERS.
 - poses: stand, walk, sit, seat, seat2, eat, game, lift, curl (gym: lift or curl; desk: seat). Moods: neutral, happy, smug, shock, angry, focus.
 - x between 200 and 850.
 - Background people appear automatically and differ each episode. For a bigger crowd set `crowd` on a shot, for example 40; Episode 100 uses 120 or more on outdoor sets.
