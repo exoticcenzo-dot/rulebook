@@ -18,3 +18,5 @@ Fans: `fans.json` tracks comments already read, the fan cast, ideas, and anyone 
 Outro: after the shot with `end`, add one last shot with `"outro": true`: EXOTICCENZO alone, happy, in the same set, with 1-2 short lines. Either thank viewers or tell a joke that fits that episode's lesson.
 
 Trends: `trends.json` lists current trends mapped to the story. Use one when it fits naturally, as a scene or joke format. Never add copyrighted songs to the video file.
+
+Music and credit: every video plays a freshly generated original trap beat. Set `credit_song` to a Future song whose mood or title fits the episode (for example Honest, Mask Off, Turn On the Lights, Worst Day, Magic, Tony Montana). Do not use the real recording or copy its melody. Do not reuse the same song within 7 episodes. The credit card is added automatically after the outro.

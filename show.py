@@ -233,6 +233,54 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
 
 def duration(tx): return .65 + len(tx) / 16.0
 
+def trap_bed(N, sr, seed):
+    """Original dark trap instrumental. Generated fresh per episode; no existing song or melody."""
+    r = np.random.default_rng(1000 + seed)
+    bpm = 132 + int(r.integers(0, 17)); step = 60 / bpm / 4
+    root = 41.2 * 2 ** (int(r.integers(0, 7)) / 12)
+    scale = [0, 3, 5, 7, 10]
+    out_ = np.zeros(N, np.float32)
+    def put(at, x, g=1):
+        i = int(at * sr); j = min(N, i + len(x))
+        if 0 <= i < N: out_[i:j] += x[:j - i] * g
+    def env(d, k):
+        u = np.arange(int(d * sr)) / sr; return u, np.exp(-u * k)
+    bars = int(N / sr / (step * 16)) + 2
+    bass = [int(r.choice(scale)) for _ in range(4)]
+    bass[0] = 0
+    pat808 = [0, 3, 6, 10, 11, 14]
+    bell = [12 + int(r.choice(scale)) for _ in range(8)]
+    bell_steps = sorted(int(v) for v in r.choice(32, 8, replace=False))
+    for b in range(bars):
+        t0 = b * 16 * step
+        note = bass[b % 4]
+        for st_ in pat808:
+            if r.random() < .12: continue
+            d = step * 3.4; u, e = env(d, 2.2)
+            f = root * 2 ** (note / 12)
+            gl = np.cumsum(np.full(len(u), f)) / sr
+            w = np.tanh(2.4 * np.sin(2 * np.pi * gl)) * e
+            put(t0 + st_ * step, w.astype(np.float32), .85)
+        u, e = env(.2, 26)
+        nz = r.normal(0, 1, len(u)).astype(np.float32)
+        snare = (nz * .8 + np.sin(2 * np.pi * 190 * u) * .5) * e
+        put(t0 + 8 * step, snare, .55)
+        roll = int(r.integers(0, 4))
+        for h in range(16):
+            sub = 3 if h in (6, 14) and roll else 1
+            for q in range(sub):
+                u, e = env(.05, 150)
+                hat = r.normal(0, 1, len(u)).astype(np.float32) * e
+                hat = np.diff(hat, prepend=0)
+                put(t0 + (h + q / sub) * step, hat, .26 if h % 2 == 0 else .15)
+        if b % 2 == 0:
+            for k, st2 in enumerate(bell_steps):
+                u, e = env(.7, 5)
+                f = root * 8 * 2 ** (bell[k] / 12)
+                w = (np.sin(2 * np.pi * f * u) + .4 * np.sin(2 * np.pi * f * 2.76 * u)) * e
+                put(t0 + st2 * step, w.astype(np.float32), .13)
+    return out_ / max(1e-6, np.abs(out_).max()) * .8
+
 class Show:
     def __init__(s, ep):
         s.e = json.load(open(f"{HERE}/scripts/ep{ep:03d}.json")); s.n = ep
@@ -252,6 +300,10 @@ class Show:
                 s.sp.append((t + .15, x)); s.sp.append((t + .25 + len(x) / 44100, y))
                 d = max(2.8, (len(x) + len(y)) / 44100 + .75); end = (t, t + d); t += d
             s.tl.append(dict(a=a, b=t, sh=sh, lines=lines, card=card, end=end))
+        if s.e.get("credit_song"):
+            x = V.say("cenzo", "RESPECT TO FUTURE. REGARDS, EXOTICCENZO.")
+            s.sp.append((t + .25, x)); d = max(4.2, len(x) / 44100 + 1.4)
+            s.tl.append(dict(a=t, b=t + d, sh=dict(set=s.e["shots"][-1]["set"], cast=[], lines=[], credit=True), lines=[], card=None, end=None)); t += d
         s.D = t + .15
 
     def shot_at(s, t):
@@ -309,6 +361,17 @@ class Show:
             if t > x["end"][0] + .9:
                 text(img, s.next, 505, 760, 44, col=A, alpha=ease((t - x["end"][0] - .9) / .2), track=4)
                 text(img, S["handle"], 505, 850, 52, alpha=ease((t - x["end"][0] - 1.1) / .2), track=5)
+        if sh.get("credit"):
+            k = ease(st / .25)
+            img = (img * (1 - .86 * k)).astype(np.uint8)
+            text(img, "REGARDS,", 505, 410, 46, alpha=k, track=4)
+            text(img, "EXOTICCENZO", 505, 480, 74, col=A, alpha=k, track=4)
+            text(img, "BEAT INSPIRED BY", 505, 660, 34, alpha=k, track=4, glow=.2)
+            text(img, '"' + s.e["credit_song"].upper() + '"', 505, 720, 52, alpha=k, track=2)
+            text(img, "FUTURE", 505, 830, 86, col=A, alpha=k, track=8)
+            text(img, "NAYVADIUS DEMUN WILBURN", 505, 950, 38, alpha=k, track=2, glow=.2)
+            text(img, "AKA PLUTO · FUTURE HENDRIX · MEATHEAD", 505, 1010, 28, alpha=k, track=1, glow=.2)
+            text(img, "ORIGINAL INSTRUMENTAL", 505, 1090, 26, alpha=k, track=3, glow=.15)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
         return img
@@ -354,24 +417,14 @@ class Show:
         def kick(d=.3):
             q = np.arange(int(d * sr)) / sr
             return np.sin(2 * np.pi * (46 * q + 7 * (1 - np.exp(-q * 34)))) * np.exp(-q * 13)
-        root = 110 * 2 ** ((s.n * 3 % 7 - 3) / 12)
-        ch = [(1, 1.2, 1.5), (1.335, 1.6, 2), (.89, 1.12, 1.335), (1.122, 1.335, 1.68)]
-        for b in range(int(s.D / 3) + 1):
-            a = b * 3; e = min(s.D, a + 3.4); idx = (t >= a) & (t < e); q = t[idx] - a
-            env = np.minimum(q / .4, 1) * np.minimum((e - t[idx]) / .4, 1)
-            for r in ch[b % 4]:
-                m[idx] += env * (.05 * np.sin(2 * np.pi * root * r * q) + .018 * np.sin(2 * np.pi * root * r * 2.003 * q))
-        q = 0.
-        bt = 60 / 96
-        while q < s.D:
-            add(m, q, kick(), .3); q += bt
+        m += trap_bed(N, sr, s.n)
         for x in s.tl:
             if x["card"]: add(fx, x["card"][0], kick(.9), 1)
             if x["end"]: add(fx, x["end"][0], kick(1.0), 1)
             add(fx, x["a"], kick(.4), .4)
         sp = np.zeros(N, np.float32)
         for a, y in s.sp: add(sp, a, y)
-        z = m * .26 + fx * .32 + sp; z *= np.minimum(1, (s.D - t) / .3)
+        z = m * .40 + fx * .26 + sp; z *= np.minimum(1, (s.D - t) / .3)
         z = np.tanh(z * 1.05) / np.tanh(1.05) * .94
         pcm = (np.stack([z, z], 1) * 32767).astype(np.int16)
         with wave.open(path, "wb") as w:
