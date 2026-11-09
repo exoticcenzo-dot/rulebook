@@ -156,6 +156,15 @@
       "rule": "Don't chase",
       "cliffhanger": "Back of Solo's note is in the Rule Book's handwriting and the ink is still wet. Ep 6 must answer whether Mtoriro's uncle is in Tokyo.",
       "credit_song": "Worst Day"
+    },
+    {
+      "ep": 6,
+      "date": "2026-11-11",
+      "time": "10:00",
+      "set": "tokyo",
+      "rule": "Sure is not proof",
+      "cliffhanger": "Boarding pass found at the car park: Mtoriro's uncle flew Tokyo to Harare this morning, and the seat next to his was Solo's. Ep 7 must explain why he travelled with Solo.",
+      "credit_song": "Honest"
     }
   ],
   "masterplan": {

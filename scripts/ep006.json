@@ -1,0 +1,72 @@
+{
+ "ep": 6,
+ "chapter": "TOKYO",
+ "title": "THE ADDRESS",
+ "lesson": "Sure is not proof",
+ "hook": "ALL HIS CASH\nGONE?!",
+ "caption": "Buying trading tips from strangers? Clyde paid a man for an address. It was a car park. Ever trusted a tip from the group chat? Yes or no? #tradingpsychology #tradingtips #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "credit_song": "Honest",
+ "shots": [
+  {
+   "set": "tokyo",
+   "crowd": 40,
+   "cast": [
+    {"who": "clyde", "x": 280, "pose": "walk", "face": "r", "mood": "happy"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "lines": [
+    ["clyde", "WET INK! THE BOOK'S WRITER IS IN TOKYO!"],
+    ["cenzo", "CLYDE, MTORIRO'S UNCLE VANISHED."]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {"who": "clyde", "x": 240, "pose": "stand", "face": "r", "mood": "happy"},
+    {"who": "maya", "x": 590, "pose": "stand", "face": "l", "mood": "smug"},
+    {"who": "cenzo", "x": 840, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "A MAN SOLD ME HIS ADDRESS! ALL MY MONEY!"],
+    ["maya", "CLYDE. THAT ADDRESS IS A CAR PARK."]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "card": "RULE 6\nSURE IS\nNOT PROOF",
+   "lines": [
+    ["cenzo", "HE SOUNDED SURE, SO YOU PAID."],
+    ["cenzo", "SAME AS THAT TRADING TIP IN THE GROUP CHAT."],
+    ["cenzo", "CHECK IT FIRST. SURE IS NOT PROOF."]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {"who": "maya", "x": 310, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "end": "WHY WITH SOLO?",
+   "lines": [
+    ["maya", "THE GUARD FOUND THIS. HIS BOARDING PASS."],
+    ["cenzo", "TOKYO TO HARARE. THIS MORNING."],
+    ["maya", "AND THE SEAT NEXT TO HIS? SOLO."]
+   ]
+  },
+  {
+   "set": "tokyo",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "THE CAR PARK MAN SENT CLYDE A LOYALTY CARD."]
+   ]
+  }
+ ]
+}
