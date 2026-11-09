@@ -137,7 +137,13 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
     # face
     e1, e2 = (hc[0] + 10 * z, hc[1] - 6 * z), (hc[0] + 31 * z, hc[1] - 6 * z)
     ink = (22, 22, 26)
-    circle(img, e1, 5.8 * z, ink); circle(img, e2, 5.8 * z, ink)
+    if L.get("red_eyes"):
+        for e_ in (e1, e2):
+            circle(img, e_, 10.5 * z, (70, 70, 235))
+            circle(img, (e_[0] + 1 * z, e_[1] + 2 * z), 4.8 * z, ink)
+            quad(img, [(e_[0] - 12 * z, e_[1] - 13 * z), (e_[0] + 12 * z, e_[1] - 13 * z), (e_[0] + 12 * z, e_[1] - 3 * z), (e_[0] - 12 * z, e_[1] - 3 * z)], (236, 240, 245))
+    else:
+        circle(img, e1, 5.8 * z, ink); circle(img, e2, 5.8 * z, ink)
     br = {"focus": 5, "angry": 7, "shock": -6, "smug": -2}.get(mood, 0) * z
     line(img, (e1[0] - 9 * z, e1[1] - 15 * z - br * .2), (e1[0] + 9 * z, e1[1] - 15 * z + br), 4 * z, ink)
     line(img, (e2[0] - 9 * z, e2[1] - 15 * z + br), (e2[0] + 9 * z, e2[1] - 15 * z - br * .2), 4 * z, ink)

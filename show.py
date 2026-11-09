@@ -171,7 +171,23 @@ def harare():
     rect(i, 0, FLOOR - 24, W, H, (70, 90, 120))
     return i, None
 
-BUILDERS = dict(mansion=mansion, hotel=hotel, gameroom=gameroom, plane=plane, tokyo=tokyo, paris=paris, dubai=dubai, harare=harare)
+def desk():
+    i = base((34, 22, 18), (12, 10, 12))
+    for mx, my in ((130, 560), (430, 520), (730, 560)):
+        rect(i, mx - 8, my - 8, mx + 268, my + 208, (30, 30, 34)); rect(i, mx, my, mx + 260, my + 200, (22, 16, 12))
+        r = random.Random(mx); y_ = my + 100
+        for k in range(16):
+            x_ = mx + 12 + k * 15; dy = r.randint(-30, 30); c = (70, 70, 235) if dy > 0 else (90, 215, 110)
+            cv2.line(i, (x_ + 4, min(y_, y_ + dy) - 10), (x_ + 4, max(y_, y_ + dy) + 10), c, 1, cv2.LINE_AA)
+            rect(i, x_, min(y_, y_ + dy), x_ + 8, max(y_, y_ + dy) + 2, c); y_ = int(clamp(y_ + dy, my + 28, my + 172))
+    i = glow(i, 20, .7)
+    i[FLOOR - 30:] = base((40, 34, 38), (12, 12, 14))[FLOOR - 30:]
+    f = np.zeros((H, W, 4), np.uint8)
+    rect(f, 40, 1120, 1040, 1160, (70, 80, 92, 255)); rect(f, 80, 1160, 130, FLOOR, (46, 50, 58, 255)); rect(f, 950, 1160, 1000, FLOOR, (46, 50, 58, 255))
+    for kx in (240, 690): rect(f, kx, 1104, kx + 170, 1120, (42, 42, 50, 255))
+    return i, f
+
+BUILDERS = dict(desk=desk, mansion=mansion, hotel=hotel, gameroom=gameroom, plane=plane, tokyo=tokyo, paris=paris, dubai=dubai, harare=harare)
 
 def get_set(n):
     if n not in SETS: SETS[n] = BUILDERS[n]()

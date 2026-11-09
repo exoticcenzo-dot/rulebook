@@ -11,7 +11,9 @@
     "Add a new recurring character every chapter or two, and bring old ones back.",
     "Stay on the main story at all times: Cenzo, Clyde, the Rule Book, the hunt for pages, Solo's race, Mtoriro's missing uncle. Viewer ideas add to this story and never replace it.",
     "Keep the 99 pages belief going until the story reaches Page 99, then reveal Volume 1 and the 884-page truth. Number each new page in order.",
-    "Fans can become recurring side characters. Roles must be positive or funny-friendly, never mocked or made a villain, and they never teach the lesson."
+    "Fans can become recurring side characters. Roles must be positive or funny-friendly, never mocked or made a villain, and they never teach the lesson.",
+    "Vary the teaching format: some episodes show a trading session first and the lesson comes after it; others have Cenzo teach through something happening in the scene.",
+    "Hide the lesson: viewers should not be able to guess it until EXOTICCENZO says it. Do not foreshadow the rule, and put the reveal late in the episode as a surprise connection."
   ],
   "characters": {
     "cenzo": {
@@ -31,7 +33,8 @@
         "cape"
       ],
       "hair": "spiky",
-      "voice": 180
+      "voice": 180,
+      "red_eyes": true
     },
     "clyde": {
       "name": "CLYDE",
@@ -51,7 +54,8 @@
         "scarf"
       ],
       "hair": "beanie",
-      "voice": 125
+      "voice": 125,
+      "red_eyes": true
     },
     "nia": {
       "name": "MTORIRO",
