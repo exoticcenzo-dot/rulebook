@@ -21,4 +21,4 @@ Trends: `trends.json` lists current trends mapped to the story. Use one when it 
 
 Music and credit: every video plays a freshly generated original trap beat. Set `credit_song` to a Future song whose mood or title fits the episode (for example Honest, Mask Off, Turn On the Lights, Worst Day, Magic, Tony Montana). Do not use the real recording or copy its melody. Do not reuse the same song within 7 episodes. The credit card is added automatically after the outro.
 
-Paid service advert: every 18:00 episode sets `"promo": true`, which adds a card offering animated ads and explainers. Its caption also ends with: Need animated videos for your business? Message me. Do not put prices on it. 10:00 episodes have no advert.
+Paid service advert: switched OFF while the account grows. Do not set `promo` or mention paid services until Vincenzo says to turn it back on.
