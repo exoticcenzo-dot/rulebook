@@ -118,6 +118,25 @@
       ],
       "hair": "cap",
       "voice": 350
+    },
+    "ruva": {
+      "name": "RUVA",
+      "bio": "Air hostess from Harare. Warm, quick, knows everyone's name before they say it. Flies the Tokyo route.",
+      "suit": [
+        245,
+        240,
+        235
+      ],
+      "accent": [
+        40,
+        150,
+        90
+      ],
+      "gear": [
+        "scarf"
+      ],
+      "hair": "bun",
+      "voice": 320
     }
   },
   "episodes_log": [
@@ -168,6 +187,15 @@
       "rule": "Sure is not proof",
       "cliffhanger": "Boarding pass found at the car park: Mtoriro's uncle flew Tokyo to Harare this morning, and the seat next to his was Solo's. Ep 7 must explain why he travelled with Solo.",
       "credit_song": "Honest"
+    },
+    {
+      "ep": 7,
+      "date": "2026-11-11",
+      "time": "18:00",
+      "set": "plane",
+      "rule": "Bored is not a signal",
+      "cliffhanger": "Ruva: the old man slept while Solo copied his notebook, and he never got off in Harare. Ep 8 must reveal where the flight went on to (Bulawayo) and start the gym arc.",
+      "credit_song": "Mask Off"
     }
   ],
   "masterplan": {
@@ -256,5 +284,23 @@
       }
     ]
   },
-  "plot_threads": []
+  "plot_threads": [
+    {
+      "chapter": 1,
+      "expect": "Find Mtoriro's uncle by following Solo home to Zimbabwe.",
+      "twist": "Episode 9-10: Ruva is the uncle's daughter. She has been helping him hide from Solo, and the 'old man' Solo sat beside on the plane was a decoy. Her hints link to a Rule Book clue in Bulawayo.",
+      "hints": [
+        {
+          "ep": 7,
+          "hint": "Ruva calls Clyde by name though nobody told her it."
+        },
+        {
+          "ep": 7,
+          "hint": "Ruva says the old man 'slept' the whole flight while Solo copied his notebook: a decoy never shows his face."
+        }
+      ],
+      "payoff_ep": 10,
+      "paid_off": false
+    }
+  ]
 }

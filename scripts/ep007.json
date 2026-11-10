@@ -1,0 +1,159 @@
+{
+ "ep": 7,
+ "chapter": "HOMEWARD",
+ "title": "THE BORED BUTTON",
+ "lesson": "Bored is not a signal",
+ "hook": "SOLO WITH\nTHE UNCLE?!",
+ "caption": "Trading because you're bored? Clyde ordered 12 juices on a plane just to feel busy. Ever placed a trade just to do something? Yes or no? #overtrading #tradingpsychology #stickman",
+ "credit_song": "Mask Off",
+ "shots": [
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 250,
+     "pose": "seat",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "clyde",
+     "x": 730,
+     "pose": "seat",
+     "face": "l",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "OUR RULE BOOK'S WRITER FLEW BESIDE OUR RIVAL."
+    ],
+    [
+     "clyde",
+     "TERRIBLE. ALSO I PRESSED THIS BUTTON 40 TIMES."
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "ruva",
+     "x": 560,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 840,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "ruva",
+     "CLYDE. 12 JUICES, 3 PILLOWS. 80 DOLLARS."
+    ],
+    [
+     "clyde",
+     "I WASN'T THIRSTY! I WAS BORED!"
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "seat",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "card": "RULE 7\nBORED IS\nNOT A SIGNAL",
+   "lines": [
+    [
+     "cenzo",
+     "BORED HANDS SPEND. ON PLANES AND ON CHARTS."
+    ],
+    [
+     "cenzo",
+     "NO REASON TO CLICK? DON'T CLICK."
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "ruva",
+     "x": 310,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "end": "WHERE DID HE GO?",
+   "lines": [
+    [
+     "ruva",
+     "THE OLD MAN SLEPT. SOLO COPIED HIS NOTEBOOK."
+    ],
+    [
+     "cenzo",
+     "SO HE NEVER KNEW SOLO WAS THERE."
+    ],
+    [
+     "ruva",
+     "AND HE NEVER GOT OFF IN HARARE."
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "CLYDE PAID 80 DOLLARS. HE'S KEEPING THE PILLOWS."
+    ]
+   ]
+  }
+ ]
+}
