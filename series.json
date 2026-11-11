@@ -196,6 +196,15 @@
       "rule": "Bored is not a signal",
       "cliffhanger": "Ruva: the old man slept while Solo copied his notebook, and he never got off in Harare. Ep 8 must reveal where the flight went on to (Bulawayo) and start the gym arc.",
       "credit_song": "Mask Off"
+    },
+    {
+      "ep": 8,
+      "date": "2026-11-12",
+      "time": "10:00",
+      "set": "home,gym",
+      "rule": "Skill before gear",
+      "cliffhanger": "Ruva texts Cenzo: Bulawayo train, 8pm, though nobody gave her his number. Ep 9 must put them on the overnight train to Bulawayo and ask who told her.",
+      "credit_song": "Life Is Good"
     }
   ],
   "masterplan": {
@@ -297,6 +306,10 @@
         {
           "ep": 7,
           "hint": "Ruva says the old man 'slept' the whole flight while Solo copied his notebook: a decoy never shows his face."
+        },
+        {
+          "ep": 8,
+          "hint": "Ruva texts Cenzo's phone though he never gave her his number, and she knows the Bulawayo train time."
         }
       ],
       "payoff_ep": 10,

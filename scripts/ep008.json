@@ -1,0 +1,78 @@
+{
+ "ep": 8,
+ "chapter": "HOMEWARD",
+ "title": "THE 200 DOLLAR GLOVES",
+ "lesson": "Skill before gear",
+ "hook": "200 DOLLARS\nON GLOVES?!",
+ "caption": "Buying a trading bot before you can read a chart? Clyde spent 200 dollars on gym gear and couldn't lift the empty bar. Ever bought the gear before learning the skill? Yes or no? Comment CAST ME to join the story. #tradingforbeginners #gymhumor #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "credit_song": "Life Is Good",
+ "shots": [
+  {
+   "set": "home",
+   "cast": [
+    {"who": "cenzo", "x": 280, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "clyde", "x": 740, "pose": "sit", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["cenzo", "THE RULE BOOK'S WRITER FLEW ON TO BULAWAYO."],
+    ["clyde", "SOLO'S THERE WITH BODYGUARDS. GYM. NOW."]
+   ]
+  },
+  {
+   "set": "gym",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "smug"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "GLOVES, BELT, SHAKER. 200 DOLLARS. READY!"],
+    ["cenzo", "NICE. NOW LIFT THE EMPTY BAR."]
+   ]
+  },
+  {
+   "set": "gym",
+   "cast": [
+    {"who": "clyde", "x": 420, "pose": "lift", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 800, "pose": "stand", "face": "l", "mood": "happy"}
+   ],
+   "lines": [
+    ["clyde", "WHY... IS... IT... HEAVY?!"]
+   ]
+  },
+  {
+   "set": "gym",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "sit", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "card": "RULE 8\nSKILL\nBEFORE GEAR",
+   "lines": [
+    ["cenzo", "YOU BOUGHT THE GEAR BEFORE THE SKILL."],
+    ["cenzo", "LIKE A TRADING BOT BEFORE YOUR FIRST CHART."]
+   ]
+  },
+  {
+   "set": "gym",
+   "cast": [
+    {"who": "cenzo", "x": 300, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "clyde", "x": 740, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "end": "WHO TOLD HER?",
+   "lines": [
+    ["cenzo", "TEXT FROM RUVA. BULAWAYO TRAIN, 8PM."],
+    ["clyde", "WE NEVER GAVE HER YOUR NUMBER."]
+   ]
+  },
+  {
+   "set": "gym",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE KEPT THE SHAKER. IT HOLDS JUICE NOW."]
+   ]
+  }
+ ]
+}
