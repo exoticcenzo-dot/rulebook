@@ -137,6 +137,25 @@
       ],
       "hair": "bun",
       "voice": 320
+    },
+    "gogo": {
+      "name": "GOGO",
+      "bio": "Grandmother on the Bulawayo night train. Sleeps like a queen, wakes like thunder. Somehow knows Ruva.",
+      "suit": [
+        240,
+        235,
+        225
+      ],
+      "accent": [
+        150,
+        70,
+        160
+      ],
+      "gear": [
+        "scarf"
+      ],
+      "hair": "bun",
+      "voice": 260
     }
   },
   "episodes_log": [
@@ -205,6 +224,15 @@
       "rule": "Skill before gear",
       "cliffhanger": "Ruva texts Cenzo: Bulawayo train, 8pm, though nobody gave her his number. Ep 9 must put them on the overnight train to Bulawayo and ask who told her.",
       "credit_song": "Life Is Good"
+    },
+    {
+      "ep": 9,
+      "date": "2026-11-12",
+      "time": "18:00",
+      "set": "trainnight,bulawayo",
+      "rule": "Set alerts, then rest",
+      "cliffhanger": "Ruva is waiting in Bulawayo beside the old man from the plane, who holds the notebook. Ep 10 must pay off the chapter twist: Ruva is the uncle's daughter, the plane 'old man' was a decoy, and Gogo was asked by Ruva to wake them; link to a Bulawayo Rule Book clue.",
+      "credit_song": "Magic"
     }
   ],
   "masterplan": {
@@ -310,6 +338,10 @@
         {
           "ep": 8,
           "hint": "Ruva texts Cenzo's phone though he never gave her his number, and she knows the Bulawayo train time."
+        },
+        {
+          "ep": 9,
+          "hint": "Gogo on the night train says Ruva told her Clyde would be loud: Ruva planned their trip and asked Gogo to wake them."
         }
       ],
       "payoff_ep": 10,

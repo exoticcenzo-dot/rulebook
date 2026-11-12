@@ -1,0 +1,79 @@
+{
+ "ep": 9,
+ "chapter": "HOMEWARD",
+ "title": "ONE ALARM",
+ "lesson": "Set alerts, then rest",
+ "hook": "6 HOURS\nNO SLEEP?!",
+ "caption": "Staring at charts all night? Clyde watched every station for 6 hours, then slept through his stop. Gogo set one alarm and slept like a queen. Ever stayed up watching a chart? Yes or no? #tradingpsychology #tradinglife #stickman",
+ "credit_song": "Magic",
+ "shots": [
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "seat", "face": "r", "mood": "focus"},
+    {"who": "cenzo", "x": 740, "pose": "seat", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "MISS BULAWAYO, SOLO GETS THE BOOK'S WRITER."],
+    ["cenzo", "AND RUVA KNEW OUR TRAIN. WHO TOLD HER?"]
+   ]
+  },
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "stand", "face": "r", "mood": "angry"},
+    {"who": "gogo", "x": 700, "pose": "seat", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["clyde", "I'LL WATCH EVERY STATION. NO SLEEP."],
+    ["gogo", "RUVA SAID YOU'D BE LOUD. GOODNIGHT."]
+   ]
+  },
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "seat", "face": "r", "mood": "shock"},
+    {"who": "gogo", "x": 720, "pose": "stand", "face": "l", "mood": "angry"}
+   ],
+   "lines": [
+    ["gogo", "BOY! BULAWAYO! WAKE UP!"],
+    ["clyde", "SIX HOURS AWAKE. SLEPT AT THE LAST STOP?!"]
+   ]
+  },
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "seat", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "card": "RULE 9\nSET ALERTS.\nTHEN REST",
+   "lines": [
+    ["cenzo", "YOU WATCHED ALL NIGHT. GOGO SET ONE ALARM."],
+    ["cenzo", "SAME WITH CHARTS. SET AN ALERT, THEN REST."]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "crowd": 30,
+   "cast": [
+    {"who": "cenzo", "x": 300, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "clyde", "x": 740, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "end": "IS THAT HIM?",
+   "lines": [
+    ["cenzo", "RUVA'S HERE IN BULAWAYO. WAITING FOR US."],
+    ["clyde", "THE OLD MAN BESIDE HER HAS THE NOTEBOOK!"]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE'S NEW RINGTONE? GOGO SHOUTING BOY!"]
+   ]
+  }
+ ]
+}

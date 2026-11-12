@@ -334,7 +334,24 @@ def villa():
     rect(i, 0, FLOOR + 120, W, H, (150, 158, 165))
     return i, None
 
-BUILDERS.update(alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, ship=ship, home=home)
+def trainnight():
+    i = base((110, 92, 84), (70, 58, 54))
+    r = random.Random(9)
+    for x in range(40, W, 260):
+        rect(i, x, 560, x + 200, 860, (150, 140, 120)); rect(i, x + 6, 566, x + 194, 854, (70, 34, 18))
+        for _ in range(6): circle(i, (x + r.randint(14, 186), r.randint(576, 720)), r.choice((2, 3)), (230, 235, 240))
+        pts = np.array([(x + 6, 820), (x + 70, 760), (x + 130, 790), (x + 194, 750), (x + 194, 854), (x + 6, 854)], np.int32)
+        cv2.fillPoly(i, [pts], (30, 22, 16), cv2.LINE_AA)
+        circle(i, (x + r.randint(30, 170), 800 + r.randint(-6, 20)), 4, (90, 200, 250))
+    circle(i, (560, 630), 34, (215, 240, 250)); circle(i, (574, 622), 30, (70, 34, 18))
+    rect(i, 0, 470, W, 500, (48, 44, 46))
+    for x in range(30, W, 120): cv2.line(i, (x, 500), (x, 540), (130, 130, 138), 4); cv2.ellipse(i, (x, 550), (16, 12), 0, 0, 360, (130, 130, 138), 4, cv2.LINE_AA)
+    i[FLOOR - 25:] = base((60, 50, 44), (28, 24, 22))[FLOOR - 25:]
+    for x in (240, 760):
+        rect(i, x - 110, FLOOR - 560, x + 110, FLOOR - 50, (34, 70, 120)); rect(i, x - 110, FLOOR - 172, x + 130, FLOOR - 60, (46, 90, 140))
+    return i, None
+
+BUILDERS.update(alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
 
 def get_set(n):
     if n not in SETS: SETS[n] = BUILDERS[n]()
@@ -431,7 +448,7 @@ def extras(img, sh, t, ep):
             rect(img, x - 62, FLOOR - 120, x + 62, FLOOR - 100, (225, 228, 235)); rect(img, x - 8, FLOOR - 100, x + 8, FLOOR - 30, (120, 120, 128))
         wx = (r.uniform(0, W) + 70 * t) % (W + 200) - 100
         npc(img, wx, FLOOR - 30, .95, SKIN[0], (240, 240, 245), (28, 28, 34), t * 5, "tray"); rect(img, wx + 2, FLOOR - 222, wx + 60, FLOOR - 214, (205, 205, 212))
-    elif name in ("plane", "train"):
+    elif name in ("plane", "train", "trainnight"):
         for k in range(want or 3):
             skin, shirt, pants = pick(); x = (30, 500, 1040)[k % 3]
             rect(img, x - 62, FLOOR - 380, x + 62, FLOOR - 40, (92, 72, 60)); npc(img, x, FLOOR - 175, .92, skin, shirt, pants, t * 2 + k, "sit", r.choice((1, -1)))
