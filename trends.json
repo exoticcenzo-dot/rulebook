@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-09",
+  "checked": "2026-11-13",
   "note": "Use a trend's format and joke inside the story. Do not put copyrighted songs in the video file.",
   "sources": [
     "https://www.socialpilot.co/blog/tiktok-trends",
@@ -8,28 +8,42 @@
   ],
   "fits": [
     {
+      "trend": "I'm so sorry reveal (peaking)",
+      "use": "Build-up to Clyde's big moment, final reveal is a mess; caption I'm so sorry. Used ep 10."
+    },
+    {
       "trend": "Rock paper scissors food challenge (rising)",
-      "use": "Cenzo and Clyde play for one plate at the Grand Hotel; Clyde bets the whole plate on one throw"
+      "use": "Cenzo and Clyde play for one plate at a Harare cafe; Clyde bets the whole plate on one throw"
     },
     {
-      "trend": "Loading reveal (rising)",
-      "use": "Clyde's plan loading... then cut to the disaster, or a trade or disguise loading before a page heist"
+      "trend": "Pick your favorite thing challenge (rising)",
+      "use": "Cenzo and Clyde count to three and grab from a table of clues; Clyde grabs the snack"
     },
     {
-      "trend": "Clapping cat handshake deal (peaking)",
-      "use": "Solo offers a too-good deal and shakes on it"
+      "trend": "Paparazzi bow (rising)",
+      "use": "Clyde poses for a tourist's camera in Paris and bows dramatically; use the pose, not the song"
     },
     {
-      "trend": "I'm so sorry reveal (current)",
-      "use": "Build-up to Clyde's masterpiece, final reveal is a mess, caption I'm so sorry"
+      "trend": "Loading reveal (fading after Halloween)",
+      "use": "Clyde's plan loading... then cut to the disaster"
     },
     {
       "trend": "AI vs handmade (current)",
       "use": "Plan vs reality: Cenzo's clean plan beside Clyde's real attempt"
     },
     {
+      "trend": "Clapping cat handshake deal (peaking)",
+      "use": "Solo offers a too-good deal and shakes on it"
+    },
+    {
       "trend": "Be OK money confession (current)",
       "use": "On-screen confession about money, cheerful punchline by Clyde"
     }
+  ],
+  "sounds_for_manual_posting": [
+    "original sound by secret (Coming Up Roses clip, used for I'm so sorry reveals)",
+    "Housewife - Tate McRae",
+    "Dame Hombro - Bulin 47",
+    "H4UNT - baldgirl"
   ]
 }

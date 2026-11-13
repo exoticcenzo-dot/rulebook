@@ -4,7 +4,7 @@ import numpy as np
 MODEL = "/home/claude/tts/kokoro-v1.0.onnx"; VOICES = "/home/claude/tts/voices-v1.0.bin"
 CACHE = os.path.dirname(os.path.abspath(__file__)) + "/out/tts"; os.makedirs(CACHE, exist_ok=True)
 SPEAK = {"cenzo": ("am_michael", 1.02), "clyde": ("am_puck", 1.08), "nia": ("am_eric", 1.0),
-         "zeke": ("bm_george", .97), "maya": ("am_liam", 1.08), "ruva": ("af_heart", 1.04), "gogo": ("bf_emma", .9), "narrator": ("am_onyx", .96)}
+         "zeke": ("bm_george", .97), "maya": ("am_liam", 1.08), "ruva": ("af_heart", 1.04), "gogo": ("bf_emma", .9), "moyo": ("bm_daniel", .9), "narrator": ("am_onyx", .96)}
 _k = None
 def clean(tx):
     s = tx.replace("\n", ". ").replace('"', "").strip(". ")
@@ -13,7 +13,7 @@ def clean(tx):
     s = re.sub(r"(^|[.!?]\s+)([a-z])", lambda m: m.group(1) + m.group(2).upper(), s)
     s = re.sub(r"\bexoticcenzo\b", "Exotic Chenzo", s, flags=re.I)
     s = re.sub(r"\bcenzo\b", "Chenzo", s, flags=re.I)
-    for a, b in (("clyde", "Clyde"), ("mtoriro", "Muh-toh-ree-roh"), ("solo", "Solo"), ("jamal", "Jamal"), ("ruva", "Roova"), ("gogo", "Go-go"), ("tokyo", "Tokyo")):
+    for a, b in (("clyde", "Clyde"), ("mtoriro", "Muh-toh-ree-roh"), ("solo", "Solo"), ("jamal", "Jamal"), ("ruva", "Roova"), ("gogo", "Go-go"), ("moyo", "Moh-yo"), ("tokyo", "Tokyo")):
         s = re.sub(rf"\b{a}\b", b, s, flags=re.I)
     s = re.sub(r"\bi('|\b)", lambda m: "I" + m.group(1), s)
     s = re.sub(r"\brematch\b", "re-match", s, flags=re.I)

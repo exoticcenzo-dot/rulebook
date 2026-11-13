@@ -156,6 +156,25 @@
       ],
       "hair": "bun",
       "voice": 260
+    },
+    "moyo": {
+      "name": "MR MOYO",
+      "bio": "Ruva's sleepy neighbour from Bulawayo. Paid to nap on planes as the decoy 'old man'. Friendly, slow, always yawning.",
+      "suit": [
+        230,
+        225,
+        210
+      ],
+      "accent": [
+        140,
+        110,
+        70
+      ],
+      "gear": [
+        "glasses"
+      ],
+      "hair": "neat",
+      "voice": 110
     }
   },
   "episodes_log": [
@@ -233,6 +252,15 @@
       "rule": "Set alerts, then rest",
       "cliffhanger": "Ruva is waiting in Bulawayo beside the old man from the plane, who holds the notebook. Ep 10 must pay off the chapter twist: Ruva is the uncle's daughter, the plane 'old man' was a decoy, and Gogo was asked by Ruva to wake them; link to a Bulawayo Rule Book clue.",
       "credit_song": "Magic"
+    },
+    {
+      "ep": 10,
+      "date": "2026-11-13",
+      "time": "10:00",
+      "set": "bulawayo",
+      "rule": "One candle isn't a trend",
+      "cliffhanger": "Ruva (the uncle's daughter) hands over page 3, which the uncle left before vanishing again; page 3 is signed by Solo. Ep 11 must open Chapter 2 in Zimbabwe and ask why Solo's signature is on the uncle's page.",
+      "credit_song": "Too Comfortable"
     }
   ],
   "masterplan": {
@@ -345,7 +373,17 @@
         }
       ],
       "payoff_ep": 10,
-      "paid_off": false
+      "paid_off": true,
+      "paid_off_note": "Ep 10: Ruva revealed as the uncle's daughter; Mr Moyo was the paid decoy 'old man'; Solo copied a fake notebook; Gogo woke them for Ruva; Bulawayo clue = page 3."
+    },
+    {
+      "chapter": 2,
+      "expect": "Find out why Solo signed page 3 and track the uncle, then follow the trail to Paris.",
+      "twist": "Planned for Episodes 19-20: Solo and Ruva's father co-wrote the first pages years ago; Solo's signature is a partner's, not a thief's. He hunts the book to finish what they started. Links to a Paris clue.",
+      "hints": [],
+      "payoff_ep": 20,
+      "paid_off": false,
+      "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background)."
     }
   ]
 }

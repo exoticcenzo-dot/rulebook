@@ -1,0 +1,190 @@
+{
+ "ep": 10,
+ "chapter": "HOMEWARD",
+ "title": "THE DECOY",
+ "lesson": "One candle isn't a trend",
+ "hook": "HE'S NOT\nTHE UNCLE?!",
+ "caption": "Judging the whole chart from one candle? Clyde saw one clue and hugged a total stranger in Bulawayo. I'm so sorry, Mr Moyo. Ever judged a trade from one candle? Yes or no? #tradingpsychology #imsosorry #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "credit_song": "Too Comfortable",
+ "shots": [
+  {
+   "set": "bulawayo",
+   "crowd": 30,
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 240,
+     "pose": "walk",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "ruva",
+     "x": 620,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    },
+    {
+     "who": "moyo",
+     "x": 810,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "THAT OLD MAN HAS THE RULE BOOK'S NOTES!"
+    ],
+    [
+     "clyde",
+     "UNCLE! WE CROSSED THE WORLD FOR YOU!",
+     {
+      "mood": "happy"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "moyo",
+     "x": 700,
+     "pose": "stand",
+     "face": "l",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "moyo",
+     "I'M MR MOYO. PAID TO NAP ON PLANES."
+    ],
+    [
+     "clyde",
+     "A PRO NAPPER?!"
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 280,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "ruva",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "lines": [
+    [
+     "ruva",
+     "MY FATHER WROTE THE RULE BOOK. I HID HIM."
+    ],
+    [
+     "ruva",
+     "SOLO COPIED A FAKE. GOGO WOKE YOU FOR ME."
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "card": "RULE 10\nONE CANDLE\nISN'T A TREND",
+   "lines": [
+    [
+     "cenzo",
+     "YOU SAW ONE CLUE AND HUGGED A STRANGER."
+    ],
+    [
+     "cenzo",
+     "ONE CANDLE LIES. LINE THEM UP, SEE THE TREND."
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "crowd": 30,
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "ruva",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "end": "SOLO SIGNED IT?",
+   "lines": [
+    [
+     "ruva",
+     "DAD LEFT PAGE 3, THEN VANISHED AGAIN."
+    ],
+    [
+     "cenzo",
+     "WAIT. PAGE 3 IS SIGNED... BY SOLO?!"
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "MR MOYO CHARGES DOUBLE IF HE SNORES."
+    ]
+   ]
+  }
+ ]
+}
