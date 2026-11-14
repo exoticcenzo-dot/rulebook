@@ -1,0 +1,82 @@
+{
+ "ep": 11,
+ "chapter": "THE SIGNATURE",
+ "title": "ALL IN ON ONE BOX",
+ "lesson": "Bet small, stay in",
+ "hook": "ALL HIS\nMONEY?!",
+ "caption": "Putting all your money on one trade? Clyde spent his whole 20 dollars on one mystery box in Harare. Cenzo spent 2 and still had 18 to keep going. Ever gone all in on one trade? Yes or no? Comment CAST ME to join the story. #positionsizing #pickyourfavorite #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "credit_song": "Thought It Was a Drought",
+ "shots": [
+  {
+   "set": "harare",
+   "crowd": 30,
+   "cast": [
+    {"who": "cenzo", "x": 280, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "nia", "x": 740, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "lines": [
+    ["cenzo", "OUR RULE BOOK PAGE IS SIGNED BY RIVAL SOLO!"],
+    ["nia", "MY UNCLE'S OLD BOXES ARE ON SALE!"]
+   ]
+  },
+  {
+   "set": "harare",
+   "cast": [
+    {"who": "tino", "x": 260, "pose": "stand", "face": "r", "mood": "happy"},
+    {"who": "clyde", "x": 560, "pose": "stand", "face": "l", "mood": "smug"},
+    {"who": "cenzo", "x": 810, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["tino", "HIM AND HIS PARTNER'S BOXES. 1, 2, 3, PICK!"],
+    ["clyde", "ALL MY 20 DOLLARS. THE BIG ONE!"],
+    ["cenzo", "TINY ONE. TWO DOLLARS.", {"mood": "happy"}]
+   ]
+  },
+  {
+   "set": "harare",
+   "cast": [
+    {"who": "clyde", "x": 420, "pose": "sit", "face": "r", "mood": "shock"},
+    {"who": "tino", "x": 780, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["clyde", "40 BROKEN CALCULATORS?! I'M BROKE!"]
+   ]
+  },
+  {
+   "set": "harare",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "sit", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "card": "RULE 11\nBET SMALL.\nSTAY IN",
+   "lines": [
+    ["cenzo", "YOU BET IT ALL ON ONE BOX. NOW YOU'RE OUT."],
+    ["cenzo", "I BET 2. STILL HAVE 18 FOR THE NEXT TRY."]
+   ]
+  },
+  {
+   "set": "harare",
+   "crowd": 30,
+   "cast": [
+    {"who": "nia", "x": 300, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "clyde", "x": 740, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "end": "SOLO'S LOCKER?",
+   "lines": [
+    ["nia", "THE TINY BOX HAS A STATION LOCKER KEY!"],
+    ["clyde", "THE NAME ON THE TAG... SOLO?!"]
+   ]
+  },
+  {
+   "set": "harare",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE SELLS CALCULATORS NOW. 20 DOLLARS."]
+   ]
+  }
+ ]
+}

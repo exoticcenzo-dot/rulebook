@@ -175,6 +175,25 @@
       ],
       "hair": "neat",
       "voice": 110
+    },
+    "tino": {
+      "name": "MAI TINO",
+      "bio": "Harare street vendor outside the uncle's old shop. Sells anything in a box, loud and kind, counts to three for every sale.",
+      "suit": [
+        245,
+        235,
+        215
+      ],
+      "accent": [
+        230,
+        120,
+        40
+      ],
+      "gear": [
+        "scarf"
+      ],
+      "hair": "bun",
+      "voice": 280
     }
   },
   "episodes_log": [
@@ -261,6 +280,16 @@
       "rule": "One candle isn't a trend",
       "cliffhanger": "Ruva (the uncle's daughter) hands over page 3, which the uncle left before vanishing again; page 3 is signed by Solo. Ep 11 must open Chapter 2 in Zimbabwe and ask why Solo's signature is on the uncle's page.",
       "credit_song": "Too Comfortable"
+    },
+    {
+      "ep": 11,
+      "date": "2026-11-14",
+      "time": "10:00",
+      "set": "harare",
+      "rule": "Bet small, stay in",
+      "cliffhanger": "Mtoriro finds a Harare station locker key in the $2 box; the tag says SOLO. Ep 12 must open locker 4 at the Harare station and ask what Solo kept there (keep partner hints subtle).",
+      "credit_song": "Thought It Was a Drought",
+      "new_character": "tino (MAI TINO, Harare street vendor)"
     }
   ],
   "masterplan": {
@@ -380,7 +409,12 @@
       "chapter": 2,
       "expect": "Find out why Solo signed page 3 and track the uncle, then follow the trail to Paris.",
       "twist": "Planned for Episodes 19-20: Solo and Ruva's father co-wrote the first pages years ago; Solo's signature is a partner's, not a thief's. He hunts the book to finish what they started. Links to a Paris clue.",
-      "hints": [],
+      "hints": [
+        {
+          "ep": 11,
+          "hint": "Mai Tino sells 'the old man and his PARTNER's boxes': the uncle had a partner."
+        }
+      ],
       "payoff_ep": 20,
       "paid_off": false,
       "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background)."
