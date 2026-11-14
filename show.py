@@ -351,7 +351,41 @@ def trainnight():
         rect(i, x - 110, FLOOR - 560, x + 110, FLOOR - 50, (34, 70, 120)); rect(i, x - 110, FLOOR - 172, x + 130, FLOOR - 60, (46, 90, 140))
     return i, None
 
-BUILDERS.update(alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
+def station():
+    """Harare railway station concourse: arches onto the platform, departures board, lockers, ticket kiosk."""
+    i = base((150, 190, 215), (120, 160, 190))
+    rect(i, 0, 0, W, 300, (70, 86, 104))
+    for x in range(0, W, 180): cv2.line(i, (x, 0), (x + 90, 300), (90, 106, 124), 6, cv2.LINE_AA)
+    for ax in (60, 420, 780):
+        rect(i, ax, 520, ax + 260, 1000, (225, 200, 160)); cv2.ellipse(i, (ax + 130, 520), (130, 110), 0, 180, 360, (225, 200, 160), -1, cv2.LINE_AA)
+        rect(i, ax, 840, ax + 260, 1000, (60, 70, 82))
+        for k in range(4): rect(i, ax + 10 + k * 62, 870, ax + 62 + k * 62, 930, (150, 175, 195))
+        rect(i, ax, 940, ax + 260, 958, (40, 120, 70))
+        rect(i, ax, 1000, ax + 260, 1010, (110, 110, 118))
+    for px_ in (20, 380, 740, 1060): rect(i, px_ - 20, 420, px_ + 20, FLOOR, (190, 205, 215)); rect(i, px_ - 28, 420, px_ + 28, 446, (160, 175, 188))
+    label(i, "HARARE STATION", 390, 500, 1.3, (40, 40, 44), (230, 235, 240))
+    circle(i, (930, 360), 50, (240, 240, 240)); cv2.circle(i, (930, 360), 50, (40, 40, 44), 5, cv2.LINE_AA)
+    cv2.line(i, (930, 360), (930, 326), (30, 30, 34), 5, cv2.LINE_AA); cv2.line(i, (930, 360), (954, 372), (30, 30, 34), 5, cv2.LINE_AA)
+    rect(i, 60, 470, 360, 650, (30, 30, 34))
+    for k, (dst, tm) in enumerate((("BULAWAYO", "20:00"), ("MUTARE", "21:30"), ("VIC FALLS", "19:00"))):
+        label(i, dst, 76, 520 + k * 50, .75, (60, 200, 250)); label(i, tm, 270, 520 + k * 50, .75, (60, 200, 250))
+    lx = 560
+    for k in range(8):
+        cx = lx + (k % 4) * 125; cy = 1030 + (k // 4) * 150
+        rect(i, cx, cy, cx + 115, cy + 140, (120, 130, 150)); rect(i, cx + 6, cy + 6, cx + 109, cy + 134, (150, 162, 182))
+        for v in range(4): rect(i, cx + 20, cy + 18 + v * 10, cx + 95, cy + 22 + v * 10, (110, 120, 138))
+        label(i, str(k + 1), cx + 46, cy + 90, .9, (255, 255, 255) if k == 3 else (40, 40, 44), (40, 60, 200) if k == 3 else None)
+        circle(i, (cx + 96, cy + 110), 7, (60, 160, 200))
+    label(i, "LOCKERS", lx + 150, 1000, .8, (40, 40, 44))
+    rect(i, 40, 1030, 300, FLOOR - 26, (60, 110, 160)); rect(i, 40, 1030, 300, 1070, (50, 90, 200))
+    label(i, "TICKETS", 90, 1062, .8, (255, 255, 255))
+    rect(i, 70, 1100, 270, 1200, (150, 175, 195))
+    i[FLOOR - 26:] = base((150, 160, 168), (90, 98, 108))[FLOOR - 26:]
+    for x in range(-200, W + 200, 150): cv2.line(i, (x, FLOOR - 26), (int(x * 1.5 - 270), H), (120, 128, 136), 2, cv2.LINE_AA)
+    rect(i, 0, FLOOR + 240, W, FLOOR + 262, (50, 200, 240))
+    return i, None
+
+BUILDERS.update(station=station, alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
 
 def get_set(n):
     if n not in SETS: SETS[n] = BUILDERS[n]()
@@ -422,12 +456,12 @@ def extras(img, sh, t, ep):
     """Everyday people who belong in this place; a different crowd each episode."""
     name = sh["set"]; shot_s = abs(hash(("x", name, ep, sh.get("card", "")))) % 100000
     r = random.Random(ep * 97 + shot_s)
-    outdoors = name in ("tokyo", "paris", "dubai", "harare", "bulawayo", "port", "alley", "villa")
+    outdoors = name in ("tokyo", "paris", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station")
     want = sh.get("crowd", 0)
     style = LOCAL_STYLE.get(name, CLOTH)
-    pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo", "alley") else SKIN + SKIN[3:]), r.choice(style), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
+    pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo", "alley", "station") else SKIN + SKIN[3:]), r.choice(style), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
     if outdoors:
-        for k in range(want or (r.randint(14, 22) if name in ("harare", "bulawayo") else r.randint(12, 18))):
+        for k in range(want or (r.randint(14, 22) if name in ("harare", "bulawayo", "station") else r.randint(12, 18))):
             skin, shirt, pants = pick(); layer = r.random()
             y = FLOOR - 22 - layer * 34; sc = .78 + (1 - layer) * .34; spd = r.uniform(26, 62) * r.choice((-1, 1)); x0 = r.uniform(0, W + 200)
             x = (x0 + spd * t) % (W + 240) - 120

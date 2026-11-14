@@ -290,6 +290,24 @@
       "cliffhanger": "Mtoriro finds a Harare station locker key in the $2 box; the tag says SOLO. Ep 12 must open locker 4 at the Harare station and ask what Solo kept there (keep partner hints subtle).",
       "credit_song": "Thought It Was a Drought",
       "new_character": "tino (MAI TINO, Harare street vendor)"
+    },
+    {
+      "ep": 12,
+      "date": "2026-11-14",
+      "time": "18:00",
+      "set": "station",
+      "rule": "Small risk, big reward",
+      "cliffhanger": "Locker 4 holds an old photo of Mtoriro's uncle beside a man whose face is cut out; Solo walks up: 'Put my photo down.' Ep 13 must have Solo confront them at Harare station.",
+      "credit_song": "Commas"
+    },
+    {
+      "ep": 13,
+      "date": "2026-11-15",
+      "time": "10:00",
+      "set": "station",
+      "rule": "The one who waits gets the better price",
+      "cliffhanger": "Solo trades pages 4 and 5 for the photo, whispers 'Sorry, old friend' to it; page 5 is in French and signed Paris. Ep 14 must ask who in Paris signed page 5 and start the road to Paris (keep partner reveal for ep 19-20).",
+      "credit_song": "Wait for U"
     }
   ],
   "masterplan": {
@@ -413,6 +431,14 @@
         {
           "ep": 11,
           "hint": "Mai Tino sells 'the old man and his PARTNER's boxes': the uncle had a partner."
+        },
+        {
+          "ep": 12,
+          "hint": "Solo's locker photo shows the uncle beside a man whose face is cut out (it is young Solo)."
+        },
+        {
+          "ep": 13,
+          "hint": "Solo whispers 'Sorry, old friend' to the photo as he walks away."
         }
       ],
       "payoff_ep": 20,

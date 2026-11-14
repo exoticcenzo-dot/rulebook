@@ -1,0 +1,190 @@
+{
+ "ep": 13,
+ "chapter": "THE SIGNATURE",
+ "title": "10 SECONDS",
+ "lesson": "The one who waits gets the better price",
+ "hook": "10 SECONDS\nTO DECIDE?!",
+ "caption": "Rushing into deals? Solo gave us 10 seconds to trade his photo for one Rule Book page. Clyde screamed DEAL. Cenzo just ate his chips, and Solo raised his own offer. Can you stay quiet in a negotiation? Yes or no? #patience #negotiation #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "credit_song": "Wait for U",
+ "shots": [
+  {
+   "set": "station",
+   "crowd": 24,
+   "cast": [
+    {
+     "who": "nia",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "angry"
+    },
+    {
+     "who": "zeke",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "angry"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "THAT PHOTO IS MINE. GIVE IT BACK."
+    ],
+    [
+     "nia",
+     "WHY IS MY UNCLE IN YOUR LOCKER, SOLO?"
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "walk",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "zeke",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "PHOTO FOR PAGE 4. YOU HAVE 10 SECONDS."
+    ],
+    [
+     "clyde",
+     "DEAL! DEAL! CENZO, SAY DEAL!"
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 220,
+     "pose": "eat",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "clyde",
+     "x": 500,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "zeke",
+     "x": 800,
+     "pose": "stand",
+     "face": "l",
+     "mood": "angry"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "...FINE! PAGES 4 AND 5! FINAL OFFER!"
+    ],
+    [
+     "clyde",
+     "HE RAISED HIS OWN OFFER?!"
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 700,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "card": "RULE 13\nWHOEVER WAITS\nGETS THE PRICE",
+   "lines": [
+    [
+     "cenzo",
+     "HE NEEDED IT MORE. I JUST ATE MY CHIPS."
+    ],
+    [
+     "cenzo",
+     "THE ONE WHO WAITS GETS THE BETTER PRICE."
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "crowd": 24,
+   "cast": [
+    {
+     "who": "zeke",
+     "x": 260,
+     "pose": "walk",
+     "face": "l",
+     "mood": "neutral"
+    },
+    {
+     "who": "nia",
+     "x": 700,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "end": "WHO'S IN PARIS?",
+   "lines": [
+    [
+     "zeke",
+     "SORRY, OLD FRIEND.",
+     {
+      "mood": "focus"
+     }
+    ],
+    [
+     "nia",
+     "PAGE 5 IS IN FRENCH. SIGNED, PARIS."
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "TIP: NEVER NEGOTIATE NEXT TO CLYDE."
+    ]
+   ]
+  }
+ ]
+}

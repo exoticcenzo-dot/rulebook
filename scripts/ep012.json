@@ -1,0 +1,192 @@
+{
+ "ep": 12,
+ "chapter": "THE SIGNATURE",
+ "title": "LOCKER 4",
+ "lesson": "Small risk, big reward",
+ "hook": "100 DOLLARS\nTO OPEN?!",
+ "caption": "Paying too much for a maybe? Solo wanted 100 dollars to open his locker at Harare station. Gogo opened it for 2. Same locker, way better price. Would you pay 100 for a maybe? Yes or no? #riskreward #tradingpsychology #stickman",
+ "credit_song": "Commas",
+ "shots": [
+  {
+   "set": "station",
+   "crowd": 24,
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 250,
+     "pose": "walk",
+     "face": "r",
+     "mood": "angry"
+    },
+    {
+     "who": "nia",
+     "x": 560,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    },
+    {
+     "who": "cenzo",
+     "x": 800,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "OPEN SOLO'S LOCKER BEFORE HE'S BACK!"
+    ],
+    [
+     "nia",
+     "LOCKER 4 NOTE: 100 DOLLARS TO OPEN.",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 420,
+     "pose": "sit",
+     "face": "r",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "WE HAVE 18 DOLLARS AND 40 CALCULATORS!"
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "gogo",
+     "x": 700,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "gogo",
+     "SOLO PAYS ME 1 DOLLAR TO GUARD IT."
+    ],
+    [
+     "gogo",
+     "FOR 2 DOLLARS, I LOOK AWAY.",
+     {
+      "mood": "happy"
+     }
+    ],
+    [
+     "clyde",
+     "GOGO WORKS HERE TOO?!"
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "cenzo",
+     "x": 700,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "card": "RULE 12\nSMALL RISK.\nBIG REWARD",
+   "lines": [
+    [
+     "cenzo",
+     "100 FOR MAYBE A PAGE? BAD BET."
+    ],
+    [
+     "cenzo",
+     "2 FOR THE SAME PAGE? NOW WE TALK."
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "crowd": 24,
+   "cast": [
+    {
+     "who": "nia",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 620,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    },
+    {
+     "who": "zeke",
+     "x": 830,
+     "pose": "walk",
+     "face": "l",
+     "mood": "angry"
+    }
+   ],
+   "end": "SOLO'S BACK?",
+   "lines": [
+    [
+     "nia",
+     "A PHOTO OF MY UNCLE... AND A CUT-OUT FACE."
+    ],
+    [
+     "zeke",
+     "PUT MY PHOTO DOWN. NOW."
+    ]
+   ]
+  },
+  {
+   "set": "station",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "GOGO GETS PAID BY BOTH SIDES. REAL TRADER."
+    ]
+   ]
+  }
+ ]
+}
