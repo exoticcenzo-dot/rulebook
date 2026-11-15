@@ -318,6 +318,15 @@
    "rule": "Size it so you can sleep",
    "cliffhanger": "Mtoriro reads that page 5 calls the uncle 'LE PROF' (a nickname only his old partner used); Ruva warns that Solo booked the same Paris flight. Ep 15 must put the crew on the plane to Paris with Solo aboard (Ruva can be crew) and keep the partner reveal for eps 19-20.",
    "credit_song": "March Madness"
+  },
+  {
+   "ep": 15,
+   "date": "2026-11-16",
+   "time": "10:00",
+   "set": "plane",
+   "rule": "See the prize before you bet",
+   "cliffhanger": "On the plane to Paris, Solo's 'page 6' envelope turned out to be the plane menu; Solo says the real page 6 is in Paris and 'the Prof always hid things high' (slip: he uses the uncle's old nickname). Ep 16 must land in Paris and ask where up high page 6 is hidden; keep the partner reveal for eps 19-20.",
+   "credit_song": "Mask Off"
   }
  ],
  "masterplan": {
@@ -453,6 +462,10 @@
     {
      "ep": 14,
      "hint": "Page 5 (signed Paris) calls the uncle 'LE PROF', a nickname only his old partner used; Solo should later slip and say 'Prof'."
+    },
+    {
+     "ep": 15,
+     "hint": "Solo slips and calls the uncle 'the Prof' on the plane (page 5's nickname for him) and knows his hiding habits: 'always hid things high'."
     }
    ],
    "payoff_ep": 20,

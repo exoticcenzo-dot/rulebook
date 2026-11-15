@@ -1,0 +1,80 @@
+{
+ "ep": 15,
+ "chapter": "THE SIGNATURE",
+ "title": "THE ENVELOPE",
+ "lesson": "See the prize before you bet",
+ "hook": "PAGE 4 ON\nONE THROW?!",
+ "caption": "Risking big without checking the prize? On the plane to Paris, Solo bet his 'page 6' against our page 4 on one round of rock paper scissors. Clyde said yes. Then Ruva spilled juice on Solo's envelope: it was the plane menu. Would you check the envelope first? Yes or no? #riskreward #rockpaperscissors #stickman",
+ "credit_song": "Mask Off",
+ "next": "NEXT EPISODE TONIGHT",
+ "shots": [
+  {
+   "set": "plane",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "seat", "face": "r", "mood": "happy"},
+    {"who": "zeke", "x": 700, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["zeke", "MY PAGE 6 FOR YOUR PAGE 4. ONE THROW."],
+    ["clyde", "ROCK PAPER SCISSORS? I'M IN!"]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {"who": "cenzo", "x": 300, "pose": "stand", "face": "r", "mood": "focus"},
+    {"who": "zeke", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["cenzo", "WAIT. SHOW US PAGE 6 FIRST."],
+    ["zeke", "IT'S IN THIS ENVELOPE. TRUST ME."]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {"who": "ruva", "x": 300, "pose": "walk", "face": "r", "mood": "shock"},
+    {"who": "zeke", "x": 560, "pose": "stand", "face": "l", "mood": "shock"},
+    {"who": "clyde", "x": 820, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "lines": [
+    ["ruva", "OOPS! JUICE ALL OVER YOUR ENVELOPE, SIR."],
+    ["clyde", "WAIT... IT'S THE PLANE MENU!"]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "seat", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "card": "RULE 15\nSEE THE PRIZE\nBEFORE YOU BET",
+   "lines": [
+    ["cenzo", "HE RISKED A MENU. WE RISKED A PAGE."],
+    ["cenzo", "SEE THE PRIZE BEFORE YOU BET."]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {"who": "nia", "x": 300, "pose": "stand", "face": "r", "mood": "focus"},
+    {"who": "zeke", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "end": "WHERE IN PARIS?",
+   "lines": [
+    ["nia", "SO WHERE IS THE REAL PAGE 6?"],
+    ["zeke", "PARIS. THE PROF ALWAYS HID THINGS HIGH."]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE ORDERED OFF SOLO'S MENU. TWICE."]
+   ]
+  }
+ ]
+}
