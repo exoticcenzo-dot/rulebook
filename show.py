@@ -392,7 +392,7 @@ def get_set(n):
     if k not in SETS:
         back, front = BUILDERS[n]()
         if STYLE == "anime":
-            back = cel(back)
+            back = painted(back) if n in ("harare", "bulawayo", "home", "villa") else cel(back)
             if front is not None:
                 f3 = cel(np.ascontiguousarray(front[..., :3])); front = np.dstack([f3, front[..., 3]])
         SETS[k] = (back, front)
@@ -410,6 +410,21 @@ def cel(img):
     yy = np.clip(np.linspace(0, H / FLOOR, H, dtype=np.float32), 0, 1)[:, None, None]
     grade = np.array((30, 8, -12), np.float32) * (1 - yy)
     return np.clip(out.astype(np.float32) + grade, 0, 255).astype(np.uint8)
+
+_SH = np.array((92, 40, 58), np.float32); _HL = np.array((175, 225, 255), np.float32)
+def palette(img):
+    """EXOTICCENZO signature look: plum shadows, warm golden highlights."""
+    f = img.astype(np.float32); lum = (f @ np.array((.114, .587, .299), np.float32))[..., None] / 255
+    tone = _SH * (1 - lum) + _HL * lum
+    return np.clip(f * .78 + tone * .22 * (.4 + lum), 0, 255).astype(np.uint8)
+
+def painted(img):
+    """Soft painted look for home scenes: watercolour smoothing with light ink."""
+    p = cv2.stylization(img, sigma_s=50, sigma_r=.38)
+    p = cv2.addWeighted(p, .82, cv2.GaussianBlur(img, (0, 0), 2), .18, 0)
+    ed = cv2.Canny(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 40, 120)
+    p[ed > 0] = (p[ed > 0] * .45).astype(np.uint8)
+    return p
 
 def speed_lines(img, t, strength=1.0, seed=0):
     r = random.Random(int(t * 12) + seed); c = (W / 2, 900); ov = img.copy()
@@ -807,10 +822,19 @@ class Show:
             if cast[spk].get("mood") == "shock" and t - cur[0] < .3:
                 tx = math.sin(t * 70) * 11
         z = 1.05 + .09 * (i_ % 2) + .025 * pr
+        ty = 0.
+        if STYLE == "anime":
+            if cur:
+                dt = t - cur[0]; z += .12 * math.exp(-dt / .07) - .03 * math.exp(-dt / .25) * math.sin(dt * 30)
+                if cast[spk].get("mood") in ("shock", "angry") and dt < .45:
+                    tx = math.sin(t * 83) * 16 * (1 - dt / .45); ty = math.cos(t * 71) * 12 * (1 - dt / .45)
+            if x["card"] and x["card"][0] <= t < x["card"][0] + .5:
+                dt = t - x["card"][0]; z += .2 * math.exp(-dt / .1); ty += math.sin(t * 90) * 14 * (1 - dt / .5)
         s._z = z
-        M = np.array([[z, 0, (1 - z) * pv + tx], [0, z, (1 - z) * FLOOR]], np.float32)
+        M = np.array([[z, 0, (1 - z) * pv + tx], [0, z, (1 - z) * FLOOR + ty]], np.float32)
         img = cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_LINEAR)
         img = (img.astype(np.float32) * F.vignette()).astype(np.uint8)
+        if STYLE == "anime": img = palette(img)
         A = (50, 190, 255)
         shade = np.ones((H, 1, 1), np.float32); shade[:300] = np.linspace(.38, 1, 300, dtype=np.float32)[..., None, None]
         img = (img.astype(np.float32) * shade).astype(np.uint8)
@@ -916,6 +940,32 @@ class Show:
             q = np.arange(int(d * sr)) / sr
             return np.sin(2 * np.pi * (46 * q + 7 * (1 - np.exp(-q * 34)))) * np.exp(-q * 13)
         m += trap_bed(N, sr, s.n)
+        if STYLE == "anime":
+            def env(d, k): q = np.arange(int(d * sr)) / sr; return q, np.exp(-q * k)
+            def whoosh():
+                q, _ = env(.32, 1); nz = rng.normal(0, 1, len(q)).astype(np.float32)
+                sh = np.sin(np.pi * q / q[-1]) ** 2; f = np.cumsum(nz) ; f = nz - np.convolve(nz, np.ones(int(30 - 25 * 0.5)) / 18, "same")
+                return (f * sh * .6).astype(np.float32)
+            def pop():
+                q, e_ = env(.09, 45); return (np.sin(2 * np.pi * (500 * q + 4000 * q * q)) * e_).astype(np.float32)
+            def boing():
+                q, e_ = env(.5, 6); f = 180 * (1 + .35 * np.sin(2 * np.pi * 11 * q) * np.exp(-q * 4)) * (1 - q * .6)
+                return (np.sin(2 * np.pi * np.cumsum(f) / sr) * e_).astype(np.float32)
+            def ding():
+                q, e_ = env(1.2, 3.5)
+                return ((np.sin(2 * np.pi * 1320 * q) + .5 * np.sin(2 * np.pi * 1980 * q) + .3 * np.sin(2 * np.pi * 2640 * q)) * e_ * .5).astype(np.float32)
+            def bonk():
+                q, e_ = env(.18, 30); return (np.sin(2 * np.pi * (220 * q - 300 * q * q)) * e_ + rng.normal(0, .3, len(q)) * np.exp(-q * 90)).astype(np.float32)
+            for k_, x in enumerate(s.tl):
+                if k_: add(fx, x["a"] - .12, whoosh(), 1.1)
+                for a_, b_, ln in x["lines"]:
+                    add(fx, a_ + .02, pop(), .35)
+                    md = ln[2].get("mood") if len(ln) > 2 else None
+                    md = md or next((c_["mood"] for c_ in x["sh"]["cast"] if c_["who"] == ln[0]), None)
+                    if md == "shock": add(fx, a_ + .05, boing(), .55)
+                    if md == "angry": add(fx, a_ + .05, bonk(), .7)
+                if x["card"]: add(fx, x["card"][0] + .02, ding(), .9)
+                if x["end"]: add(fx, x["end"][0], whoosh(), 1.2)
         for x in s.tl:
             if x["card"]: add(fx, x["card"][0], kick(.9), 1)
             if x["end"]: add(fx, x["end"][0], kick(1.0), 1)

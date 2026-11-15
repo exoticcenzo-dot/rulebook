@@ -129,10 +129,12 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
             a_ = -1 + k_ / 4
             circle(img, Wp((neck[0] + a_ * 26, neck[1] + 16 + (1 - a_ * a_) * 38)), 5.2 * z, (55, 195, 245))
         circle(img, Wp((neck[0], neck[1] + 60)), 11 * z, (70, 215, 255))
-    hc, R = Wp(P["head"]), 46 * z
+    zf = z * (1.32 if L.get("anime") else 1.0)
+    hc, R = Wp(P["head"]), 46 * zf
+    hc = (hc[0], hc[1] - (zf - z) * 30)
     hair = L.get("hair")
     if hair == "afro":
-        circle(img, (hc[0] - 6 * z, hc[1] - 14 * z), 66 * z, dim(ac, .55))
+        circle(img, (hc[0] - 6 * zf, hc[1] - 14 * zf), 66 * zf, dim(ac, .55))
     circle(img, hc, R, (236, 240, 245))
     if hair == "spiky":
         for i in range(-3, 4):
@@ -142,53 +144,53 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
             tip = (hc[0] + R * 1.5 * math.cos(a), hc[1] + R * 1.5 * math.sin(a))
             quad(img, [b1, tip, b2, hc], ac)
     elif hair == "neat":
-        quad(img, [(hc[0] - R, hc[1] - 8 * z), (hc[0] - R * .7, hc[1] - R), (hc[0] + R * .8, hc[1] - R), (hc[0] - R * .2, hc[1] - R * .45)], dim(ac, .7))
+        quad(img, [(hc[0] - R, hc[1] - 8 * zf), (hc[0] - R * .7, hc[1] - R), (hc[0] + R * .8, hc[1] - R), (hc[0] - R * .2, hc[1] - R * .45)], dim(ac, .7))
     elif hair == "cap":
-        quad(img, [(hc[0] - R, hc[1] - 14 * z), (hc[0] - R * .7, hc[1] - R * 1.05), (hc[0] + R * .7, hc[1] - R * 1.05), (hc[0] + R, hc[1] - 14 * z)], ac)
-        line(img, (hc[0] + R * .7, hc[1] - 14 * z), (hc[0] + R * 1.65, hc[1] - 9 * z), 11 * z, dim(ac, .75))
+        quad(img, [(hc[0] - R, hc[1] - 14 * zf), (hc[0] - R * .7, hc[1] - R * 1.05), (hc[0] + R * .7, hc[1] - R * 1.05), (hc[0] + R, hc[1] - 14 * zf)], ac)
+        line(img, (hc[0] + R * .7, hc[1] - 14 * zf), (hc[0] + R * 1.65, hc[1] - 9 * zf), 11 * zf, dim(ac, .75))
     elif hair == "beanie":
-        quad(img, [(hc[0] - R, hc[1] - 12 * z), (hc[0] - R * .75, hc[1] - R * 1.1), (hc[0] + R * .75, hc[1] - R * 1.1), (hc[0] + R, hc[1] - 12 * z)], dim(ac, .8))
-        circle(img, (hc[0], hc[1] - R * 1.2), 13 * z, ac)
+        quad(img, [(hc[0] - R, hc[1] - 12 * zf), (hc[0] - R * .75, hc[1] - R * 1.1), (hc[0] + R * .75, hc[1] - R * 1.1), (hc[0] + R, hc[1] - 12 * zf)], dim(ac, .8))
+        circle(img, (hc[0], hc[1] - R * 1.2), 13 * zf, ac)
     elif hair == "bun":
-        circle(img, (hc[0] - 8 * z, hc[1] - R * 1.2), 23 * z, dim(ac, .75))
-        quad(img, [(hc[0] - R, hc[1] - 4 * z), (hc[0] - R * .7, hc[1] - R), (hc[0] + R * .7, hc[1] - R), (hc[0] - R * .1, hc[1] - R * .5)], dim(ac, .75))
+        circle(img, (hc[0] - 8 * zf, hc[1] - R * 1.2), 23 * zf, dim(ac, .75))
+        quad(img, [(hc[0] - R, hc[1] - 4 * zf), (hc[0] - R * .7, hc[1] - R), (hc[0] + R * .7, hc[1] - R), (hc[0] - R * .1, hc[1] - R * .5)], dim(ac, .75))
     elif hair == "crown":
         pts = [(-.8, -.75), (-.85, -1.5), (-.4, -1.05), (0, -1.65), (.4, -1.05), (.85, -1.5), (.8, -.75)]
         p2 = np.array([ipt((hc[0] + a * R, hc[1] + b * R)) for a, b in pts], np.int32)
         cv2.fillPoly(img, [p2], (60, 200, 245), cv2.LINE_AA, 3)
     if "headphones" in gear:
-        cv2.ellipse(img, (int(hc[0]), int(hc[1])), (int(R * 1.06), int(R * 1.06)), 0, 180, 360, ac, max(1, int(9 * z)), cv2.LINE_AA)
-        circle(img, (hc[0] - R * .98, hc[1]), 16 * z, ac)
+        cv2.ellipse(img, (int(hc[0]), int(hc[1])), (int(R * 1.06), int(R * 1.06)), 0, 180, 360, ac, max(1, int(9 * zf)), cv2.LINE_AA)
+        circle(img, (hc[0] - R * .98, hc[1]), 16 * zf, ac)
     # face
-    e1, e2 = (hc[0] + 10 * z, hc[1] - 6 * z), (hc[0] + 31 * z, hc[1] - 6 * z)
+    e1, e2 = (hc[0] + 10 * zf, hc[1] - 6 * zf), (hc[0] + 31 * zf, hc[1] - 6 * zf)
     ink = (22, 22, 26)
     if L.get("anime"):
-        e1 = (e1[0] - 3 * z, e1[1] + 2 * z); e2 = (e2[0] + 3 * z, e2[1] + 2 * z)
+        e1 = (e1[0] - 3 * zf, e1[1] + 2 * zf); e2 = (e2[0] + 3 * zf, e2[1] + 2 * zf)
         for e_ in (e1, e2):
-            cv2.ellipse(img, ipt(e_), (int(11 * z * 8), int(15 * z * 8)), 0, 0, 360, (20, 18, 24), -1, cv2.LINE_AA, 3)
-            cv2.ellipse(img, ipt((e_[0], e_[1] + 2 * z)), (int(8 * z * 8), int(11 * z * 8)), 0, 0, 360, (60, 60, 225) if L.get("red_eyes") else (150, 90, 40), -1, cv2.LINE_AA, 3)
-            circle(img, (e_[0] - 3.5 * z, e_[1] - 6 * z), 3.8 * z, (255, 255, 255)); circle(img, (e_[0] + 3 * z, e_[1] + 5 * z), 1.8 * z, (255, 255, 255))
-            if L.get("red_eyes"): quad(img, [(e_[0] - 13 * z, e_[1] - 17 * z), (e_[0] + 13 * z, e_[1] - 17 * z), (e_[0] + 13 * z, e_[1] - 7 * z), (e_[0] - 13 * z, e_[1] - 7 * z)], (236, 240, 245))
+            cv2.ellipse(img, ipt(e_), (int(11 * zf * 8), int(15 * zf * 8)), 0, 0, 360, (20, 18, 24), -1, cv2.LINE_AA, 3)
+            cv2.ellipse(img, ipt((e_[0], e_[1] + 2 * zf)), (int(8 * zf * 8), int(11 * zf * 8)), 0, 0, 360, (60, 60, 225) if L.get("red_eyes") else (150, 90, 40), -1, cv2.LINE_AA, 3)
+            circle(img, (e_[0] - 3.5 * zf, e_[1] - 6 * zf), 3.8 * zf, (255, 255, 255)); circle(img, (e_[0] + 3 * zf, e_[1] + 5 * zf), 1.8 * zf, (255, 255, 255))
+            if L.get("red_eyes"): quad(img, [(e_[0] - 13 * zf, e_[1] - 17 * zf), (e_[0] + 13 * zf, e_[1] - 17 * zf), (e_[0] + 13 * zf, e_[1] - 7 * zf), (e_[0] - 13 * zf, e_[1] - 7 * zf)], (236, 240, 245))
     elif L.get("red_eyes"):
         for e_ in (e1, e2):
-            circle(img, e_, 10.5 * z, (70, 70, 235))
-            circle(img, (e_[0] + 1 * z, e_[1] + 2 * z), 4.8 * z, ink)
-            quad(img, [(e_[0] - 12 * z, e_[1] - 13 * z), (e_[0] + 12 * z, e_[1] - 13 * z), (e_[0] + 12 * z, e_[1] - 3 * z), (e_[0] - 12 * z, e_[1] - 3 * z)], (236, 240, 245))
+            circle(img, e_, 10.5 * zf, (70, 70, 235))
+            circle(img, (e_[0] + 1 * zf, e_[1] + 2 * zf), 4.8 * zf, ink)
+            quad(img, [(e_[0] - 12 * zf, e_[1] - 13 * zf), (e_[0] + 12 * zf, e_[1] - 13 * zf), (e_[0] + 12 * zf, e_[1] - 3 * zf), (e_[0] - 12 * zf, e_[1] - 3 * zf)], (236, 240, 245))
     else:
-        circle(img, e1, 5.8 * z, ink); circle(img, e2, 5.8 * z, ink)
-    br = {"focus": 5, "angry": 7, "shock": -6, "smug": -2}.get(mood, 0) * z
-    line(img, (e1[0] - 9 * z, e1[1] - 15 * z - br * .2), (e1[0] + 9 * z, e1[1] - 15 * z + br), 4 * z, ink)
-    line(img, (e2[0] - 9 * z, e2[1] - 15 * z + br), (e2[0] + 9 * z, e2[1] - 15 * z - br * .2), 4 * z, ink)
-    mc = (hc[0] + 20 * z, hc[1] + 20 * z)
+        circle(img, e1, 5.8 * zf, ink); circle(img, e2, 5.8 * zf, ink)
+    br = {"focus": 5, "angry": 7, "shock": -6, "smug": -2}.get(mood, 0) * zf
+    line(img, (e1[0] - 9 * zf, e1[1] - 15 * zf - br * .2), (e1[0] + 9 * zf, e1[1] - 15 * zf + br), 4 * zf, ink)
+    line(img, (e2[0] - 9 * zf, e2[1] - 15 * zf + br), (e2[0] + 9 * zf, e2[1] - 15 * zf - br * .2), 4 * zf, ink)
+    mc = (hc[0] + 20 * zf, hc[1] + 20 * zf)
     if mood in ("happy", "smug"):
-        cv2.ellipse(img, ipt(mc), (int(13 * z * 8), int(9 * z * 8)), 0, 10, 170, ink, max(1, int(4 * z)), cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt(mc), (int(13 * zf * 8), int(9 * zf * 8)), 0, 10, 170, ink, max(1, int(4 * zf)), cv2.LINE_AA, 3)
     elif mood == "shock":
-        circle(img, mc, 8 * z, ink)
+        circle(img, mc, 8 * zf, ink)
     else:
-        line(img, (mc[0] - 9 * z, mc[1]), (mc[0] + 9 * z, mc[1]), 4 * z, ink)
+        line(img, (mc[0] - 9 * zf, mc[1]), (mc[0] + 9 * zf, mc[1]), 4 * zf, ink)
     if "glasses" in gear:
         for e in (e1, e2):
-            cv2.circle(img, ipt(e), int(10.5 * z * 8), ac, max(1, int(4 * z)), cv2.LINE_AA, 3)
+            cv2.circle(img, ipt(e), int(10.5 * zf * 8), ac, max(1, int(4 * zf)), cv2.LINE_AA, 3)
     for n, root, l1, l2, b in (("fF", hip, 96, 96, -1), ("hF", sh, 84, 84, 1)):
         j = ik(root, P[n], l1, l2, b)
         c_ = pants if n[0] == "f" else top
