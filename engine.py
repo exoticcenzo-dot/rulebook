@@ -500,3 +500,136 @@ if __name__ == "__main__":
         render(int(sys.argv[2]))
     elif c == "poster":
         poster()
+
+
+INK = (34, 30, 36)
+def _ol(img, a, b, th, col, o):
+    line(img, a, b, th + 2 * o, INK); line(img, a, b, th, col)
+def _oc(img, c, r, col, o):
+    circle(img, c, r + o, INK); circle(img, c, r, col)
+def _op(img, pts, col, o):
+    p = np.array([ipt(q) for q in pts], np.int32)
+    cv2.fillPoly(img, [p], col, cv2.LINE_AA, 3); cv2.polylines(img, [p], True, INK, max(1, int(o * 2 / 8 * 8)) // 1 if False else max(2, int(o * 1.6)), cv2.LINE_AA, 3)
+
+def fig_illus(img, cam, x, y, P, L, t, mood="neutral"):
+    """Illustrated cartoon stickman: white round head, big eyes, real clothes, thick ink outline."""
+    z = cam.z; o = 4.2 * z
+    Wp = lambda q: cam.p(x + q[0], y + q[1])
+    ac = tuple(L["accent"]); top = tuple(L.get("top", L["suit"])); pants = tuple(L.get("pants", (70, 62, 58)))
+    if pants == tuple(L["suit"]): pants = (80, 70, 64)
+    if top == (245, 245, 245) or top == tuple(L["suit"]): top = tuple(int(v) for v in L.get("hoodie", ac))
+    skin = (246, 246, 248); gear = L.get("gear", []); mb = L.get("muscle", 0)
+    hip, neck = P["hip"], P["neck"]
+    sh = (mix(hip[0], neck[0], .9), mix(hip[1], neck[1], .9))
+    shoe = (40, 38, 44)
+    def leg(n, col):
+        j = ik(hip, P[n], 96, 96, -1)
+        _ol(img, Wp(hip), Wp(j), 30 * z, col, o); _ol(img, Wp(j), Wp(P[n]), 27 * z, col, o)
+        f = Wp(P[n]); d = 1
+        cv2.ellipse(img, ipt((f[0] + 12 * z * d, f[1] - 4 * z)), (int((24 * z + o) * 8), int((13 * z + o) * 8)), 0, 0, 360, INK, -1, cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt((f[0] + 12 * z * d, f[1] - 4 * z)), (int(24 * z * 8), int(13 * z * 8)), 0, 0, 360, shoe, -1, cv2.LINE_AA, 3)
+        line(img, (f[0] - 8 * z, f[1] + 5 * z), (f[0] + 32 * z, f[1] + 5 * z), 4 * z, (235, 235, 240))
+    def arm(n, col):
+        j = ik(sh, P[n], 84, 84, 1)
+        _ol(img, Wp(sh), Wp(j), (26 + 10 * mb) * z, col, o); _ol(img, Wp(j), Wp(P[n]), (23 + 6 * mb) * z, col, o)
+        _oc(img, Wp(P[n]), 13 * z, skin, o * .8)
+    dk = lambda c, k=.82: tuple(int(v * k) for v in c)
+    leg("fB", dk(pants)); arm("hB", dk(top))
+    if "cape" in gear and False:
+        wv = math.sin(t * 7) * 18
+        _op(img, [Wp(sh), Wp((sh[0] + 12, sh[1])), Wp((hip[0] - 42 + wv * .4, hip[1] + 90)), Wp((hip[0] - 118 + wv, hip[1] + 70))], ac, o)
+    # torso: hoodie / tee block
+    sw, hw = (34 + 30 * mb), (30 + 4 * mb)
+    tor = [Wp((sh[0] - sw, sh[1] - 6)), Wp((sh[0] + sw, sh[1] - 6)), Wp((hip[0] + hw, hip[1] + 14)), Wp((hip[0] - hw, hip[1] + 14))]
+    _op(img, tor, top, o)
+    if mb >= .3:
+        c_ = dk(top, .7); lerp = lambda k: (mix(sh[0], hip[0], k), mix(sh[1], hip[1], k))
+        cx, cy = lerp(.3); line(img, Wp((cx - sw * .55, cy)), Wp((cx + sw * .55, cy)), 3 * z, c_)
+        line(img, Wp(lerp(.12)), Wp(lerp(.32)), 3 * z, c_)
+    # hoodie pocket + strings
+    pk = lambda k: (mix(sh[0], hip[0], k), mix(sh[1], hip[1], k))
+    px, py = pk(.72); _op(img, [Wp((px - 20, py - 10)), Wp((px + 20, py - 10)), Wp((px + 24, py + 16)), Wp((px - 24, py + 16))], dk(top, .9), o * .5)
+    if "chain" in gear:
+        for k_ in range(9):
+            a_ = -1 + k_ / 4
+            circle(img, Wp((neck[0] + a_ * 24, neck[1] + 16 + (1 - a_ * a_) * 34)), 5 * z, (55, 195, 245))
+        _oc(img, Wp((neck[0], neck[1] + 54)), 10 * z, (70, 215, 255), o * .5)
+    if "fur" in gear:
+        for a_ in range(-3, 4):
+            _oc(img, Wp((neck[0] + a_ * 15, neck[1] + 6 + abs(a_) * 2)), 17 * z, tuple(L.get("fur", (235, 235, 240))), o * .5)
+    if "scarf" in gear:
+        _ol(img, Wp((neck[0] - 20, neck[1] + 8)), Wp((neck[0] + 22, neck[1] + 8)), 18 * z, ac, o * .7)
+    if "tie" in gear:
+        _ol(img, Wp((neck[0], neck[1] + 10)), Wp(pk(.55)), 11 * z, ac, o * .5)
+    leg("fF", pants)
+    # head (big, like trending cartoon stickmen)
+    zh = z * 1.22
+    hc, R = Wp(P["head"]), 60 * zh
+    hc = (hc[0] + 4 * zh, hc[1] - 34 * zh)
+    hair = L.get("hair"); hcol = tuple(L.get("hair_col", (36, 34, 40)))
+    if hair == "afro": _oc(img, (hc[0] - 4 * zh, hc[1] - 14 * zh), R * 1.32, hcol, o)
+    if hair == "bun": _oc(img, (hc[0] - 10 * zh, hc[1] - R * 1.12), 24 * zh, hcol, o)
+    _oc(img, hc, R, skin, o)
+    if hair == "spiky":  # short twists / dreads
+        for i in range(-4, 5):
+            a = -math.pi / 2 + i * .3
+            b_ = (hc[0] + R * .82 * math.cos(a), hc[1] + R * .82 * math.sin(a))
+            tip = (hc[0] + R * 1.28 * math.cos(a + .08), hc[1] + R * 1.28 * math.sin(a + .08))
+            _ol(img, b_, tip, 13 * zh, hcol, o * .6)
+        cv2.ellipse(img, ipt(hc), (int(R * 8), int(R * 8)), 0, 200, 340, hcol, -1, cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt(hc), (int((R) * 8), int((R) * 8)), 0, 200, 340, INK, max(2, int(o)), cv2.LINE_AA, 3)
+    elif hair in ("neat", "bun", "afro"):
+        cv2.ellipse(img, ipt(hc), (int(R * 8), int(R * 8)), 0, 195, 345, hcol, -1, cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt(hc), (int(R * 8), int(R * 8)), 0, 195, 345, INK, max(2, int(o)), cv2.LINE_AA, 3)
+    elif hair in ("cap", "beanie"):
+        cv2.ellipse(img, ipt((hc[0], hc[1] - 6 * zh)), (int((R + 3 * zh) * 8), int((R + 3 * zh) * 8)), 0, 180, 360, ac, -1, cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt((hc[0], hc[1] - 6 * zh)), (int((R + 3 * zh) * 8), int((R + 3 * zh) * 8)), 0, 180, 360, INK, max(2, int(o)), cv2.LINE_AA, 3)
+        if hair == "cap":
+            _ol(img, (hc[0] + R * .4, hc[1] - 8 * zh), (hc[0] + R * 1.45, hc[1] - 4 * zh), 13 * zh, dk(ac, .8), o * .6)
+        else:
+            _ol(img, (hc[0] - R - 2 * zh, hc[1] - 10 * zh), (hc[0] + R + 2 * zh, hc[1] - 10 * zh), 16 * zh, dk(ac, .8), o * .6)
+            _oc(img, (hc[0], hc[1] - R * 1.12), 12 * zh, ac, o * .6)
+        nm = L.get("cap_text")
+    elif hair == "crown":
+        pts = [(-.8, -.75), (-.85, -1.5), (-.4, -1.05), (0, -1.65), (.4, -1.05), (.85, -1.5), (.8, -.75)]
+        _op(img, [(hc[0] + a * R, hc[1] + b * R) for a, b in pts], (60, 200, 245), o * .7)
+    if "headphones" in gear:
+        cv2.ellipse(img, ipt(hc), (int(R * 1.08 * 8), int(R * 1.08 * 8)), 0, 180, 360, INK, max(1, int(14 * zh)), cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt(hc), (int(R * 1.08 * 8), int(R * 1.08 * 8)), 0, 180, 360, ac, max(1, int(8 * zh)), cv2.LINE_AA, 3)
+        _oc(img, (hc[0] - R * .95, hc[1] + 4 * zh), 17 * zh, ac, o * .7)
+    # face (looks right; patch is flipped for left)
+    e1, e2 = (hc[0] + 8 * zh, hc[1] + 2 * zh), (hc[0] + 36 * zh, hc[1] + 2 * zh)
+    red = L.get("red_eyes"); scl = (200, 196, 252) if red else (255, 255, 255)
+    for e_ in (e1, e2):
+        ry = 13 if mood == "shock" else 11
+        cv2.ellipse(img, ipt(e_), (int((10 * zh + o * .6) * 8), int((ry * zh + o * .6) * 8)), 0, 0, 360, INK, -1, cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt(e_), (int(10 * zh * 8), int(ry * zh * 8)), 0, 0, 360, scl, -1, cv2.LINE_AA, 3)
+        pr = 3.6 if mood == "shock" else 5.2
+        circle(img, (e_[0] + 3 * zh, e_[1] + 1 * zh), pr * zh, INK)
+        circle(img, (e_[0] + 1.5 * zh, e_[1] - 1.5 * zh), 1.5 * zh, (255, 255, 255))
+        if red or mood in ("smug", "focus"):  # heavy lids
+            lid = (e_[1] - (ry - 1) * zh, e_[1] - (2 if red else 4) * zh)
+            cv2.rectangle(img, ipt((e_[0] - 12 * zh, lid[0] - 3 * zh)), ipt((e_[0] + 12 * zh, lid[1])), skin, -1, cv2.LINE_AA, 3)
+            line(img, (e_[0] - 10 * zh, lid[1]), (e_[0] + 10 * zh, lid[1]), 3.4 * zh, INK)
+    br = {"focus": 5, "angry": 8, "shock": -7, "smug": -2, "happy": -3}.get(mood, 0) * zh
+    line(img, (e1[0] - 11 * zh, e1[1] - 19 * zh - br * .2), (e1[0] + 9 * zh, e1[1] - 19 * zh + br), 5 * zh, INK)
+    line(img, (e2[0] - 9 * zh, e2[1] - 19 * zh + br), (e2[0] + 11 * zh, e2[1] - 19 * zh - br * .2), 5 * zh, INK)
+    mc = (hc[0] + 22 * zh, hc[1] + 30 * zh)
+    if mood == "happy":
+        cv2.ellipse(img, ipt(mc), (int(15 * zh * 8), int(12 * zh * 8)), 0, 0, 180, INK, -1, cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt((mc[0], mc[1] + 6 * zh)), (int(7 * zh * 8), int(4 * zh * 8)), 0, 0, 180, (90, 90, 220), -1, cv2.LINE_AA, 3)
+    elif mood == "smug":
+        cv2.ellipse(img, ipt(mc), (int(13 * zh * 8), int(7 * zh * 8)), -12, 10, 160, INK, max(1, int(4.5 * zh)), cv2.LINE_AA, 3)
+    elif mood == "shock":
+        cv2.ellipse(img, ipt(mc), (int(9 * zh * 8), int(12 * zh * 8)), 0, 0, 360, INK, -1, cv2.LINE_AA, 3)
+        cv2.ellipse(img, ipt((mc[0], mc[1] + 5 * zh)), (int(6 * zh * 8), int(5 * zh * 8)), 0, 0, 360, (90, 90, 220), -1, cv2.LINE_AA, 3)
+    elif mood == "angry":
+        cv2.ellipse(img, ipt((mc[0], mc[1] + 6 * zh)), (int(12 * zh * 8), int(7 * zh * 8)), 0, 190, 350, INK, max(1, int(4.5 * zh)), cv2.LINE_AA, 3)
+    else:
+        line(img, (mc[0] - 10 * zh, mc[1]), (mc[0] + 9 * zh, mc[1] - 2 * zh), 4.5 * zh, INK)
+    if "glasses" in gear:
+        for e in (e1, e2):
+            cv2.circle(img, ipt(e), int(15 * zh * 8), INK, max(1, int(4 * zh)), cv2.LINE_AA, 3)
+        line(img, (e1[0] + 15 * zh, e1[1]), (e2[0] - 15 * zh, e2[1]), 3.5 * zh, INK)
+    arm("hF", top)
+    return Wp(P["hF"])

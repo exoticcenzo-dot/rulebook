@@ -393,10 +393,25 @@ def get_set(n):
         back, front = BUILDERS[n]()
         if STYLE == "anime":
             back = painted(back) if n in ("harare", "bulawayo", "home", "villa") else cel(back)
+        if STYLE == "illus":
+            back = storybook(back)
+            if front is not None:
+                f3 = storybook(np.ascontiguousarray(front[..., :3])); front = np.dstack([f3, front[..., 3]])
             if front is not None:
                 f3 = cel(np.ascontiguousarray(front[..., :3])); front = np.dstack([f3, front[..., 3]])
         SETS[k] = (back, front)
     return SETS[k]
+
+def storybook(img):
+    """Bright painted storybook background with clean ink edges."""
+    p = cv2.stylization(img, sigma_s=60, sigma_r=.42)
+    hsv = cv2.cvtColor(p, cv2.COLOR_BGR2HSV).astype(np.float32)
+    hsv[..., 1] = np.clip(hsv[..., 1] * 1.25 + 8, 0, 255); hsv[..., 2] = np.clip(hsv[..., 2] * 1.25 + 45, 0, 255)
+    p = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2BGR)
+    ed = cv2.Canny(cv2.GaussianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), (0, 0), 1.2), 30, 90)
+    ed = cv2.dilate(ed, np.ones((2, 2), np.uint8))
+    p[ed > 0] = (p[ed > 0] * .25).astype(np.uint8)
+    return p
 
 def cel(img):
     """Anime background: flattened colour bands, bolder saturation and ink lines."""
@@ -603,7 +618,7 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     m = c.get("mood", "neutral")
     if speaking:
         m = "shock" if mouth else "neutral"
-    hand = E.fig(patch, Cam2(ox, fy, Z * L.get("scale", 1)), 0, 0, P, L, t, m)
+    hand = (E.fig_illus if STYLE == "illus" else E.fig)(patch, Cam2(ox, fy, Z * L.get("scale", 1)), 0, 0, P, L, t, m)
     if pose == "lift":
         hy_ = int(hand[1]); bx0 = int(ox - 240); bx1 = int(ox + 240)
         cv2.line(patch, (bx0, hy_), (bx1, hy_), (150, 150, 158), 11, cv2.LINE_AA)
@@ -624,6 +639,10 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     x0 = int(c["x"] - ox); y0 = int(FLOOR - fy)
     xa, xb = max(0, x0), min(W, x0 + pw); ya, yb = max(0, y0), min(H, y0 + ph)
     if c.get("_alpha", 1) <= 0: return
+    if STYLE == "illus":
+        ov_ = canvas.copy()
+        cv2.ellipse(ov_, (int(c["x"]), int(FLOOR - 4)), (int(95 * Z * L.get("scale", 1)), int(16 * Z)), 0, 0, 360, (20, 20, 30), -1, cv2.LINE_AA)
+        cv2.addWeighted(ov_, .38, canvas, .62, 0, canvas)
     if STYLE == "anime":
         m = (a[..., 0] > .45).astype(np.uint8)
         sh_ = m & ((1 - np.roll(m, -14, axis=1)) | (1 - np.roll(m, -12, axis=0)))
@@ -634,7 +653,7 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     al = a[ya - y0:yb - y0, xa - x0:xb - x0]
     canvas[ya:yb, xa:xb] = np.clip(sub * (1 - al) + pa * al, 0, 255).astype(np.uint8)
     mood_ = c.get("mood", "neutral")
-    if STYLE == "anime" and mood_ in ("shock", "angry", "happy", "smug"):
+    if STYLE in ("anime", "illus") and mood_ in ("shock", "angry", "happy", "smug"):
         zz = Z * L.get("scale", 1); d_ = 1 if c["face"] == "r" else -1
         hx = c["x"] + P["head"][0] * zz * d_; hy = FLOOR - 30 + P["head"][1] * zz
         ink = (16, 14, 20)
@@ -746,8 +765,8 @@ class Show:
         s.e = json.load(open(f"{HERE}/scripts/ep{ep:03d}.json")); s.n = ep; CURRENT_EP = ep
         STYLE = os.environ.get("RB_STYLE") or s.e.get("style") or S.get("style", "classic")
         anime = STYLE == "anime"
-        F.FONT = HERE + "/assets/fonts/Bangers-Regular.ttf" if anime else "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
-        F.PROP = F.STROKE = anime; F.text_patch.cache_clear()
+        F.FONT = HERE + ("/assets/fonts/Bangers-Regular.ttf" if anime else "/assets/fonts/Fredoka-Bold.ttf") if STYLE != "classic" else "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
+        F.PROP = F.STROKE = STYLE != "classic"; F.text_patch.cache_clear()
         t = 0; s.tl = []; s.ev = []; s.info = {}; s.sp = []
         for sh in s.e["shots"]:
             a = t; lines = []
@@ -791,9 +810,10 @@ class Show:
                 cast[ln[0]].update(ln[2])
         img = back.copy()
         if not sh.get("promo") and not sh.get("credit"):
-            if STYLE == "anime":
+            if STYLE in ("anime", "illus"):
                 lay = np.zeros_like(img); extras(lay, sh, t, s.n)
                 m = (lay.max(axis=2) > 6).astype(np.uint8); ring = cv2.dilate(m, np.ones((5, 5), np.uint8)) - m
+                if STYLE == "illus": lay = cv2.addWeighted(lay, .8, np.full_like(lay, 235), .2, 0)
                 img[m > 0] = lay[m > 0]; img[ring > 0] = (16, 14, 20)
             else:
                 extras(img, sh, t, s.n)
@@ -833,10 +853,10 @@ class Show:
         s._z = z
         M = np.array([[z, 0, (1 - z) * pv + tx], [0, z, (1 - z) * FLOOR + ty]], np.float32)
         img = cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_LINEAR)
-        img = (img.astype(np.float32) * F.vignette()).astype(np.uint8)
+        if STYLE != "illus": img = (img.astype(np.float32) * F.vignette()).astype(np.uint8)
         if STYLE == "anime": img = palette(img)
         A = (50, 190, 255)
-        shade = np.ones((H, 1, 1), np.float32); shade[:300] = np.linspace(.38, 1, 300, dtype=np.float32)[..., None, None]
+        shade = np.ones((H, 1, 1), np.float32); shade[:300] = np.linspace(.62 if STYLE == "illus" else .38, 1, 300, dtype=np.float32)[..., None, None]
         img = (img.astype(np.float32) * shade).astype(np.uint8)
         hk = s.e.get("hook")
         if hk and t < 2.2:
@@ -844,7 +864,8 @@ class Show:
         else:
             text(img, f"CH {(s.n - 1) // 10 + 1}  ·  EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
         if cur:
-            s.bubble(img, cur, t, cast, A)
+            if STYLE == "illus" and not s.has_tr(cur, t): s.words(img, cur, t)
+            else: s.bubble(img, cur, t, cast, A)
         if STYLE == "anime" and cur and cast.get(spk, {}).get("mood") == "shock" and t - cur[0] < .7:
             img = speed_lines(img, t, .8)
         if x["card"] and x["card"][0] <= t < x["card"][1]:
@@ -884,6 +905,24 @@ class Show:
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
         return img
+
+    def has_tr(s, cur, t):
+        ln = cur[2]; tr = (ln[2] if len(ln) > 2 else {}).get("tr")
+        sh_ = s.shot_at(t)["sh"]; lang = sh_.get("lang") or SET_LANG.get(sh_["set"])
+        return bool(tr and lang and font_ok(lang))
+
+    WORD_COLS = [(255, 255, 255), (90, 230, 255), (255, 235, 120), (190, 160, 255), (140, 255, 170)]
+    def words(s, img, cur, t):
+        """Trending one-word-at-a-time caption, colour changes each line."""
+        a, b, ln = cur
+        ws = ln[1].split(); au = s.info.get(a, (b - a - .16, None))[0]
+        wt = [len(w_) + 2 for w_ in ws]; tot = sum(wt); acc = .08; k = 0
+        for k, w_ in enumerate(wt):
+            acc += au * w_ / tot
+            if t - a < acc: break
+        p = clamp((t - a - (acc - au * wt[k] / tot)) / .09)
+        col = s.WORD_COLS[(hash_str(ln[1]) + s.n) % len(s.WORD_COLS)]
+        text(img, ws[k].lower(), 505, 470, int(96 + 22 * (1 - out(p))), col=col)
 
     def bubble(s, img, cur, t, cast, A):
         a, b, ln = cur
