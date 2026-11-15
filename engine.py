@@ -162,7 +162,14 @@ def fig(img, cam, x, y, P, L, t, mood="neutral"):
     # face
     e1, e2 = (hc[0] + 10 * z, hc[1] - 6 * z), (hc[0] + 31 * z, hc[1] - 6 * z)
     ink = (22, 22, 26)
-    if L.get("red_eyes"):
+    if L.get("anime"):
+        e1 = (e1[0] - 3 * z, e1[1] + 2 * z); e2 = (e2[0] + 3 * z, e2[1] + 2 * z)
+        for e_ in (e1, e2):
+            cv2.ellipse(img, ipt(e_), (int(11 * z * 8), int(15 * z * 8)), 0, 0, 360, (20, 18, 24), -1, cv2.LINE_AA, 3)
+            cv2.ellipse(img, ipt((e_[0], e_[1] + 2 * z)), (int(8 * z * 8), int(11 * z * 8)), 0, 0, 360, (60, 60, 225) if L.get("red_eyes") else (150, 90, 40), -1, cv2.LINE_AA, 3)
+            circle(img, (e_[0] - 3.5 * z, e_[1] - 6 * z), 3.8 * z, (255, 255, 255)); circle(img, (e_[0] + 3 * z, e_[1] + 5 * z), 1.8 * z, (255, 255, 255))
+            if L.get("red_eyes"): quad(img, [(e_[0] - 13 * z, e_[1] - 17 * z), (e_[0] + 13 * z, e_[1] - 17 * z), (e_[0] + 13 * z, e_[1] - 7 * z), (e_[0] - 13 * z, e_[1] - 7 * z)], (236, 240, 245))
+    elif L.get("red_eyes"):
         for e_ in (e1, e2):
             circle(img, e_, 10.5 * z, (70, 70, 235))
             circle(img, (e_[0] + 1 * z, e_[1] + 2 * z), 4.8 * z, ink)

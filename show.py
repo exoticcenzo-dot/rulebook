@@ -388,8 +388,36 @@ def station():
 BUILDERS.update(station=station, alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
 
 def get_set(n):
-    if n not in SETS: SETS[n] = BUILDERS[n]()
-    return SETS[n]
+    k = (n, STYLE)
+    if k not in SETS:
+        back, front = BUILDERS[n]()
+        if STYLE == "anime":
+            back = cel(back)
+            if front is not None:
+                f3 = cel(np.ascontiguousarray(front[..., :3])); front = np.dstack([f3, front[..., 3]])
+        SETS[k] = (back, front)
+    return SETS[k]
+
+def cel(img):
+    """Anime background: flattened colour bands, bolder saturation and ink lines."""
+    sm = cv2.bilateralFilter(img, 9, 60, 9)
+    hsv = cv2.cvtColor(sm, cv2.COLOR_BGR2HSV).astype(np.float32)
+    hsv[..., 1] = np.clip(hsv[..., 1] * 1.55 + 18, 0, 255); hsv[..., 2] = np.clip(np.round(hsv[..., 2] / 46) * 46 + 22, 0, 255)
+    out = cv2.cvtColor(np.clip(hsv, 0, 255).astype(np.uint8), cv2.COLOR_HSV2BGR)
+    ed = cv2.Canny(cv2.cvtColor(sm, cv2.COLOR_BGR2GRAY), 22, 70)
+    ed = cv2.dilate(ed, np.ones((3, 3), np.uint8))
+    out[ed > 0] = (out[ed > 0] * .12).astype(np.uint8)
+    yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
+    grade = np.array((40, 10, -25), np.float32) * (1 - yy) + np.array((-20, 5, 35), np.float32) * yy
+    return np.clip(out.astype(np.float32) + grade, 0, 255).astype(np.uint8)
+
+def speed_lines(img, t, strength=1.0, seed=0):
+    r = random.Random(int(t * 12) + seed); c = (W / 2, 900); ov = img.copy()
+    for _ in range(int(46 * strength)):
+        a = r.uniform(0, math.tau); r0 = r.uniform(430, 620); r1 = r0 + r.uniform(260, 700); w = r.randint(2, 7)
+        p0 = (int(c[0] + r0 * math.cos(a)), int(c[1] + r0 * math.sin(a))); p1 = (int(c[0] + r1 * math.cos(a)), int(c[1] + r1 * math.sin(a)))
+        cv2.line(ov, p0, p1, (250, 250, 255), w, cv2.LINE_AA)
+    return cv2.addWeighted(ov, .55, img, .45, 0)
 
 # seated world height: seat level relative to the floor line
 SEAT = 130
@@ -503,6 +531,7 @@ class Cam2:
     def p(s, x, y): return (s.ox + x * s.z, s.fy + y * s.z)
 
 CURRENT_EP = 1
+STYLE = "classic"
 def hash_str(t_): return sum(ord(c) * (i + 1) for i, c in enumerate(t_))
 # Outfit eras, every 20 episodes. Styles only, no real logos.
 OUTFITS = {
@@ -533,6 +562,7 @@ def glowup(who, base_):
 
 def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     L = glowup(c["who"], CAST[c["who"]])
+    if STYLE == "anime": L["anime"] = True
     pose = c["pose"]
     P = POSES.get(pose) or POSES_X.get(pose) or POSES["stand"]
     P = {k: v for k, v in P.items()}
@@ -579,6 +609,12 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     x0 = int(c["x"] - ox); y0 = int(FLOOR - fy)
     xa, xb = max(0, x0), min(W, x0 + pw); ya, yb = max(0, y0), min(H, y0 + ph)
     if c.get("_alpha", 1) <= 0: return
+    if STYLE == "anime":
+        m = (a[..., 0] > .45).astype(np.uint8)
+        sh_ = m & ((1 - np.roll(m, -14, axis=1)) | (1 - np.roll(m, -12, axis=0)))
+        patch = patch.copy(); patch[sh_ > 0] = (patch[sh_ > 0] * np.array((.62, .5, .55))).astype(np.uint8)
+        ring = cv2.dilate(m, np.ones((12, 12), np.uint8)) - m
+        patch[ring > 0] = (14, 12, 18); a = np.maximum(a, ring[..., None].astype(np.float32))
     sub = canvas[ya:yb, xa:xb].astype(np.float32); pa = patch[ya - y0:yb - y0, xa - x0:xb - x0].astype(np.float32)
     al = a[ya - y0:yb - y0, xa - x0:xb - x0]
     canvas[ya:yb, xa:xb] = np.clip(sub * (1 - al) + pa * al, 0, 255).astype(np.uint8)
@@ -673,8 +709,9 @@ def trap_bed(N, sr, seed):
 
 class Show:
     def __init__(s, ep):
-        global CURRENT_EP
+        global CURRENT_EP, STYLE
         s.e = json.load(open(f"{HERE}/scripts/ep{ep:03d}.json")); s.n = ep; CURRENT_EP = ep
+        STYLE = os.environ.get("RB_STYLE") or s.e.get("style") or S.get("style", "classic")
         t = 0; s.tl = []; s.ev = []; s.info = {}; s.sp = []
         for sh in s.e["shots"]:
             a = t; lines = []
@@ -758,9 +795,15 @@ class Show:
             text(img, f"CH {(s.n - 1) // 10 + 1}  ·  EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
         if cur:
             s.bubble(img, cur, t, cast, A)
+        if STYLE == "anime" and cur and cast.get(spk, {}).get("mood") == "shock" and t - cur[0] < .7:
+            img = speed_lines(img, t, .8)
         if x["card"] and x["card"][0] <= t < x["card"][1]:
             k = window(t, x["card"][0], x["card"][1], .1, .15)
             img = (img * (1 - .72 * k)).astype(np.uint8)
+            if STYLE == "anime":
+                img = speed_lines(img, t, 1.3, 7)
+                fl = 1 - clamp((t - x["card"][0]) / .12)
+                if fl > 0: img = cv2.addWeighted(img, 1 - .7 * fl, np.full_like(img, 255), .7 * fl, 0)
             text(img, sh["card"], 505, 640, 104, col=A, alpha=k)
         if x["end"] and x["end"][0] <= t:
             k = ease((t - x["end"][0]) / .2)
