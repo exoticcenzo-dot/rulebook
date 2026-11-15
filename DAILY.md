@@ -23,3 +23,6 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, cr
 ## Other files
 - `fans.json`: comments read, fan cast, ideas, removal requests. Fan characters go in `series.json` with their TikTok username as the name.
 - `trends.json`: current trends mapped to the story. Use one when it fits. Never add copyrighted songs.
+
+## Look from Episode 21
+From Episode 21 (Chapter 3) the renderer switches to the illustrated cartoon style on its own (`illus_from: 21` in series.json): big-head stickmen in real clothes, close-ups on whoever is talking, one big word caption at a time at the bottom. Scripts don't need a `style` field. Keep lines short and punchy so the captions read well.

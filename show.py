@@ -763,7 +763,7 @@ class Show:
     def __init__(s, ep):
         global CURRENT_EP, STYLE
         s.e = json.load(open(f"{HERE}/scripts/ep{ep:03d}.json")); s.n = ep; CURRENT_EP = ep
-        STYLE = os.environ.get("RB_STYLE") or s.e.get("style") or S.get("style", "classic")
+        STYLE = os.environ.get("RB_STYLE") or s.e.get("style") or ("illus" if ep >= S.get("illus_from", 10 ** 9) else S.get("style", "classic"))
         anime = STYLE == "anime"
         F.FONT = HERE + ("/assets/fonts/Bangers-Regular.ttf" if anime else "/assets/fonts/Fredoka-Bold.ttf") if STYLE != "classic" else "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
         F.PROP = F.STROKE = STYLE != "classic"; F.text_patch.cache_clear()
