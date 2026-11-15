@@ -18,7 +18,7 @@
   "THE LONG GAME. Each chapter sets up one thing viewers expect at its start, then something unexpected happens at the last moment in its final episodes. Across the chapter, plant small hidden hints in the background or in throwaway lines that viewers will not notice. Characters seen in separate episodes later turn out to be connected. In the payoff, EXOTICCENZO links the hints together: it becomes a lesson nobody saw coming and uncovers a Rule Book clue. Record the planned twist and each hint in series.json plot_threads with its episode, and pay every one off.",
   "LOOKS. Every 20 episodes, EXOTICCENZO's and Clyde's outfits change automatically: EXOTICCENZO in a Future-inspired style, Clyde in a Gunna-inspired style, generic with no real logos. Other characters wear random outfits by era, and background people dress for the place they are in, so research what is worn there when building a new country. Everyone stands on the ground in a place that makes sense.",
   "LANGUAGE. Abroad, speech bubbles show the local language with English underneath. Add tr to each line's options, using natural, accurate translation. Zimbabwe scenes stay in English. Spoken voices stay English.",
-  "STYLE: From Episode 21 (Chapter 3) every episode renders in the illustrated cartoon style automatically (big-head stickmen in real clothes, close-ups on the speaker, one-word captions). Keep lines punchy and conversational so the word-by-word captions read well. Do not set a style in scripts."
+  "STYLE: From Episode 15 every episode renders in the illustrated cartoon style automatically (big-head stickmen in real clothes, close-ups on the speaker, one-word captions). Keep lines punchy and conversational so the word-by-word captions read well. Do not set a style in scripts."
  ],
  "characters": {
   "cenzo": {
@@ -473,5 +473,5 @@
    "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background)."
   }
  ],
- "illus_from": 21
+ "illus_from": 15
 }
