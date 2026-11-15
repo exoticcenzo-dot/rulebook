@@ -175,8 +175,12 @@ def figure(img, cam, x, y, P, bendF=1):
 
 
 # ---------- text ----------
+PROP = False   # proportional (manga) font mode
+STROKE = False # ink outline on big text
+
 @functools.lru_cache(maxsize=700)
 def text_patch(s, size, n, track):
+    if PROP: return text_patch_prop(s, size, n, track)
     font = ImageFont.truetype(FONT, size)
     cw = font.getlength("M") + track
     lines = s.split("\n")
@@ -198,6 +202,22 @@ def text_patch(s, size, n, track):
     return a, g
 
 
+def text_patch_prop(s, size, n, track):
+    size = int(size * 1.12)
+    font = ImageFont.truetype(FONT, size)
+    lines = s.split("\n"); lh = int(size * 1.08)
+    lw = [font.getlength(l) + track * len(l) for l in lines]
+    w = int(max(lw)) + 80; h = lh * len(lines) + 70
+    im = Image.new("L", (w, h), 0); d = ImageDraw.Draw(im); left = n
+    for ln, l in enumerate(lines):
+        x = (w - lw[ln]) / 2
+        for ch in l:
+            if left <= 0: break
+            d.text((x, 34 + ln * lh), ch, font=font, fill=255); x += font.getlength(ch) + track; left -= 1
+    a = np.asarray(im, np.float32) / 255
+    return a, cv2.GaussianBlur(a, (0, 0), size / 7)
+
+
 def text(img, s, cx, y, size, col=(255, 255, 255), alpha=1.0, n=None, track=3, glow=.55):
     if alpha <= 0:
         return
@@ -212,6 +232,11 @@ def text(img, s, cx, y, size, col=(255, 255, 255), alpha=1.0, n=None, track=3, g
     g = g[ya - y0:yb - y0, xa - x0:xb - x0] * alpha * glow
     roi = img[ya:yb, xa:xb].astype(np.float32)
     c = np.array(col, np.float32)
+    if STROKE and size >= 70:
+        k = max(3, int(size / 9)) | 1
+        st = cv2.dilate(a, np.ones((k, k), np.uint8))
+        roi = roi * (1 - st[..., None]) + np.array((18, 14, 22), np.float32) * st[..., None]
+        g = g * .3
     roi = roi + g[..., None] * c * .8
     roi = roi * (1 - a[..., None]) + c * a[..., None]
     img[ya:yb, xa:xb] = np.clip(roi, 0, 255).astype(np.uint8)

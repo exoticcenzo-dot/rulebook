@@ -407,8 +407,8 @@ def cel(img):
     ed = cv2.Canny(cv2.cvtColor(sm, cv2.COLOR_BGR2GRAY), 22, 70)
     ed = cv2.dilate(ed, np.ones((3, 3), np.uint8))
     out[ed > 0] = (out[ed > 0] * .12).astype(np.uint8)
-    yy = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
-    grade = np.array((40, 10, -25), np.float32) * (1 - yy) + np.array((-20, 5, 35), np.float32) * yy
+    yy = np.clip(np.linspace(0, H / FLOOR, H, dtype=np.float32), 0, 1)[:, None, None]
+    grade = np.array((30, 8, -12), np.float32) * (1 - yy)
     return np.clip(out.astype(np.float32) + grade, 0, 255).astype(np.uint8)
 
 def speed_lines(img, t, strength=1.0, seed=0):
@@ -618,6 +618,24 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     sub = canvas[ya:yb, xa:xb].astype(np.float32); pa = patch[ya - y0:yb - y0, xa - x0:xb - x0].astype(np.float32)
     al = a[ya - y0:yb - y0, xa - x0:xb - x0]
     canvas[ya:yb, xa:xb] = np.clip(sub * (1 - al) + pa * al, 0, 255).astype(np.uint8)
+    mood_ = c.get("mood", "neutral")
+    if STYLE == "anime" and mood_ in ("shock", "angry", "happy", "smug"):
+        zz = Z * L.get("scale", 1); d_ = 1 if c["face"] == "r" else -1
+        hx = c["x"] + P["head"][0] * zz * d_; hy = FLOOR - 30 + P["head"][1] * zz
+        ink = (16, 14, 20)
+        if mood_ == "shock":
+            b = math.sin(shot_t * 6) * 4; cx_, cy_ = hx + 60 * zz * d_, hy - 34 * zz + b
+            pts = np.array([(cx_, cy_ - 30 * zz), (cx_ + 13 * zz, cy_), (cx_, cy_ + 15 * zz), (cx_ - 13 * zz, cy_)], np.int32)
+            cv2.fillConvexPoly(canvas, pts, (250, 215, 140), cv2.LINE_AA); cv2.polylines(canvas, [pts], True, ink, 4, cv2.LINE_AA)
+            circle(canvas, (cx_ - 3 * zz, cy_ - 2 * zz), 3 * zz, (255, 255, 255))
+        elif mood_ == "angry":
+            cx_, cy_ = hx - 44 * zz * d_, hy - 52 * zz
+            for a_ in (0, 90, 180, 270):
+                cv2.ellipse(canvas, (int(cx_), int(cy_)), (int(13 * zz), int(13 * zz)), a_, 200, 300, (40, 40, 235), 7, cv2.LINE_AA)
+        else:
+            for k_ in range(3):
+                x_ = hx + (8 + k_ * 9) * zz * d_; y_ = hy + 14 * zz
+                cv2.line(canvas, (int(x_), int(y_)), (int(x_ - 6 * zz * d_), int(y_ + 9 * zz)), (150, 130, 245), 4, cv2.LINE_AA)
 
 def duration(tx): return .65 + len(tx) / 16.0
 
@@ -712,6 +730,9 @@ class Show:
         global CURRENT_EP, STYLE
         s.e = json.load(open(f"{HERE}/scripts/ep{ep:03d}.json")); s.n = ep; CURRENT_EP = ep
         STYLE = os.environ.get("RB_STYLE") or s.e.get("style") or S.get("style", "classic")
+        anime = STYLE == "anime"
+        F.FONT = HERE + "/assets/fonts/Bangers-Regular.ttf" if anime else "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
+        F.PROP = F.STROKE = anime; F.text_patch.cache_clear()
         t = 0; s.tl = []; s.ev = []; s.info = {}; s.sp = []
         for sh in s.e["shots"]:
             a = t; lines = []
@@ -755,7 +776,12 @@ class Show:
                 cast[ln[0]].update(ln[2])
         img = back.copy()
         if not sh.get("promo") and not sh.get("credit"):
-            extras(img, sh, t, s.n)
+            if STYLE == "anime":
+                lay = np.zeros_like(img); extras(lay, sh, t, s.n)
+                m = (lay.max(axis=2) > 6).astype(np.uint8); ring = cv2.dilate(m, np.ones((5, 5), np.uint8)) - m
+                img[m > 0] = lay[m > 0]; img[ring > 0] = (16, 14, 20)
+            else:
+                extras(img, sh, t, s.n)
         spk = cur[2][0] if cur else None
         order = list(cast.values())
         for c in order:
