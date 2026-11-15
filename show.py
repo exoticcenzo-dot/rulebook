@@ -852,6 +852,18 @@ class Show:
                 dt = t - x["card"][0]; z += .2 * math.exp(-dt / .1); ty += math.sin(t * 90) * 14 * (1 - dt / .5)
         s._z = z
         M = np.array([[z, 0, (1 - z) * pv + tx], [0, z, (1 - z) * FLOOR + ty]], np.float32)
+        if STYLE == "illus" and cur and not s.has_tr(cur, t) and not (x["card"] and x["card"][0] <= t):
+            # TikTok cartoon framing: hard cut to a close-up on whoever talks
+            prev = x["lines"][i_ - 1][2][0] if i_ else None
+            zc = (1.38 if prev == spk else 1.78) + .04 * pr
+            seated = cast[spk]["pose"] not in ("stand", "walk")
+            hy = FLOOR - (480 if seated else 560) * Z * glowup(spk, CAST[spk]).get("scale", 1)
+            ox_ = clamp(W / 2 - zc * cast[spk]["x"], W - zc * W, 0)
+            oy_ = clamp(800 - zc * hy, H - zc * H, 0)
+            dt = t - cur[0]
+            if cast[spk].get("mood") in ("shock", "angry") and dt < .35:
+                ox_ += math.sin(t * 83) * 12 * (1 - dt / .35)
+            M = np.array([[zc, 0, ox_], [0, zc, oy_]], np.float32); s._z = zc
         img = cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_LINEAR)
         if STYLE != "illus": img = (img.astype(np.float32) * F.vignette()).astype(np.uint8)
         if STYLE == "anime": img = palette(img)
@@ -901,7 +913,8 @@ class Show:
             text(img, "NAYVADIUS DEMUN WILBURN", 505, 950, 38, alpha=k, track=2, glow=.2)
             text(img, "AKA PLUTO · FUTURE HENDRIX · MEATHEAD", 505, 1010, 28, alpha=k, track=1, glow=.2)
             text(img, "ORIGINAL INSTRUMENTAL", 505, 1090, 26, alpha=k, track=3, glow=.15)
-        text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
+        if STYLE == "illus": text(img, "@exoticcenzo", 800, 560, 28, alpha=.72, track=2, glow=.2)
+        else: text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
         return img
@@ -922,7 +935,7 @@ class Show:
             if t - a < acc: break
         p = clamp((t - a - (acc - au * wt[k] / tot)) / .09)
         col = s.WORD_COLS[(hash_str(ln[1]) + s.n) % len(s.WORD_COLS)]
-        text(img, ws[k].lower(), 505, 470, int(96 + 22 * (1 - out(p))), col=col)
+        text(img, ws[k].upper(), 505, 1530, int(104 + 26 * (1 - out(p))), col=col)
 
     def bubble(s, img, cur, t, cast, A):
         a, b, ln = cur
