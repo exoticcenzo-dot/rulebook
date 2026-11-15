@@ -1,0 +1,77 @@
+{
+ "ep": 14,
+ "chapter": "THE SIGNATURE",
+ "title": "THE RENT",
+ "lesson": "Size it so you can sleep",
+ "hook": "SPENT THE\nRENT?!",
+ "caption": "Spending money you need for rent? Clyde put ALL our rent on first class tickets to Paris, then lay awake at 3am. Cenzo swapped them for cheap seats and paid the rent. If a bet keeps you up at night, it's too big. Would you sleep after that? Yes or no? Comment CAST ME to join the story. #positionsizing #moneymindset #stickman",
+ "credit_song": "March Madness",
+ "shots": [
+  {
+   "set": "home",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "walk", "face": "r", "mood": "happy"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "lines": [
+    ["clyde", "I SPENT ALL THE RENT ON PARIS TICKETS!"],
+    ["cenzo", "ALL OF IT? FOR ONE PAGE IN PARIS?"]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {"who": "clyde", "x": 420, "pose": "sit", "face": "r", "mood": "shock"}
+   ],
+   "lines": [
+    ["clyde", "3AM. CAN'T SLEEP. WHY FIRST CLASS?!"]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "sit", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 740, "pose": "eat", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["cenzo", "RELAX. I SWAPPED YOUR FIRST CLASS."],
+    ["clyde", "YOU WHAT?!"],
+    ["cenzo", "THREE CHEAP SEATS. RENT IS PAID."]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "stand", "face": "r", "mood": "happy"},
+    {"who": "cenzo", "x": 700, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "card": "RULE 14\nSIZE IT SO\nYOU CAN SLEEP",
+   "lines": [
+    ["cenzo", "IF A BET KEEPS YOU UP, IT'S TOO BIG."],
+    ["cenzo", "SIZE IT SO YOU CAN SLEEP."]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {"who": "nia", "x": 300, "pose": "walk", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "end": "SOLO ON BOARD?",
+   "lines": [
+    ["nia", "PAGE 5 CALLS UNCLE 'LE PROF'. WEIRD.", {"mood": "focus"}],
+    ["nia", "AND RUVA SAYS SOLO BOOKED OUR FLIGHT!"]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE SLEPT FINE. HUGGING THE RECEIPT."]
+   ]
+  }
+ ]
+}

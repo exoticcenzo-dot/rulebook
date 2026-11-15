@@ -1,449 +1,462 @@
 {
-  "title": "THE RULE BOOK",
-  "handle": "@EXOTICCENZO",
-  "premise": "ME, CLYDE & 1 MISSING RULE BOOK. EXOTICCENZO and his best friend CLYDE find only the gutted cover and one page of an old trader's Rule Book, and hunt its pages across the world. They believe it has 99 pages. Episodes 1-100 are THE SEARCH: the complete Rule Book is found at exactly Episode 100, where they discover it really has 884 pages. Episode 101 onward is PART TWO: discovering and understanding the book now in their hands, and it never concludes.",
-  "rules_for_daily_scripts": [
-    "STORY FIRST. This is an adventure about EXOTICCENZO, Clyde and 1 missing Rule Book: the hunt for pages, Solo's race, Mtoriro's missing uncle. Plot, friendships, places and jokes lead every episode. It is never a trading class. Viewer ideas and trends add to the story and never replace it.",
-    "THE 100-EPISODE PLAN. Chapters are exactly 10 episodes and follow masterplan.chapters. Every episode moves the hunt forward with a page or clue. By Episode 100 they have travelled the whole world by train, plane and ship. Number collected pages in order. Everyone believes the book has 99 pages. The final piece is found in their Zimbabwe homeland at exactly Episode 100, not before; the complete book has 884 pages. Episode 100 delivers the most powerful lesson of the series and changes more than 100 characters on screen. Episode 101 onward is about discovering and understanding the book, and the story never concludes.",
-    "THE LESSON. One lesson per episode, mixing mindset, money, relationships, work and trading, at the level the chapter sets. Only EXOTICCENZO explains it, but anyone can cause or learn it: Clyde, friends, strangers, gym regulars, shopkeepers, kombi drivers, fans. It comes from a random, funny, unexpected moment. Viewers must not guess it until EXOTICCENZO breaks it down at the end. Vary the format, including trading sessions with the lesson after. Write moments so true to everyday life that viewers feel they are watching their own reality.",
-    "OPENING. Set a short shock hook on screen. The first spoken line is conflict or stakes, never scene-setting. Every episode must make sense alone, so give new viewers the setup in the first or second line without a slow recap.",
-    "PACING. About 20-25 seconds of story, 8-10 lines at most, each under 50 characters. Change something every 3 to 5 seconds and add a small surprise near 15 seconds.",
-    "ENDING. Close on a cliffhanger that pays off next episode, mostly an open question; cut mid-action only when the next episode truly delivers. Then the outro: EXOTICCENZO alone, thanking viewers or telling a fresh joke that comes out of this episode's unexpected moment, about whoever caused it, never spoiling a hidden hint. The credit_song matches the episode's mood. The Future credit follows automatically. All end screens must fit this episode's story.",
-    "WORLD AND CAST. EXOTICCENZO and Clyde live together in Zimbabwe, between Harare and Bulawayo. Home is the base and the most-used setting. Every few episodes they travel abroad by train, plane or ship, then return home. Everyday scenes are constant: eating, games, sofas, kombis, shops, the gym, trading sessions. Every place is full of ordinary people going about their lives. Give background people moments of their own when funny. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
-    "THE VIBE. EXOTICCENZO and Clyde are permanently chilled, shown only by red eyes and jokes: sleepy, hungry, Clyde forgetting what he was saying. Shady dealers exist in the world, in dark alleys and, unexpectedly, in nice houses (sets alley, villa), but keep it implied: only unmarked packages, whispers and the word dealer. Never show, name or refer to weed, smoking or any drug by name in the video, caption or hashtags.",
-    "GLOW-UP. Appearance changes automatically every 10 episodes from Episode 11: EXOTICCENZO gets bigger and more cut; Clyde barely changes, just slightly taller than Cenzo. One or two gym episodes each chapter, starting Episodes 8-10, so it feels earned. Gym scenes still move the hunt forward.",
-    "FANS. Commenters can become recurring side characters. Roles are positive or friendly-funny; never mock them, make them villains or let them teach.",
-    "CAPTIONS AND SEARCH. The first words name the mindset, money or trading topic people search, such as Can't stop overspending? or Trading with no exit plan? A character says it out loud, and the hook or rule card shows it. Ask an easy question such as Yes or no? Use 2 or 3 specific hashtags, ending with #stickman, never #fyp or #viral. Write at least one line per episode someone would send to a friend.",
-    "SAFETY. No profit promises, no specific buy or sell calls, and no paid-service adverts until Vincenzo turns them back on.",
-    "THE LONG GAME. Each chapter sets up one thing viewers expect at its start, then something unexpected happens at the last moment in its final episodes. Across the chapter, plant small hidden hints in the background or in throwaway lines that viewers will not notice. Characters seen in separate episodes later turn out to be connected. In the payoff, EXOTICCENZO links the hints together: it becomes a lesson nobody saw coming and uncovers a Rule Book clue. Record the planned twist and each hint in series.json plot_threads with its episode, and pay every one off.",
-    "LOOKS. Every 20 episodes, EXOTICCENZO's and Clyde's outfits change automatically: EXOTICCENZO in a Future-inspired style, Clyde in a Gunna-inspired style, generic with no real logos. Other characters wear random outfits by era, and background people dress for the place they are in, so research what is worn there when building a new country. Everyone stands on the ground in a place that makes sense.",
-    "LANGUAGE. Abroad, speech bubbles show the local language with English underneath. Add tr to each line's options, using natural, accurate translation. Zimbabwe scenes stay in English. Spoken voices stay English."
-  ],
-  "characters": {
-    "cenzo": {
-      "name": "EXOTICCENZO",
-      "bio": "The main man. Calm, sharp, loyal. Learns by doing.",
-      "suit": [
-        245,
-        245,
-        245
-      ],
-      "accent": [
-        50,
-        190,
-        255
-      ],
-      "gear": [
-        "cape"
-      ],
-      "hair": "spiky",
-      "voice": 180,
-      "red_eyes": true
-    },
-    "clyde": {
-      "name": "CLYDE",
-      "bio": "Best friend. Always hungry, always all-in, loyal to the end.",
-      "suit": [
-        235,
-        240,
-        225
-      ],
-      "accent": [
-        240,
-        150,
-        50
-      ],
-      "gear": [
-        "headphones",
-        "scarf"
-      ],
-      "hair": "beanie",
-      "voice": 125,
-      "red_eyes": true
-    },
-    "nia": {
-      "name": "MTORIRO",
-      "bio": "From Harare. His uncle wrote the Rule Book and vanished. Holds the book's history, but leaves the teaching to Cenzo.",
-      "suit": [
-        250,
-        238,
-        245
-      ],
-      "accent": [
-        220,
-        90,
-        190
-      ],
-      "gear": [
-        "scarf"
-      ],
-      "hair": "afro",
-      "voice": 300
-    },
-    "zeke": {
-      "name": "SOLO",
-      "bio": "Rival page hunter. Works alone. Polished, smug, always one step ahead.",
-      "suit": [
-        205,
-        205,
-        220
-      ],
-      "accent": [
-        70,
-        70,
-        235
-      ],
-      "gear": [
-        "tie",
-        "glasses"
-      ],
-      "hair": "neat",
-      "voice": 95
-    },
-    "maya": {
-      "name": "JAMAL",
-      "bio": "Tokyo-based creator who films everything. Knows every shortcut.",
-      "suit": [
-        240,
-        248,
-        250
-      ],
-      "accent": [
-        120,
-        220,
-        90
-      ],
-      "gear": [
-        "headphones"
-      ],
-      "hair": "cap",
-      "voice": 350
-    },
-    "ruva": {
-      "name": "RUVA",
-      "bio": "Air hostess from Harare. Warm, quick, knows everyone's name before they say it. Flies the Tokyo route.",
-      "suit": [
-        245,
-        240,
-        235
-      ],
-      "accent": [
-        40,
-        150,
-        90
-      ],
-      "gear": [
-        "scarf"
-      ],
-      "hair": "bun",
-      "voice": 320
-    },
-    "gogo": {
-      "name": "GOGO",
-      "bio": "Grandmother on the Bulawayo night train. Sleeps like a queen, wakes like thunder. Somehow knows Ruva.",
-      "suit": [
-        240,
-        235,
-        225
-      ],
-      "accent": [
-        150,
-        70,
-        160
-      ],
-      "gear": [
-        "scarf"
-      ],
-      "hair": "bun",
-      "voice": 260
-    },
-    "moyo": {
-      "name": "MR MOYO",
-      "bio": "Ruva's sleepy neighbour from Bulawayo. Paid to nap on planes as the decoy 'old man'. Friendly, slow, always yawning.",
-      "suit": [
-        230,
-        225,
-        210
-      ],
-      "accent": [
-        140,
-        110,
-        70
-      ],
-      "gear": [
-        "glasses"
-      ],
-      "hair": "neat",
-      "voice": 110
-    },
-    "tino": {
-      "name": "MAI TINO",
-      "bio": "Harare street vendor outside the uncle's old shop. Sells anything in a box, loud and kind, counts to three for every sale.",
-      "suit": [
-        245,
-        235,
-        215
-      ],
-      "accent": [
-        230,
-        120,
-        40
-      ],
-      "gear": [
-        "scarf"
-      ],
-      "hair": "bun",
-      "voice": 280
-    }
+ "title": "THE RULE BOOK",
+ "handle": "@EXOTICCENZO",
+ "premise": "ME, CLYDE & 1 MISSING RULE BOOK. EXOTICCENZO and his best friend CLYDE find only the gutted cover and one page of an old trader's Rule Book, and hunt its pages across the world. They believe it has 99 pages. Episodes 1-100 are THE SEARCH: the complete Rule Book is found at exactly Episode 100, where they discover it really has 884 pages. Episode 101 onward is PART TWO: discovering and understanding the book now in their hands, and it never concludes.",
+ "rules_for_daily_scripts": [
+  "STORY FIRST. This is an adventure about EXOTICCENZO, Clyde and 1 missing Rule Book: the hunt for pages, Solo's race, Mtoriro's missing uncle. Plot, friendships, places and jokes lead every episode. It is never a trading class. Viewer ideas and trends add to the story and never replace it.",
+  "THE 100-EPISODE PLAN. Chapters are exactly 10 episodes and follow masterplan.chapters. Every episode moves the hunt forward with a page or clue. By Episode 100 they have travelled the whole world by train, plane and ship. Number collected pages in order. Everyone believes the book has 99 pages. The final piece is found in their Zimbabwe homeland at exactly Episode 100, not before; the complete book has 884 pages. Episode 100 delivers the most powerful lesson of the series and changes more than 100 characters on screen. Episode 101 onward is about discovering and understanding the book, and the story never concludes.",
+  "THE LESSON. One lesson per episode, mixing mindset, money, relationships, work and trading, at the level the chapter sets. Only EXOTICCENZO explains it, but anyone can cause or learn it: Clyde, friends, strangers, gym regulars, shopkeepers, kombi drivers, fans. It comes from a random, funny, unexpected moment. Viewers must not guess it until EXOTICCENZO breaks it down at the end. Vary the format, including trading sessions with the lesson after. Write moments so true to everyday life that viewers feel they are watching their own reality.",
+  "OPENING. Set a short shock hook on screen. The first spoken line is conflict or stakes, never scene-setting. Every episode must make sense alone, so give new viewers the setup in the first or second line without a slow recap.",
+  "PACING. About 20-25 seconds of story, 8-10 lines at most, each under 50 characters. Change something every 3 to 5 seconds and add a small surprise near 15 seconds.",
+  "ENDING. Close on a cliffhanger that pays off next episode, mostly an open question; cut mid-action only when the next episode truly delivers. Then the outro: EXOTICCENZO alone, thanking viewers or telling a fresh joke that comes out of this episode's unexpected moment, about whoever caused it, never spoiling a hidden hint. The credit_song matches the episode's mood. The Future credit follows automatically. All end screens must fit this episode's story.",
+  "WORLD AND CAST. EXOTICCENZO and Clyde live together in Zimbabwe, between Harare and Bulawayo. Home is the base and the most-used setting. Every few episodes they travel abroad by train, plane or ship, then return home. Everyday scenes are constant: eating, games, sofas, kombis, shops, the gym, trading sessions. Every place is full of ordinary people going about their lives. Give background people moments of their own when funny. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
+  "THE VIBE. EXOTICCENZO and Clyde are permanently chilled, shown only by red eyes and jokes: sleepy, hungry, Clyde forgetting what he was saying. Shady dealers exist in the world, in dark alleys and, unexpectedly, in nice houses (sets alley, villa), but keep it implied: only unmarked packages, whispers and the word dealer. Never show, name or refer to weed, smoking or any drug by name in the video, caption or hashtags.",
+  "GLOW-UP. Appearance changes automatically every 10 episodes from Episode 11: EXOTICCENZO gets bigger and more cut; Clyde barely changes, just slightly taller than Cenzo. One or two gym episodes each chapter, starting Episodes 8-10, so it feels earned. Gym scenes still move the hunt forward.",
+  "FANS. Commenters can become recurring side characters. Roles are positive or friendly-funny; never mock them, make them villains or let them teach.",
+  "CAPTIONS AND SEARCH. The first words name the mindset, money or trading topic people search, such as Can't stop overspending? or Trading with no exit plan? A character says it out loud, and the hook or rule card shows it. Ask an easy question such as Yes or no? Use 2 or 3 specific hashtags, ending with #stickman, never #fyp or #viral. Write at least one line per episode someone would send to a friend.",
+  "SAFETY. No profit promises, no specific buy or sell calls, and no paid-service adverts until Vincenzo turns them back on.",
+  "THE LONG GAME. Each chapter sets up one thing viewers expect at its start, then something unexpected happens at the last moment in its final episodes. Across the chapter, plant small hidden hints in the background or in throwaway lines that viewers will not notice. Characters seen in separate episodes later turn out to be connected. In the payoff, EXOTICCENZO links the hints together: it becomes a lesson nobody saw coming and uncovers a Rule Book clue. Record the planned twist and each hint in series.json plot_threads with its episode, and pay every one off.",
+  "LOOKS. Every 20 episodes, EXOTICCENZO's and Clyde's outfits change automatically: EXOTICCENZO in a Future-inspired style, Clyde in a Gunna-inspired style, generic with no real logos. Other characters wear random outfits by era, and background people dress for the place they are in, so research what is worn there when building a new country. Everyone stands on the ground in a place that makes sense.",
+  "LANGUAGE. Abroad, speech bubbles show the local language with English underneath. Add tr to each line's options, using natural, accurate translation. Zimbabwe scenes stay in English. Spoken voices stay English."
+ ],
+ "characters": {
+  "cenzo": {
+   "name": "EXOTICCENZO",
+   "bio": "The main man. Calm, sharp, loyal. Learns by doing.",
+   "suit": [
+    245,
+    245,
+    245
+   ],
+   "accent": [
+    50,
+    190,
+    255
+   ],
+   "gear": [
+    "cape"
+   ],
+   "hair": "spiky",
+   "voice": 180,
+   "red_eyes": true
   },
-  "episodes_log": [
-    {
-      "ep": 1,
-      "date": "2026-11-09",
-      "set": "mansion",
-      "rule": "Survive first",
-      "cliffhanger": "Book found under the sofa; page 2 is at the Grand Hotel"
-    },
-    {
-      "ep": 2,
-      "date": "2026-11-09",
-      "set": "hotel",
-      "rule": "Fewer. Better.",
-      "cliffhanger": "Mtoriro's uncle vanished looking for page 99"
-    },
-    {
-      "ep": 3,
-      "date": "2026-11-09",
-      "set": "gameroom",
-      "rule": "Lost? Walk away.",
-      "cliffhanger": "Solo claims the book and races them to Tokyo"
-    },
-    {
-      "ep": 4,
-      "date": "2026-11-10",
-      "set": "plane,tokyo",
-      "rule": "Know your exit",
-      "cliffhanger": "Solo reached the page first and left them a note. Ep 5 must reveal the note.",
-      "time": "10:00",
-      "credit_song": "Turn On the Lights"
-    },
-    {
-      "ep": 5,
-      "date": "2026-11-10",
-      "time": "18:00",
-      "set": "tokyo",
-      "rule": "Don't chase",
-      "cliffhanger": "Back of Solo's note is in the Rule Book's handwriting and the ink is still wet. Ep 6 must answer whether Mtoriro's uncle is in Tokyo.",
-      "credit_song": "Worst Day"
-    },
-    {
-      "ep": 6,
-      "date": "2026-11-11",
-      "time": "10:00",
-      "set": "tokyo",
-      "rule": "Sure is not proof",
-      "cliffhanger": "Boarding pass found at the car park: Mtoriro's uncle flew Tokyo to Harare this morning, and the seat next to his was Solo's. Ep 7 must explain why he travelled with Solo.",
-      "credit_song": "Honest"
-    },
-    {
-      "ep": 7,
-      "date": "2026-11-11",
-      "time": "18:00",
-      "set": "plane",
-      "rule": "Bored is not a signal",
-      "cliffhanger": "Ruva: the old man slept while Solo copied his notebook, and he never got off in Harare. Ep 8 must reveal where the flight went on to (Bulawayo) and start the gym arc.",
-      "credit_song": "Mask Off"
-    },
-    {
-      "ep": 8,
-      "date": "2026-11-12",
-      "time": "10:00",
-      "set": "home,gym",
-      "rule": "Skill before gear",
-      "cliffhanger": "Ruva texts Cenzo: Bulawayo train, 8pm, though nobody gave her his number. Ep 9 must put them on the overnight train to Bulawayo and ask who told her.",
-      "credit_song": "Life Is Good"
-    },
-    {
-      "ep": 9,
-      "date": "2026-11-12",
-      "time": "18:00",
-      "set": "trainnight,bulawayo",
-      "rule": "Set alerts, then rest",
-      "cliffhanger": "Ruva is waiting in Bulawayo beside the old man from the plane, who holds the notebook. Ep 10 must pay off the chapter twist: Ruva is the uncle's daughter, the plane 'old man' was a decoy, and Gogo was asked by Ruva to wake them; link to a Bulawayo Rule Book clue.",
-      "credit_song": "Magic"
-    },
-    {
-      "ep": 10,
-      "date": "2026-11-13",
-      "time": "10:00",
-      "set": "bulawayo",
-      "rule": "One candle isn't a trend",
-      "cliffhanger": "Ruva (the uncle's daughter) hands over page 3, which the uncle left before vanishing again; page 3 is signed by Solo. Ep 11 must open Chapter 2 in Zimbabwe and ask why Solo's signature is on the uncle's page.",
-      "credit_song": "Too Comfortable"
-    },
-    {
-      "ep": 11,
-      "date": "2026-11-14",
-      "time": "10:00",
-      "set": "harare",
-      "rule": "Bet small, stay in",
-      "cliffhanger": "Mtoriro finds a Harare station locker key in the $2 box; the tag says SOLO. Ep 12 must open locker 4 at the Harare station and ask what Solo kept there (keep partner hints subtle).",
-      "credit_song": "Thought It Was a Drought",
-      "new_character": "tino (MAI TINO, Harare street vendor)"
-    },
-    {
-      "ep": 12,
-      "date": "2026-11-14",
-      "time": "18:00",
-      "set": "station",
-      "rule": "Small risk, big reward",
-      "cliffhanger": "Locker 4 holds an old photo of Mtoriro's uncle beside a man whose face is cut out; Solo walks up: 'Put my photo down.' Ep 13 must have Solo confront them at Harare station.",
-      "credit_song": "Commas"
-    },
-    {
-      "ep": 13,
-      "date": "2026-11-15",
-      "time": "10:00",
-      "set": "station",
-      "rule": "The one who waits gets the better price",
-      "cliffhanger": "Solo trades pages 4 and 5 for the photo, whispers 'Sorry, old friend' to it; page 5 is in French and signed Paris. Ep 14 must ask who in Paris signed page 5 and start the road to Paris (keep partner reveal for ep 19-20).",
-      "credit_song": "Wait for U"
-    }
-  ],
-  "masterplan": {
-    "part_one": "THE SEARCH, episodes 1-100",
-    "part_two": "UNDERSTANDING THE BOOK, episode 101 onward",
-    "chapters": [
-      {
-        "ch": 1,
-        "eps": "1-10",
-        "place": "Home and Tokyo",
-        "lessons": "survive, fewer better trades, walk away, know your exit, don't chase",
-        "note": "After Tokyo they return to Harare. Gym begins episodes 8-10.",
-        "locations": "Harare and Bulawayo; Tokyo by plane"
-      },
-      {
-        "ch": 2,
-        "eps": "11-20",
-        "place": "Zimbabwe, then Paris",
-        "lessons": "position sizing, risk and reward, patience",
-        "note": "First glow-up. Travel by plane and across Europe by train.",
-        "locations": "Harare; Paris"
-      },
-      {
-        "ch": 3,
-        "eps": "21-30",
-        "place": "Zimbabwe, then Dubai and the Middle East",
-        "lessons": "greed, leverage, lifestyle traps",
-        "note": "Solo offers a tempting deal.",
-        "locations": "Bulawayo; Dubai"
-      },
-      {
-        "ch": 4,
-        "eps": "31-40",
-        "place": "Across Southern Africa",
-        "lessons": "routines, journaling, discipline, family pressure",
-        "note": "By train from Bulawayo; Victoria Falls. Mtoriro's family; the uncle's trail heats up.",
-        "locations": "Harare, Bulawayo, Victoria Falls"
-      },
-      {
-        "ch": 5,
-        "eps": "41-50",
-        "place": "Zimbabwe, then New York and the Americas",
-        "lessons": "market structure, liquidity, news",
-        "note": "Cross the ocean by ship. Build new sets.",
-        "locations": "New York"
-      },
-      {
-        "ch": 6,
-        "eps": "51-60",
-        "place": "Zimbabwe, then Rio and South America",
-        "lessons": "winning and losing streaks, envy, friendship and money",
-        "note": "Build new sets. The crew is tested.",
-        "locations": "Rio"
-      },
-      {
-        "ch": 7,
-        "eps": "61-70",
-        "place": "Zimbabwe, then London and Europe",
-        "lessons": "backtesting, data, finding an edge",
-        "note": "Build new sets.",
-        "locations": "London"
-      },
-      {
-        "ch": 8,
-        "eps": "71-80",
-        "place": "Zimbabwe, then India, China and Asia",
-        "lessons": "systems, automation, rules over feelings",
-        "note": "Build new sets. Solo's true goal appears.",
-        "locations": "India, China"
-      },
-      {
-        "ch": 9,
-        "eps": "81-90",
-        "place": "Australia, the far corners, Solo's stronghold",
-        "lessons": "drawdown recovery, starting over, real portfolios",
-        "note": "The biggest setback of the search. Build new sets.",
-        "locations": "Australia"
-      },
-      {
-        "ch": 10,
-        "eps": "91-100",
-        "place": "The road home to Zimbabwe",
-        "lessons": "everything combined",
-        "note": "All threads meet. Great Zimbabwe. Episode 100: the final piece is found at home and its lesson changes 100+ characters. Use crowd 120 or more.",
-        "locations": "Harare, Bulawayo, Great Zimbabwe"
-      }
-    ]
+  "clyde": {
+   "name": "CLYDE",
+   "bio": "Best friend. Always hungry, always all-in, loyal to the end.",
+   "suit": [
+    235,
+    240,
+    225
+   ],
+   "accent": [
+    240,
+    150,
+    50
+   ],
+   "gear": [
+    "headphones",
+    "scarf"
+   ],
+   "hair": "beanie",
+   "voice": 125,
+   "red_eyes": true
   },
-  "plot_threads": [
-    {
-      "chapter": 1,
-      "expect": "Find Mtoriro's uncle by following Solo home to Zimbabwe.",
-      "twist": "Episode 9-10: Ruva is the uncle's daughter. She has been helping him hide from Solo, and the 'old man' Solo sat beside on the plane was a decoy. Her hints link to a Rule Book clue in Bulawayo.",
-      "hints": [
-        {
-          "ep": 7,
-          "hint": "Ruva calls Clyde by name though nobody told her it."
-        },
-        {
-          "ep": 7,
-          "hint": "Ruva says the old man 'slept' the whole flight while Solo copied his notebook: a decoy never shows his face."
-        },
-        {
-          "ep": 8,
-          "hint": "Ruva texts Cenzo's phone though he never gave her his number, and she knows the Bulawayo train time."
-        },
-        {
-          "ep": 9,
-          "hint": "Gogo on the night train says Ruva told her Clyde would be loud: Ruva planned their trip and asked Gogo to wake them."
-        }
-      ],
-      "payoff_ep": 10,
-      "paid_off": true,
-      "paid_off_note": "Ep 10: Ruva revealed as the uncle's daughter; Mr Moyo was the paid decoy 'old man'; Solo copied a fake notebook; Gogo woke them for Ruva; Bulawayo clue = page 3."
-    },
-    {
-      "chapter": 2,
-      "expect": "Find out why Solo signed page 3 and track the uncle, then follow the trail to Paris.",
-      "twist": "Planned for Episodes 19-20: Solo and Ruva's father co-wrote the first pages years ago; Solo's signature is a partner's, not a thief's. He hunts the book to finish what they started. Links to a Paris clue.",
-      "hints": [
-        {
-          "ep": 11,
-          "hint": "Mai Tino sells 'the old man and his PARTNER's boxes': the uncle had a partner."
-        },
-        {
-          "ep": 12,
-          "hint": "Solo's locker photo shows the uncle beside a man whose face is cut out (it is young Solo)."
-        },
-        {
-          "ep": 13,
-          "hint": "Solo whispers 'Sorry, old friend' to the photo as he walks away."
-        }
-      ],
-      "payoff_ep": 20,
-      "paid_off": false,
-      "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background)."
-    }
+  "nia": {
+   "name": "MTORIRO",
+   "bio": "From Harare. His uncle wrote the Rule Book and vanished. Holds the book's history, but leaves the teaching to Cenzo.",
+   "suit": [
+    250,
+    238,
+    245
+   ],
+   "accent": [
+    220,
+    90,
+    190
+   ],
+   "gear": [
+    "scarf"
+   ],
+   "hair": "afro",
+   "voice": 300
+  },
+  "zeke": {
+   "name": "SOLO",
+   "bio": "Rival page hunter. Works alone. Polished, smug, always one step ahead.",
+   "suit": [
+    205,
+    205,
+    220
+   ],
+   "accent": [
+    70,
+    70,
+    235
+   ],
+   "gear": [
+    "tie",
+    "glasses"
+   ],
+   "hair": "neat",
+   "voice": 95
+  },
+  "maya": {
+   "name": "JAMAL",
+   "bio": "Tokyo-based creator who films everything. Knows every shortcut.",
+   "suit": [
+    240,
+    248,
+    250
+   ],
+   "accent": [
+    120,
+    220,
+    90
+   ],
+   "gear": [
+    "headphones"
+   ],
+   "hair": "cap",
+   "voice": 350
+  },
+  "ruva": {
+   "name": "RUVA",
+   "bio": "Air hostess from Harare. Warm, quick, knows everyone's name before they say it. Flies the Tokyo route.",
+   "suit": [
+    245,
+    240,
+    235
+   ],
+   "accent": [
+    40,
+    150,
+    90
+   ],
+   "gear": [
+    "scarf"
+   ],
+   "hair": "bun",
+   "voice": 320
+  },
+  "gogo": {
+   "name": "GOGO",
+   "bio": "Grandmother on the Bulawayo night train. Sleeps like a queen, wakes like thunder. Somehow knows Ruva.",
+   "suit": [
+    240,
+    235,
+    225
+   ],
+   "accent": [
+    150,
+    70,
+    160
+   ],
+   "gear": [
+    "scarf"
+   ],
+   "hair": "bun",
+   "voice": 260
+  },
+  "moyo": {
+   "name": "MR MOYO",
+   "bio": "Ruva's sleepy neighbour from Bulawayo. Paid to nap on planes as the decoy 'old man'. Friendly, slow, always yawning.",
+   "suit": [
+    230,
+    225,
+    210
+   ],
+   "accent": [
+    140,
+    110,
+    70
+   ],
+   "gear": [
+    "glasses"
+   ],
+   "hair": "neat",
+   "voice": 110
+  },
+  "tino": {
+   "name": "MAI TINO",
+   "bio": "Harare street vendor outside the uncle's old shop. Sells anything in a box, loud and kind, counts to three for every sale.",
+   "suit": [
+    245,
+    235,
+    215
+   ],
+   "accent": [
+    230,
+    120,
+    40
+   ],
+   "gear": [
+    "scarf"
+   ],
+   "hair": "bun",
+   "voice": 280
+  }
+ },
+ "episodes_log": [
+  {
+   "ep": 1,
+   "date": "2026-11-09",
+   "set": "mansion",
+   "rule": "Survive first",
+   "cliffhanger": "Book found under the sofa; page 2 is at the Grand Hotel"
+  },
+  {
+   "ep": 2,
+   "date": "2026-11-09",
+   "set": "hotel",
+   "rule": "Fewer. Better.",
+   "cliffhanger": "Mtoriro's uncle vanished looking for page 99"
+  },
+  {
+   "ep": 3,
+   "date": "2026-11-09",
+   "set": "gameroom",
+   "rule": "Lost? Walk away.",
+   "cliffhanger": "Solo claims the book and races them to Tokyo"
+  },
+  {
+   "ep": 4,
+   "date": "2026-11-10",
+   "set": "plane,tokyo",
+   "rule": "Know your exit",
+   "cliffhanger": "Solo reached the page first and left them a note. Ep 5 must reveal the note.",
+   "time": "10:00",
+   "credit_song": "Turn On the Lights"
+  },
+  {
+   "ep": 5,
+   "date": "2026-11-10",
+   "time": "18:00",
+   "set": "tokyo",
+   "rule": "Don't chase",
+   "cliffhanger": "Back of Solo's note is in the Rule Book's handwriting and the ink is still wet. Ep 6 must answer whether Mtoriro's uncle is in Tokyo.",
+   "credit_song": "Worst Day"
+  },
+  {
+   "ep": 6,
+   "date": "2026-11-11",
+   "time": "10:00",
+   "set": "tokyo",
+   "rule": "Sure is not proof",
+   "cliffhanger": "Boarding pass found at the car park: Mtoriro's uncle flew Tokyo to Harare this morning, and the seat next to his was Solo's. Ep 7 must explain why he travelled with Solo.",
+   "credit_song": "Honest"
+  },
+  {
+   "ep": 7,
+   "date": "2026-11-11",
+   "time": "18:00",
+   "set": "plane",
+   "rule": "Bored is not a signal",
+   "cliffhanger": "Ruva: the old man slept while Solo copied his notebook, and he never got off in Harare. Ep 8 must reveal where the flight went on to (Bulawayo) and start the gym arc.",
+   "credit_song": "Mask Off"
+  },
+  {
+   "ep": 8,
+   "date": "2026-11-12",
+   "time": "10:00",
+   "set": "home,gym",
+   "rule": "Skill before gear",
+   "cliffhanger": "Ruva texts Cenzo: Bulawayo train, 8pm, though nobody gave her his number. Ep 9 must put them on the overnight train to Bulawayo and ask who told her.",
+   "credit_song": "Life Is Good"
+  },
+  {
+   "ep": 9,
+   "date": "2026-11-12",
+   "time": "18:00",
+   "set": "trainnight,bulawayo",
+   "rule": "Set alerts, then rest",
+   "cliffhanger": "Ruva is waiting in Bulawayo beside the old man from the plane, who holds the notebook. Ep 10 must pay off the chapter twist: Ruva is the uncle's daughter, the plane 'old man' was a decoy, and Gogo was asked by Ruva to wake them; link to a Bulawayo Rule Book clue.",
+   "credit_song": "Magic"
+  },
+  {
+   "ep": 10,
+   "date": "2026-11-13",
+   "time": "10:00",
+   "set": "bulawayo",
+   "rule": "One candle isn't a trend",
+   "cliffhanger": "Ruva (the uncle's daughter) hands over page 3, which the uncle left before vanishing again; page 3 is signed by Solo. Ep 11 must open Chapter 2 in Zimbabwe and ask why Solo's signature is on the uncle's page.",
+   "credit_song": "Too Comfortable"
+  },
+  {
+   "ep": 11,
+   "date": "2026-11-14",
+   "time": "10:00",
+   "set": "harare",
+   "rule": "Bet small, stay in",
+   "cliffhanger": "Mtoriro finds a Harare station locker key in the $2 box; the tag says SOLO. Ep 12 must open locker 4 at the Harare station and ask what Solo kept there (keep partner hints subtle).",
+   "credit_song": "Thought It Was a Drought",
+   "new_character": "tino (MAI TINO, Harare street vendor)"
+  },
+  {
+   "ep": 12,
+   "date": "2026-11-14",
+   "time": "18:00",
+   "set": "station",
+   "rule": "Small risk, big reward",
+   "cliffhanger": "Locker 4 holds an old photo of Mtoriro's uncle beside a man whose face is cut out; Solo walks up: 'Put my photo down.' Ep 13 must have Solo confront them at Harare station.",
+   "credit_song": "Commas"
+  },
+  {
+   "ep": 13,
+   "date": "2026-11-15",
+   "time": "10:00",
+   "set": "station",
+   "rule": "The one who waits gets the better price",
+   "cliffhanger": "Solo trades pages 4 and 5 for the photo, whispers 'Sorry, old friend' to it; page 5 is in French and signed Paris. Ep 14 must ask who in Paris signed page 5 and start the road to Paris (keep partner reveal for ep 19-20).",
+   "credit_song": "Wait for U"
+  },
+  {
+   "ep": 14,
+   "date": "2026-11-15",
+   "time": "18:00",
+   "set": "home",
+   "rule": "Size it so you can sleep",
+   "cliffhanger": "Mtoriro reads that page 5 calls the uncle 'LE PROF' (a nickname only his old partner used); Ruva warns that Solo booked the same Paris flight. Ep 15 must put the crew on the plane to Paris with Solo aboard (Ruva can be crew) and keep the partner reveal for eps 19-20.",
+   "credit_song": "March Madness"
+  }
+ ],
+ "masterplan": {
+  "part_one": "THE SEARCH, episodes 1-100",
+  "part_two": "UNDERSTANDING THE BOOK, episode 101 onward",
+  "chapters": [
+   {
+    "ch": 1,
+    "eps": "1-10",
+    "place": "Home and Tokyo",
+    "lessons": "survive, fewer better trades, walk away, know your exit, don't chase",
+    "note": "After Tokyo they return to Harare. Gym begins episodes 8-10.",
+    "locations": "Harare and Bulawayo; Tokyo by plane"
+   },
+   {
+    "ch": 2,
+    "eps": "11-20",
+    "place": "Zimbabwe, then Paris",
+    "lessons": "position sizing, risk and reward, patience",
+    "note": "First glow-up. Travel by plane and across Europe by train.",
+    "locations": "Harare; Paris"
+   },
+   {
+    "ch": 3,
+    "eps": "21-30",
+    "place": "Zimbabwe, then Dubai and the Middle East",
+    "lessons": "greed, leverage, lifestyle traps",
+    "note": "Solo offers a tempting deal.",
+    "locations": "Bulawayo; Dubai"
+   },
+   {
+    "ch": 4,
+    "eps": "31-40",
+    "place": "Across Southern Africa",
+    "lessons": "routines, journaling, discipline, family pressure",
+    "note": "By train from Bulawayo; Victoria Falls. Mtoriro's family; the uncle's trail heats up.",
+    "locations": "Harare, Bulawayo, Victoria Falls"
+   },
+   {
+    "ch": 5,
+    "eps": "41-50",
+    "place": "Zimbabwe, then New York and the Americas",
+    "lessons": "market structure, liquidity, news",
+    "note": "Cross the ocean by ship. Build new sets.",
+    "locations": "New York"
+   },
+   {
+    "ch": 6,
+    "eps": "51-60",
+    "place": "Zimbabwe, then Rio and South America",
+    "lessons": "winning and losing streaks, envy, friendship and money",
+    "note": "Build new sets. The crew is tested.",
+    "locations": "Rio"
+   },
+   {
+    "ch": 7,
+    "eps": "61-70",
+    "place": "Zimbabwe, then London and Europe",
+    "lessons": "backtesting, data, finding an edge",
+    "note": "Build new sets.",
+    "locations": "London"
+   },
+   {
+    "ch": 8,
+    "eps": "71-80",
+    "place": "Zimbabwe, then India, China and Asia",
+    "lessons": "systems, automation, rules over feelings",
+    "note": "Build new sets. Solo's true goal appears.",
+    "locations": "India, China"
+   },
+   {
+    "ch": 9,
+    "eps": "81-90",
+    "place": "Australia, the far corners, Solo's stronghold",
+    "lessons": "drawdown recovery, starting over, real portfolios",
+    "note": "The biggest setback of the search. Build new sets.",
+    "locations": "Australia"
+   },
+   {
+    "ch": 10,
+    "eps": "91-100",
+    "place": "The road home to Zimbabwe",
+    "lessons": "everything combined",
+    "note": "All threads meet. Great Zimbabwe. Episode 100: the final piece is found at home and its lesson changes 100+ characters. Use crowd 120 or more.",
+    "locations": "Harare, Bulawayo, Great Zimbabwe"
+   }
   ]
+ },
+ "plot_threads": [
+  {
+   "chapter": 1,
+   "expect": "Find Mtoriro's uncle by following Solo home to Zimbabwe.",
+   "twist": "Episode 9-10: Ruva is the uncle's daughter. She has been helping him hide from Solo, and the 'old man' Solo sat beside on the plane was a decoy. Her hints link to a Rule Book clue in Bulawayo.",
+   "hints": [
+    {
+     "ep": 7,
+     "hint": "Ruva calls Clyde by name though nobody told her it."
+    },
+    {
+     "ep": 7,
+     "hint": "Ruva says the old man 'slept' the whole flight while Solo copied his notebook: a decoy never shows his face."
+    },
+    {
+     "ep": 8,
+     "hint": "Ruva texts Cenzo's phone though he never gave her his number, and she knows the Bulawayo train time."
+    },
+    {
+     "ep": 9,
+     "hint": "Gogo on the night train says Ruva told her Clyde would be loud: Ruva planned their trip and asked Gogo to wake them."
+    }
+   ],
+   "payoff_ep": 10,
+   "paid_off": true,
+   "paid_off_note": "Ep 10: Ruva revealed as the uncle's daughter; Mr Moyo was the paid decoy 'old man'; Solo copied a fake notebook; Gogo woke them for Ruva; Bulawayo clue = page 3."
+  },
+  {
+   "chapter": 2,
+   "expect": "Find out why Solo signed page 3 and track the uncle, then follow the trail to Paris.",
+   "twist": "Planned for Episodes 19-20: Solo and Ruva's father co-wrote the first pages years ago; Solo's signature is a partner's, not a thief's. He hunts the book to finish what they started. Links to a Paris clue.",
+   "hints": [
+    {
+     "ep": 11,
+     "hint": "Mai Tino sells 'the old man and his PARTNER's boxes': the uncle had a partner."
+    },
+    {
+     "ep": 12,
+     "hint": "Solo's locker photo shows the uncle beside a man whose face is cut out (it is young Solo)."
+    },
+    {
+     "ep": 13,
+     "hint": "Solo whispers 'Sorry, old friend' to the photo as he walks away."
+    },
+    {
+     "ep": 14,
+     "hint": "Page 5 (signed Paris) calls the uncle 'LE PROF', a nickname only his old partner used; Solo should later slip and say 'Prof'."
+    }
+   ],
+   "payoff_ep": 20,
+   "paid_off": false,
+   "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background)."
+  }
+ ]
 }
