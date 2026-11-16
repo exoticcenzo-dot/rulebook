@@ -1,0 +1,82 @@
+{
+  "checked": "2026-11-16",
+  "how": "Dialogue is global English first. American Gen Z slang is the main spice; Zimbabwean words are a light local flavour. Every term must be clear from context or the picture.",
+  "american_genz": {
+    "sources": [
+      "https://wordy.info/blog/gen-z-slang-guide",
+      "https://simplified.com/blog/ai-writing/gen-z-slang-words-and-how-to-use-them",
+      "https://sumsumsum.com/list/gen-z-slang-2026"
+    ],
+    "terms": {
+      "no cap": "for real",
+      "bet": "okay, deal",
+      "lowkey": "a little, quietly",
+      "sus": "suspicious",
+      "it's giving": "has the vibe of",
+      "ate": "did extremely well",
+      "say less": "got it",
+      "bussin": "really good (food)",
+      "I'm dead": "so funny",
+      "aura": "coolness",
+      "big W": "a big win",
+      "L": "a loss",
+      "glow up": "transformation",
+      "clock it": "notice it",
+      "cooked": "in big trouble",
+      "crash out": "overreact, lose it",
+      "lock in": "focus hard",
+      "touch grass": "go outside",
+      "mid": "average",
+      "GOAT": "greatest of all time",
+      "understood the assignment": "nailed it",
+      "unbothered": "calm, unaffected",
+      "rent free": "stuck in your head",
+      "delulu": "playfully delusional",
+      "era": "a phase",
+      "FOMO": "fear of missing out",
+      "hangry": "hungry and angry",
+      "IYKYK": "if you know you know"
+    }
+  },
+  "zimbabwe": {
+    "sources": [
+      "https://www.heraldonline.co.zw/from-kenge-to-drip-baddie-energy-the-streets-still-have-a-language/",
+      "https://journals.nwu.ac.za/index.php/ijilmd/article/download/705/126/5680",
+      "https://omniglot.com/language/phrases/shona.php",
+      "https://sophiecress.com/blog/greetings-in-zimbabwe-saying-hello",
+      "https://pindula.co.zw/Kombi",
+      "https://en.wikipedia.org/wiki/Zimbabwean_English"
+    ],
+    "terms": {
+      "ndeipi": "what's up (Shona)",
+      "kenge": "all good? (Shona street)",
+      "sharp sharp": "okay, bye, cool",
+      "shamwari": "friend (Shona)",
+      "hesi": "hi (Shona, casual)",
+      "zvakaoma": "things are tough (Shona)",
+      "eish": "ugh, wow",
+      "unjani": "how are you (Ndebele)",
+      "ngiyabonga": "thank you (Ndebele)",
+      "kombi": "minibus taxi",
+      "hwindi": "kombi tout",
+      "sadza": "maize-meal staple",
+      "tuck shop": "corner shop",
+      "make a plan": "improvise",
+      "zvemahara": "free stuff (Shona)",
+      "mabhero": "second-hand clothes market",
+      "pressa": "pressure to keep up",
+      "tyora": "chill, relax (Shona)",
+      "lighty": "younger kid"
+    }
+  },
+  "avoid": [
+    "slurs of any kind",
+    "sexual words",
+    "drug words (incl. mbanje, dank)",
+    "political words and satire of president, police, army, parties (chimbwido, mujibha)",
+    "class-mocking words (benzi, matsaga)",
+    "voetsek",
+    "dated slang: cheugy, gyat, bae, sassy, vibe check, simp, woke, ok boomer",
+    "real comedians' catchphrases"
+  ]
+}

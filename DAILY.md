@@ -24,7 +24,8 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, op
 
 ## Other files
 - `fans.json`: comments read, fan cast, ideas, removal requests. Fan characters go in `series.json` with their TikTok username as the name.
-- `trends.json`: current trends mapped to the story. Use one when it fits. Never add copyrighted songs.
+- `trends.json`: current trends mapped to the story.
+- `slang.json`: current American Gen Z slang and vetted Zimbabwean words, plus an avoid list. See the LANGUAGE AND RELATABILITY rule. Use one when it fits. Never add copyrighted songs.
 
 ## Look from Episode 15
 From Episode 15 the renderer switches to the illustrated cartoon style on its own (`illus_from: 15` in series.json): big-head stickmen in real clothes, close-ups on whoever is talking, 2-3 word caption chunks at the bottom with the spoken word highlighted. Scripts don't need a `style` field. Keep lines short and punchy so the captions read well.

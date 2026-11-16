@@ -20,6 +20,12 @@ def clean(tx):
         s = re.sub(rf"\b{a}\b", b, s, flags=re.I)
     s = re.sub(r"\bi('|\b)", lambda m: "I" + m.group(1), s)
     s = re.sub(r"\brematch\b", "re-match", s, flags=re.I)
+    # Shona / Ndebele / slang pronunciations for the American-English voice
+    for a, b in (("ndeipi", "n-day-pee"), ("zvakaoma", "zvah-kah-oh-mah"), ("zvemahara", "zveh-mah-hah-rah"), ("shamwari", "shahm-wah-ree"),
+                 ("ngiyabonga", "ngee-yah-bohn-gah"), ("unjani", "oon-jah-nee"), ("hwindi", "hwin-dee"), ("sadza", "sahd-zah"),
+                 ("kombi", "kom-bee"), ("mabhero", "mah-beh-roh"), ("tyora", "tyoh-rah"), ("hesi", "heh-see"), ("kenge", "ken-geh"),
+                 ("eish", "aysh"), ("mfana", "um-fah-nah"), ("mudhara", "moo-dah-rah"), ("delulu", "deh-loo-loo"), ("bussin", "buss-in"), ("GOAT", "goat")):
+        s = re.sub(rf"\b{a}\b", b, s, flags=re.I)
     return s if s[-1:] in ".?!" else s + "."
 def say(who, tx):
     """return mono float32 at 44100 Hz"""
