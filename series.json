@@ -359,6 +359,15 @@
    "cliffhanger": "In Paris, Clyde refused to ask directions for six hours; Cenzo asked Antoine the waiter at Cafe Le Haut and page 6 was on his top shelf. Page 6 reveals the Rule Book is rules for LIFE, not money (book_truth revealed). Antoine adds: 'A man in a suit asked too. Years ago.' Ep 17 must ask whether Solo was in Paris with the Prof years ago (partner hint, keep full reveal for eps 19-20); Solo still believes it is a trading book.",
    "credit_song": "Hard to Choose One",
    "new_character": "antoine (ANTOINE, Paris cafe waiter at Cafe Le Haut)"
+  },
+  {
+   "ep": 17,
+   "date": "2026-11-17",
+   "time": "16:00",
+   "set": "pariscafe",
+   "rule": "No thanks is a full sentence",
+   "cliffhanger": "Clyde couldn't say no to Antoine and ate nine croissants (60 euro bill). Antoine finds an old bill: two coffees for LE PROF and 'S'. Ep 18 must ask who S is (strong Solo hint) without the full partner reveal (keep for eps 19-20); Solo still thinks it is a trading book.",
+   "structure": "repeat gag / me-correcting-myself (Clyde tries to say no and caves)"
   }
  ],
  "masterplan": {
@@ -502,6 +511,10 @@
     {
      "ep": 16,
      "hint": "Antoine the Paris waiter: 'A man in a suit asked too. Years ago.' Young Solo came to Cafe Le Haut with the Prof."
+    },
+    {
+     "ep": 17,
+     "hint": "Antoine's old Cafe Le Haut bill: two coffees, LE PROF and 'S' (Solo)."
     }
    ],
    "payoff_ep": 20,

@@ -1,0 +1,66 @@
+{
+ "ep": 17,
+ "chapter": "THE SIGNATURE",
+ "title": "THE TENTH CROISSANT",
+ "lesson": "No thanks is a full sentence",
+ "hook": "NINE\nCROISSANTS?!",
+ "caption": "Can't say no to people? THE RULE BOOK Ep 17: Clyde ate nine croissants in Paris because the waiter asked nicely. Then Antoine found an old bill: two coffees, Le Prof and 'S'. Who is S? A) Solo B) Someone new. A or B? Comment CAST ME to join the story. #sayingno #liferules #meme #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "shots": [
+  {
+   "set": "pariscafe",
+   "cast": [
+    {"who": "clyde", "x": 320, "pose": "sit", "face": "r", "mood": "shock", "prop": "table"},
+    {"who": "antoine", "x": 760, "pose": "walk", "face": "l", "mood": "happy"}
+   ],
+   "lines": [
+    ["clyde", "I ATE NINE CROISSANTS. SEND HELP.", {"tr": "J'AI MANGÉ NEUF CROISSANTS. AU SECOURS."}],
+    ["antoine", "A TENTH, MONSIEUR?", {"tr": "UN DIXIÈME, MONSIEUR ?"}],
+    ["clyde", "NO TH... OKAY, BET. YES PLEASE.", {"tr": "NON MER... BON, D'ACCORD. OUI MERCI.", "mood": "happy"}]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {"who": "cenzo", "x": 300, "pose": "stand", "face": "r", "mood": "focus"},
+    {"who": "clyde", "x": 740, "pose": "sit", "face": "l", "mood": "shock", "prop": "table"}
+   ],
+   "lines": [
+    ["cenzo", "EISH. THE BILL IS 60 EUROS.", {"tr": "AÏE. L'ADDITION FAIT 60 EUROS."}],
+    ["clyde", "HE ASKED SO NICELY. I'M COOKED.", {"tr": "IL A DEMANDÉ SI GENTIMENT. JE SUIS FICHU."}]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "sit", "face": "r", "mood": "shock", "prop": "table"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "card": "RULE 17\nJUST SAY\nNO THANKS",
+   "lines": [
+    ["cenzo", "'NO THANKS' IS A FULL SENTENCE.", {"tr": "'NON MERCI' EST UNE PHRASE COMPLÈTE."}]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {"who": "antoine", "x": 320, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 760, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "end": "WHO IS S?",
+   "lines": [
+    ["antoine", "OLD BILL. TWO COFFEES: LE PROF AND S.", {"tr": "VIEILLE ADDITION. DEUX CAFÉS : LE PROF ET S."}]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE JUST ORDERED CROISSANT ELEVEN.", {"tr": "CLYDE VIENT DE COMMANDER LE ONZIÈME CROISSANT."}]
+   ]
+  }
+ ]
+}
