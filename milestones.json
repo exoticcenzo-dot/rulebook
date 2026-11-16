@@ -46,7 +46,8 @@
     ]
   },
   "announced": [
-    "first_comment"
+    "first_comment",
+    "total_likes:50"
   ],
   "alerted_comment_ids": [
     "7708342797313655558"
