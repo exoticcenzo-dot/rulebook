@@ -1,0 +1,192 @@
+{
+ "ep": 16,
+ "chapter": "THE SIGNATURE",
+ "title": "THE TOP SHELF",
+ "lesson": "Asking is free, pride costs hours",
+ "hook": "TOO PROUD\nTO ASK?",
+ "caption": "Too proud to ask for directions? THE RULE BOOK Ep 16: Clyde walked us round Paris for six hours instead of asking. Then he sat on a cafe table. One polite question to the waiter found page 6 in ten seconds. Who was the man in the suit? A) Solo B) Someone new. A or B? #liferules #lifelessons #stickman",
+ "credit_song": "Hard to Choose One",
+ "shots": [
+  {
+   "set": "pariscafe",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 320,
+     "pose": "sit",
+     "face": "r",
+     "mood": "angry",
+     "prop": "table"
+    },
+    {
+     "who": "antoine",
+     "x": 760,
+     "pose": "walk",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "SIX HOURS LOST. STILL NOT ASKING!",
+     {
+      "tr": "SIX HEURES PERDUES. JE NE DEMANDE PAS !"
+     }
+    ],
+    [
+     "antoine",
+     "MONSIEUR. YOU SIT ON THE TABLE.",
+     {
+      "tr": "MONSIEUR. VOUS ÊTES ASSIS SUR LA TABLE."
+     }
+    ]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "antoine",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "EXCUSE ME. WAS 'THE PROF' HERE?",
+     {
+      "tr": "PARDON. 'LE PROF' EST VENU ICI ?"
+     }
+    ],
+    [
+     "antoine",
+     "LE PROF? HIS PAGE IS ON MY TOP SHELF.",
+     {
+      "tr": "LE PROF ? SA PAGE EST SUR MON ÉTAGÈRE DU HAUT."
+     }
+    ]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "clyde",
+     "x": 740,
+     "pose": "sit",
+     "face": "l",
+     "mood": "shock",
+     "prop": "table"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "PAGE 6: RULES FOR LIFE. NOT MONEY.",
+     {
+      "tr": "PAGE 6 : RÈGLES DE VIE. PAS D'ARGENT."
+     }
+    ]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "sit",
+     "face": "r",
+     "mood": "shock",
+     "prop": "table"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "card": "RULE 16\nASKING\nIS FREE",
+   "lines": [
+    [
+     "cenzo",
+     "ASKING IS FREE. PRIDE COSTS HOURS.",
+     {
+      "tr": "DEMANDER EST GRATUIT. L'ORGUEIL COÛTE DES HEURES."
+     }
+    ]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {
+     "who": "antoine",
+     "x": 320,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "cenzo",
+     "x": 760,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "end": "SOLO WAS HERE?",
+   "lines": [
+    [
+     "antoine",
+     "A MAN IN A SUIT ASKED TOO. YEARS AGO.",
+     {
+      "tr": "UN HOMME EN COSTUME A DEMANDÉ AUSSI. IL Y A DES ANNÉES."
+     }
+    ]
+   ]
+  },
+  {
+   "set": "pariscafe",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "CLYDE STILL WON'T ASK FOR THE TOILET.",
+     {
+      "tr": "CLYDE NE DEMANDE TOUJOURS PAS LES TOILETTES."
+     }
+    ]
+   ]
+  }
+ ]
+}

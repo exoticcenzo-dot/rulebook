@@ -134,18 +134,75 @@ def tokyo():
     i[FLOOR:] = cv2.addWeighted(i[FLOOR:], .7, lamp, .4, 0)
     return i, None
 
+def paris_tower(i, cx, top, sc, col=(30, 40, 60)):
+    """Eiffel Tower silhouette, feet on the floor line."""
+    hgt = FLOOR - top
+    pts = np.array([(cx, top), (cx - 35 * sc, top + hgt * .45), (cx - 120 * sc, FLOOR), (cx - 70 * sc, FLOOR), (cx - 10 * sc, top + hgt * .62),
+                    (cx + 10 * sc, top + hgt * .62), (cx + 70 * sc, FLOOR), (cx + 120 * sc, FLOOR), (cx + 35 * sc, top + hgt * .45)], np.int32)
+    cv2.fillPoly(i, [pts], col, cv2.LINE_AA)
+    for k in (.45, .7): rect(i, cx - 60 * sc * k * 1.4, top + hgt * k, cx + 60 * sc * k * 1.4, top + hgt * k + 14 * sc, col)
+    cv2.ellipse(i, (int(cx), int(FLOOR)), (int(62 * sc), int(hgt * .2)), 0, 180, 360, (130, 150, 175), -1, cv2.LINE_AA)
+
+def paris_lamp(i, x):
+    cv2.line(i, (x, FLOOR - 20), (x, FLOOR - 470), (30, 34, 40), 10, cv2.LINE_AA)
+    cv2.line(i, (x - 40, FLOOR - 440), (x + 40, FLOOR - 440), (30, 34, 40), 6, cv2.LINE_AA)
+    for dx in (-40, 40):
+        rect(i, x + dx - 14, FLOOR - 500, x + dx + 14, FLOOR - 444, (120, 210, 245)); rect(i, x + dx - 18, FLOOR - 506, x + dx + 18, FLOOR - 498, (30, 34, 40))
+
+def paris_table(i, x, cloth=(240, 240, 240)):
+    cv2.ellipse(i, (x, FLOOR - 150), (62, 12), 0, 0, 360, (150, 160, 170), -1, cv2.LINE_AA)
+    rect(i, x - 5, FLOOR - 150, x + 5, FLOOR - 26, (40, 44, 50)); rect(i, x - 30, FLOOR - 32, x + 30, FLOOR - 24, (40, 44, 50))
+    for dx in (-96, 96):
+        rect(i, x + dx - 26, FLOOR - 110, x + dx + 26, FLOOR - 100, (60, 90, 150))
+        cv2.line(i, (x + dx - 22, FLOOR - 100), (x + dx - 22, FLOOR - 26), (40, 44, 50), 4); cv2.line(i, (x + dx + 22, FLOOR - 100), (x + dx + 22, FLOOR - 26), (40, 44, 50), 4)
+        cv2.line(i, (x + dx + (24 if dx > 0 else -24), FLOOR - 110), (x + dx + (24 if dx > 0 else -24), FLOOR - 190), (40, 44, 50), 4)
+
+def paris_front(i, x, w, top, wall, name, awn, kind):
+    rect(i, x, top, x + w, FLOOR, wall)
+    for wy in range(top + 30, top + 300, 110):
+        for wx in range(x + 24, x + w - 50, 78):
+            rect(i, wx, wy, wx + 46, wy + 74, (200, 215, 225)); rect(i, wx - 6, wy + 74, wx + 52, wy + 84, (60, 60, 64))
+            for fx in range(wx, wx + 46, 14): circle(i, (fx + 6, wy + 70), 7, (90, 60, 220) if (fx // 14) % 2 else (60, 180, 240))
+    sy = top + 330
+    rect(i, x, sy, x + w, sy + 60, (40, 70, 40) if kind == "pharm" else (40, 40, 120) if kind == "cafe" else (50, 80, 130))
+    label(i, name, x + 16, sy + 44, .95, (235, 240, 245))
+    for ax in range(x, x + w, 36):
+        quad(i, [(ax, sy + 60), (ax + 36, sy + 60), (ax + 44, sy + 110), (ax + 8, sy + 110)], awn if (ax - x) // 36 % 2 == 0 else (240, 240, 240))
+    rect(i, x + 16, sy + 130, x + w - 16, FLOOR - 40, (120, 100, 70)); rect(i, x + 24, sy + 138, x + w - 24, FLOOR - 48, (180, 200, 215))
+    if kind == "bakery":
+        for k in range(4): cv2.ellipse(i, (x + 60 + k * 50, FLOOR - 130), (24, 10), -20, 0, 360, (60, 140, 200), -1, cv2.LINE_AA)
+        for k in range(3): cv2.line(i, (x + 50 + k * 60, FLOOR - 200), (x + 100 + k * 60, FLOOR - 240), (70, 150, 210), 12, cv2.LINE_AA)
+    if kind == "pharm":
+        cx, cy = x + w - 50, sy - 50
+        rect(i, cx - 12, cy - 34, cx + 12, cy + 34, (90, 220, 90)); rect(i, cx - 34, cy - 12, cx + 34, cy + 12, (90, 220, 90))
+    if kind == "cafe":
+        for k in range(5):
+            bx = x + 40 + k * 46; rect(i, bx, sy + 150, bx + 16, sy + 200, ((40, 120, 60), (40, 60, 150), (30, 160, 200), (120, 60, 40), (60, 40, 120))[k])
+        rect(i, x + 30, sy + 202, x + w - 30, sy + 208, (60, 50, 40))
+
 def paris():
-    i = base((130, 80, 110), (60, 90, 170))
-    pts = np.array([(540, 300), (505, 760), (420, 1250), (470, 1250), (530, 900), (550, 900), (610, 1250), (660, 1250), (575, 760)], np.int32)
-    cv2.fillPoly(i, [pts], (30, 40, 60), cv2.LINE_AA)
-    for y in (760, 1000): rect(i, 470, y, 610, y + 18, (30, 40, 60))
-    r = random.Random(1); x = 0
-    while x < W:
-        w = r.randint(120, 200); top = r.randint(860, 1020); rect(i, x, top, x + w, FLOOR, (50, 66, 100))
-        for wy in range(top + 26, FLOOR - 40, 62):
-            for wx in range(x + 14, x + w - 24, 46): rect(i, wx, wy, wx + 20, wy + 34, (120, 180, 230))
-        x += w + 2
-    rect(i, 0, FLOOR - 24, W, H, (60, 66, 80))
+    i = base((150, 120, 150), (190, 200, 235))
+    cv2.circle(i, (840, 420), 70, (200, 230, 255), -1, cv2.LINE_AA)
+    r = random.Random(4)
+    for x in range(-40, W, 150): rect(i, x, 640 + r.randint(0, 60), x + 150, FLOOR, (150, 160, 185))
+    paris_tower(i, 540, 230, 1.6)
+    paris_front(i, 0, 300, 600, (175, 200, 225), "BOULANGERIE", (60, 120, 200), "bakery")
+    paris_front(i, 760, 320, 580, (165, 190, 215), "PHARMACIE", (60, 140, 60), "pharm")
+    rect(i, 0, FLOOR - 26, W, H, (110, 120, 130))
+    for x in range(-60, W, 70): rect(i, x, FLOOR + 10 + (x // 70 % 2) * 30, x + 64, FLOOR + 36 + (x // 70 % 2) * 30, (130, 140, 150))
+    for x in (330, 720): paris_lamp(i, x)
+    for px_ in (380, 640): cv2.ellipse(i, (px_, FLOOR - 16), (14, 9), 0, 0, 360, (110, 110, 120), -1, cv2.LINE_AA); circle(i, (px_ + 12, FLOOR - 26), 6, (110, 110, 120))
+    return i, None
+
+def pariscafe():
+    i = base((160, 130, 160), (195, 205, 238))
+    paris_tower(i, 900, 380, 1.0, (80, 90, 120))
+    paris_front(i, -20, 1120, 520, (170, 195, 220), "CAFE LE HAUT   *   BAR   *   TABAC-PRESSE", (40, 40, 170), "cafe")
+    rect(i, 0, FLOOR - 26, W, H, (120, 128, 136))
+    for x in range(-60, W, 70): rect(i, x, FLOOR + 10 + (x // 70 % 2) * 30, x + 64, FLOOR + 36 + (x // 70 % 2) * 30, (140, 148, 156))
+    for x in (130, 560, 960): paris_table(i, x)
+    for fx in (40, 1040): rect(i, fx - 34, FLOOR - 120, fx + 34, FLOOR - 26, (60, 80, 120)); [circle(i, (fx - 24 + k * 16, FLOOR - 128), 12, (80, 60, 210) if k % 2 else (60, 200, 240)) for k in range(4)]
+    label(i, "MENU", 680, FLOOR - 250, .8, (240, 240, 240), (40, 40, 40))
     return i, None
 
 def dubai():
@@ -385,7 +442,7 @@ def station():
     rect(i, 0, FLOOR + 240, W, FLOOR + 262, (50, 200, 240))
     return i, None
 
-BUILDERS.update(station=station, alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
+BUILDERS.update(pariscafe=pariscafe, station=station, alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
 
 def get_set(n):
     k = (n, STYLE)
@@ -506,6 +563,7 @@ def npc(i, x, y, sc, skin, shirt, pants, phase, kind="walk", dir_=1, hat=None):
 
 LOCAL_STYLE = {"tokyo": [(30, 30, 34), (60, 60, 66), (235, 235, 240), (160, 90, 200), (70, 170, 220)],
  "paris": [(40, 44, 60), (120, 130, 150), (230, 225, 215), (40, 40, 46), (70, 60, 130)],
+ "pariscafe": [(40, 44, 60), (120, 160, 190), (230, 225, 215), (40, 40, 46), (70, 60, 130), (100, 140, 170)],
  "dubai": [(245, 245, 245), (230, 235, 240), (30, 30, 36), (210, 225, 235)],
  "alley": [(26, 26, 30), (42, 44, 50), (34, 36, 54), (20, 20, 24)],
  "villa": [(230, 230, 235), (40, 90, 170), (190, 200, 210), (30, 40, 60)]}
@@ -514,7 +572,7 @@ def extras(img, sh, t, ep):
     """Everyday people who belong in this place; a different crowd each episode."""
     name = sh["set"]; shot_s = abs(hash(("x", name, ep, sh.get("card", "")))) % 100000
     r = random.Random(ep * 97 + shot_s)
-    outdoors = name in ("tokyo", "paris", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station")
+    outdoors = name in ("tokyo", "paris", "pariscafe", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station")
     want = sh.get("crowd", 0)
     style = LOCAL_STYLE.get(name, CLOTH)
     pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo", "alley", "station") else SKIN + SKIN[3:]), r.choice(style), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
@@ -618,6 +676,11 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
     m = c.get("mood", "neutral")
     if speaking:
         m = "shock" if mouth else "neutral"
+    if c.get("prop") == "table":  # cafe table under a sitting character (Paris terrace)
+        ty = int(fy + P["hip"][1] * Z * L.get("scale", 1) + 18)
+        rect(patch, ox - 12, ty, ox + 12, fy - 6, (95, 100, 110)); rect(patch, ox - 70, fy - 14, ox + 70, fy, (95, 100, 110))
+        cv2.ellipse(patch, (ox, ty), (150, 24), 0, 0, 360, (175, 185, 195), -1, cv2.LINE_AA)
+        cv2.ellipse(patch, (ox, ty), (150, 24), 0, 0, 360, (110, 115, 125), 4, cv2.LINE_AA)
     hand = (E.fig_illus if STYLE == "illus" else E.fig)(patch, Cam2(ox, fy, Z * L.get("scale", 1)), 0, 0, P, L, t, m)
     if pose == "lift":
         hy_ = int(hand[1]); bx0 = int(ox - 240); bx1 = int(ox + 240)
@@ -675,7 +738,7 @@ def duration(tx): return .65 + len(tx) / 16.0
 
 
 BUBBLE_COLORS = [(250, 250, 252), (205, 240, 255), (215, 245, 215), (250, 225, 215), (245, 215, 245), (190, 235, 255), (225, 225, 255)]
-SET_LANG = {"tokyo": "ja", "paris": "fr", "dubai": "ar"}
+SET_LANG = {"tokyo": "ja", "paris": "fr", "pariscafe": "fr", "dubai": "ar"}
 _DJ = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 _CJK = "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc"
 LANG_FONT = {"ja": (_CJK, 0), "ko": (_CJK, 1), "zh": (_CJK, 2)}
@@ -963,6 +1026,9 @@ class Show:
         hy = FLOOR - (FLOOR - hy) * getattr(s, "_z", 1)
         cx = clamp(c["x"], wd / 2 + 56, 930 - wd / 2)
         bot = min(hy, 980); y0 = int(bot - ht); x0 = int(cx - wd / 2)
+        below = bool(s.e.get("hook")) and t < 2.2  # hook is on screen: put the bubble under the feet, not over the hook
+        if below: y0 = FLOOR + 50
+        else: y0 = max(y0, 372)  # never cover the series tag or title
         p = out((t - a) / .12)
         ov = img.copy()
         col = BUBBLE_COLORS[(hash_str(tx) + s.n) % len(BUBBLE_COLORS)]
@@ -972,7 +1038,7 @@ class Show:
             cv2.circle(ov, q, 26, col, -1, cv2.LINE_AA)
         tipx = int(clamp(c["x"] + (24 if c["face"] == "r" else -24), x0 + 40, x0 + wd - 40))
         tri = np.array([(tipx - 26, y0 + ht - 3), (tipx + 26, y0 + ht - 3), (tipx, int(min(hy + 46, y0 + ht + 62)))], np.int32)
-        cv2.fillConvexPoly(ov, tri, col, cv2.LINE_AA)
+        if not below: cv2.fillConvexPoly(ov, tri, col, cv2.LINE_AA)
         name = L["name"]; nw = int(len(name) * 21 + 34)
         nx = x0 + 22
         cv2.rectangle(ov, (nx, y0 - 26), (nx + nw, y0 + 30), px(L["accent"]), -1, cv2.LINE_AA)

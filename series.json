@@ -195,6 +195,25 @@
    ],
    "hair": "bun",
    "voice": 280
+  },
+  "antoine": {
+   "name": "ANTOINE",
+   "bio": "Paris cafe waiter at Cafe Le Haut. Polite, deadpan, has worked the same terrace for twenty years and remembers every customer who ever asked nicely.",
+   "suit": [
+    245,
+    245,
+    245
+   ],
+   "accent": [
+    40,
+    40,
+    40
+   ],
+   "gear": [
+    "tie"
+   ],
+   "hair": "neat",
+   "voice": 140
   }
  },
  "episodes_log": [
@@ -327,6 +346,16 @@
    "rule": "See the prize before you bet",
    "cliffhanger": "On the plane to Paris, Solo's 'page 6' envelope turned out to be the plane menu; Solo says the real page 6 is in Paris and 'the Prof always hid things high' (slip: he uses the uncle's old nickname). Ep 16 must land in Paris and ask where up high page 6 is hidden; keep the partner reveal for eps 19-20.",
    "credit_song": "Mask Off"
+  },
+  {
+   "ep": 16,
+   "date": "2026-11-16",
+   "time": "18:00",
+   "set": "pariscafe",
+   "rule": "Asking is free, pride costs hours",
+   "cliffhanger": "In Paris, Clyde refused to ask directions for six hours; Cenzo asked Antoine the waiter at Cafe Le Haut and page 6 was on his top shelf. Page 6 reveals the Rule Book is rules for LIFE, not money (book_truth revealed). Antoine adds: 'A man in a suit asked too. Years ago.' Ep 17 must ask whether Solo was in Paris with the Prof years ago (partner hint, keep full reveal for eps 19-20); Solo still believes it is a trading book.",
+   "credit_song": "Hard to Choose One",
+   "new_character": "antoine (ANTOINE, Paris cafe waiter at Cafe Le Haut)"
   }
  ],
  "masterplan": {
@@ -466,6 +495,10 @@
     {
      "ep": 15,
      "hint": "Solo slips and calls the uncle 'the Prof' on the plane (page 5's nickname for him) and knows his hiding habits: 'always hid things high'."
+    },
+    {
+     "ep": 16,
+     "hint": "Antoine the Paris waiter: 'A man in a suit asked too. Years ago.' Young Solo came to Cafe Le Haut with the Prof."
     }
    ],
    "payoff_ep": 20,
@@ -476,7 +509,8 @@
    "thread": "book_truth",
    "reveal_ep": 16,
    "reveal": "In Paris, page 6 (hidden up high, as Solo said) shows the Rule Book is the Prof's rules for LIFE: money, friends, family, work, pride. The trading pages were a disguise so greedy hunters like Solo would chase charts and miss what the book really is. Cenzo reads it first; Clyde is disappointed there are no 'money cheat codes', then laughs. From here every rule card is a life rule.",
-   "keep": "Solo still believes it is a trading book that will make him rich; do not tell him yet. Keep the Solo-and-the-Prof partner reveal for eps 19-20 (Solo co-wrote the early 'trading' disguise pages)."
+   "keep": "Solo still believes it is a trading book that will make him rich; do not tell him yet. Keep the Solo-and-the-Prof partner reveal for eps 19-20 (Solo co-wrote the early 'trading' disguise pages).",
+   "revealed": "Ep 16: page 6 on Antoine's top shelf at Cafe Le Haut reads 'Rules for life. Not money.' Clyde: 'No money cheat codes?! Ha!'"
   }
  ],
  "illus_from": 15,
