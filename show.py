@@ -781,7 +781,7 @@ class Show:
             if sh.get("end"):
                 x = V.say("narrator", sh["end"]); s.next = s.e.get("next", "NEXT EPISODE TOMORROW"); y = V.say("narrator", s.next)
                 s.sp.append((t + .15, x)); s.sp.append((t + .25 + len(x) / 44100, y))
-                d = max(1.9, (len(x) + len(y)) / 44100 + .45); end = (t, t + d); t += d
+                d = max(1.3, (len(x) + len(y)) / 44100 + .25); end = (t, t + d); t += d
             s.tl.append(dict(a=a, b=t, sh=sh, lines=lines, card=card, end=end))
         if s.e.get("promo"):
             x = V.say("cenzo", "NEED A VIDEO LIKE THIS FOR YOUR BUSINESS? MESSAGE ME. WE MAKE THEM.")
@@ -872,10 +872,13 @@ class Show:
         shade = np.ones((H, 1, 1), np.float32); shade[:300] = np.linspace(.62 if STYLE == "illus" else .38, 1, 300, dtype=np.float32)[..., None, None]
         img = (img.astype(np.float32) * shade).astype(np.uint8)
         hk = s.e.get("hook")
+        # Series tag is always visible so For You viewers know it's a numbered series
+        tag = img[252:312, 235:775].astype(np.float32); img[252:312, 235:775] = (tag * .35).astype(np.uint8)
+        text(img, f"THE RULE BOOK  ·  EP {s.n}", 505, 250, 40, track=3, glow=.2)
         if hk and (t < 2.2 or sh.get("loop")):
-            text(img, hk, 505, 175, 108, alpha=1 if sh.get("loop") else 1 - ease((t - 2.05) / .15))
+            text(img, hk, 505, 390, 108, alpha=1 if sh.get("loop") else 1 - ease((t - 2.05) / .15))
         else:
-            text(img, f"CH {(s.n - 1) // 10 + 1}  ·  EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
+            text(img, s.e["title"], 505, 315, 38, col=A, track=3, glow=.45)
         if cur:
             if STYLE == "illus" and not s.has_tr(cur, t): s.words(img, cur, t)
             else: s.bubble(img, cur, t, cast, A)
@@ -903,7 +906,7 @@ class Show:
             text(img, "ANIMATED ADS AND EXPLAINERS", 505, 800, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "WITH CHARACTER VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
-        if STYLE == "illus": text(img, "@exoticcenzo", 800, 560, 28, alpha=.72, track=2, glow=.2)
+        if STYLE == "illus": text(img, "@exoticcenzo", 800, 720, 28, alpha=.72, track=2, glow=.2)
         else: text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
