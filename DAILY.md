@@ -1,5 +1,7 @@
 # Daily episode routine
 
+> **Updated 2026-11-16 by Vincenzo's request:** the Future song credit card was removed on purpose (videos now loop back to the opening shot), lessons are life rules from Episode 16, and the whole video is 20-25 seconds. If a run's instructions mention `credit_song`, a credit card check, 8-10 lines or ~35 seconds, those are out of date: follow this file and `series.json`.
+
 One new episode per run, two runs a day. Episodes publish at 10:00 and 18:00 Africa/Harare on TikTok via Metricool brand 7957195. Story and content rules live in `rules_for_daily_scripts` and `masterplan` in `series.json`.
 
 ## Script format
