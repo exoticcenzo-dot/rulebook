@@ -1078,6 +1078,27 @@ class Show:
         if STYLE != "illus": text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
+        if STYLE == "illus" and not getattr(s, "_inner", False):
+            img = s.rewatch_layer(img, t)
+        return img
+
+    def rewatch_layer(s, img, t):
+        """Rewatch bait. (1) Planted punchline: 2-frame ghost flashes of the cliffhanger card early in the video,
+        so a second watch reveals it was coming. (2) Secret frame: one frame at a fixed spot (frame 150 = 5.0 s)
+        with a hidden message, for pause-hunters. Both are invisible at normal speed."""
+        endx = next((x for x in s.tl if x["end"]), None)
+        if endx is not None:
+            for ft in (3.2, 10.4):
+                if ft <= t < ft + 2 / FPS and t < endx["end"][0] - 1:
+                    s._inner = True
+                    try: ghost = s.frame(endx["end"][0] + 1.4)
+                    finally: s._inner = False
+                    img = cv2.addWeighted(img, .8, ghost, .2, 0)
+        if 5.0 <= t < 5.0 + 1 / FPS:
+            msg = s.e.get("secret") or f"YOU FOUND THE\nSECRET FRAME\nCOMMENT 'PAGE {s.n + 1}'"
+            ov = img.copy(); cv2.rectangle(ov, (120, 760), (960, 1120), (20, 18, 24), -1)
+            img = cv2.addWeighted(ov, .82, img, .18, 0)
+            text(img, msg, 505, 800, 64, col=(90, 230, 255), track=2, glow=.3)
         return img
 
     def subline(s, img, cur, t):
