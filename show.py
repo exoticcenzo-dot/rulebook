@@ -613,6 +613,7 @@ def extras(img, sh, t, ep):
             else:
                 x = (x0 + spd * t) % (W + 240) - 120
                 npc(img, x, y, sc, skin, shirt, pants, t * (4 + r.random() * 3) + k, kind, 1 if spd > 0 else -1, hat)
+        for kind_, rx_ in REGULARS.get(name, []): regular(img, kind_, rx_, t, ep)
         # running gag: Bucket Hat Guy hides in every outdoor crowd (a different spot each episode)
         bx = 120 + (ep * 389) % 840; by = FLOOR - 30
         npc(img, bx, by, .9, SKIN[2], (70, 160, 80), (60, 50, 40), t * 2 + ep, "stand", 1 if bx < 540 else -1, (40, 140, 245))
@@ -654,6 +655,46 @@ class Cam2:
 
 CURRENT_EP = 1
 REACT = {}
+SIGNS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "signs.json")))
+OUTDOOR_SETS = ("tokyo", "paris", "pariscafe", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station")
+
+def pun_sign(img, name, ep):
+    """Running background gag: a sign whose joke changes every episode (Bob's Burgers 'store next door' style)."""
+    if name in OUTDOOR_SETS:
+        lines = SIGNS["outdoor"][ep % len(SIGNS["outdoor"])]
+        hw_ = max(92, max(map(len, lines)) * 9 + 26); x, y = min(905, W - 14 - hw_), FLOOR - 300  # hanging shop board, above the crowd's heads
+        cv2.line(img, (x - 50, y - 210), (x - 50, y - 250), (50, 40, 34), 5, cv2.LINE_AA)
+        cv2.line(img, (x + 50, y - 210), (x + 50, y - 250), (50, 40, 34), 5, cv2.LINE_AA)
+        rect(img, x - hw_, y - 212, x + hw_, y, (70, 52, 40)); rect(img, x - hw_ + 8, y - 204, x + hw_ - 8, y - 8, (48, 58, 52))
+        for i, l in enumerate(lines):
+            text(img, l, x, y - 196 + i * 52, 23, col=(235, 240, 238), track=0, glow=0)
+    else:
+        lines = SIGNS["indoor"][ep % len(SIGNS["indoor"])]
+        x, y = 905, FLOOR - 640
+        rect(img, x - 82, y - 6, x + 82, y + 170, (40, 40, 48)); rect(img, x - 76, y, x + 76, y + 164, (225, 238, 245))
+        for i, l in enumerate(lines):
+            text(img, l, x, y + 16 + i * 48, 22, col=(40, 40, 60), track=1, glow=0)
+
+# Regulars: the same background people in the same places every episode (Simpsons-style), ready to be promoted later
+REGULARS = {
+    "harare": [("tout", 160), ("aunty", 760)], "bulawayo": [("aunty", 220), ("vendor", 640)],
+    "station": [("tout", 330), ("vendor", 980)], "paris": [("baguette", 260)], "pariscafe": [("baguette", 980)],
+}
+def regular(img, kind, x, t, ep):
+    y = FLOOR - 28
+    if kind == "tout":  # kombi tout: red cap, orange vest, arm up shouting
+        npc(img, x, y, 1.0, SKIN[1], (40, 130, 240), (50, 45, 40), t * 3, "stand", 1, (40, 40, 200))
+        cv2.line(img, (int(x + 10), int(y - 200)), (int(x + 40), int(y - 290 - 12 * abs(math.sin(t * 5)))), (40, 130, 240), 10, cv2.LINE_AA)
+    elif kind == "aunty":  # aunty: purple doek, patterned dress, big shopping bag
+        npc(img, x, y, .98, SKIN[0], (150, 60, 150), (150, 60, 150), t * 2, "stand", -1, (180, 80, 200))
+        rect(img, x + 22, y - 110, x + 62, y - 60, (60, 160, 230)); cv2.line(img, (int(x + 26), int(y - 110)), (int(x + 18), int(y - 150)), (40, 40, 40), 3, cv2.LINE_AA)
+    elif kind == "vendor":  # fruit vendor behind a crate
+        npc(img, x, y, .95, SKIN[3], (60, 170, 90), (60, 50, 40), t * 2, "stand", 1, (230, 230, 235))
+        rect(img, x - 60, y - 70, x + 60, y, (60, 110, 160))
+        for k in range(5): circle(img, (x - 44 + k * 22, y - 76), 10, (40, 120, 240) if k % 2 else (40, 200, 240))
+    elif kind == "baguette":  # Paris regular: beret, striped shirt, baguette
+        npc(img, x, y, .96, SKIN[5], (230, 230, 235), (40, 40, 48), t * 2, "stand", 1, (30, 30, 34))
+        cv2.line(img, (int(x - 30), int(y - 150)), (int(x + 30), int(y - 230)), (90, 170, 220), 12, cv2.LINE_AA)
 STYLE = "classic"
 def hash_str(t_): return sum(ord(c) * (i + 1) for i, c in enumerate(t_))
 # Outfit eras, every 20 episodes. Styles only, no real logos.
@@ -926,6 +967,7 @@ class Show:
             cast[cur[2][0]]["_ls"] = t - cur[0]
             cast[cur[2][0]]["_md"] = (cur[2][2].get("mood") if len(cur[2]) > 2 else None)
         img = back.copy()
+        if STYLE == "illus" and not sh.get("promo"): pun_sign(img, sh["set"], s.n)
         if not sh.get("promo"):
             if STYLE in ("anime", "illus"):
                 lay = np.zeros_like(img); extras(lay, sh, t, s.n)

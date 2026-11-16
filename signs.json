@@ -1,0 +1,37 @@
+{
+ "how": "Background pun sign. The renderer shows one line set per episode (episode number picks it), on a sidewalk A-board outdoors or a wall poster indoors. Add new ones at the end; never remove (old episodes re-render the same).",
+ "outdoor": [
+  ["TODAY'S SPECIAL:", "SADZA. AGAIN."],
+  ["FREE WI-FI", "PASSWORD: ASK NICELY"],
+  ["NO CAP", "ON PRICES*", "*CAPS SOLD INSIDE"],
+  ["LOST: MY", "MOTIVATION", "REWARD: SNACKS"],
+  ["KOMBI RULES:", "PAY FIRST", "CRY LATER"],
+  ["HAPPY HOUR", "5-6PM", "SAD HOUR 6-5AM"],
+  ["CREDIT TODAY?", "NO.", "TOMORROW? MAYBE."],
+  ["WE FIX", "PHONES", "NOT FEELINGS"],
+  ["ZESA OFF?", "COLD DRINKS", "STILL COLD-ISH"],
+  ["COFFEE:", "BECAUSE ADULTING", "IS HARD"],
+  ["SALE!", "BUY 1 GET 1", "REGRET FREE"],
+  ["TRUST ISSUES?", "WE ACCEPT", "CASH ONLY"],
+  ["TOUCH GRASS", "FREE SAMPLES", "OUTSIDE"],
+  ["DATA BUNDLES", "CHEAPER THAN", "THERAPY"],
+  ["THIS SIGN IS", "LOWKEY", "JUDGING YOU"],
+  ["BACK IN", "5 MINUTES", "(SINCE TUESDAY)"],
+  ["AUNTY'S RULE:", "EAT FIRST", "TALK LATER"],
+  ["LOCK IN", "OR LOCK OUT", "CLOSING 6PM"],
+  ["FRESH BREAD", "FRESHER GOSSIP", "INSIDE"],
+  ["DELULU", "IS NOT A", "BUSINESS PLAN"]
+ ],
+ "indoor": [
+  ["EMPLOYEE OF", "THE MONTH:", "THE KETTLE"],
+  ["PLEASE DO NOT", "FEED THE", "CLYDE"],
+  ["WI-FI SLOW?", "SO IS", "EVERYONE"],
+  ["RULE 0:", "READ THE", "RULES"],
+  ["SMILE!", "YOU'RE ON", "CAMERA (MAYBE)"],
+  ["QUIET PLEASE", "OVERTHINKING", "IN PROGRESS"],
+  ["IF LOST,", "ASK.", "PRIDE IS HEAVY"],
+  ["NAPS ARE", "A PERSONALITY", "TRAIT"],
+  ["NO SNACKS", "AFTER 9PM", "(WE KNOW)"],
+  ["THINK", "BEFORE YOU", "BUY"]
+ ]
+}
