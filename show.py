@@ -593,11 +593,29 @@ def extras(img, sh, t, ep):
     style = LOCAL_STYLE.get(name, CLOTH)
     pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo", "alley", "station") else SKIN + SKIN[3:]), r.choice(style), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
     if outdoors:
+        # crowd reacts to big moments: walkers freeze and turn toward the action, a few film it on their phones
+        rt = REACT.get("t"); rx = REACT.get("x", 540)
+        reacting = rt is not None and 0 <= t - rt < 1.1
         for k in range(want or (r.randint(14, 22) if name in ("harare", "bulawayo", "station") else r.randint(12, 18))):
             skin, shirt, pants = pick(); layer = r.random()
             y = FLOOR - 22 - layer * 34; sc = .78 + (1 - layer) * .34; spd = r.uniform(26, 62) * r.choice((-1, 1)); x0 = r.uniform(0, W + 200)
-            x = (x0 + spd * t) % (W + 240) - 120
-            npc(img, x, y, sc, skin, shirt, pants, t * (4 + r.random() * 3) + k, r.choice(("walk", "walk", "walk", "stand")), 1 if spd > 0 else -1, r.choice((None, None, r.choice(CLOTH))) if name != "alley" else (28, 28, 34))
+            kind = r.choice(("walk", "walk", "walk", "stand")); hat = r.choice((None, None, r.choice(CLOTH))) if name != "alley" else (28, 28, 34)
+            delay = abs(((x0 + spd * (rt or 0)) % (W + 240) - 120) - rx) / 900 * .25 if reacting else 0
+            if reacting and t - rt >= delay:
+                x = (x0 + spd * rt) % (W + 240) - 120
+                dir_ = 1 if rx > x else -1
+                npc(img, x, y, sc, skin, shirt, pants, k, "stand", dir_, hat)
+                if k % 4 == 1:  # phone filmer
+                    hy_ = y - 72 * sc * 1.05 - 92 * sc - 22 * sc * 1.05
+                    px_ = x + dir_ * 30 * sc
+                    rect(img, px_ - 9 * sc, hy_ - 4 * sc, px_ + 9 * sc, hy_ + 26 * sc, (30, 30, 36))
+                    circle(img, (px_, hy_ + 6 * sc), 3 * sc, (120, 230, 255) if int(t * 6) % 2 else (255, 255, 255))
+            else:
+                x = (x0 + spd * t) % (W + 240) - 120
+                npc(img, x, y, sc, skin, shirt, pants, t * (4 + r.random() * 3) + k, kind, 1 if spd > 0 else -1, hat)
+        # running gag: Bucket Hat Guy hides in every outdoor crowd (a different spot each episode)
+        bx = 120 + (ep * 389) % 840; by = FLOOR - 30
+        npc(img, bx, by, .9, SKIN[2], (70, 160, 80), (60, 50, 40), t * 2 + ep, "stand", 1 if bx < 540 else -1, (40, 140, 245))
     elif name == "gym":
         spots = [(120, "run"), (300, "press"), (470, "squat"), (640, "press"), (800, "squat"), (960, "run")]
         for k, (x, kind) in enumerate(spots):
@@ -635,6 +653,7 @@ class Cam2:
     def p(s, x, y): return (s.ox + x * s.z, s.fy + y * s.z)
 
 CURRENT_EP = 1
+REACT = {}
 STYLE = "classic"
 def hash_str(t_): return sum(ord(c) * (i + 1) for i, c in enumerate(t_))
 # Outfit eras, every 20 episodes. Styles only, no real logos.
@@ -900,7 +919,10 @@ class Show:
         for a, b, ln in x["lines"]:
             if a <= t and len(ln) > 2:
                 cast[ln[0]].update(ln[2])
+        REACT.clear()
         if cur and cur[2][0] in cast:
+            md0 = (cur[2][2].get("mood") if len(cur[2]) > 2 else None) or cast[cur[2][0]].get("mood")
+            if md0 in ("shock", "angry"): REACT.update(t=cur[0], x=cast[cur[2][0]]["x"])
             cast[cur[2][0]]["_ls"] = t - cur[0]
             cast[cur[2][0]]["_md"] = (cur[2][2].get("mood") if len(cur[2]) > 2 else None)
         img = back.copy()
