@@ -5,6 +5,9 @@ MODEL = "/home/claude/tts/kokoro-v1.0.onnx"; VOICES = "/home/claude/tts/voices-v
 CACHE = os.path.dirname(os.path.abspath(__file__)) + "/out/tts"; os.makedirs(CACHE, exist_ok=True)
 SPEAK = {"cenzo": ("am_michael", 1.02), "clyde": ("am_puck", 1.08), "nia": ("am_eric", 1.0),
          "zeke": ("bm_george", .97), "maya": ("am_liam", 1.08), "ruva": ("af_heart", 1.04), "gogo": ("bf_emma", .9), "moyo": ("bm_daniel", .9), "tino": ("af_sarah", .98), "narrator": ("am_onyx", .96)}
+# Character pitch: >1 higher, <1 deeper. Speech speed is compensated so pacing stays the same.
+# Makes each friend a distinct cartoon voice instead of a plain stock TTS read.
+PITCH = {"cenzo": .92, "clyde": 1.12, "zeke": .88, "narrator": .94, "gogo": 1.06, "moyo": .93}
 _k = None
 def clean(tx):
     s = tx.replace("\n", ". ").replace('"', "").strip(". ")
@@ -21,15 +24,15 @@ def clean(tx):
 def say(who, tx):
     """return mono float32 at 44100 Hz"""
     global _k
-    v, spd = SPEAK[who]; c = clean(tx)
-    p = f"{CACHE}/{hashlib.md5((v + str(spd) + c).encode()).hexdigest()}.npy"
+    v, spd = SPEAK.get(who, SPEAK["narrator"]); c = clean(tx); r = PITCH.get(who, 1.0)
+    p = f"{CACHE}/{hashlib.md5((v + str(spd) + str(r) + c).encode()).hexdigest()}.npy"
     if os.path.exists(p): return np.load(p)
     if _k is None:
         from kokoro_onnx import Kokoro
         _k = Kokoro(MODEL, VOICES)
-    a, sr = _k.create(c, voice=v, speed=spd, lang="en-us")
-    n = int(len(a) * 44100 / sr)
-    x = np.interp(np.arange(n) * sr / 44100, np.arange(len(a)), a).astype(np.float32)
+    a, sr = _k.create(c, voice=v, speed=spd / r, lang="en-us")
+    n = int(len(a) * 44100 / sr / r)
+    x = np.interp(np.arange(n) * sr * r / 44100, np.arange(len(a)), a).astype(np.float32)
     idx = np.where(np.abs(x) > .01)[0]
     x = x[max(0, idx[0] - 900): idx[-1] + 2200]
     x = x / np.abs(x).max() * .95

@@ -877,8 +877,6 @@ class Show:
         text(img, f"THE RULE BOOK  ·  EP {s.n}", 505, 250, 40, track=3, glow=.2)
         if hk and (t < 2.2 or sh.get("loop")):
             text(img, hk, 505, 390, 108, alpha=1 if sh.get("loop") else 1 - ease((t - 2.05) / .15))
-        else:
-            text(img, s.e["title"], 505, 315, 38, col=A, track=3, glow=.45)
         if cur:
             if STYLE == "illus" and not s.has_tr(cur, t): s.words(img, cur, t)
             else: s.bubble(img, cur, t, cast, A)
@@ -919,7 +917,7 @@ class Show:
 
     WORD_COLS = [(255, 255, 255), (90, 230, 255), (255, 235, 120), (190, 160, 255), (140, 255, 170)]
     def words(s, img, cur, t):
-        """Trending one-word-at-a-time caption, colour changes each line."""
+        """Trending 2-3 word caption chunks; the word being spoken is coloured and pops."""
         a, b, ln = cur
         ws = ln[1].split(); au = s.info.get(a, (b - a - .16, None))[0]
         wt = [len(w_) + 2 for w_ in ws]; tot = sum(wt); acc = .08; k = 0
@@ -928,7 +926,23 @@ class Show:
             if t - a < acc: break
         p = clamp((t - a - (acc - au * wt[k] / tot)) / .09)
         col = s.WORD_COLS[(hash_str(ln[1]) + s.n) % len(s.WORD_COLS)]
-        text(img, ws[k].upper(), 505, 1530, int(104 + 26 * (1 - out(p))), col=col)
+        if col == (255, 255, 255): col = s.WORD_COLS[1]
+        # group words into chunks of up to 3 words / 16 characters
+        chunks, cu = [], []
+        for i_, w_ in enumerate(ws):
+            if cu and (len(cu) == 3 or len(" ".join(ws[j] for j in cu + [i_])) > 16): chunks.append(cu); cu = []
+            cu.append(i_)
+        if cu: chunks.append(cu)
+        ch = next(c_ for c_ in chunks if k in c_)
+        from PIL import ImageFont
+        size = 92; fsz = int(size * 1.12) if F.PROP else size
+        font = ImageFont.truetype(F.FONT, fsz); sp = font.getlength(" ") + 22
+        wl = [font.getlength(ws[i_].upper()) + 3 * len(ws[i_]) for i_ in ch]
+        x = 505 - (sum(wl) + sp * (len(ch) - 1)) / 2
+        for i_, w_ in zip(ch, wl):
+            on = i_ == k
+            text(img, ws[i_].upper(), x + w_ / 2, 1530, int(size + (22 * (1 - out(p)) if on else 0)), col=col if on else (255, 255, 255))
+            x += w_ + sp
 
     def bubble(s, img, cur, t, cast, A):
         a, b, ln = cur
@@ -985,7 +999,7 @@ class Show:
             q = np.arange(int(d * sr)) / sr
             return np.sin(2 * np.pi * (46 * q + 7 * (1 - np.exp(-q * 34)))) * np.exp(-q * 13)
         m += trap_bed(N, sr, s.n)
-        if STYLE == "anime":
+        if STYLE in ("anime", "illus"):
             def env(d, k): q = np.arange(int(d * sr)) / sr; return q, np.exp(-q * k)
             def whoosh():
                 q, _ = env(.32, 1); nz = rng.normal(0, 1, len(q)).astype(np.float32)
@@ -1001,6 +1015,7 @@ class Show:
                 return ((np.sin(2 * np.pi * 1320 * q) + .5 * np.sin(2 * np.pi * 1980 * q) + .3 * np.sin(2 * np.pi * 2640 * q)) * e_ * .5).astype(np.float32)
             def bonk():
                 q, e_ = env(.18, 30); return (np.sin(2 * np.pi * (220 * q - 300 * q * q)) * e_ + rng.normal(0, .3, len(q)) * np.exp(-q * 90)).astype(np.float32)
+            add(fx, .02, ding(), .8); add(fx, .0, whoosh(), 1.0)  # series sting on frame 1
             for k_, x in enumerate(s.tl):
                 if k_: add(fx, x["a"] - .12, whoosh(), 1.1)
                 for a_, b_, ln in x["lines"]:

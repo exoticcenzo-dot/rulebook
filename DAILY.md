@@ -25,4 +25,4 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, op
 - `trends.json`: current trends mapped to the story. Use one when it fits. Never add copyrighted songs.
 
 ## Look from Episode 15
-From Episode 15 the renderer switches to the illustrated cartoon style on its own (`illus_from: 15` in series.json): big-head stickmen in real clothes, close-ups on whoever is talking, one big word caption at a time at the bottom. Scripts don't need a `style` field. Keep lines short and punchy so the captions read well.
+From Episode 15 the renderer switches to the illustrated cartoon style on its own (`illus_from: 15` in series.json): big-head stickmen in real clothes, close-ups on whoever is talking, 2-3 word caption chunks at the bottom with the spoken word highlighted. Scripts don't need a `style` field. Keep lines short and punchy so the captions read well.
