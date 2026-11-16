@@ -1061,10 +1061,13 @@ class Show:
         tr = opts.get("tr"); shot_set = s.shot_at(t)["sh"]["set"]
         lang = s.shot_at(t)["sh"].get("lang") or SET_LANG.get(shot_set)
         if tr and not (lang and font_ok(lang)): tr = None
-        fs = 30 if tr else 50; cw = 18.5 if tr else 30.5
-        lines = textwrap.wrap(tx, 34 if tr else 17)
+        # English is the main line (global audience); the local-language translation sits smaller underneath
+        fs = 44 if tr else 50; cw = 27 if tr else 30.5
+        lines = textwrap.wrap(tx, 22 if tr else 17)
         n = len(lines); lh = int(fs * 1.2)
         trm = tr_mask(tr, lang) if tr else None
+        if trm is not None:
+            trm = cv2.resize(trm, (max(1, int(trm.shape[1] * .62)), max(1, int(trm.shape[0] * .62))), interpolation=cv2.INTER_AREA)
         trh = (trm.shape[0] + 12) if tr else 0
         wd = max(int(max(len(l) for l in lines) * cw), trm.shape[1] if tr else 0) + 96; ht = lh * n + 92 + trh
         seated = c["pose"] != "stand" and c["pose"] != "walk"
@@ -1073,8 +1076,9 @@ class Show:
         cx = clamp(c["x"], wd / 2 + 56, 930 - wd / 2)
         bot = min(hy, 980); y0 = int(bot - ht); x0 = int(cx - wd / 2)
         below = bool(s.e.get("hook")) and t < 2.2  # hook is on screen: put the bubble under the feet, not over the hook
-        if below: y0 = FLOOR + 50
+        if below: y0 = int(1250 - ht)  # under the characters, clear of the hook and TikTok UI
         else: y0 = max(y0, 372)  # never cover the series tag or title
+        y0 = int(min(y0, 1250 - ht))  # keep clear of TikTok's caption/button zone
         p = out((t - a) / .12)
         ov = img.copy()
         col = BUBBLE_COLORS[(hash_str(tx) + s.n) % len(BUBBLE_COLORS)]
@@ -1092,10 +1096,10 @@ class Show:
         if p < .5: return
         text(img, name, nx + nw / 2, y0 - 22, 30, col=(20, 20, 24), glow=0, track=2)
         if tr:
-            mh, mw = trm.shape; px0 = int(cx - mw / 2); py0 = y0 + 40
+            text(img, "\n".join(lines), cx, y0 + 40, fs, col=(24, 22, 28), track=0, glow=0)
+            mh, mw = trm.shape; px0 = int(cx - mw / 2); py0 = int(y0 + 40 + lh * n + 6)
             al = trm[..., None]; roi = img[py0:py0 + mh, px0:px0 + mw].astype(np.float32)
-            img[py0:py0 + mh, px0:px0 + mw] = (roi * (1 - al) + np.array((24, 22, 28), np.float32) * al).astype(np.uint8)
-            text(img, "\n".join(lines), cx, y0 + 40 + mh + 2, fs, col=(70, 70, 78), track=0, glow=0)
+            img[py0:py0 + mh, px0:px0 + mw] = (roi * (1 - al) + np.array((95, 95, 105), np.float32) * al).astype(np.uint8)
             return
         chars = "".join(lines); typed_n = (t - a - .08) / max(.3, s.info[a][0]) * len(chars) * 1.15
         text(img, "\n".join(lines), cx, y0 + 42, fs, col=(24, 22, 28), n=clamp(typed_n, 0, len(chars)), track=0, glow=0)
