@@ -1,8 +1,8 @@
 # Daily episode routine
 
-> **Updated 2026-11-16 by Vincenzo's request:** the Future song credit card was removed on purpose (videos now loop back to the opening shot), lessons are life rules from Episode 16, and the whole video is 20-25 seconds. If a run's instructions mention `credit_song`, a credit card check, 8-10 lines or ~35 seconds, those are out of date: follow this file and `series.json`.
+> **Updated 2026-11-16 by Vincenzo's request:** the Future song credit card was removed on purpose (videos now loop back to the opening shot), lessons are life rules from Episode 16, and the whole video is 20-25 seconds. If a run's instructions mention 10:00/18:00 slots, `credit_song`, a credit card check, 8-10 lines or ~35 seconds, those are out of date: follow this file and `series.json`.
 
-One new episode per run, two runs a day. Episodes publish at 10:00 and 18:00 Africa/Harare on TikTok via Metricool brand 7957195. Story and content rules live in `rules_for_daily_scripts` and `masterplan` in `series.json`.
+One new episode per run, two runs a day. Episodes publish at 16:00 and 20:00 Africa/Harare (9:00 and 13:00 US Eastern; switched from 10:00/18:00 on 2026-11-17 to reach the US-heavy global audience) on TikTok via Metricool brand 7957195. Story and content rules live in `rules_for_daily_scripts` and `masterplan` in `series.json`.
 
 ## Script format
 Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, optional next, and shots[]. Each shot has set, cast (who, x, pose, face, mood), lines ([who, text, optional {mood, pose}]), and optional card, end, outro.
@@ -18,7 +18,7 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, op
 - Last shot has `"outro": true`: EXOTICCENZO alone, happy, same set, 1 short line.
 
 ## End of video
-- next: set NEXT EPISODE TONIGHT for 10:00. Leave unset for 18:00, which says NEXT EPISODE TOMORROW.
+- next: set NEXT EPISODE TONIGHT for 16:00. Leave unset for 20:00, which says NEXT EPISODE TOMORROW.
 - End: no credits. The video loops: after the end card it cuts back for 0.9s to the opening shot with the hook on screen, so the replay feels seamless. Make the hook and the last line connect (the last line can lead straight into the hook). credit_song is no longer used.
 - promo: leave unset. Paid adverts are off.
 
