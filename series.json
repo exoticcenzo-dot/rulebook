@@ -1,19 +1,19 @@
 {
  "title": "THE RULE BOOK",
  "handle": "@EXOTICCENZO",
- "premise": "ME, CLYDE & 1 MISSING RULE BOOK. EXOTICCENZO and his best friend CLYDE find only the gutted cover and one page of an old trader's Rule Book, and hunt its pages across the world. They believe it has 99 pages. Episodes 1-100 are THE SEARCH: the complete Rule Book is found at exactly Episode 100, where they discover it really has 884 pages. Episode 101 onward is PART TWO: discovering and understanding the book now in their hands, and it never concludes.",
+ "premise": "ME, CLYDE & 1 MISSING RULE BOOK. EXOTICCENZO and his best friend CLYDE find only the gutted cover and one page of an old man's Rule Book (everyone thinks it is a trading book), and hunt its pages across the world. They believe it has 99 pages. Episodes 1-100 are THE SEARCH: the complete Rule Book is found at exactly Episode 100, where they discover it really has 884 pages. Episode 101 onward is PART TWO: discovering and understanding the book now in their hands, and it never concludes.",
  "rules_for_daily_scripts": [
   "STORY FIRST. This is an adventure about EXOTICCENZO, Clyde and 1 missing Rule Book: the hunt for pages, Solo's race, Mtoriro's missing uncle. Plot, friendships, places and jokes lead every episode. It is never a trading class. Viewer ideas and trends add to the story and never replace it.",
   "THE 100-EPISODE PLAN. Chapters are exactly 10 episodes and follow masterplan.chapters. Every episode moves the hunt forward with a page or clue. By Episode 100 they have travelled the whole world by train, plane and ship. Number collected pages in order. Everyone believes the book has 99 pages. The final piece is found in their Zimbabwe homeland at exactly Episode 100, not before; the complete book has 884 pages. Episode 100 delivers the most powerful lesson of the series and changes more than 100 characters on screen. Episode 101 onward is about discovering and understanding the book, and the story never concludes.",
-  "THE LESSON. One lesson per episode, mixing mindset, money, relationships, work and trading, at the level the chapter sets. Only EXOTICCENZO explains it, but anyone can cause or learn it: Clyde, friends, strangers, gym regulars, shopkeepers, kombi drivers, fans. It comes from a random, funny, unexpected moment. Viewers must not guess it until EXOTICCENZO breaks it down at the end. Vary the format, including trading sessions with the lesson after. Write moments so true to everyday life that viewers feel they are watching their own reality.",
+  "THE LESSON. From Episode 16 every lesson is a LIFE RULE, never trading or betting: money habits, friends, love and family, work, pride, patience, habits, saying no, honesty. Only EXOTICCENZO explains it, but anyone can cause or learn it: Clyde, friends, strangers, gym regulars, shopkeepers, kombi drivers, fans. It comes from a random, funny, unexpected moment. Viewers must not guess it until EXOTICCENZO breaks it down at the end. Vary the format. Write moments so true to everyday life that viewers feel they are watching their own reality. In the story, the Rule Book is the Prof's rules for life; the trading pages were a disguise (see plot_threads, book_truth).",
   "OPENING. Set a short shock hook on screen. The first spoken line is conflict or stakes, never scene-setting. Every episode must make sense alone, so give new viewers the setup in the first or second line without a slow recap.",
   "PACING. About 20-25 seconds of story, 8-10 lines at most, each under 50 characters. Change something every 3 to 5 seconds and add a small surprise near 15 seconds.",
   "ENDING. Close on a cliffhanger that pays off next episode, mostly an open question; cut mid-action only when the next episode truly delivers. Then the outro: EXOTICCENZO alone, thanking viewers or telling a fresh joke that comes out of this episode's unexpected moment, about whoever caused it, never spoiling a hidden hint. The credit_song matches the episode's mood. The Future credit follows automatically. All end screens must fit this episode's story.",
-  "WORLD AND CAST. EXOTICCENZO and Clyde live together in Zimbabwe, between Harare and Bulawayo. Home is the base and the most-used setting. Every few episodes they travel abroad by train, plane or ship, then return home. Everyday scenes are constant: eating, games, sofas, kombis, shops, the gym, trading sessions. Every place is full of ordinary people going about their lives. Give background people moments of their own when funny. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
+  "WORLD AND CAST. EXOTICCENZO and Clyde live together in Zimbabwe, between Harare and Bulawayo. Home is the base and the most-used setting. Every few episodes they travel abroad by train, plane or ship, then return home. Everyday scenes are constant: eating, games, sofas, kombis, shops, the gym, phones, jobs, family visits. Every place is full of ordinary people going about their lives. Give background people moments of their own when funny. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
   "THE VIBE. EXOTICCENZO and Clyde are permanently chilled, shown only by red eyes and jokes: sleepy, hungry, Clyde forgetting what he was saying. Shady dealers exist in the world, in dark alleys and, unexpectedly, in nice houses (sets alley, villa), but keep it implied: only unmarked packages, whispers and the word dealer. Never show, name or refer to weed, smoking or any drug by name in the video, caption or hashtags.",
   "GLOW-UP. Appearance changes automatically every 10 episodes from Episode 11: EXOTICCENZO gets bigger and more cut; Clyde barely changes, just slightly taller than Cenzo. One or two gym episodes each chapter, starting Episodes 8-10, so it feels earned. Gym scenes still move the hunt forward.",
   "FANS. Commenters can become recurring side characters. Roles are positive or friendly-funny; never mock them, make them villains or let them teach.",
-  "CAPTIONS AND SEARCH. The first words name the mindset, money or trading topic people search, such as Can't stop overspending? or Trading with no exit plan? A character says it out loud, and the hook or rule card shows it. Ask an easy question such as Yes or no? Use 2 or 3 specific hashtags, ending with #stickman, never #fyp or #viral. Write at least one line per episode someone would send to a friend.",
+  "CAPTIONS AND SEARCH. The first words name the everyday life problem people search, such as Can't say no to friends? or Always broke before payday? A character says it out loud, and the hook or rule card shows it. Ask an easy question such as Yes or no? Use 2 or 3 specific life hashtags (e.g. #liferules #lifelessons #adulting), ending with #stickman, never #fyp, #viral or trading tags. Write at least one line per episode someone would send to a friend.",
   "SAFETY. No profit promises, no specific buy or sell calls, and no paid-service adverts until Vincenzo turns them back on.",
   "THE LONG GAME. Each chapter sets up one thing viewers expect at its start, then something unexpected happens at the last moment in its final episodes. Across the chapter, plant small hidden hints in the background or in throwaway lines that viewers will not notice. Characters seen in separate episodes later turn out to be connected. In the payoff, EXOTICCENZO links the hints together: it becomes a lesson nobody saw coming and uncovers a Rule Book clue. Record the planned twist and each hint in series.json plot_threads with its episode, and pay every one off.",
   "LOOKS. Every 20 episodes, EXOTICCENZO's and Clyde's outfits change automatically: EXOTICCENZO in a Future-inspired style, Clyde in a Gunna-inspired style, generic with no real logos. Other characters wear random outfits by era, and background people dress for the place they are in, so research what is worn there when building a new country. Everyone stands on the ground in a place that makes sense.",
@@ -345,7 +345,7 @@
     "ch": 2,
     "eps": "11-20",
     "place": "Zimbabwe, then Paris",
-    "lessons": "position sizing, risk and reward, patience",
+    "lessons": "patience with people, pride vs asking for help, saying no (eps 11-15 already covered money size and risk)",
     "note": "First glow-up. Travel by plane and across Europe by train.",
     "locations": "Harare; Paris"
    },
@@ -353,7 +353,7 @@
     "ch": 3,
     "eps": "21-30",
     "place": "Zimbabwe, then Dubai and the Middle East",
-    "lessons": "greed, leverage, lifestyle traps",
+    "lessons": "greed, showing off, comparison, lifestyle traps",
     "note": "Solo offers a tempting deal.",
     "locations": "Bulawayo; Dubai"
    },
@@ -361,7 +361,7 @@
     "ch": 4,
     "eps": "31-40",
     "place": "Across Southern Africa",
-    "lessons": "routines, journaling, discipline, family pressure",
+    "lessons": "routines, discipline, family pressure, keeping promises",
     "note": "By train from Bulawayo; Victoria Falls. Mtoriro's family; the uncle's trail heats up.",
     "locations": "Harare, Bulawayo, Victoria Falls"
    },
@@ -369,7 +369,7 @@
     "ch": 5,
     "eps": "41-50",
     "place": "Zimbabwe, then New York and the Americas",
-    "lessons": "market structure, liquidity, news",
+    "lessons": "first impressions, hustle vs rest, saying what you mean",
     "note": "Cross the ocean by ship. Build new sets.",
     "locations": "New York"
    },
@@ -377,7 +377,7 @@
     "ch": 6,
     "eps": "51-60",
     "place": "Zimbabwe, then Rio and South America",
-    "lessons": "winning and losing streaks, envy, friendship and money",
+    "lessons": "winning and losing streaks in life, envy, friendship and money",
     "note": "Build new sets. The crew is tested.",
     "locations": "Rio"
    },
@@ -385,7 +385,7 @@
     "ch": 7,
     "eps": "61-70",
     "place": "Zimbabwe, then London and Europe",
-    "lessons": "backtesting, data, finding an edge",
+    "lessons": "learning from mistakes, honesty, asking for feedback",
     "note": "Build new sets.",
     "locations": "London"
    },
@@ -393,7 +393,7 @@
     "ch": 8,
     "eps": "71-80",
     "place": "Zimbabwe, then India, China and Asia",
-    "lessons": "systems, automation, rules over feelings",
+    "lessons": "habits over motivation, rules over feelings, consistency",
     "note": "Build new sets. Solo's true goal appears.",
     "locations": "India, China"
    },
@@ -401,7 +401,7 @@
     "ch": 9,
     "eps": "81-90",
     "place": "Australia, the far corners, Solo's stronghold",
-    "lessons": "drawdown recovery, starting over, real portfolios",
+    "lessons": "setbacks, starting over, forgiveness",
     "note": "The biggest setback of the search. Build new sets.",
     "locations": "Australia"
    },
@@ -471,6 +471,12 @@
    "payoff_ep": 20,
    "paid_off": false,
    "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background)."
+  },
+  {
+   "thread": "book_truth",
+   "reveal_ep": 16,
+   "reveal": "In Paris, page 6 (hidden up high, as Solo said) shows the Rule Book is the Prof's rules for LIFE: money, friends, family, work, pride. The trading pages were a disguise so greedy hunters like Solo would chase charts and miss what the book really is. Cenzo reads it first; Clyde is disappointed there are no 'money cheat codes', then laughs. From here every rule card is a life rule.",
+   "keep": "Solo still believes it is a trading book that will make him rich; do not tell him yet. Keep the Solo-and-the-Prof partner reveal for eps 19-20 (Solo co-wrote the early 'trading' disguise pages)."
   }
  ],
  "illus_from": 15,
