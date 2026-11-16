@@ -787,9 +787,10 @@ class Show:
             x = V.say("cenzo", "NEED A VIDEO LIKE THIS FOR YOUR BUSINESS? MESSAGE ME. WE MAKE THEM.")
             s.sp.append((t + .25, x)); d = max(4.5, len(x) / 44100 + 1.0)
             s.tl.append(dict(a=t, b=t + d, sh=dict(set=s.e["shots"][-1]["set"], cast=[], lines=[], promo=True), lines=[], card=None, end=None)); t += d
-        if s.e.get("credit_song"):
-            d = 2.2
-            s.tl.append(dict(a=t, b=t + d, sh=dict(set=s.e["shots"][-1]["set"], cast=[], lines=[], credit=True), lines=[], card=None, end=None)); t += d
+        if s.e.get("hook"):
+            # Loop end: cut back to the opening shot with the hook on screen, so the replay feels seamless
+            d = 0.9; sh0 = s.e["shots"][0]
+            s.tl.append(dict(a=t, b=t + d, sh=dict(set=sh0["set"], cast=[dict(c) for c in sh0["cast"]], lines=[], loop=True), lines=[], card=None, end=None)); t += d
         s.D = t + .15
 
     def shot_at(s, t):
@@ -809,7 +810,7 @@ class Show:
             if a <= t and len(ln) > 2:
                 cast[ln[0]].update(ln[2])
         img = back.copy()
-        if not sh.get("promo") and not sh.get("credit"):
+        if not sh.get("promo"):
             if STYLE in ("anime", "illus"):
                 lay = np.zeros_like(img); extras(lay, sh, t, s.n)
                 m = (lay.max(axis=2) > 6).astype(np.uint8); ring = cv2.dilate(m, np.ones((5, 5), np.uint8)) - m
@@ -871,8 +872,8 @@ class Show:
         shade = np.ones((H, 1, 1), np.float32); shade[:300] = np.linspace(.62 if STYLE == "illus" else .38, 1, 300, dtype=np.float32)[..., None, None]
         img = (img.astype(np.float32) * shade).astype(np.uint8)
         hk = s.e.get("hook")
-        if hk and t < 2.2:
-            text(img, hk, 505, 175, 108, alpha=1 - ease((t - 2.05) / .15))
+        if hk and (t < 2.2 or sh.get("loop")):
+            text(img, hk, 505, 175, 108, alpha=1 if sh.get("loop") else 1 - ease((t - 2.05) / .15))
         else:
             text(img, f"CH {(s.n - 1) // 10 + 1}  ·  EP {s.n}  ·  {s.e['title']}", 505, 165, 34, col=A, track=3, glow=.3)
         if cur:
@@ -902,17 +903,6 @@ class Show:
             text(img, "ANIMATED ADS AND EXPLAINERS", 505, 800, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "WITH CHARACTER VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
-        if sh.get("credit"):
-            k = ease(st / .25)
-            img = (img * (1 - .86 * k)).astype(np.uint8)
-            text(img, "REGARDS,", 505, 410, 46, alpha=k, track=4)
-            text(img, "EXOTICCENZO", 505, 480, 74, col=A, alpha=k, track=4)
-            text(img, "BEAT INSPIRED BY", 505, 660, 34, alpha=k, track=4, glow=.2)
-            text(img, '"' + s.e["credit_song"].upper() + '"', 505, 720, 52, alpha=k, track=2)
-            text(img, "FUTURE", 505, 830, 86, col=A, alpha=k, track=8)
-            text(img, "NAYVADIUS DEMUN WILBURN", 505, 950, 38, alpha=k, track=2, glow=.2)
-            text(img, "AKA PLUTO · FUTURE HENDRIX · MEATHEAD", 505, 1010, 28, alpha=k, track=1, glow=.2)
-            text(img, "ORIGINAL INSTRUMENTAL", 505, 1090, 26, alpha=k, track=3, glow=.15)
         if STYLE == "illus": text(img, "@exoticcenzo", 800, 560, 28, alpha=.72, track=2, glow=.2)
         else: text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9

@@ -3,7 +3,7 @@
 One new episode per run, two runs a day. Episodes publish at 10:00 and 18:00 Africa/Harare on TikTok via Metricool brand 7957195. Story and content rules live in `rules_for_daily_scripts` and `masterplan` in `series.json`.
 
 ## Script format
-Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, credit_song, optional next, and shots[]. Each shot has set, cast (who, x, pose, face, mood), lines ([who, text, optional {mood, pose}]), and optional card, end, outro.
+Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, optional next, and shots[]. Each shot has set, cast (who, x, pose, face, mood), lines ([who, text, optional {mood, pose}]), and optional card, end, outro.
 - who: cenzo, clyde, nia (displays MTORIRO), zeke (displays SOLO), maya (displays JAMAL). New characters go in `series.json` and `voices.py`.
 - sets: harare, bulawayo, home, alley, villa, mansion, hotel, gameroom, gym, desk, plane, train, ship, tokyo, paris, dubai. Build every new country before using it, with its landmarks, shops and street life. Add new ones in `show.py` BUILDERS.
 - poses: stand, walk, sit, seat, seat2, eat, game, lift, curl (gym: lift or curl; desk: seat). Moods: neutral, happy, smug, shock, angry, focus.
@@ -17,7 +17,7 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, cr
 
 ## End of video
 - next: set NEXT EPISODE TONIGHT for 10:00. Leave unset for 18:00, which says NEXT EPISODE TOMORROW.
-- credit_song: a clean-titled Future song whose mood or title fits (Honest, Mask Off, Turn On the Lights, Worst Day, Magic, Tony Montana). Do not reuse within 7 episodes. The beat is original; never use his recording or copy its melody. The credit card is automatic.
+- End: no credits. The video loops: after the end card it cuts back for 0.9s to the opening shot with the hook on screen, so the replay feels seamless. Make the hook and the last line connect (the last line can lead straight into the hook). credit_song is no longer used.
 - promo: leave unset. Paid adverts are off.
 
 ## Other files
