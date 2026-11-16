@@ -4,7 +4,10 @@
   "sources": [
     "https://newengen.com/insights/tiktok-trends/",
     "https://ppl.studio/viral-formats/tiktok-trends",
-    "https://tryvolume.app/working"
+    "https://tryvolume.app/working",
+    "https://napoleoncat.com/blog/trending-memes/",
+    "https://www.epidemicsound.com/blog/latest-tiktok-trends/",
+    "https://ppl.studio/viral-formats/2026-11"
   ],
   "fits": [
     {
@@ -50,6 +53,38 @@
     {
       "trend": "Clapping cat handshake deal (peaking)",
       "use": "Solo offers a too-good deal and shakes on it"
+    },
+    {
+      "trend": "Grr Mondays (still going)",
+      "use": "Monday episode opens on how Clyde's Monday should go vs how it goes; life rule about routines"
+    },
+    {
+      "trend": "Kinda chic to... (caption list)",
+      "use": "Outro: Cenzo lists 'kinda chic to' small wins from the episode (kinda chic to pay the rent first)"
+    },
+    {
+      "trend": "Bicep heart pose (since end of Oct)",
+      "use": "Gym scenes and glow-up moments: Cenzo does it, Clyde's arm makes a sad oval"
+    },
+    {
+      "trend": "Weird cafe furniture (sitting on the table)",
+      "use": "Paris cafe: Clyde sits on the steel table, a waiter puts the coffee on the stool"
+    },
+    {
+      "trend": "Passenger asleep, phone swinging (rising)",
+      "use": "Kombi or Paris taxi: Clyde asleep, his phone swinging, the clue is on the screen"
+    },
+    {
+      "trend": "Friends' trend dance, one living-room take (proven)",
+      "use": "Celebration beat at home when a page is found; one wide shot, everyone dancing badly"
+    },
+    {
+      "trend": "Fake-boyfriend text prank (rising)",
+      "use": "Clyde pranks Cenzo by text: 'I'm bringing someone home'; it's Solo"
+    },
+    {
+      "trend": "Deadpan list (proven)",
+      "use": "Cenzo's red-eyed deadpan delivery of the rule as a numbered list"
     }
   ],
   "sounds_for_manual_posting": [
@@ -57,5 +92,102 @@
     "Housewife - Tate McRae",
     "Dame Hombro - Bulin 47",
     "H4UNT - baldgirl"
-  ]
+  ],
+  "joke_bank": {
+    "checked": "2026-11-16",
+    "how": "Ready jokes for eps 16-20 (Paris) built on this month's trends. Each line is under 50 characters. Put one joke in the first 8 seconds (weekly_learnings) and save one for the outro. Rewrite freely to fit the scene.",
+    "jokes": [
+      {
+        "trend": "Weird cafe furniture",
+        "rule": "Ask before you act",
+        "lines": [
+          "CLYDE: THIS STOOL IS SO FANCY.",
+          "WAITER: MONSIEUR, THAT IS THE TABLE.",
+          "CLYDE: THEN WHERE'S MY COFFEE? ...OH."
+        ]
+      },
+      {
+        "trend": "What I spent in a day",
+        "rule": "Know where your money goes",
+        "lines": [
+          "CLYDE: PARIS DAY ONE. 2 EUROS... OK.",
+          "CLYDE: CROISSANT 4. VIEW OF TOWER 30?!",
+          "CLYDE: I PAID TO LOOK AT A BUILDING."
+        ]
+      },
+      {
+        "trend": "Me correcting myself",
+        "rule": "Say the truth the first time",
+        "lines": [
+          "CLYDE: I CLIMBED THE WHOLE TOWER!",
+          "CLYDE: HALF THE TOWER.",
+          "CLYDE: I SAW THE STAIRS. I TOOK A NAP."
+        ]
+      },
+      {
+        "trend": "Word-for-word script for a dreaded moment",
+        "rule": "Say no without a speech",
+        "lines": [
+          "CLYDE: SOLO WANTS TO BORROW 50.",
+          "CLYDE: I'LL SAY I'M ALLERGIC TO MONEY.",
+          "CENZO: JUST SAY 'NO, BUT GOOD LUCK.'"
+        ]
+      },
+      {
+        "trend": "Overthinking spiral",
+        "rule": "Don't read a text five times",
+        "lines": [
+          "RUVA'S TEXT: 'OK.'",
+          "CLYDE: OK? OR OK. OR... OK!",
+          "CLYDE: SHE HATES ME. I'M MOVING TO PARIS.",
+          "CENZO: WE'RE IN PARIS."
+        ]
+      },
+      {
+        "trend": "Bicep heart pose",
+        "rule": "Results take reps",
+        "lines": [
+          "CENZO: (BICEP HEART)",
+          "CLYDE: (TRIES. MAKES A SAD OVAL)",
+          "CLYDE: MINE'S A HEART ON A DIET."
+        ]
+      },
+      {
+        "trend": "Grr Mondays",
+        "rule": "Plan the night before",
+        "lines": [
+          "CLYDE: MONDAY PLAN: GYM, PAGE, CROISSANT.",
+          "CLYDE: MONDAY REAL: CROISSANT.",
+          "CLYDE: ...TWO CROISSANTS."
+        ]
+      },
+      {
+        "trend": "Passenger asleep, phone swinging",
+        "rule": "Rest is not lazy",
+        "lines": [
+          "(CLYDE ASLEEP, PHONE SWINGING)",
+          "CENZO: WAIT. STOP THE PHONE.",
+          "CENZO: THE CLUE IS ON HIS LOCK SCREEN."
+        ]
+      },
+      {
+        "trend": "Kinda chic to... (outro)",
+        "rule": "Small wins count",
+        "lines": [
+          "CENZO: KINDA CHIC TO PAY RENT FIRST.",
+          "CENZO: KINDA CHIC TO SAY NO TO SOLO.",
+          "CENZO: KINDA CHIC CLYDE FOUND THE TABLE."
+        ]
+      },
+      {
+        "trend": "Fake-boyfriend text prank",
+        "rule": "Know who you let in",
+        "lines": [
+          "CLYDE TEXTS: BRINGING SOMEONE HOME 🌹",
+          "CENZO: WHO?",
+          "(DOOR OPENS: SOLO WITH FLOWERS)"
+        ]
+      }
+    ]
+  }
 }
