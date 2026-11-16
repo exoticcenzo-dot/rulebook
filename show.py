@@ -444,6 +444,15 @@ def station():
 
 BUILDERS.update(pariscafe=pariscafe, station=station, alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
 
+def grade_bg(img):
+    """Push backgrounds back so the white-headed cast pops (WCAG-style 3:1 separation):
+    mute saturation, lower value, and darken the ground band where captions and TikTok UI sit."""
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV).astype(np.float32)
+    hsv[..., 1] *= .7; hsv[..., 2] *= .8
+    g = np.ones((H, 1), np.float32); g[FLOOR - 40:] = np.linspace(1, .62, H - FLOOR + 40)[:, None]
+    hsv[..., 2] *= g
+    return cv2.cvtColor(np.clip(hsv, 0, 255).astype(np.uint8), cv2.COLOR_HSV2BGR)
+
 def get_set(n):
     k = (n, STYLE)
     if k not in SETS:
@@ -451,7 +460,7 @@ def get_set(n):
         if STYLE == "anime":
             back = painted(back) if n in ("harare", "bulawayo", "home", "villa") else cel(back)
         if STYLE == "illus":
-            back = storybook(back)
+            back = grade_bg(storybook(back))
             if front is not None:
                 f3 = storybook(np.ascontiguousarray(front[..., :3])); front = np.dstack([f3, front[..., 3]])
             if front is not None:
@@ -877,7 +886,10 @@ class Show:
             if STYLE in ("anime", "illus"):
                 lay = np.zeros_like(img); extras(lay, sh, t, s.n)
                 m = (lay.max(axis=2) > 6).astype(np.uint8); ring = cv2.dilate(m, np.ones((5, 5), np.uint8)) - m
-                if STYLE == "illus": lay = cv2.addWeighted(lay, .8, np.full_like(lay, 235), .2, 0)
+                if STYLE == "illus":
+                    # background people: muted and softer so they never compete with the leads
+                    gl = cv2.cvtColor(cv2.cvtColor(lay, cv2.COLOR_BGR2GRAY), cv2.COLOR_GRAY2BGR)
+                    lay = cv2.addWeighted(cv2.addWeighted(lay, .6, gl, .4, 0), .78, np.full_like(lay, 150), .22, 0)
                 img[m > 0] = lay[m > 0]; img[ring > 0] = (16, 14, 20)
             else:
                 extras(img, sh, t, s.n)
@@ -967,7 +979,7 @@ class Show:
             text(img, "ANIMATED ADS AND EXPLAINERS", 505, 800, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "WITH CHARACTER VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
-        if STYLE == "illus": text(img, "@exoticcenzo", 800, 720, 28, alpha=.72, track=2, glow=.2)
+        if STYLE == "illus": text(img, "@exoticcenzo", 760, 720, 28, alpha=.72, track=2, glow=.2)
         else: text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
@@ -1004,7 +1016,7 @@ class Show:
         x = 505 - (sum(wl) + sp * (len(ch) - 1)) / 2
         for i_, w_ in zip(ch, wl):
             on = i_ == k
-            text(img, ws[i_].upper(), x + w_ / 2, 1530, int(size + (22 * (1 - out(p)) if on else 0)), col=col if on else (255, 255, 255))
+            text(img, ws[i_].upper(), x + w_ / 2, 1240, int(size + (22 * (1 - out(p)) if on else 0)), col=col if on else (255, 255, 255))
             x += w_ + sp
 
     def bubble(s, img, cur, t, cast, A):
