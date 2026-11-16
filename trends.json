@@ -11,6 +11,18 @@
   ],
   "fits": [
     {
+      "trend": "Black Friday / TikTok Shop deals (#tiktokshopblackfriday, #tiktokgoblackfriday rising)",
+      "use": "Clyde buys 'deals' he doesn't need (a 3-for-1 on umbrellas in dry season). Life rule: a discount on something you don't need is still spending. Use late Nov."
+    },
+    {
+      "trend": "Christmas / festive season (#christmas top 5)",
+      "use": "Zim December: everyone home, aunties asking questions, spending everything, then broke January. Rules about saying no to family pressure and planning for January. Use from early Dec."
+    },
+    {
+      "trend": "#meme (top 2, ~300M recent views)",
+      "use": "Make one frame per episode screenshot-worthy: a reaction face plus a short line people can repost as a meme."
+    },
+    {
       "trend": "Word-for-word script for a dreaded moment (top cross-niche format, Nov 2026)",
       "use": "Clyde has to say no to a friend or ask for money back; he says the wrong version, Cenzo gives the exact right sentence as the rule"
     },
@@ -188,6 +200,15 @@
           "(DOOR OPENS: SOLO WITH FLOWERS)"
         ]
       }
+    ]
+  },
+  "creative_center_check": {
+    "checked": "2026-11-16",
+    "note": "TikTok Creative Center itself could not be opened from here; data via trackers that mirror it (ignix.social US week of 16 Nov, tokchart worldwide, trendsmcp 13 Nov). No life-lesson, animation or Africa tags are in the top lists; the big waves are Black Friday / TikTok Shop, Christmas, #meme.",
+    "sources": [
+      "https://ignix.social/trends/hashtags/us",
+      "https://tokchart.com/trending/US/hashtags",
+      "https://www.trendsmcp.ai/trending/tiktok-hashtags-trending-november-13-2026"
     ]
   }
 }
