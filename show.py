@@ -556,9 +556,16 @@ def npc(i, x, y, sc, skin, shirt, pants, phase, kind="walk", dir_=1, hat=None):
         la, ra = (x + 34 * sc * dir_, nk[1] + 44 * sc + v), (x + 24 * sc * dir_, nk[1] + 48 * sc)
     else:
         lf, rf, la, ra = (x, y), (x, y), (x + 26 * sc, nk[1] + 34 * sc), (x - 24 * sc, hip[1])
-    line(i, hip, lf, th, pants); line(i, hip, rf, th, pants)
-    line(i, hip, nk, th * 1.5, shirt)
-    line(i, nk, la, th * .8, shirt); line(i, nk, ra, th * .8, shirt)
+    if STYLE == "illus":
+        # solid, rounded silhouettes instead of thin smeared sticks
+        lt, tt, at = th * 1.3, th * 2.9, th * 1.05
+        line(i, hip, lf, lt, pants); line(i, hip, rf, lt, pants)
+        line(i, nk, la, at, shirt); line(i, nk, ra, at, shirt)
+        line(i, (hip[0], hip[1] + 4 * sc), (nk[0], nk[1] + 10 * sc), tt, shirt)
+    else:
+        line(i, hip, lf, th, pants); line(i, hip, rf, th, pants)
+        line(i, hip, nk, th * 1.5, shirt)
+        line(i, nk, la, th * .8, shirt); line(i, nk, ra, th * .8, shirt)
     if kind == "press":
         line(i, (x - 70 * sc, la[1]), (x + 70 * sc, la[1]), max(2, 5 * sc), (150, 150, 160))
         for e_ in (x - 70 * sc, x + 70 * sc): circle(i, (e_, la[1]), 13 * sc, (50, 50, 60))
@@ -706,6 +713,18 @@ def draw_char(canvas, c, t, speaking, shot_t, mouth=False):
         cv2.line(patch, (int(hand[0]), int(hand[1])), (int(hand[0] + 26), int(hand[1] - 38)), (210, 210, 210), 6, cv2.LINE_AA)
     if c["face"] == "l":
         patch = cv2.flip(patch, 1)
+    if STYLE == "illus":
+        # squash & stretch around the feet: gentle idle breathing, plus a springy pop when a line starts
+        ph_ = hash_str(c["who"]) % 7
+        sy = 1 + .014 * math.sin(t * 2.6 + ph_)
+        ls = c.get("_ls")
+        if ls is not None and ls < .6:
+            md = c.get("_md") or c.get("mood", "neutral")
+            A = {"shock": .16, "angry": .12, "happy": .09}.get(md, .06)
+            sy *= 1 - A * math.exp(-ls * 8) * math.cos(ls * 24)
+        sx = 1 / sy
+        M_ = np.float32([[sx, 0, ox * (1 - sx)], [0, sy, fy * (1 - sy)]])
+        patch = cv2.warpAffine(patch, M_, (pw, ph), flags=cv2.INTER_LINEAR)
     g = cv2.cvtColor(patch, cv2.COLOR_BGR2GRAY).astype(np.float32)
     a = np.clip(g / 12, 0, 1)[..., None]
     x0 = int(c["x"] - ox); y0 = int(FLOOR - fy)
@@ -881,6 +900,9 @@ class Show:
         for a, b, ln in x["lines"]:
             if a <= t and len(ln) > 2:
                 cast[ln[0]].update(ln[2])
+        if cur and cur[2][0] in cast:
+            cast[cur[2][0]]["_ls"] = t - cur[0]
+            cast[cur[2][0]]["_md"] = (cur[2][2].get("mood") if len(cur[2]) > 2 else None)
         img = back.copy()
         if not sh.get("promo"):
             if STYLE in ("anime", "illus"):
