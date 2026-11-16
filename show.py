@@ -967,7 +967,8 @@ class Show:
             cast[cur[2][0]]["_ls"] = t - cur[0]
             cast[cur[2][0]]["_md"] = (cur[2][2].get("mood") if len(cur[2]) > 2 else None)
         img = back.copy()
-        if STYLE == "illus" and not sh.get("promo"): pun_sign(img, sh["set"], s.n)
+        closeup_ = STYLE == "illus" and cur is not None and not (x["card"] and x["card"][0] <= t)
+        if STYLE == "illus" and not sh.get("promo") and not closeup_: pun_sign(img, sh["set"], s.n)
         if not sh.get("promo"):
             if STYLE in ("anime", "illus"):
                 lay = np.zeros_like(img); extras(lay, sh, t, s.n)
@@ -1041,20 +1042,20 @@ class Show:
         img = (img.astype(np.float32) * shade).astype(np.uint8)
         hk = s.e.get("hook")
         # Series tag is always visible so For You viewers know it's a numbered series
-        tag = img[252:312, 235:775].astype(np.float32); img[252:312, 235:775] = (tag * .35).astype(np.uint8)
-        text(img, f"THE RULE BOOK  ·  EP {s.n}", 505, 250, 40, track=3, glow=.2)
+        tag = img[252:312, 150:860].astype(np.float32); img[252:312, 150:860] = (tag * .35).astype(np.uint8)
+        text(img, f"THE RULE BOOK  ·  EP {s.n}  ·  @EXOTICCENZO", 505, 250, 34, track=2, glow=.2)
         if hk and (t < 2.2 or sh.get("loop")):
             text(img, hk, 505, 390, 108, alpha=1 if sh.get("loop") else 1 - ease((t - 2.05) / .15))
         if cur:
             if STYLE == "illus":
                 s.words(img, cur, t)
-                if s.has_tr(cur, t): s.subline(img, cur, t)
+                if s.has_tr(cur, t) and not (s.e.get("hook") and t < 2.2): s.subline(img, cur, t)
             else: s.bubble(img, cur, t, cast, A)
         if STYLE == "anime" and cur and cast.get(spk, {}).get("mood") == "shock" and t - cur[0] < .7:
             img = speed_lines(img, t, .8)
         if x["card"] and x["card"][0] <= t < x["card"][1]:
             k = window(t, x["card"][0], x["card"][1], .1, .15)
-            img = (img * (1 - .72 * k)).astype(np.uint8)
+            img = (img * (1 - .5 * k)).astype(np.uint8)
             if STYLE == "anime":
                 img = speed_lines(img, t, 1.3, 7)
                 fl = 1 - clamp((t - x["card"][0]) / .12)
@@ -1062,7 +1063,7 @@ class Show:
             text(img, sh["card"], 505, 640, 104, col=A, alpha=k)
         if x["end"] and x["end"][0] <= t:
             k = ease((t - x["end"][0]) / .2)
-            img = (img * (1 - .78 * k)).astype(np.uint8)
+            img = (img * (1 - .55 * k)).astype(np.uint8)
             text(img, sh["end"], 505, 560, 92, alpha=k, n=typed(sh["end"], t, x["end"][0] + .05, 30))
             if t > x["end"][0] + .9:
                 text(img, s.next, 505, 760, 44, col=A, alpha=ease((t - x["end"][0] - .9) / .2), track=4)
@@ -1074,8 +1075,7 @@ class Show:
             text(img, "ANIMATED ADS AND EXPLAINERS", 505, 800, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "WITH CHARACTER VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
-        if STYLE == "illus": text(img, "@exoticcenzo", 760, 720, 28, alpha=.72, track=2, glow=.2)
-        else: text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
+        if STYLE != "illus": text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
         return img
