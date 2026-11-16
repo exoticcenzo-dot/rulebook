@@ -958,9 +958,16 @@ class Show:
             hy = FLOOR - (480 if seated else 560) * Z * glowup(spk, CAST[spk]).get("scale", 1)
             ox_ = clamp(W / 2 - zc * cast[spk]["x"], W - zc * W, 0)
             oy_ = clamp(800 - zc * hy, H - zc * H, 0)
-            dt = t - cur[0]
-            if cast[spk].get("mood") in ("shock", "angry") and dt < .35:
-                ox_ += math.sin(t * 83) * 12 * (1 - dt / .35)
+            dt = t - cur[0]; md_ = cast[spk].get("mood")
+            if md_ in ("shock", "angry", "happy"):
+                # punch-in on reactions/punchlines: snap ~14% tighter, hold, then ease back out
+                k_ = 1.0 if dt < .9 else max(0.0, 1 - (dt - .9) / .3)
+                zc2 = zc * (1 + .14 * k_)
+                fx_ = cast[spk]["x"]; fy_ = hy + 120
+                ox_ = clamp(ox_ - (zc2 - zc) * fx_, W - zc2 * W, 0); oy_ = clamp(oy_ - (zc2 - zc) * fy_, H - zc2 * H, 0); zc = zc2
+            if md_ in ("shock", "angry") and dt < .3:
+                d_ = 1 - dt / .3
+                ox_ += math.sin(t * 83) * 22 * d_; oy_ += math.cos(t * 71) * 14 * d_
             M = np.array([[zc, 0, ox_], [0, zc, oy_]], np.float32); s._z = zc
         img = cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_LINEAR)
         if STYLE != "illus": img = (img.astype(np.float32) * F.vignette()).astype(np.uint8)
@@ -1022,8 +1029,13 @@ class Show:
             acc += au * w_ / tot
             if t - a < acc: break
         p = clamp((t - a - (acc - au * wt[k] / tot)) / .09)
-        col = s.WORD_COLS[(hash_str(ln[1]) + s.n) % len(s.WORD_COLS)]
-        if col == (255, 255, 255): col = s.WORD_COLS[1]
+        # each speaker keeps one caption colour (their accent, lifted for readability)
+        acc_ = CAST.get(ln[0], {}).get("accent")
+        if acc_ is not None:
+            col = tuple(int(v * .55 + 255 * .45) for v in px(acc_))
+        else:
+            col = s.WORD_COLS[(hash_str(ln[1]) + s.n) % len(s.WORD_COLS)]
+        if max(col) - min(col) < 25: col = s.WORD_COLS[1]
         # group words into chunks of up to 3 words / 16 characters
         chunks, cu = [], []
         for i_, w_ in enumerate(ws):
@@ -1132,7 +1144,15 @@ class Show:
             add(fx, x["a"], kick(.4), .4)
         sp = np.zeros(N, np.float32)
         for a, y in s.sp: add(sp, a, y)
-        z = m * .15 + fx * .16 + sp; z *= np.minimum(1, (s.D - t) / .3)
+        # duck the music ~8 dB while anyone speaks (fast attack, ~300 ms release)
+        hop = 441; env_ = np.abs(sp[:N // hop * hop]).reshape(-1, hop).max(1)
+        g = np.empty_like(env_); lv = 0.0
+        for i_ in range(len(env_)):
+            tgt = 1.0 if (env_[max(0, i_ - 30):i_ + 1] > .02).any() else 0.0
+            lv = tgt if tgt > lv else lv + (tgt - lv) * .07
+            g[i_] = lv
+        duck = np.ones(N, np.float32); duck[:len(g) * hop] = np.repeat(1 - .6 * g, hop)
+        z = m * .15 * duck + fx * .16 + sp; z *= np.minimum(1, (s.D - t) / .3)
         z = np.tanh(z * 1.05) / np.tanh(1.05) * .94
         pcm = (np.stack([z, z], 1) * 32767).astype(np.int16)
         with wave.open(path, "wb") as w:
@@ -1149,7 +1169,7 @@ def render(ep):
         p.stdin.write(s.frame(f / FPS).tobytes())
     p.stdin.close(); assert p.wait() == 0
     s.audio(a)
-    subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", v, "-i", a, "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", tmp])
+    subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", v, "-i", a, "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "44100", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", tmp])
     os.replace(tmp, fin); os.remove(v); os.remove(a); print(fin, round(s.D, 1), "s", flush=True)
 
 if __name__ == "__main__":

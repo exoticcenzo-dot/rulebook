@@ -29,3 +29,6 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, op
 
 ## Look from Episode 15
 From Episode 15 the renderer switches to the illustrated cartoon style on its own (`illus_from: 15` in series.json): big-head stickmen in real clothes, close-ups on whoever is talking, 2-3 word caption chunks at the bottom with the spoken word highlighted. Scripts don't need a `style` field. Keep lines short and punchy so the captions read well.
+
+## Automatic polish (renderer, from 2026-11-16)
+Punch-in zoom (~14%) and a short shake on shock/angry/happy lines, springy squash-and-stretch, idle blinks, caption colour per speaker (their accent), music ducked under dialogue, audio normalised to -14 LUFS. Use moods deliberately: shock/angry/happy lines get the punch-in, so save them for the 2-4 real punchlines and reactions per episode.

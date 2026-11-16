@@ -600,8 +600,14 @@ def fig_illus(img, cam, x, y, P, L, t, mood="neutral"):
     # face (looks right; patch is flipped for left)
     e1, e2 = (hc[0] + 8 * zh, hc[1] + 2 * zh), (hc[0] + 36 * zh, hc[1] + 2 * zh)
     red = L.get("red_eyes"); scl = (200, 196, 252) if red else (255, 255, 255)
+    # idle blink every ~3-4 s, offset per character (never while shocked)
+    bph = (sum(map(ord, str(L.get("name", "")))) % 17) / 5.0
+    blink = mood != "shock" and ((t + bph) % 3.6) < .11
     for e_ in (e1, e2):
         ry = 13 if mood == "shock" else 11
+        if blink:
+            line(img, (e_[0] - 10 * zh, e_[1] + 2 * zh), (e_[0] + 10 * zh, e_[1] + 2 * zh), 4.2 * zh, INK)
+            continue
         cv2.ellipse(img, ipt(e_), (int((10 * zh + o * .6) * 8), int((ry * zh + o * .6) * 8)), 0, 0, 360, INK, -1, cv2.LINE_AA, 3)
         cv2.ellipse(img, ipt(e_), (int(10 * zh * 8), int(ry * zh * 8)), 0, 0, 360, scl, -1, cv2.LINE_AA, 3)
         pr = 3.6 if mood == "shock" else 5.2
