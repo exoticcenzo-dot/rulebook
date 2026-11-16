@@ -950,7 +950,7 @@ class Show:
                 dt = t - x["card"][0]; z += .2 * math.exp(-dt / .1); ty += math.sin(t * 90) * 14 * (1 - dt / .5)
         s._z = z
         M = np.array([[z, 0, (1 - z) * pv + tx], [0, z, (1 - z) * FLOOR + ty]], np.float32)
-        if STYLE == "illus" and cur and not s.has_tr(cur, t) and not (x["card"] and x["card"][0] <= t):
+        if STYLE == "illus" and cur and not (x["card"] and x["card"][0] <= t):
             # TikTok cartoon framing: hard cut to a close-up on whoever talks
             prev = x["lines"][i_ - 1][2][0] if i_ else None
             zc = (1.38 if prev == spk else 1.78) + .04 * pr
@@ -982,7 +982,9 @@ class Show:
         if hk and (t < 2.2 or sh.get("loop")):
             text(img, hk, 505, 390, 108, alpha=1 if sh.get("loop") else 1 - ease((t - 2.05) / .15))
         if cur:
-            if STYLE == "illus" and not s.has_tr(cur, t): s.words(img, cur, t)
+            if STYLE == "illus":
+                s.words(img, cur, t)
+                if s.has_tr(cur, t): s.subline(img, cur, t)
             else: s.bubble(img, cur, t, cast, A)
         if STYLE == "anime" and cur and cast.get(spk, {}).get("mood") == "shock" and t - cur[0] < .7:
             img = speed_lines(img, t, .8)
@@ -1013,6 +1015,18 @@ class Show:
         dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
         if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
         return img
+
+    def subline(s, img, cur, t):
+        """Abroad: the local-language line as a small subtitle on a dark pill, above the speaker's head."""
+        ln = cur[2]; tr = ln[2]["tr"]; sh_ = s.shot_at(t)["sh"]; lang = sh_.get("lang") or SET_LANG.get(sh_["set"])
+        m_ = tr_mask(tr, lang, size=34, maxw=820)
+        mh, mw = m_.shape; x0 = int(505 - mw / 2); y0 = int(700 - mh / 2)
+        k = clamp((t - cur[0]) / .15)
+        if x0 < 0 or y0 < 0: return
+        roi = img[y0 - 10:y0 + mh + 10, x0 - 22:x0 + mw + 22].astype(np.float32)
+        img[y0 - 10:y0 + mh + 10, x0 - 22:x0 + mw + 22] = (roi * (1 - .55 * k)).astype(np.uint8)
+        al = m_[..., None] * k; roi = img[y0:y0 + mh, x0:x0 + mw].astype(np.float32)
+        img[y0:y0 + mh, x0:x0 + mw] = (roi * (1 - al) + 240 * al).astype(np.uint8)
 
     def has_tr(s, cur, t):
         ln = cur[2]; tr = (ln[2] if len(ln) > 2 else {}).get("tr")
@@ -1046,11 +1060,12 @@ class Show:
         from PIL import ImageFont
         size = 92; fsz = int(size * 1.12) if F.PROP else size
         font = ImageFont.truetype(F.FONT, fsz); sp = font.getlength(" ") + 22
-        wl = [font.getlength(ws[i_].upper()) + 3 * len(ws[i_]) for i_ in ch]
+        pop = 22 * (1 - out(p))
+        wl = [(font.getlength(ws[i_].upper()) + 3 * len(ws[i_])) * ((size + pop) / size if i_ == k else 1) for i_ in ch]
         x = 505 - (sum(wl) + sp * (len(ch) - 1)) / 2
         for i_, w_ in zip(ch, wl):
             on = i_ == k
-            text(img, ws[i_].upper(), x + w_ / 2, 1240, int(size + (22 * (1 - out(p)) if on else 0)), col=col if on else (255, 255, 255))
+            text(img, ws[i_].upper(), x + w_ / 2, 1240, int(size + (pop if on else 0)), col=col if on else (255, 255, 255))
             x += w_ + sp
 
     def bubble(s, img, cur, t, cast, A):
