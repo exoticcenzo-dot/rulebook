@@ -23,6 +23,9 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, op
 - End: no credits. The video loops: after the end card it cuts back for 0.9s to the opening shot with the hook on screen, so the replay feels seamless. Make the hook and the last line connect (the last line can lead straight into the hook). credit_song is no longer used.
 - promo: leave unset. Paid adverts are off.
 
+## 80-day countdown (from Episode 21)
+Episode N is story DAY N-20 of 80 (Ep 100 = DAY 80/80, the final piece). The renderer adds a red DAY N/80 badge above the hook automatically. Caption: 'THE RULE BOOK Ep N (Day N-20/80)'. See the 80-DAY COUNTDOWN rule and plot_threads the_deadline (THE COLLECTOR) in series.json.
+
 ## Other files
 - `fans.json`: comments read, fan cast, ideas, removal requests. Fan characters go in `series.json` with their TikTok username as the name.
 - `trends.json`: current trends mapped to the story.

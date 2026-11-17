@@ -1047,7 +1047,15 @@ class Show:
         tag = img[252:312, 150:860].astype(np.float32); img[252:312, 150:860] = (tag * .35).astype(np.uint8)
         text(img, f"THE RULE BOOK  ·  EP {s.n}  ·  @EXOTICCENZO", 505, 250, 34, track=2, glow=.2)
         if hk and (t < 2.2 or sh.get("loop")):
-            text(img, hk, 505, 390, 108, alpha=1 if sh.get("loop") else 1 - ease((t - 2.05) / .15))
+            hk_a = 1 if sh.get("loop") else 1 - ease((t - 2.05) / .15)
+            # 80-day countdown badge (eps 21-100 = DAY 1-80, the Collector's deadline): progress hook like 'Day 1 to Day 30'
+            day = s.e.get("day") or (s.n - 20 if 21 <= s.n <= 100 else None)
+            if day:
+                bw = 300; bx = 505 - bw // 2 + 0; by = 322
+                ov_ = img.copy(); cv2.rectangle(ov_, (bx, by), (bx + bw, by + 70), (30, 40, 220), -1)
+                img = cv2.addWeighted(ov_, .9 * hk_a, img, 1 - .9 * hk_a, 0)
+                text(img, f"DAY {day}/80", 505, by + 4, 44, alpha=hk_a, track=4, glow=.15)
+            text(img, hk, 505, 420 if day else 390, 108, alpha=hk_a)
         if cur:
             if STYLE == "illus":
                 s.words(img, cur, t)
