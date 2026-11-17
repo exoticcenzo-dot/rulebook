@@ -35,3 +35,8 @@ Punch-in zoom (~14%) and a short shake on shock/angry/happy lines, springy squas
 Crowds: outdoor extras freeze, turn toward the speaker and a few film on phones during shock/angry lines; Bucket Hat Guy (running gag) is hidden in every outdoor crowd. See the BACKGROUND rule.
 Pun sign: one joke per episode from signs.json (shop board outdoors, poster indoors). Regulars: tout, aunty, fruit vendor, baguette man always in their spots (REGULARS in show.py).
 Rewatch layer (automatic): 2-frame ghost flashes of the cliffhanger card at 3.2 s and 10.4 s; one secret frame at 5.0 s using the optional script field "secret". See the LOOPS AND REWATCH rule.
+
+## Summary extras (from 2026-11-17 research)
+- POLL TO PIN: TikTok creator comment polls take up to 5 options and a time limit; give the caption's options (2, or 3 on viewer-vote episodes) and suggest 24 hours.
+- PLAYLIST: tell Vincenzo which TikTok playlist to add the episode to, one per chapter, named 'THE RULE BOOK Ch N: <chapter title>' (e.g. 'THE RULE BOOK Ch 2: THE SIGNATURE'), so new viewers can binge in order.
+- Follow the CREATOR PLAYBOOK rule in series.json (save/share bait, viewer vote episodes, silent episode, Sunday CLYDE'S PLAN segment, Solo rivalry score, fans on background signs).
