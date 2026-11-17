@@ -1,0 +1,76 @@
+{
+ "ep": 18,
+ "chapter": "THE SIGNATURE",
+ "title": "THREE DOTS",
+ "lesson": "Let them finish before you panic",
+ "hook": "ENEMY IS\nTYPING...",
+ "caption": "Overthinking a text? THE RULE BOOK Ep 18: I texted Solo 'are you S?' and Clyde crashed out over three dots. The full text said 'S is for sorry.' Then Ruva went quiet. Drop a rule the book should have. What does Ruva know? A) Dad's old partner B) Dad's old enemy. A or B? Pause at 0:05 👀 #overthinking #liferules #stickman",
+ "secret": "SORRY FOR\nWHAT, SOLO?\nCOMMENT S",
+ "shots": [
+  {
+   "set": "paris",
+   "cast": [
+    {"who": "clyde", "x": 320, "pose": "walk", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "lines": [
+    ["clyde", "I TEXTED MY ENEMY. HE'S TYPING!", {"tr": "J'AI ÉCRIT À MON ENNEMI. IL ÉCRIT !", "mood": "shock"}],
+    ["clyde", "IT'S GIVING... FULL CONFESSION.", {"tr": "ÇA SENT... LES AVEUX COMPLETS.", "mood": "smug"}]
+   ]
+  },
+  {
+   "set": "paris",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "DOTS GONE. HE'S COMING FOR US!", {"tr": "PLUS DE POINTS. IL VIENT NOUS CHERCHER !", "mood": "shock"}],
+    ["clyde", "I'M MOVING TO PARIS. NO CAP.", {"tr": "JE DÉMÉNAGE À PARIS. SANS MENTIR."}],
+    ["cenzo", "CLYDE. WE'RE IN PARIS.", {"tr": "CLYDE. ON EST À PARIS.", "mood": "smug"}]
+   ]
+  },
+  {
+   "set": "paris",
+   "cast": [
+    {"who": "cenzo", "x": 300, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "clyde", "x": 740, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "lines": [
+    ["cenzo", "IT LOADED. 'S IS FOR SORRY.'", {"tr": "ÇA A CHARGÉ. 'S COMME SORRY.'", "mood": "shock"}]
+   ]
+  },
+  {
+   "set": "paris",
+   "cast": [
+    {"who": "clyde", "x": 260, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "card": "RULE 18\nLET THEM\nFINISH",
+   "lines": [
+    ["cenzo", "LET THEM FINISH BEFORE YOU PANIC.", {"tr": "LAISSE-LES FINIR AVANT DE PANIQUER."}]
+   ]
+  },
+  {
+   "set": "paris",
+   "cast": [
+    {"who": "ruva", "x": 320, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 760, "pose": "stand", "face": "l", "mood": "shock"}
+   ],
+   "end": "WHO WAS S?",
+   "lines": [
+    ["ruva", "SORRY... DAD USED TO SAY THAT TO S.", {"tr": "SORRY... PAPA DISAIT ÇA À S."}]
+   ]
+  },
+  {
+   "set": "paris",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE'S NEW RINGTONE IS HIM SCREAMING:", {"tr": "LA SONNERIE DE CLYDE : LUI QUI CRIE :"}]
+   ]
+  }
+ ]
+}

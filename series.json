@@ -370,6 +370,17 @@
    "rule": "No thanks is a full sentence",
    "cliffhanger": "Clyde couldn't say no to Antoine and ate nine croissants (60 euro bill). Antoine finds an old bill: two coffees for LE PROF and 'S'. Ep 18 must ask who S is (strong Solo hint) without the full partner reveal (keep for eps 19-20); Solo still thinks it is a trading book.",
    "structure": "repeat gag / me-correcting-myself (Clyde tries to say no and caves)"
+  },
+  {
+   "ep": 18,
+   "date": "2026-11-17",
+   "time": "20:00",
+   "set": "paris",
+   "rule": "Let them finish before you panic",
+   "cliffhanger": "Cenzo texted Solo 'are you S?'; Clyde spiralled over the typing dots; the full reply was 'S is for sorry.' Ruva: 'Dad used to say that to S.' Ep 19 starts the partner reveal (Solo and the Prof co-wrote the early pages; keep the full payoff for ep 20); Solo still thinks it is a trading book.",
+   "structure": "text-message gag / overthinking spiral (sentence loop: outro 'Clyde's new ringtone is him screaming:' -> 'I texted my enemy. He's typing!')",
+   "secret": "SORRY FOR / WHAT, SOLO? / COMMENT S",
+   "trend": "Overthinking spiral (joke_bank: 'I'm moving to Paris' / 'We're in Paris')"
   }
  ],
  "masterplan": {
@@ -517,6 +528,10 @@
     {
      "ep": 17,
      "hint": "Antoine's old Cafe Le Haut bill: two coffees, LE PROF and 'S' (Solo)."
+    },
+    {
+     "ep": 18,
+     "hint": "Solo's text 'S is for sorry'; Ruva says her dad used to say sorry to S."
     }
    ],
    "payoff_ep": 20,
