@@ -8,7 +8,8 @@
   "THE LESSON. From Episode 16 every lesson is a LIFE RULE, never trading or betting: money habits, friends, love and family, work, pride, patience, habits, saying no, honesty. Only EXOTICCENZO explains it, but anyone can cause or learn it: Clyde, friends, strangers, gym regulars, shopkeepers, kombi drivers, fans. It comes from a random, funny, unexpected moment. Viewers must not guess it until EXOTICCENZO breaks it down at the end. Vary the format. Write moments so true to everyday life that viewers feel they are watching their own reality. In the story, the Rule Book is the Prof's rules for life; the trading pages were a disguise (see plot_threads, book_truth).",
   "OPENING. Set a short shock hook on screen. The first spoken line is conflict or stakes, never scene-setting. Every episode must make sense alone, so give new viewers the setup in the first or second line without a slow recap.",
   "PACING. Whole video 20-25 seconds including the end card: 6-8 lines, each under 40 characters. Start mid-action in shot 1 (someone already running, grabbing, shouting) so frame 1 works with the sound off. A joke or surprise by second 8, another near 15. Change something every 2 to 4 seconds. Vary the structure between episodes (chase, argument, text-message gag, list, silent gag) so the feed never sees the same template twice in a row.",
-  "ENDING. Close on a cliffhanger that pays off next episode, mostly an open question; cut mid-action only when the next episode truly delivers. Then the outro: EXOTICCENZO alone, thanking viewers or telling a fresh joke that comes out of this episode's unexpected moment, about whoever caused it, never spoiling a hidden hint. All end screens must fit this episode's story. No song credit. Every video loops: it cuts back to the opening shot with the hook, so write the last line to flow into the first.",
+  "ENDING. Close on a cliffhanger that pays off next episode, following the CLIFFHANGERS rule. Then the outro: EXOTICCENZO alone, thanking viewers or telling a fresh joke that comes out of this episode's unexpected moment, about whoever caused it, never spoiling a hidden hint. All end screens must fit this episode's story. No song credit. Every video loops: it cuts back to the opening shot with the hook, so write the last line to flow into the first.",
+  "CLIFFHANGERS (researched 2026-11-17 from microdrama and TikTok-series writers: Genra, Filmustage, CapCut, Virlo, Ream, Influencers Time). (1) CUT ON THE QUESTION, NOT THE ANSWER: end at the moment of impact, about 2 seconds earlier than feels safe; the cliffhanger line can be cut off mid-sentence ('S WAS MY DAD'S—') or end on a reaction before anyone explains. If the viewer feels satisfied, it was cut too late. (2) ROTATE THE TYPE: never use the same type two episodes in a row, and do not default to 'someone reveals a clue + question card' (eps 15-18 all did this). Types: ARRIVAL (someone unexpected walks in), DECISION (two doors, one choice; pairs with the caption A/B), COUNTDOWN (train leaving, battery dying, door closing), CONFESSION (cut just before the feeling or secret is said), DANGER (a funny-physical threat: falling, chased, locked in), REVELATION (a secret comes out), BETRAYAL (a friend seems to switch sides; reverse or explain it next ep), MISTAKE (the plan goes wrong, the fix is next ep), TWIST (reframes everything; chapter finales only). Follow cliffhanger_plan for upcoming episodes and record the type as 'cliffhanger_type' in episodes_log. (3) ONE OPEN QUESTION AT A TIME: each episode answers the previous cliffhanger, ideally in its first 2 lines, and opens exactly one new question. The end card states that one question in 4 words or fewer. (4) LAST 3-6 SECONDS: the cliffhanger beat sits right before the end card; the outro after it must never answer, explain or undercut it. On TWIST, ARRIVAL, DANGER and COUNTDOWN episodes, the outro raises the tension (a deadpan tag such as 'WE SHOULD RUN.') instead of a joke unrelated to the threat. (5) OPEN ON NEW TENSION, NEVER A RECAP: line 1 continues the cliffhanger as new stakes ('SOLO JUST SAT AT OUR TABLE.'), never 'Last time...'. (6) ALWAYS PAY IT OFF: every cliffhanger is answered by the next episode or, for chapter-long mysteries, advanced visibly; a bait-and-switch loses trust. Big mysteries run 3-5 episodes, small ones pay off next episode.",
   "WORLD AND CAST. EXOTICCENZO and Clyde live together in Zimbabwe, between Harare and Bulawayo. Home is the base and the most-used setting. Every few episodes they travel abroad by train, plane or ship, then return home. Everyday scenes are constant: eating, games, sofas, kombis, shops, the gym, phones, jobs, family visits. Every place is full of ordinary people going about their lives. Give background people moments of their own when funny. Characters talk like friends. Add a new recurring character every chapter or two, and bring old ones back.",
   "THE VIBE. EXOTICCENZO and Clyde are permanently chilled, shown only by red eyes and jokes: sleepy, hungry, Clyde forgetting what he was saying. Shady dealers exist in the world, in dark alleys and, unexpectedly, in nice houses (sets alley, villa), but keep it implied: only unmarked packages, whispers and the word dealer. Never show, name or refer to weed, smoking or any drug by name in the video, caption or hashtags.",
   "GLOW-UP. Appearance changes automatically every 10 episodes from Episode 11: EXOTICCENZO gets bigger and more cut; Clyde barely changes, just slightly taller than Cenzo. One or two gym episodes each chapter, starting Episodes 8-10, so it feels earned. Gym scenes still move the hunt forward.",
@@ -350,7 +351,8 @@
    "set": "plane",
    "rule": "See the prize before you bet",
    "cliffhanger": "On the plane to Paris, Solo's 'page 6' envelope turned out to be the plane menu; Solo says the real page 6 is in Paris and 'the Prof always hid things high' (slip: he uses the uncle's old nickname). Ep 16 must land in Paris and ask where up high page 6 is hidden; keep the partner reveal for eps 19-20.",
-   "credit_song": "Mask Off"
+   "credit_song": "Mask Off",
+   "cliffhanger_type": "REVELATION"
   },
   {
    "ep": 16,
@@ -360,7 +362,8 @@
    "rule": "Asking is free, pride costs hours",
    "cliffhanger": "In Paris, Clyde refused to ask directions for six hours; Cenzo asked Antoine the waiter at Cafe Le Haut and page 6 was on his top shelf. Page 6 reveals the Rule Book is rules for LIFE, not money (book_truth revealed). Antoine adds: 'A man in a suit asked too. Years ago.' Ep 17 must ask whether Solo was in Paris with the Prof years ago (partner hint, keep full reveal for eps 19-20); Solo still believes it is a trading book.",
    "credit_song": "Hard to Choose One",
-   "new_character": "antoine (ANTOINE, Paris cafe waiter at Cafe Le Haut)"
+   "new_character": "antoine (ANTOINE, Paris cafe waiter at Cafe Le Haut)",
+   "cliffhanger_type": "REVELATION"
   },
   {
    "ep": 17,
@@ -369,7 +372,8 @@
    "set": "pariscafe",
    "rule": "No thanks is a full sentence",
    "cliffhanger": "Clyde couldn't say no to Antoine and ate nine croissants (60 euro bill). Antoine finds an old bill: two coffees for LE PROF and 'S'. Ep 18 must ask who S is (strong Solo hint) without the full partner reveal (keep for eps 19-20); Solo still thinks it is a trading book.",
-   "structure": "repeat gag / me-correcting-myself (Clyde tries to say no and caves)"
+   "structure": "repeat gag / me-correcting-myself (Clyde tries to say no and caves)",
+   "cliffhanger_type": "REVELATION"
   },
   {
    "ep": 18,
@@ -380,7 +384,8 @@
    "cliffhanger": "Cenzo texted Solo 'are you S?'; Clyde spiralled over the typing dots; the full reply was 'S is for sorry.' Ruva: 'Dad used to say that to S.' Ep 19 starts the partner reveal (Solo and the Prof co-wrote the early pages; keep the full payoff for ep 20); Solo still thinks it is a trading book.",
    "structure": "text-message gag / overthinking spiral (sentence loop: outro 'Clyde's new ringtone is him screaming:' -> 'I texted my enemy. He's typing!')",
    "secret": "SORRY FOR / WHAT, SOLO? / COMMENT S",
-   "trend": "Overthinking spiral (joke_bank: 'I'm moving to Paris' / 'We're in Paris')"
+   "trend": "Overthinking spiral (joke_bank: 'I'm moving to Paris' / 'We're in Paris')",
+   "cliffhanger_type": "REVELATION"
   }
  ],
  "masterplan": {
@@ -557,5 +562,20 @@
     "KEEP THE VIDEO UNDER 32 SECONDS. Runtime crept to 34-35 seconds by eps 9-13 and finish rate fell to 0-2.6%, against 3.7-7.2% for the 28-32 second eps 1-3. Cut a line rather than run long."
    ]
   }
- ]
+ ],
+ "cliffhanger_plan": {
+  "how": "Planned cliffhanger type per upcoming episode (see CLIFFHANGERS rule). Change if the story or viewer votes need it, but never repeat a type twice in a row. Extend this plan at the start of each chapter.",
+  "19": "ARRIVAL: Solo walks into Cafe Le Haut and sits at their table, holding the old photo; cut on his first word.",
+  "20": "TWIST (chapter 2 finale): Solo and the Prof co-wrote the early 'trading' disguise pages; cut as Solo learns the book is rules for life, before he reacts.",
+  "21": "DECISION: home to Zimbabwe; Solo offers a tempting deal (chapter 3 note); the choice matches the caption A/B.",
+  "22": "MISTAKE",
+  "23": "COUNTDOWN",
+  "24": "CONFESSION",
+  "25": "REVELATION",
+  "26": "DANGER",
+  "27": "BETRAYAL (reversed in 28)",
+  "28": "DECISION",
+  "29": "COUNTDOWN",
+  "30": "TWIST (chapter 3 finale)"
+ }
 }
