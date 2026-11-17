@@ -399,6 +399,19 @@
    "cliffhanger_type": "ARRIVAL",
    "secret": "S = ? / REWIND EP 12 / THE PHOTO",
    "vote": "A) say sorry B) the pages C) join us"
+  },
+  {
+   "ep": 20,
+   "date": "2026-11-18",
+   "time": "20:00",
+   "set": "pariscafe",
+   "rule": "Say sorry first",
+   "cliffhanger": "Solo told his side: he never said sorry to the Prof for 20 years, and they wrote the first pages together. Clyde said sorry to Antoine and got a free croissant. Cenzo showed Solo page 6; Solo: 'Rules for life? Then my pages were—' (cut). Ep 21 opens on Solo's reaction: his 'trading' pages were the Prof's disguise all along (he was played, but kindly); then home to Zimbabwe and Solo's tempting deal (DECISION, follow the A/B vote: join the crew or rip up the pages). Solo rivalry score starts here: SOLO 0, US 1 (he had to admit it).",
+   "structure": "confession / two-story parallel (Solo's 20-year silence vs Clyde's 20-hour croissant grudge)",
+   "cliffhanger_type": "TWIST",
+   "secret": "TWO PENS / ONE BOOK / COMMENT PROF",
+   "vote": "A) Join the crew B) Rip up the pages",
+   "no_votes_note": "Ep 19 not yet published when ep 20 was made, so no 'You chose this'; story followed option A (to say sorry)."
   }
  ],
  "masterplan": {
@@ -557,8 +570,9 @@
     }
    ],
    "payoff_ep": 20,
-   "paid_off": false,
-   "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background)."
+   "paid_off": true,
+   "note": "Plant 3-4 hints in eps 11-18 (e.g. Solo knows an old nickname for the uncle; an old photo with two men in the background).",
+   "paid_off_note": "Ep 20: Solo admits he and the Prof wrote the first pages together and he never said sorry in 20 years (Ruva's 'betrayal' was pride on both sides). Cut as Solo learns from page 6 that the book is rules for life and his trading pages were the Prof's disguise; his reaction opens ep 21."
   },
   {
    "thread": "book_truth",
@@ -578,6 +592,10 @@
     "LAND THE FIRST SURPRISE BY SECOND 8, NOT 15. Only 6-16% of viewers are still watching at 10 seconds, so the 15-second surprise is seen by almost nobody. Keep the 15-second one too, but add an earlier twist or punchline.",
     "KEEP THE VIDEO UNDER 32 SECONDS. Runtime crept to 34-35 seconds by eps 9-13 and finish rate fell to 0-2.6%, against 3.7-7.2% for the 28-32 second eps 1-3. Cut a line rather than run long."
    ]
+  },
+  {
+   "date": "2026-11-17",
+   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3)."
   }
  ],
  "cliffhanger_plan": {
