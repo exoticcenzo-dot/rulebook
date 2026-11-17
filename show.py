@@ -932,7 +932,9 @@ class Show:
             if sh.get("end"):
                 x = V.say("narrator", sh["end"]); s.next = s.e.get("next", "NEXT EPISODE TOMORROW"); y = V.say("narrator", s.next)
                 s.sp.append((t + .15, x)); s.sp.append((t + .25 + len(x) / 44100, y))
-                d = max(1.3, (len(x) + len(y)) / 44100 + .25); end = (t, t + d); t += d
+                d = max(1.3, (len(x) + len(y)) / 44100 + .25)
+                if s.e.get("vote"): d += 1.3  # on-screen vote: time to read the options
+                end = (t, t + d); t += d
             s.tl.append(dict(a=a, b=t, sh=sh, lines=lines, card=card, end=end))
         if s.e.get("promo"):
             x = V.say("cenzo", "NEED A VIDEO LIKE THIS FOR YOUR BUSINESS? MESSAGE ME. WE MAKE THEM.")
@@ -1068,6 +1070,12 @@ class Show:
             if t > x["end"][0] + .9:
                 text(img, s.next, 505, 760, 44, col=A, alpha=ease((t - x["end"][0] - .9) / .2), track=4)
                 text(img, S["handle"], 505, 850, 52, alpha=ease((t - x["end"][0] - 1.1) / .2), track=5)
+            vote = s.e.get("vote")
+            if vote and t > x["end"][0] + 1.2:  # viewer vote shown on screen (TikTok polls can't be made via API)
+                for i, o in enumerate(vote[:3]):
+                    text(img, "%s) %s" % ("ABC"[i], o.upper()), 505, 980 + i * 78, 50, alpha=ease((t - x["end"][0] - 1.2 - .15 * i) / .2), track=2)
+                lets = ", ".join("ABC"[:len(vote[:3])][:-1]) + " OR " + "ABC"[len(vote[:3]) - 1]
+                text(img, "COMMENT " + lets, 505, 980 + len(vote[:3]) * 78 + 30, 40, col=A, alpha=ease((t - x["end"][0] - 1.7) / .2), track=4)
         if sh.get("promo"):
             k = ease(st / .2)
             img = (img * (1 - .84 * k)).astype(np.uint8)

@@ -11,57 +11,171 @@
   {
    "set": "pariscafe",
    "cast": [
-    {"who": "clyde", "x": 320, "pose": "sit", "face": "r", "mood": "angry", "prop": "table"},
-    {"who": "antoine", "x": 760, "pose": "walk", "face": "l", "mood": "shock"}
+    {
+     "who": "clyde",
+     "x": 320,
+     "pose": "sit",
+     "face": "r",
+     "mood": "angry",
+     "prop": "table"
+    },
+    {
+     "who": "antoine",
+     "x": 760,
+     "pose": "walk",
+     "face": "l",
+     "mood": "shock"
+    }
    ],
    "lines": [
-    ["clyde", "WHO STOLE MY CROISSANT? CONFESS!", {"tr": "QUI A VOLÉ MON CROISSANT ? AVOUE !", "mood": "angry"}],
-    ["antoine", "MONSIEUR... YOU ARE SITTING ON IT.", {"tr": "MONSIEUR... VOUS ÊTES ASSIS DESSUS.", "mood": "shock"}]
+    [
+     "clyde",
+     "WHO STOLE MY CROISSANT? CONFESS!",
+     {
+      "tr": "QUI A VOLÉ MON CROISSANT ? AVOUE !",
+      "mood": "angry"
+     }
+    ],
+    [
+     "antoine",
+     "MONSIEUR... YOU ARE SITTING ON IT.",
+     {
+      "tr": "MONSIEUR... VOUS ÊTES ASSIS DESSUS.",
+      "mood": "shock"
+     }
+    ]
    ]
   },
   {
    "set": "pariscafe",
    "cast": [
-    {"who": "ruva", "x": 300, "pose": "stand", "face": "r", "mood": "focus"},
-    {"who": "clyde", "x": 740, "pose": "sit", "face": "l", "mood": "neutral", "prop": "table"}
+    {
+     "who": "ruva",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "clyde",
+     "x": 740,
+     "pose": "sit",
+     "face": "l",
+     "mood": "neutral",
+     "prop": "table"
+    }
    ],
    "lines": [
-    ["ruva", "S WAS DAD'S PARTNER. HE BETRAYED HIM.", {"tr": "S ÉTAIT L'ASSOCIÉ DE PAPA. IL L'A TRAHI."}],
-    ["clyde", "SO S IS THE VILLAIN. NO CAP.", {"tr": "ALORS S EST LE MÉCHANT. SANS MENTIR.", "mood": "smug"}]
+    [
+     "ruva",
+     "S WAS DAD'S PARTNER. HE BETRAYED HIM.",
+     {
+      "tr": "S ÉTAIT L'ASSOCIÉ DE PAPA. IL L'A TRAHI."
+     }
+    ],
+    [
+     "clyde",
+     "SO S IS THE VILLAIN. NO CAP.",
+     {
+      "tr": "ALORS S EST LE MÉCHANT. SANS MENTIR.",
+      "mood": "smug"
+     }
+    ]
    ]
   },
   {
    "set": "pariscafe",
    "cast": [
-    {"who": "clyde", "x": 260, "pose": "sit", "face": "r", "mood": "shock", "prop": "table"},
-    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+    {
+     "who": "clyde",
+     "x": 260,
+     "pose": "sit",
+     "face": "r",
+     "mood": "shock",
+     "prop": "table"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
    ],
    "card": "RULE 19\nHEAR BOTH\nSIDES",
    "lines": [
-    ["cenzo", "YOU BLAMED A WAITER. YOU SAT ON IT.", {"tr": "TU AS ACCUSÉ UN SERVEUR. TU ÉTAIS ASSIS DESSUS.", "mood": "happy"}],
-    ["cenzo", "HEAR BOTH SIDES BEFORE YOU JUDGE.", {"tr": "ÉCOUTE LES DEUX CÔTÉS AVANT DE JUGER."}]
+    [
+     "cenzo",
+     "YOU BLAMED A WAITER. YOU SAT ON IT.",
+     {
+      "tr": "TU AS ACCUSÉ UN SERVEUR. TU ÉTAIS ASSIS DESSUS.",
+      "mood": "happy"
+     }
+    ],
+    [
+     "cenzo",
+     "HEAR BOTH SIDES BEFORE YOU JUDGE.",
+     {
+      "tr": "ÉCOUTE LES DEUX CÔTÉS AVANT DE JUGER."
+     }
+    ]
    ]
   },
   {
    "set": "pariscafe",
    "cast": [
-    {"who": "zeke", "x": 320, "pose": "walk", "face": "r", "mood": "neutral"},
-    {"who": "cenzo", "x": 760, "pose": "stand", "face": "l", "mood": "shock"}
+    {
+     "who": "zeke",
+     "x": 320,
+     "pose": "walk",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "cenzo",
+     "x": 760,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
    ],
    "end": "SOLO'S SIDE?",
    "lines": [
-    ["zeke", "BONJOUR. NOW HEAR MY SIDE—", {"tr": "BONJOUR. ÉCOUTEZ MA VERSION—"}]
+    [
+     "zeke",
+     "BONJOUR. NOW HEAR MY SIDE—",
+     {
+      "tr": "BONJOUR. ÉCOUTEZ MA VERSION—"
+     }
+    ]
    ]
   },
   {
    "set": "pariscafe",
    "cast": [
-    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "focus"}
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    }
    ],
    "outro": true,
    "lines": [
-    ["cenzo", "ORDER THREE COFFEES. THIS GETS LONG.", {"tr": "COMMANDE TROIS CAFÉS. ÇA VA ÊTRE LONG."}]
+    [
+     "cenzo",
+     "ORDER THREE COFFEES. THIS GETS LONG.",
+     {
+      "tr": "COMMANDE TROIS CAFÉS. ÇA VA ÊTRE LONG."
+     }
+    ]
    ]
   }
+ ],
+ "vote": [
+  "To say sorry",
+  "The pages",
+  "To join us"
  ]
 }

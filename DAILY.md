@@ -14,6 +14,7 @@ Copy `scripts/ep005.json`. Fields: ep, chapter, title, lesson, hook, caption, op
 - hook: 2 lines at most, under 14 characters per line.
 - card: the rule, spoken by EXOTICCENZO.
 - Abroad: add `{"tr": "translated line"}` as each line's options, including the outro. No speech bubbles: abroad uses the same close-ups and English word captions, and the translation shows as a small subtitle above the speaker's head. tokyo=Japanese, paris=French, dubai=Arabic; on new countries set `lang` on the shot (ISO code) and add its font to LANG_FONT in show.py if not Latin, Cyrillic, Greek, Arabic or CJK. If no font exists, leave English and say so in the summary. Bubble colours change automatically.
+- `vote`: list of the caption's 2 or 3 answer options (short, e.g. ["To say sorry", "The pages", "To join us"]). The end card shows them as A) B) C) with COMMENT A OR B, because TikTok comment polls cannot be created through any API. Set it on every episode. Next episode, count comments that are just a letter (or name an option) and follow the most-voted/most-liked.
 - The story shot before the outro needs `end`: the cliffhanger question, 4 words or fewer. Pick the cliffhanger type from `cliffhanger_plan` in series.json and follow the CLIFFHANGERS rule: cut on the question not the answer, rotate the type, one open question, open the next episode on new tension (no recap), always pay it off. Log it as `cliffhanger_type`.
 - Last shot has `"outro": true`: EXOTICCENZO alone, happy, same set, 1 short line.
 
