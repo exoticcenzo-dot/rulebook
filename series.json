@@ -387,6 +387,18 @@
    "secret": "SORRY FOR / WHAT, SOLO? / COMMENT S",
    "trend": "Overthinking spiral (joke_bank: 'I'm moving to Paris' / 'We're in Paris')",
    "cliffhanger_type": "REVELATION"
+  },
+  {
+   "ep": 19,
+   "date": "2026-11-18",
+   "time": "16:00",
+   "set": "pariscafe",
+   "rule": "Hear both sides before you judge",
+   "cliffhanger": "Ruva says S was her dad's partner who betrayed him; Clyde calls S the villain after wrongly accusing Antoine (he sat on his own croissant). Solo walks into Cafe Le Haut: 'Bonjour. Now hear my side—' (cut). Ep 20 is the chapter 2 TWIST finale: Solo tells his side (he and the Prof co-wrote the early 'trading' disguise pages; it was a misunderstanding, not a betrayal) and learns the book is rules for life; follow the A/B/C vote on what Solo wants.",
+   "structure": "accusation / argument (wrong-suspect gag)",
+   "cliffhanger_type": "ARRIVAL",
+   "secret": "S = ? / REWIND EP 12 / THE PHOTO",
+   "vote": "A) say sorry B) the pages C) join us"
   }
  ],
  "masterplan": {
@@ -538,6 +550,10 @@
     {
      "ep": 18,
      "hint": "Solo's text 'S is for sorry'; Ruva says her dad used to say sorry to S."
+    },
+    {
+     "ep": 19,
+     "hint": "Ruva: S was Dad's partner who 'betrayed' him (her side); Solo arrives to tell his side."
     }
    ],
    "payoff_ep": 20,
