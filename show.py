@@ -945,6 +945,9 @@ class Show:
             d = 0.9; sh0 = s.e["shots"][0]
             s.tl.append(dict(a=t, b=t + d, sh=dict(set=sh0["set"], cast=[dict(c) for c in sh0["cast"]], lines=[], loop=True), lines=[], card=None, end=None)); t += d
         s.D = t + .15
+        # free edit layer (fx.py): colour grade, grain, transitions, animated captions, extra SFX
+        s.fx = ep >= S.get("fx_from", 10 ** 9) and STYLE == "illus"
+        s.cuts = [(x["a"], X.kind_for(k)) for k, x in enumerate(s.tl) if k and not x["sh"].get("loop")]
 
     def shot_at(s, t):
         for x in s.tl:
@@ -1044,6 +1047,7 @@ class Show:
                 ox_ += math.sin(t * 83) * 22 * d_; oy_ += math.cos(t * 71) * 14 * d_
             M = np.array([[zc, 0, ox_], [0, zc, oy_]], np.float32); s._z = zc
         img = cv2.warpAffine(img, M, (W, H), flags=cv2.INTER_LINEAR)
+        if getattr(s, "fx", False): img = X.grade(img)
         if STYLE != "illus": img = (img.astype(np.float32) * F.vignette()).astype(np.uint8)
         if STYLE == "anime": img = palette(img)
         A = (50, 190, 255)
@@ -1099,10 +1103,14 @@ class Show:
             text(img, "WITH CHARACTER VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
         if STYLE != "illus": text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
-        dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
-        if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
+        if getattr(s, "fx", False):
+            img = X.transition(img, t, s.cuts)
+        else:
+            dd = min(abs(t - b["a"]) for b in s.tl[1:]) if len(s.tl) > 1 else 9
+            if dd < .07: img = (img * (dd / .07)).astype(np.uint8)
         if STYLE == "illus" and not getattr(s, "_inner", False):
             img = s.rewatch_layer(img, t)
+            if getattr(s, "fx", False): img = X.grain(img, t)
         return img
 
     def rewatch_layer(s, img, t):
@@ -1165,10 +1173,32 @@ class Show:
             cu.append(i_)
         if cu: chunks.append(cu)
         ch = next(c_ for c_ in chunks if k in c_)
+        fxon = getattr(s, "fx", False)
+        if fxon:
+            # chunk bounces in when it first appears; keywords/numbers are bigger and flash yellow when spoken
+            st_ = .08 + au * sum(wt[:ch[0]]) / tot
+            sc_ = X.bounce(t - a - st_); yb_ = int(30 * (1 - min(1, (t - a - st_) / .2)) ** 2) if t - a - st_ < .2 else 0
+            if a < .01 and ch[0] == 0: sc_, yb_ = 1.0, 0  # frame 1 is the thumbnail: no half-bounced caption
         from PIL import ImageFont
         size = 92; fsz = int(size * 1.12) if F.PROP else size
         font = ImageFont.truetype(F.FONT, fsz); sp = font.getlength(" ") + 22
         pop = 22 * (1 - out(p))
+        if fxon:
+            def wsz(i_):
+                z_ = size * (1.16 if X.is_key(ws[i_]) else 1) + (pop if i_ == k else 0)
+                return int(round(z_ * sc_ / 4) * 4)
+            wl = [(font.getlength(ws[i_].upper()) + 3 * len(ws[i_])) * wsz(i_) / size for i_ in ch]
+            tw_ = sum(wl) + sp * sc_ * (len(ch) - 1)
+            if tw_ > 960:  # keep long chunks on screen
+                f_ = 960 / tw_; wl = [w_ * f_ for w_ in wl]; tw_ = 960
+            else: f_ = 1
+            x = 505 - tw_ / 2
+            for i_, w_ in zip(ch, wl):
+                on = i_ == k; key = X.is_key(ws[i_])
+                c_ = ((90, 235, 255) if key else col) if on else (255, 255, 255)
+                text(img, ws[i_].upper(), x + w_ / 2, 1240 + yb_, int(wsz(i_) * f_ / 2) * 2, col=c_)
+                x += w_ + sp * sc_ * f_
+            return
         wl = [(font.getlength(ws[i_].upper()) + 3 * len(ws[i_])) * ((size + pop) / size if i_ == k else 1) for i_ in ch]
         x = 505 - (sum(wl) + sp * (len(ch) - 1)) / 2
         for i_, w_ in zip(ch, wl):
@@ -1255,16 +1285,31 @@ class Show:
             def bonk():
                 q, e_ = env(.18, 30); return (np.sin(2 * np.pi * (220 * q - 300 * q * q)) * e_ + rng.normal(0, .3, len(q)) * np.exp(-q * 90)).astype(np.float32)
             add(fx, .02, ding(), .8); add(fx, .0, whoosh(), 1.0)  # series sting on frame 1
+            fxon = getattr(s, "fx", False); kinds = dict(s.cuts) if fxon else {}; nshock = 0
             for k_, x in enumerate(s.tl):
-                if k_: add(fx, x["a"] - .12, whoosh(), 1.1)
+                if k_:
+                    if fxon and kinds.get(x["a"]) == "glitch": add(fx, x["a"] - .1, X.zap(rng), .9)
+                    else: add(fx, x["a"] - .12, whoosh(), 1.1)
+                if fxon and x["sh"].get("prop") == "phone": add(fx, x["a"] + .1, X.notify(), .8)
                 for a_, b_, ln in x["lines"]:
                     add(fx, a_ + .02, pop(), .35)
                     md = ln[2].get("mood") if len(ln) > 2 else None
                     md = md or next((c_["mood"] for c_ in x["sh"]["cast"] if c_["who"] == ln[0]), None)
-                    if md == "shock": add(fx, a_ + .05, boing(), .55)
+                    if md == "shock":
+                        if fxon and nshock % 2: add(fx, a_ + .03, X.scratch(rng), .7)
+                        else: add(fx, a_ + .05, boing(), .55)
+                        nshock += 1
                     if md == "angry": add(fx, a_ + .05, bonk(), .7)
-                if x["card"]: add(fx, x["card"][0] + .02, ding(), .9)
-                if x["end"]: add(fx, x["end"][0], whoosh(), 1.2)
+                    if fxon and md == "happy": add(fx, a_ + .03, X.boom(), .45)
+                if x["card"]:
+                    add(fx, x["card"][0] + .02, ding(), .9)
+                    if fxon: add(fx, x["card"][0], X.boom(), .8)
+                if x["end"]:
+                    add(fx, x["end"][0], whoosh(), 1.2)
+                    if fxon:
+                        add(fx, x["end"][0] - 1.0, X.riser(1.0, rng), .55)
+                        for j_ in range(len(x["sh"]["end"])):  # typewriter clicks while the question types on
+                            if x["sh"]["end"][j_] != " ": add(fx, x["end"][0] + .05 + j_ / 30, X.click(rng), .5)
         for x in s.tl:
             if x["card"]: add(fx, x["card"][0], kick(.9), 1)
             if x["end"]: add(fx, x["end"][0], kick(1.0), 1)
@@ -1287,11 +1332,12 @@ class Show:
 
 from film import window, typed
 import voices as V
+import fx as X
 
 def render(ep):
     s = Show(ep); b = f"{OUT}/ep{ep:03d}"
     v, a, tmp, fin = b + ".v.mp4", b + ".wav", b + ".tmp.mp4", b + ".mp4"
-    p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", v], stdin=subprocess.PIPE)
+    p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "veryfast", "-crf", "21" if s.fx else "18", "-maxrate", "8M" if s.fx else "40M", "-bufsize", "16M" if s.fx else "80M", "-pix_fmt", "yuv420p", v], stdin=subprocess.PIPE)
     for f in range(int(s.D * FPS)):
         p.stdin.write(s.frame(f / FPS).tobytes())
     p.stdin.close(); assert p.wait() == 0

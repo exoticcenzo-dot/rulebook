@@ -44,3 +44,6 @@ Rewatch layer (automatic): 2-frame ghost flashes of the cliffhanger card at 3.2 
 - POLL TO PIN: TikTok creator comment polls take up to 5 options and a time limit; give the caption's options (2, or 3 on viewer-vote episodes) and suggest 24 hours.
 - PLAYLIST: tell Vincenzo which TikTok playlist to add the episode to, one per chapter, named 'THE RULE BOOK Ch N: <chapter title>' (e.g. 'THE RULE BOOK Ch 2: THE SIGNATURE'), so new viewers can binge in order.
 - Follow the CREATOR PLAYBOOK rule in series.json (save/share bait, viewer vote episodes, silent episode, Sunday CLYDE'S PLAN segment, Solo rivalry score, fans on background signs).
+
+## Free edit layer (fx.py, from Episode 22; `fx_from` in series.json)
+Replaces CapCut/Canva/Picsart-style polish with code, no credits: warm colour grade, soft bloom, vignette and light film grain; shot transitions rotating whip-pan, zoom-blur and glitch; captions that bounce in, with keywords/numbers bigger and flashing yellow; extra synthesized SFX (record scratch on every 2nd shock line, bass boom on the rule card and happy punchlines, riser into the end card, typewriter clicks on the question, phone blip on phone-prop shots, digital zap on glitch cuts). All automatic; scripts need nothing new. The cut into the final loop shot stays hard so the loop is seamless.
