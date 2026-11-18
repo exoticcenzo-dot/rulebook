@@ -66,10 +66,6 @@
    ],
    "lines": [
     [
-     "clyde",
-     "RELAX, IT'S JUST A SELFIE. I ATE."
-    ],
-    [
      "cenzo",
      "EISH. THE PAGES ARE BEHIND YOUR HEAD.",
      {
@@ -78,7 +74,7 @@
     ],
     [
      "clyde",
-     "...LOWKEY MY HAIRLINE LOOKS GREAT."
+     "...LOWKEY MY HAIRLINE ATE THOUGH."
     ]
    ]
   },
@@ -104,7 +100,10 @@
    "lines": [
     [
      "cenzo",
-     "NOT EVERY WIN NEEDS AN AUDIENCE."
+     "POST THE WIN. THE ENEMY HAS WIFI TOO.",
+     {
+      "mood": "happy"
+     }
     ]
    ]
   },
@@ -118,7 +117,7 @@
      "x": 320,
      "pose": "stand",
      "face": "r",
-     "mood": "shock"
+     "mood": "happy"
     },
     {
      "who": "cenzo",
@@ -130,6 +129,13 @@
    ],
    "end": "WHO'S WATCHING?",
    "lines": [
+    [
+     "clyde",
+     "BET. POSTING THAT RULE RN.",
+     {
+      "mood": "happy"
+     }
+    ],
     [
      "clyde",
      "NEW FOLLOWER. HIS PIC IS A GOLD RI-",
