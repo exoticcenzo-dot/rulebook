@@ -1,0 +1,182 @@
+{
+ "ep": 21,
+ "chapter": "THE COLLECTOR",
+ "title": "FIRST CLASS",
+ "lesson": "Don't pay to keep up",
+ "hook": "PLAYED FOR\n20 YEARS",
+ "caption": "Paying money just to keep up with someone? THE RULE BOOK Ep 21 (Day 1/80): Clyde paid 300 for first class to sit near Solo. Same seat, plus a curtain. Then Solo admitted he sold the first pages to The Collector, who reaches the last piece in 80 days. Score: SOLO 0, US 2. Solo wants to team up. Would you shake his hand? A) Shake it B) Don't shake it. A or B? #liferules #adulting #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "secret": "80 DAYS\nGOLD RING\nCOMMENT 80",
+ "shots": [
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "zeke",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "I GOT PLAYED. 20 YEARS.",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 280,
+     "pose": "seat",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "ruva",
+     "x": 740,
+     "pose": "walk",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "MY FIRST CLASS ERA! 300!",
+     {
+      "mood": "happy"
+     }
+    ],
+    [
+     "ruva",
+     "SAME SEAT, CLYDE. PLUS A CURTAIN.",
+     {
+      "mood": "smug"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "zeke",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "clyde",
+     "x": 760,
+     "pose": "seat",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "I SOLD TO THE COLLECTOR. 80 DAYS LEFT.",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 280,
+     "pose": "seat",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "card": "RULE 21\nDON'T PAY\nTO KEEP UP",
+   "lines": [
+    [
+     "cenzo",
+     "ANOTHER PAGE. ANOTHER RULE."
+    ],
+    [
+     "cenzo",
+     "ONE SOLD OUT. ONE BOUGHT A CURTAIN."
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "zeke",
+     "x": 320,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "cenzo",
+     "x": 760,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "end": "SHAKE ON IT?",
+   "lines": [
+    [
+     "zeke",
+     "TEAM UP OR WE'RE COOKED. DEAL?"
+    ]
+   ]
+  },
+  {
+   "set": "plane",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "SOLO, SAY IT LOUDER:"
+    ]
+   ]
+  }
+ ],
+ "vote": [
+  "Shake it",
+  "Don't shake it"
+ ]
+}

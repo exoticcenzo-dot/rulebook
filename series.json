@@ -413,6 +413,20 @@
    "secret": "TWO PENS / ONE BOOK / COMMENT PROF",
    "vote": "A) Join the crew B) Rip up the pages",
    "no_votes_note": "Ep 19 not yet published when ep 20 was made, so no 'You chose this'; story followed option A (to say sorry)."
+  },
+  {
+   "ep": 21,
+   "date": "2026-11-19",
+   "time": "16:00",
+   "set": "plane",
+   "rule": "Don't pay to keep up",
+   "cliffhanger": "On the plane home, Solo admits his trading pages were the Prof's disguise and that he sold his copies to THE COLLECTOR, who reaches the last piece in 80 days (DAY 1/80). Clyde paid 300 for 'first class' (same seat plus a curtain). Solo offers to team up: 'Team up or we're cooked. Deal?' (cut on the choice). Ep 22 opens on the crew's answer (follow ep 21's A/B vote Shake it / Don't shake it) and lands as a MISTAKE.",
+   "structure": "confession + background money gag (sentence loop: outro 'SOLO, SAY IT LOUDER:' -> 'I GOT PLAYED. 20 YEARS.')",
+   "cliffhanger_type": "DECISION",
+   "secret": "80 DAYS / GOLD RING / COMMENT 80",
+   "vote": "A) Shake it B) Don't shake it",
+   "solo_score": "SOLO 0, US 2",
+   "no_votes_note": "Ep 20 not yet published when ep 21 was made; no votes, Solo leans toward joining (option A) as best for the story."
   }
  ],
  "masterplan": {
@@ -587,7 +601,12 @@
    "start_ep": 21,
    "setup": "Ep 21: Solo's reaction to page 6 (the trading pages he co-wrote were the Prof's disguise; he was played, kindly). Then the twist: years ago, angry at the Prof, Solo sold his copies of the first pages to THE COLLECTOR, a rich, faceless buyer who collects rare books and never loses. The Collector has worked out where the last piece is and will reach it in 80 days. The crew must get there first: DAY 1/80 starts now. Solo offers a deal: work together against the Collector (chapter 3 'Solo offers a tempting deal'; ep 21 DECISION follows the A/B vote Join the crew / Rip up the pages).",
    "rules": "The Collector is never seen fully until late in the search (hand with a gold ring, a voice on the phone, a black car, an auction paddle number 80). Seed him in background cameos 1-3 episodes before each appearance. He is a rival, not violent. Episode 100 (DAY 80) the crew beats him to the final piece at home in Zimbabwe; his payoff fits the lesson (e.g. he learns the book can't be bought).",
-   "hints": [],
+   "hints": [
+    {
+     "ep": 21,
+     "hint": "Secret frame at 5.0s: '80 DAYS / GOLD RING' (the Collector's gold ring, to be seen on a hand in a background cameo in eps 22-24)."
+    }
+   ],
    "payoff_ep": 100,
    "paid_off": false
   }
