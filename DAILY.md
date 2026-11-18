@@ -47,3 +47,8 @@ Rewatch layer (automatic): 2-frame ghost flashes of the cliffhanger card at 3.2 
 
 ## Free edit layer (fx.py, from Episode 22; `fx_from` in series.json)
 Replaces CapCut/Canva/Picsart-style polish with code, no credits: warm colour grade, soft bloom, vignette and light film grain; shot transitions rotating whip-pan, zoom-blur and glitch; captions that bounce in, with keywords/numbers bigger and flashing yellow; extra synthesized SFX (record scratch on every 2nd shock line, bass boom on the rule card and happy punchlines, riser into the end card, typewriter clicks on the question, phone blip on phone-prop shots, digital zap on glitch cuts). All automatic; scripts need nothing new. The cut into the final loop shot stays hard so the loop is seamless.
+
+## Added 2026-11-18 (similar-content research)
+- `open_loops` in series.json is the continuity ledger: cliffhangers come from it; close loops when paid off (CONTINUITY LEDGER rule). Callback to an earlier episode about every 3rd ep.
+- Optional script field `shoutout`: {"user": "...", "text": "..."} shows COMMENT OF THE DAY on the outro (COMMENT OF THE DAY rule).
+- Holiday specials (US Thanksgiving 26 Nov, Black Friday 27 Nov, Christmas, New Year) and a CLYDE TAKEOVER caption once a chapter (SPECIALS AND TAKEOVERS rule).

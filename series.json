@@ -27,7 +27,10 @@
   "BACKGROUND (from Gravity Falls, Rick and Morty, Skibidi Toilet, Bob's Burgers). The renderer already makes outdoor crowds freeze, turn and film on their phones on shock/angry lines, and hides BUCKET HAT GUY (orange bucket hat, green shirt) in every outdoor crowd. In scripts: (1) seed a future character as a background cameo 1-3 episodes before they matter; (2) once per chapter, hide a silent story clue in a background action and pay it off later ('rewind ep N'); (3) about every 5th episode, let a caption or outro wink at Bucket Hat Guy ('spot him?') without explaining him; (4) keep extras plain so the leads always stand out. The renderer also shows a PUN SIGN that changes every episode (signs.json; add new jokes at the end, never delete) and the REGULARS, the same background people in the same spots every time: the kombi tout (red cap, orange vest, Harare and the station), the aunty with the shopping bag (purple doek, Harare and Bulawayo), the fruit vendor (Bulawayo and the station) and the baguette man (Paris). A regular can be promoted to a speaking side character when the story needs one; give them a name and add them to characters and voices.py.",
   "LOOPS AND REWATCH (rarely used by other creators; built from the Perfect Loop, pause-challenge and 'subtle foreshadowing' trends). The renderer automatically flashes the cliffhanger card as a 2-frame ghost at 3.2 s and 10.4 s (only visible on a rewatch) and shows one SECRET FRAME at exactly 5.0 s. Set the script's optional \"secret\" field (3 short lines, \\n between) to a story clue or a code word for comments, e.g. 'S IS NOT\\nWHO YOU THINK\\nCOMMENT SOLO?'; default is 'comment PAGE N+1'. About every 3rd episode, use a sentence loop: the outro's last line is the first half of a sentence and the first spoken line completes it, so the replay sounds continuous. Never mention the secret frame or flashes in the caption more than once a week ('pause at 0:05 👀').",
   "CREATOR PLAYBOOK (researched 2026-11-17: TikTok newsroom/TechCrunch on comment polls, Hootsuite and Meikuio on the 2026 algorithm, Glitch Productions, Alan Chikin Chow, Tubby Nugget, D Billions, Glorb, Fruit Love Island, stickman and minimal-character accounts @humor_animations, @ketnipz, @thelandofboggs). Watch time, completion, shares and saves count most (estimates, TikTok publishes no weights). Over 30% of viewers watch muted. Apply: (1) SAVE AND SHARE BAIT: the rule card is written to be screenshot-worthy as a page of the book; about every 3rd caption, after the A/B question, add 'Save this rule for later.' or 'Send this to your Clyde.' (rotate, never both). (2) VIEWER VOTE EPISODES (Fruit Love Island's audience votes drove its growth): TikTok comment polls allow up to 5 options and a time limit. Once per chapter (the episode before the finale, e.g. ep 19, 29), the caption question has 3 options (A/B/C) about a real story choice, and the next episode must follow the winner and say 'You chose this.' (3) ONE SILENT EPISODE PER CHAPTER (@ketnipz, Where's Chicky: no dialogue works in every country and on mute): told through faces, props, sound effects and on-screen signs; only the rule card and at most one spoken line. (4) RECURRING SEGMENT: every Sunday episode is 'CLYDE'S PLAN' (Clyde says the catchphrase in line 1, the plan backfires, the rule comes from the wreckage), so returning viewers recognise the format the way D Billions and Glorb fans recognise a series. Other days rotate structures as PACING says. (5) RIVALRY ARC (Glorb's Krabs-vs-Plankton arc kept fans across 26 releases): Solo appears or is mentioned at least every 3rd episode; each time he and the crew score a point off each other, so the rivalry keeps a running score viewers can track ('SOLO 3, US 4'). (6) FANS IN THE WORLD (Tubby Nugget drew its mascot into follower photos): beyond CAST ME, about once a week put a commenter's username on a background sign, shop name or poster (friendly, no personal details) and mention it in the caption; seen fans comment more. (7) ONE SIGNATURE THING PER EPISODE (@king.science's fixed outfit, D Billions' 'My name is Chicky' hook): the catchphrases stay word-for-word; the rule card always appears with Cenzo's 'ANOTHER PAGE. ANOTHER RULE.' on the chapter's first and last episode only, so it stays special. (8) STABLE IDENTITY OVER SPIKES (Fruit Love Island grew fast, then collapsed with no stable characters and 'AI slop' backlash): never change a main character's look, voice or personality for a trend; trends fit the cast, not the reverse.",
-  "80-DAY COUNTDOWN (added 2026-11-17 at Vincenzo's request, from the 'Day 1 to Day 30' stickman-survival format, e.g. Nobody Gets In: progress in the title tells viewers where they are and that there is an end to chase). From Episode 21 each episode is one story day: Episode N = DAY N-20 of 80, so Episode 100 = DAY 80/80, the day the final piece is found in Zimbabwe. The renderer shows a red DAY N/80 badge above the hook on the first frame and the loop automatically (override with script field 'day' only if needed). Keep the shock hook and the personal first line; the badge adds progress, it does not replace them. Captions: put the day right after the series name, e.g. 'THE RULE BOOK Ep 21 (Day 1/80)'. Lines can use the clock for stakes ('79 DAYS LEFT AND CLYDE IS NAPPING'), but never more than once per episode. Mention 'X days left' in the cliffhanger or outro about every 5th episode, and make chapter finales land on round days (Ep 30 = Day 10, Ep 50 = Day 30, Ep 70 = Day 50, Ep 90 = Day 70)."
+  "80-DAY COUNTDOWN (added 2026-11-17 at Vincenzo's request, from the 'Day 1 to Day 30' stickman-survival format, e.g. Nobody Gets In: progress in the title tells viewers where they are and that there is an end to chase). From Episode 21 each episode is one story day: Episode N = DAY N-20 of 80, so Episode 100 = DAY 80/80, the day the final piece is found in Zimbabwe. The renderer shows a red DAY N/80 badge above the hook on the first frame and the loop automatically (override with script field 'day' only if needed). Keep the shock hook and the personal first line; the badge adds progress, it does not replace them. Captions: put the day right after the series name, e.g. 'THE RULE BOOK Ep 21 (Day 1/80)'. Lines can use the clock for stakes ('79 DAYS LEFT AND CLYDE IS NAPPING'), but never more than once per episode. Mention 'X days left' in the cliffhanger or outro about every 5th episode, and make chapter finales land on round days (Ep 30 = Day 10, Ep 50 = Day 30, Ep 70 = Day 50, Ep 90 = Day 70).",
+  "CONTINUITY LEDGER (from 'part 2 viewers get lost' research, dev.to 2026, and Chikn Nuggit's slow lore reveals). Before writing, read series.json open_loops. Every cliffhanger must come from an open loop or open a new one there (never a random question); when an episode answers a loop, mark it closed with the episode number. Keep 3-6 loops open at a time: one small (pays off next ep), two medium (3-5 eps), and the long ones (the Collector, the final piece at Ep 100). About every 3rd episode, include one CALLBACK to a specific earlier episode (an object, a line or a background gag that matters again, e.g. Clyde's 300 'first class' curtain) and say 'rewind ep N' in the caption at most once a week.",
+  "COMMENT OF THE DAY (from Fruit Love Island, whose host read viewer comments aloud, and Pencilmation's call-in segment). When a new comment is friendly, short and fits the episode, set the script field \"shoutout\": {\"user\": \"<username>\", \"text\": \"<comment, max 50 chars>\"}; the renderer shows it on the outro as COMMENT OF THE DAY, and the outro line may react to it. Same safety as FAN RULES: never offensive, personal, a child, someone on do_not_use, or anything asking for links/promotions; trim, never reword it into something they didn't say. At most one per episode; skip when no comment fits.",
+  "SPECIALS AND TAKEOVERS (Pencilmation's holiday/mini specials and 'Hank takes over the channel'). Holidays the US-heavy audience feels get a themed episode that still moves the hunt: US Thanksgiving (Thu 26 Nov 2026: the crew has a 'thankful for' dinner, Clyde is thankful for the wrong things), Black Friday (27 Nov: Clyde buys deals he doesn't need), Christmas (24-25 Dec: aunties and family pressure at home), New Year (31 Dec/1 Jan: resolutions vs rules). About once a chapter, a CLYDE TAKEOVER: the caption is written by Clyde in first person with his slightly-wrong slang ('Cenzo is asleep so I'm running the account. no cap.'), still including THE RULE BOOK Ep N and the A/B question."
  ],
  "characters": {
   "cenzo": {
@@ -662,5 +665,58 @@
   "28": "DECISION",
   "29": "COUNTDOWN",
   "30": "TWIST (chapter 3 finale)"
+ },
+ "open_loops": {
+  "how": "See CONTINUITY LEDGER. Each loop: id, question, size (small/medium/long), opened (ep), pays_off_by (ep or range), status open/closed, closed_ep.",
+  "loops": [
+   {
+    "id": "gold_ring_follower",
+    "question": "Who is the gold-ring account that followed Clyde, and what did he see in the selfie?",
+    "size": "medium",
+    "opened": 22,
+    "pays_off_by": "23-26 (seen, never fully shown: it is the Collector)",
+    "status": "open"
+   },
+   {
+    "id": "delete_or_bait",
+    "question": "Do they delete Clyde's post or leave it as bait? (ep 22 vote)",
+    "size": "small",
+    "opened": 22,
+    "pays_off_by": 23,
+    "status": "open"
+   },
+   {
+    "id": "solo_trust",
+    "question": "Can Solo really be trusted as a partner? (score SOLO 1, US 2)",
+    "size": "medium",
+    "opened": 21,
+    "pays_off_by": "27-28 (BETRAYAL reversed in 28)",
+    "status": "open"
+   },
+   {
+    "id": "the_collector",
+    "question": "Who is the Collector and can the crew beat him to the last piece?",
+    "size": "long",
+    "opened": 21,
+    "pays_off_by": 100,
+    "status": "open"
+   },
+   {
+    "id": "the_prof",
+    "question": "Where is the Prof (Ruva's dad, Mtoriro's uncle) hiding, and will he and Solo make peace?",
+    "size": "long",
+    "opened": 1,
+    "pays_off_by": "chapter 4 trail heats up; reunion before 100",
+    "status": "open"
+   },
+   {
+    "id": "bucket_hat_guy",
+    "question": "Who is Bucket Hat Guy, hidden in every crowd?",
+    "size": "long",
+    "opened": 15,
+    "pays_off_by": "a later chapter (promote him like Chikn Nuggit's joke character Old Pea)",
+    "status": "open"
+   }
+  ]
  }
 }

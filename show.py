@@ -1103,6 +1103,15 @@ class Show:
             text(img, "WITH CHARACTER VOICES", 505, 860, 38, col=A, alpha=k, track=2, glow=.25)
             text(img, "MESSAGE " + S["handle"], 505, 985, 52, alpha=k, track=3)
         if STYLE != "illus": text(img, "@exoticcenzo", 505, 1385, 38, alpha=.62, track=3, glow=.2)
+        so = s.e.get("shoutout")
+        if so and sh.get("outro"):  # COMMENT OF THE DAY: a real viewer comment on screen during the outro (seen fans comment more)
+            k = ease(st / .25)
+            ov_ = img.copy(); cv2.rectangle(ov_, (110, 330), (970, 560), (24, 20, 30), -1)
+            img = cv2.addWeighted(ov_, .78 * k, img, 1 - .78 * k, 0)
+            text(img, "COMMENT OF THE DAY", 540, 346, 36, col=(50, 190, 255), alpha=k, track=4, glow=.2)
+            body = "\n".join(textwrap.wrap('"%s"' % so["text"].upper(), 26)[:2])
+            text(img, body, 540, 400, 46, alpha=k, track=1, glow=.2)
+            text(img, "@" + so["user"].lstrip("@").upper()[:24], 540, 505 if "\n" in body else 465, 34, col=(140, 255, 170), alpha=k, track=3, glow=.2)
         if getattr(s, "fx", False):
             img = X.transition(img, t, s.cuts)
         else:
