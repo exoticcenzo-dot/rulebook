@@ -6,7 +6,7 @@
  "cast": [],
  "ideas": [],
  "do_not_use": [],
- "last_read": "2026-11-18 08:40 CAT: Windsor returned 1 comment (already seen), no new comments; ep 20 vote not open yet (publishes 18 Nov 20:00)",
+ "last_read": "2026-11-18 13:40 CAT: Windsor returned 1 comment (already seen), no new comments; ep 21 vote not open yet (publishes 19 Nov 16:00)",
  "votes": {
   "19": {
    "options": [
@@ -24,6 +24,14 @@
    ],
    "tally": "no votes (ep 20 not yet published when ep 21 was made)",
    "used": "A in Solo's attitude (he asks to team up), chosen as best for the story"
+  },
+  "21": {
+   "options": [
+    "Shake it",
+    "Don't shake it"
+   ],
+   "tally": "no votes (ep 21 not yet published when ep 22 was made)",
+   "used": "A (they shook on it), chosen as best for the story"
   }
  }
 }

@@ -998,6 +998,13 @@ class Show:
             f = cast["clyde"]; bx = int(f["x"]) - 120; by = FLOOR - 330
             rect(img, bx, by, bx + 150, by + 100, (40, 80, 140)); rect(img, bx + 12, by + 8, bx + 140, by + 92, (70, 130, 200))
             rect(img, bx + 60, by + 34, bx + 95, by + 62, (120, 220, 255))
+        if sh.get("prop") == "phone" and "clyde" in cast:  # Clyde holding up his phone (social post gag); optional shot field phone_text
+            f = cast["clyde"]; d = 1 if f.get("face", "r") == "r" else -1
+            bx = int(f["x"]) + d * 70 - 45; by = FLOOR - 400
+            rect(img, bx - 6, by - 6, bx + 96, by + 176, (30, 30, 36)); rect(img, bx, by + 8, bx + 90, by + 160, (245, 235, 225))
+            rect(img, bx + 8, by + 18, bx + 82, by + 92, (150, 190, 220))
+            circle(img, (bx + 45, by + 50), 18, (60, 90, 130))
+            label(img, sh.get("phone_text", "4K LIKES")[:11], bx + 6, by + 128, .5, (40, 40, 200))
         # slow push in
         pv, i_, pr = W / 2, 0, clamp(st / max(.1, x["b"] - x["a"]))
         tx = 0.

@@ -427,6 +427,20 @@
    "vote": "A) Shake it B) Don't shake it",
    "solo_score": "SOLO 0, US 2",
    "no_votes_note": "Ep 20 not yet published when ep 21 was made; no votes, Solo leans toward joining (option A) as best for the story."
+  },
+  {
+   "ep": 22,
+   "date": "2026-11-19",
+   "time": "20:00",
+   "set": "home",
+   "rule": "Not every win needs an audience (post the win, not the plan)",
+   "cliffhanger": "Back home in Harare (Day 2/80), the crew and Solo shook on the team-up; Clyde posted a selfie with the secret pages behind his head (4K likes). New follower whose profile pic is a gold ri- (cut). Ep 23 (COUNTDOWN) opens on the gold-ring follower: the Collector has seen the pages and is coming; follow ep 22's A/B vote (Delete it / Leave it as bait).",
+   "structure": "social-media confession / showing-off gag (phone prop)",
+   "cliffhanger_type": "MISTAKE",
+   "secret": "GOLD RING / IS WATCHING / COMMENT 79",
+   "vote": "A) Delete it B) Leave it as bait",
+   "solo_score": "SOLO 1, US 2 (Solo scores: Clyde leaked the pages)",
+   "no_votes_note": "Ep 21 not yet published when ep 22 was made; story followed option A (shake it)."
   }
  ],
  "masterplan": {
@@ -605,6 +619,10 @@
     {
      "ep": 21,
      "hint": "Secret frame at 5.0s: '80 DAYS / GOLD RING' (the Collector's gold ring, to be seen on a hand in a background cameo in eps 22-24)."
+    },
+    {
+     "ep": 22,
+     "hint": "Clyde's new follower has a gold ring as his profile picture: the Collector saw the pages in Clyde's selfie (first Collector cameo)."
     }
    ],
    "payoff_ep": 100,

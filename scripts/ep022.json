@@ -1,0 +1,166 @@
+{
+ "ep": 22,
+ "chapter": "THE COLLECTOR",
+ "title": "THE SELFIE",
+ "lesson": "Not every win needs an audience",
+ "hook": "HE POSTED\nTHE PAGES",
+ "caption": "Posting your plans before they happen? THE RULE BOOK Ep 22 (Day 2/80): Solo and the crew shook on it. One day later Clyde posted a selfie with the secret pages behind his head. 4K likes. Score: SOLO 1, US 2. Then someone with a gold ring followed him. Delete the post or leave it as bait? A or B? Save this rule for later. #liferules #socialmedia #stickman",
+ "secret": "GOLD RING\nIS WATCHING\nCOMMENT 79",
+ "shots": [
+  {
+   "set": "home",
+   "prop": "phone",
+   "phone_text": "4K LIKES",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "zeke",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "I POSTED OUR SECRET. 4K LIKES!",
+     {
+      "mood": "happy"
+     }
+    ],
+    [
+     "zeke",
+     "ONE DAY AS PARTNERS AND YOU POSTED IT?",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "prop": "phone",
+   "phone_text": "4K LIKES",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "RELAX, IT'S JUST A SELFIE. I ATE."
+    ],
+    [
+     "cenzo",
+     "EISH. THE PAGES ARE BEHIND YOUR HEAD.",
+     {
+      "mood": "shock"
+     }
+    ],
+    [
+     "clyde",
+     "...LOWKEY MY HAIRLINE LOOKS GREAT."
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {
+     "who": "zeke",
+     "x": 280,
+     "pose": "sit",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "card": "RULE 22\nPOST THE WIN\nNOT THE PLAN",
+   "lines": [
+    [
+     "cenzo",
+     "NOT EVERY WIN NEEDS AN AUDIENCE."
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "prop": "phone",
+   "phone_text": "+1 FOLLOWER",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 320,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 760,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "end": "WHO'S WATCHING?",
+   "lines": [
+    [
+     "clyde",
+     "NEW FOLLOWER. HIS PIC IS A GOLD RI-",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "HIS CAPTION SAID 'NO SPOILERS.'"
+    ]
+   ]
+  }
+ ],
+ "vote": [
+  "Delete it",
+  "Leave it as bait"
+ ]
+}
