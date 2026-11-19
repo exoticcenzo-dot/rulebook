@@ -1,0 +1,75 @@
+{
+ "ep": 23,
+ "chapter": "THE COLLECTOR",
+ "title": "THE FREE WATCH",
+ "lesson": "Free stuff always sends a bill",
+ "hook": "HE SENT A\nFREE WATCH",
+ "caption": "Got a free gift from a stranger online? THE RULE BOOK Ep 23 (Day 3/80): The gold-ring guy sent Clyde a free gold watch. All he wants is one lil photo of the pages. Solo admits that's how the Collector got his pages: for a free pen. Score: SOLO 1, US 3. Clyde sent a fake page as bait. Now the guy says he's 10 minutes away. A) Hide the pages B) Wait for him. A or B? Comment CAST ME to join the story. #liferules #scamalert #stickman",
+ "next": "NEXT EPISODE TONIGHT",
+ "secret": "THE WATCH\nIS TICKING\nCOMMENT 78",
+ "shots": [
+  {
+   "set": "harare",
+   "prop": "phone",
+   "phone_text": "FREE WATCH",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "walk", "face": "r", "mood": "happy"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "A STRANGER SENT ME A FREE WATCH!", {"mood": "happy"}],
+    ["cenzo", "THE GOLD RING GUY? WHAT'S THE CATCH?", {"mood": "focus"}]
+   ]
+  },
+  {
+   "set": "harare",
+   "cast": [
+    {"who": "clyde", "x": 280, "pose": "stand", "face": "r", "mood": "smug"},
+    {"who": "zeke", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "ONE LIL PHOTO OF THE PAGES. NO CAP."],
+    ["zeke", "THAT'S HOW HE GOT MINE. FOR A PEN.", {"mood": "shock"}]
+   ]
+  },
+  {
+   "set": "harare",
+   "cast": [
+    {"who": "zeke", "x": 280, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "card": "RULE 23\nFREE STUFF\nSENDS A BILL",
+   "lines": [
+    ["cenzo", "FREE IS NEVER FREE. ASK SOLO'S PEN.", {"mood": "happy"}]
+   ]
+  },
+  {
+   "set": "harare",
+   "prop": "phone",
+   "phone_text": "HERE IN 10",
+   "cast": [
+    {"who": "clyde", "x": 320, "pose": "stand", "face": "r", "mood": "smug"},
+    {"who": "cenzo", "x": 760, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "end": "10 MINUTES LEFT?",
+   "lines": [
+    ["clyde", "BET. I SENT A FAKE PAGE. LOWKEY GENIUS."],
+    ["clyde", "HE SAYS: 'NICE FAKE. SEE YOU IN 10-'", {"mood": "shock"}]
+   ]
+  },
+  {
+   "set": "harare",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE. TAKE OFF THE WATCH."]
+   ]
+  }
+ ],
+ "vote": [
+  "Hide the pages",
+  "Wait for him"
+ ]
+}

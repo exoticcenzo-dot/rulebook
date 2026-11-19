@@ -446,6 +446,22 @@
    "solo_score": "SOLO 1, US 2 (Solo scores: Clyde leaked the pages)",
    "no_votes_note": "Ep 21 not yet published when ep 22 was made; story followed option A (shake it).",
    "punchline_technique": "MISDIRECT + BUTTON (Clyde breaks the rule instantly, which triggers the cliffhanger)"
+  },
+  {
+   "ep": 23,
+   "date": "2026-11-20",
+   "time": "16:00",
+   "set": "harare",
+   "rule": "Free stuff always sends a bill (punchline: 'Free is never free. Ask Solo's pen.')",
+   "cliffhanger": "Day 3/80. The gold-ring follower (the Collector) sent Clyde a free gold watch in exchange for 'one lil photo of the pages'. Solo admits the Collector got his pages the same way, for a free pen (score SOLO 1, US 3). Clyde sends a fake page as bait (ep 22 vote B chosen for the story, no votes yet); the Collector replies 'Nice fake. See you in 10-' (cut). Cenzo's outro: 'Clyde. Take off the watch.' (the watch is how he knows where they are). Ep 24 (CONFESSION) opens on the 10-minute countdown: the watch is a tracker; follow ep 23's A/B vote (Hide the pages / Wait for him).",
+   "structure": "street show-off flex + receipt confession (phone prop at start and cliffhanger), outdoor Harare",
+   "cliffhanger_type": "COUNTDOWN",
+   "secret": "THE WATCH / IS TICKING / COMMENT 78",
+   "vote": [
+    "Hide the pages",
+    "Wait for him"
+   ],
+   "punchline_technique": "RECEIPT (Solo's pen)"
   }
  ],
  "masterplan": {
@@ -628,6 +644,10 @@
     {
      "ep": 22,
      "hint": "Clyde's new follower has a gold ring as his profile picture: the Collector saw the pages in Clyde's selfie (first Collector cameo)."
+    },
+    {
+     "ep": 23,
+     "hint": "The Collector's 'free' gold watch on Clyde's wrist: he saw through the fake page and knows where they are (the watch is a tracker; pay off in 24)."
     }
    ],
    "payoff_ep": 100,
@@ -675,7 +695,8 @@
     "size": "medium",
     "opened": 22,
     "pays_off_by": "23-26 (seen, never fully shown: it is the Collector)",
-    "status": "open"
+    "status": "open",
+    "note": "Ep 23: he sent Clyde a free gold watch for a photo of the pages; seen through the fake."
    },
    {
     "id": "delete_or_bait",
@@ -683,7 +704,9 @@
     "size": "small",
     "opened": 22,
     "pays_off_by": 23,
-    "status": "open"
+    "status": "closed",
+    "closed_ep": 23,
+    "note": "Left as bait: Clyde sent a fake page."
    },
    {
     "id": "solo_trust",
@@ -715,6 +738,14 @@
     "size": "long",
     "opened": 15,
     "pays_off_by": "a later chapter (promote him like Chikn Nuggit's joke character Old Pea)",
+    "status": "open"
+   },
+   {
+    "id": "ten_minutes",
+    "question": "The Collector is 10 minutes away and Clyde is wearing his watch: what happens when he arrives? (ep 23 vote Hide the pages / Wait for him)",
+    "size": "small",
+    "opened": 23,
+    "pays_off_by": 24,
     "status": "open"
    }
   ]

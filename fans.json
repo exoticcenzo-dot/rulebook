@@ -6,7 +6,7 @@
  "cast": [],
  "ideas": [],
  "do_not_use": [],
- "last_read": "2026-11-18 13:40 CAT: Windsor returned 1 comment (already seen), no new comments; ep 21 vote not open yet (publishes 19 Nov 16:00)",
+ "last_read": "2026-11-19 08:45 CAT: Windsor returned 1 comment (already seen), no new comments; ep 22 vote not open yet (publishes 19 Nov 20:00)",
  "votes": {
   "19": {
    "options": [
@@ -32,6 +32,14 @@
    ],
    "tally": "no votes (ep 21 not yet published when ep 22 was made)",
    "used": "A (they shook on it), chosen as best for the story"
+  },
+  "22": {
+   "options": [
+    "Delete it",
+    "Leave it as bait"
+   ],
+   "tally": "no votes (ep 22 not yet published when ep 23 was made)",
+   "used": "B (Clyde sent a fake page as bait), chosen as best for the story"
   }
  }
 }
