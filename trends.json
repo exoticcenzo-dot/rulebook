@@ -401,7 +401,7 @@
       }
     ],
     "songs": [],
-    "songs_note": "for manual posting only; never put songs in the rendered video. None collected this run: the music page no longer exists.",
+    "songs_note": "for manual posting only; never put songs in the rendered video. None collected: the music page no longer exists.",
     "creators": [
       {
         "rank": 1,
@@ -532,11 +532,40 @@
     ],
     "trend_videos_note": "Descriptions matched from page captions; mostly sponsored content. Takeaway: deadpan skits with sequels (Matt Hyams has 2 in the top 7) and 'guess how many' quiz hooks are winning formats.",
     "blocked": [
-      "songs: music page no longer exists; old URL redirects to hashtag trends",
-      "creators: Creator tab shows 'Coming soon' (used video-ranking creators instead)"
+      "songs: music page no longer exists",
+      "creators: Creator tab 'Coming soon'",
+      "Zimbabwe: not offered as a region (South Africa used as proxy)",
+      "Worldwide: no global option (built from 5 markets)"
     ],
     "blocked_note": "No login wall this run.",
     "story_fits": [
+      {
+        "trend": "#sunhalo / #solarhalo / #sun (ZA, Zimbabwe proxy: top 3 tags, 9M+7.4M views; everyone filming a ring around the sun)",
+        "chapter": "3 (eps 21-30), Bulawayo before Dubai; fits ep 23-24",
+        "scene": "A huge halo appears around the sun over Bulawayo. The whole street stops to film it. Clyde turns his back to it to film a selfie WITH the halo 'like a crown', misses the whole thing, and his clip is just his forehead. Mtoriro notices the halo's ring shape matches the circle drawn on page 23. In the crowd, one figure isn't filming the sky: he's filming Clyde, and his hand catches the light. Gold ring (gold_ring_follower, seen but not shown).",
+        "lesson": "Filming the moment for others means you don't get the moment yourself.",
+        "rule_line": "THE SKY DID A HALO. YOU DID A FOREHEAD.",
+        "technique": "RECEIPT",
+        "button": "Clyde: 'POSTING IT ANYWAY. CAPTION: GOD SAID I ATE.'"
+      },
+      {
+        "trend": "#zerotohero (BR, 7K posts, 19.7M views; before/after grind montage)",
+        "chapter": "3: comparison, lifestyle traps",
+        "scene": "Clyde wants a 'zero to hero' montage before Dubai and tries to fit 80 days of gym, savings and studying into one afternoon. Zeke times him. Each 'hero' shot is staged: borrowed watch, rented car, a dumbbell he can't lift. The Collector's account comments 'DAY 1 OF 80 ALREADY?' on the post (pays toward delete_or_bait).",
+        "lesson": "A glow-up you film in an afternoon isn't a glow-up.",
+        "rule_line": "ZERO TO HERO TAKES 80 DAYS. YOURS TOOK A RENTED CAR.",
+        "technique": "ESCALATION",
+        "button": "The rental company calls. Clyde: 'THAT'S MY MANAGER.'"
+      },
+      {
+        "trend": "#maths (ZA, Education, 12.9M views)",
+        "chapter": "3: greed; ep 23 COUNTDOWN (Day 3/80)",
+        "scene": "Mtoriro does the countdown maths on a chalkboard: 80 days, 7 missing pages, 2 flights, 1 Clyde. He shows they need a page every 11 days. Clyde 'checks' the maths on his phone calculator and adds the Dubai shopping budget to the days. Solo quietly corrects one number and nobody asks how he knew it (solo_trust).",
+        "lesson": "If the numbers scare you, that's the plan working, not failing.",
+        "rule_line": "THE MATHS IS EASY. IT'S THE CLYDE THAT DOESN'T ADD UP.",
+        "technique": "MISDIRECT",
+        "button": "Clyde: 'SO WE HAVE 80 DAYS. BET, DAY 1 IS A REST DAY.'"
+      },
       {
         "trend": "#week10 / #finalsweek (term-grind countdown posts)",
         "chapter": "3 (eps 21-30); ep 23 is the COUNTDOWN cliffhanger, Day 3/80",
@@ -556,24 +585,6 @@
         "button": "Clyde: 'NEW MEMBER JUST JOINED.' Profile pic: a gold ring."
       },
       {
-        "trend": "#friday13 / #fridaythe13th (bad-luck day)",
-        "chapter": "3: greed, showing off",
-        "scene": "Clyde blames Friday the 13th for losing his wallet, his phone charger and the page-23 clue, but every 'bad luck' item was something he left out to flex in a photo. Mtoriro lists them back like a receipt. No horror characters, only superstition.",
-        "lesson": "Most bad luck is a habit with a calendar excuse.",
-        "rule_line": "IT'S NOT FRIDAY THE 13TH. IT'S YOU, EVERY DAY.",
-        "technique": "ESCALATION",
-        "button": "Clyde knocks on wood. It's the table holding the pages; they fall out the window."
-      },
-      {
-        "trend": "Small-business origin story (Meg Ann Co., 36.7M)",
-        "chapter": "3: comparison, Bulawayo before Dubai",
-        "scene": "A Bulawayo shopkeeper who started selling from a spare room shows her 10-year 'before' photo; Clyde wants to skip straight to 'after' and orders a Dubai-sized shop sign for a stall that doesn't exist. The shopkeeper turns out to know the Prof (clue toward the_prof).",
-        "lesson": "Everyone's 'after' photo cost years you didn't see.",
-        "rule_line": "SHE STARTED IN A SPARE ROOM. YOU STARTED IN A SIGN SHOP.",
-        "technique": "RECEIPT",
-        "button": "The sign arrives. It's spelled wrong."
-      },
-      {
         "trend": "#outage / #microsoftoutage (everything is down; no brand on screen)",
         "chapter": "3: comparison, lifestyle traps; also delete_or_bait",
         "scene": "All phones in Harare go down for an hour. Clyde panics because he can't check his likes, then has the best hour of the trip: they find a clue on a real map. When the network returns, the gold-ring account's last message loads: 'NICE MAP.'",
@@ -581,24 +592,510 @@
         "rule_line": "WIFI WENT DOWN. YOUR LIFE CAME BACK ONLINE.",
         "technique": "REVERSAL (Cenzo also kept refreshing)",
         "button": "Network back. Clyde: 'POSTING HOW PEACEFUL THAT WAS.'"
-      },
-      {
-        "trend": "'How many did you guess right?' quiz format (Alexandra Lourdes, 23.4M)",
-        "chapter": "3: comparison",
-        "scene": "Solo quizzes the crew on what things in Dubai cost; Clyde's guesses are all 'cheap' because influencers made it look easy. Can open an episode as a comment-bait hook: 'How many did YOU get right?'",
-        "lesson": "A feed shows the price of the photo, not the price of the life.",
-        "rule_line": "0 OUT OF 5. BUT YOUR SELFIE GOT 5 OUT OF 5.",
-        "technique": "RECEIPT",
-        "button": "Clyde books the Dubai hotel anyway: 'IT LOOKED SMALLER ONLINE.'"
       }
     ],
     "caption_hashtags": [
-      "#week10",
-      "#grades",
-      "#friday13",
+      "#sunhalo",
+      "#zerotohero",
+      "#maths",
       "#liferules",
       "#adulting"
     ],
-    "caption_hashtags_note": "#week10/#grades are trending Education tags that fit a life-lessons series; use #friday13 only on a bad-luck episode posted that week. #liferules/#adulting are the series' standing tags. Never #fyp, #viral, trading or betting tags."
+    "caption_hashtags_note": "#sunhalo only on the halo episode, while the wave lasts (ZA/Zimbabwe-proxy trend); #zerotohero on a glow-up/grind episode; #maths on the countdown episode. #week10/#grades from the earlier US run still fit. #liferules/#adulting are standing series tags. Never #fyp, #viral, trading or betting tags.",
+    "regions_mix": {
+      "period": "Last 7 days",
+      "markets": "US, GB, BR, ZA (Zimbabwe proxy), EG",
+      "note": "Second pass on 2026-11-19. Creative Center has no Zimbabwe and no worldwide view; South Africa is the nearest proxy for the Zimbabwe audience. 'World' = tags trending in 2+ of the 5 markets. The US 'hashtags', creators and trend_videos above are from the earlier run today and are kept."
+    },
+    "hashtags_world": [
+      {
+        "rank": 1,
+        "tag": "#mymoonmyman",
+        "posts": "n/a (markets: US5,GB1,BR4,ZA14)",
+        "status": "Romance meme; skip."
+      },
+      {
+        "rank": 2,
+        "tag": "#thebody",
+        "posts": "n/a (markets: US9,GB5,BR5)",
+        "status": "Topic unclear; skip."
+      },
+      {
+        "rank": 3,
+        "tag": "#microsoft",
+        "posts": "n/a (markets: US7,GB4,ZA11)",
+        "status": "Real company; generic 'everything is down' format only."
+      },
+      {
+        "rank": 4,
+        "tag": "#marvelrivalss11",
+        "posts": "n/a (markets: US1,GB2,BR8)",
+        "status": "Skip: copyrighted characters."
+      },
+      {
+        "rank": 5,
+        "tag": "#marvelrivalsdoomsday",
+        "posts": "n/a (markets: US2,GB3,BR9)",
+        "status": "Skip: copyrighted characters."
+      },
+      {
+        "rank": 6,
+        "tag": "#outlook",
+        "posts": "n/a (markets: US3,GB9)",
+        "status": "Inbox/outage gag only."
+      },
+      {
+        "rank": 7,
+        "tag": "#liveiseasy",
+        "posts": "n/a (markets: US24,BR7)",
+        "status": "Topic unclear; ironic 'life is easy' title possible, check videos first."
+      },
+      {
+        "rank": 8,
+        "tag": "#wuwacreator",
+        "posts": "n/a (markets: US15,BR2)",
+        "status": "Skip: game characters."
+      },
+      {
+        "rank": 9,
+        "tag": "#pubgmobileflash",
+        "posts": "n/a (markets: ZA7,EG8)",
+        "status": "Skip: game."
+      },
+      {
+        "rank": 10,
+        "tag": "#fridaythe13th / #friday13 / #sextafeira13",
+        "posts": "n/a (markets: US12,US17,US20,BR3)",
+        "status": "Date has passed (Fri 13 Nov); don't use now."
+      }
+    ],
+    "hashtags_by_region": {
+      "ZA_south_africa_zimbabwe_proxy": [
+        {
+          "rank": 1,
+          "tag": "#sun",
+          "posts": "5K",
+          "views": "9M",
+          "status": "Natural sky event; FITS (sun halo wave)."
+        },
+        {
+          "rank": 2,
+          "tag": "#sunhalo",
+          "posts": "4.1K",
+          "views": "7.4M",
+          "status": "FITS: everyone filming the sky. Standout for Zimbabwe audience."
+        },
+        {
+          "rank": 3,
+          "tag": "#shorts",
+          "posts": "27.7K",
+          "views": "317.5M",
+          "status": "Generic; skip."
+        },
+        {
+          "rank": 4,
+          "tag": "#short",
+          "posts": "7.8K",
+          "views": "75.1M",
+          "status": "Generic; skip."
+        },
+        {
+          "rank": 5,
+          "tag": "#solarhalo",
+          "posts": "2K",
+          "views": "3.9M",
+          "status": "Same wave as #sunhalo."
+        },
+        {
+          "rank": 6,
+          "tag": "#pubgmflash",
+          "posts": "1.9K",
+          "views": "3M",
+          "status": "Skip: game."
+        },
+        {
+          "rank": 7,
+          "tag": "#pubgmobileflash",
+          "posts": "1.9K",
+          "views": "2.9M",
+          "status": "Skip: game."
+        },
+        {
+          "rank": 8,
+          "tag": "#gucciman",
+          "posts": "1.5K",
+          "views": "9.1M",
+          "status": "Skip: brand."
+        },
+        {
+          "rank": 9,
+          "tag": "#bafanabafana",
+          "posts": "3.6K",
+          "views": "48.4M",
+          "status": "Skip: real national team."
+        },
+        {
+          "rank": 10,
+          "tag": "#misssouthafrica",
+          "posts": "1.7K",
+          "views": "40.3M",
+          "status": "Skip: real pageant/people."
+        },
+        {
+          "rank": 11,
+          "tag": "#microsoft",
+          "posts": "1.4K",
+          "views": "10.1M",
+          "status": "Generic outage only."
+        },
+        {
+          "rank": 12,
+          "tag": "#gec",
+          "posts": "1.8K",
+          "views": "16.8M",
+          "status": "Topic unclear; skip."
+        },
+        {
+          "rank": 13,
+          "tag": "#gta6",
+          "posts": "4.7K",
+          "views": "60.6M",
+          "status": "Skip: copyrighted game."
+        },
+        {
+          "rank": 14,
+          "tag": "#mymoonmyman",
+          "posts": "1.6K",
+          "views": "5.5M",
+          "status": "Skip."
+        },
+        {
+          "rank": 15,
+          "tag": "#smile",
+          "posts": "3.6K",
+          "views": "7.3M",
+          "status": "Possible caption tag on a feel-good ep."
+        },
+        {
+          "rank": 16,
+          "tag": "#halo",
+          "posts": "1.2K",
+          "views": "1.9M",
+          "status": "Same wave; avoid alone (game name)."
+        },
+        {
+          "rank": 17,
+          "tag": "#misssa",
+          "posts": "1.3K",
+          "views": "34.2M",
+          "status": "Skip: real pageant."
+        },
+        {
+          "rank": 18,
+          "tag": "#nalediaphiwe",
+          "posts": "1K",
+          "views": "8.6M",
+          "status": "Skip: real person."
+        },
+        {
+          "rank": 19,
+          "tag": "#maths",
+          "posts": "1.1K",
+          "views": "12.9M",
+          "status": "Education; FITS countdown/receipt maths gags."
+        },
+        {
+          "rank": 20,
+          "tag": "#sky",
+          "posts": "983",
+          "views": "2.2M",
+          "status": "Same wave."
+        }
+      ],
+      "GB_uk": [
+        {
+          "rank": 1,
+          "tag": "#mymoonmyman",
+          "posts": "19.7K",
+          "views": "40.7M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 2,
+          "tag": "#marvelrivalss11",
+          "posts": "71.3K",
+          "views": "24.1M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 3,
+          "tag": "#marvelrivalsdoomsday",
+          "posts": "68.9K",
+          "views": "22.8M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 4,
+          "tag": "#microsoft",
+          "posts": "7.1K",
+          "views": "45.3M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 5,
+          "tag": "#thebody",
+          "posts": "7K",
+          "views": "60.3M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 6,
+          "tag": "#marvelrivals",
+          "posts": "75.2K",
+          "views": "43.4M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 7,
+          "tag": "#almost",
+          "posts": "4.2K",
+          "views": "10.2M",
+          "status": "Topic unclear; skip."
+        },
+        {
+          "rank": 8,
+          "tag": "#davidwalliams",
+          "posts": "4.1K",
+          "views": "143.3M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 9,
+          "tag": "#outlook",
+          "posts": "3.7K",
+          "views": "28.2M",
+          "status": "Skip: real people, games or romance meme."
+        },
+        {
+          "rank": 10,
+          "tag": "#imacelebritygetmeoutofhere",
+          "posts": "3.7K",
+          "views": "33.7M",
+          "status": "Skip: real people, games or romance meme."
+        }
+      ],
+      "BR_brazil": [
+        {
+          "rank": 1,
+          "tag": "#wutheringwaves",
+          "posts": "30.2K",
+          "views": "12.8M",
+          "status": "Skip: games or unclear."
+        },
+        {
+          "rank": 2,
+          "tag": "#wuwacreator",
+          "posts": "29.4K",
+          "views": "11.2M",
+          "status": "Skip: games or unclear."
+        },
+        {
+          "rank": 3,
+          "tag": "#sextafeira13",
+          "posts": "11.2K",
+          "views": "24.8M",
+          "status": "Passed."
+        },
+        {
+          "rank": 4,
+          "tag": "#mymoonmyman",
+          "posts": "6K",
+          "views": "21.1M",
+          "status": "Skip: games or unclear."
+        },
+        {
+          "rank": 5,
+          "tag": "#thebody",
+          "posts": "5.6K",
+          "views": "75M",
+          "status": "Skip: games or unclear."
+        },
+        {
+          "rank": 6,
+          "tag": "#suzanevonrichthofen",
+          "posts": "4.5K",
+          "views": "201M",
+          "status": "Skip: real crime case."
+        },
+        {
+          "rank": 7,
+          "tag": "#liveiseasy",
+          "posts": "9.6K",
+          "views": "21M",
+          "status": "Unclear; check first."
+        },
+        {
+          "rank": 8,
+          "tag": "#marvelrivalss11",
+          "posts": "17.5K",
+          "views": "10.2M",
+          "status": "Skip: games or unclear."
+        },
+        {
+          "rank": 9,
+          "tag": "#marvelrivalsdoomsday",
+          "posts": "16.3K",
+          "views": "9.7M",
+          "status": "Skip: games or unclear."
+        },
+        {
+          "rank": 10,
+          "tag": "#zerotohero",
+          "posts": "7K",
+          "views": "19.7M",
+          "status": "FITS: glow-up/grind format."
+        }
+      ],
+      "EG_egypt": [
+        {
+          "rank": 1,
+          "tag": "#الشعب_العراقي_ماله_حل😂😂",
+          "posts": "31.4K",
+          "views": "46.5M",
+          "gloss": "'the Iraqi people are hopeless' joke meme",
+          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
+        },
+        {
+          "rank": 2,
+          "tag": "#الشعب_المصري_ماله_حل😂😂",
+          "posts": "31.5K",
+          "views": "50.8M",
+          "gloss": "'the Egyptian people are hopeless' joke meme",
+          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
+        },
+        {
+          "rank": 3,
+          "tag": "#animetowatch",
+          "posts": "8.5K",
+          "views": "7.7M",
+          "status": "Skip: anime IP."
+        },
+        {
+          "rank": 4,
+          "tag": "#الشعب_الصيني_مال_حال😂😂",
+          "posts": "5.7K",
+          "views": "15.8M",
+          "gloss": "same meme, Chinese people",
+          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
+        },
+        {
+          "rank": 5,
+          "tag": "#الشعب_الصيني_ماله_",
+          "posts": "8.7K",
+          "views": "10M",
+          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
+        },
+        {
+          "rank": 6,
+          "tag": "#دولة_التلاوة",
+          "posts": "5.6K",
+          "views": "100.8M",
+          "gloss": "Quran recitation show",
+          "status": "Skip: religious show."
+        },
+        {
+          "rank": 7,
+          "tag": "#الشعب",
+          "posts": "24.9K",
+          "views": "40.6M",
+          "gloss": "'the people'",
+          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
+        },
+        {
+          "rank": 8,
+          "tag": "#pubgmobileflash",
+          "posts": "2.3K",
+          "views": "21.7M",
+          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
+        },
+        {
+          "rank": 9,
+          "tag": "#محمد_هاني",
+          "posts": "1.6K",
+          "views": "26.5M",
+          "gloss": "footballer Mohamed Hany",
+          "status": "Skip: real person."
+        },
+        {
+          "rank": 10,
+          "tag": "#مارجرجس_الروماني",
+          "posts": "1.5K",
+          "views": "4.8M",
+          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
+        }
+      ],
+      "US": [
+        {
+          "rank": 1,
+          "tag": "#marvelrivalss11",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 2,
+          "tag": "#marvelrivalsdoomsday",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 3,
+          "tag": "#outlook",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 4,
+          "tag": "#veteransday",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 5,
+          "tag": "#mymoonmyman",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 6,
+          "tag": "#faa",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 7,
+          "tag": "#microsoft",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 8,
+          "tag": "#streamerawards",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 9,
+          "tag": "#thebody",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        },
+        {
+          "rank": 10,
+          "tag": "#mymoon",
+          "posts": "n/a",
+          "status": "See US 'hashtags' list from earlier run."
+        }
+      ]
+    }
   }
 }
