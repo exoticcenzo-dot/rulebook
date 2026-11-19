@@ -1,0 +1,71 @@
+{
+ "ep": 24,
+ "chapter": "THE COLLECTOR",
+ "title": "THE GOLD TRACKER",
+ "lesson": "Looking rich costs more than money",
+ "hook": "HIS WATCH\nIS A SPY",
+ "caption": "Spending just to look rich? THE RULE BOOK Ep 24 (Day 4/80): They ran from the Collector all night on the train to Bulawayo, and Clyde STILL won't take off the free gold watch (it's a tracker) because it makes him look rich. Solo: you look rich AND easy to find. Score: SOLO 2, US 3. Clyde finally threw it out the window... then confessed where he hid the pages. A) Jump off B) Pull the brake. A or B? Send this to your Clyde. #liferules #lifestylecreep #stickman",
+ "secret": "IN THE\nWATCH BOX?\nCOMMENT 77",
+ "shots": [
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "clyde", "x": 280, "pose": "seat", "face": "r", "mood": "smug"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "angry"}
+   ],
+   "lines": [
+    ["clyde", "I'M NEVER TAKING OFF THIS WATCH."],
+    ["cenzo", "IT'S A TRACKER. WE RAN ALL NIGHT!", {"mood": "angry"}]
+   ]
+  },
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "clyde", "x": 280, "pose": "seat", "face": "r", "mood": "smug"},
+    {"who": "zeke", "x": 740, "pose": "seat", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["clyde", "BUT IT MAKES ME LOOK RICH, NO CAP."],
+    ["zeke", "YOU LOOK RICH. AND EASY TO FIND.", {"mood": "happy"}]
+   ]
+  },
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "zeke", "x": 280, "pose": "seat", "face": "r", "mood": "smug"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "card": "RULE 24\nLOOKING RICH\nCOSTS EXTRA",
+   "lines": [
+    ["cenzo", "IT COSTS CASH, SLEEP... AND YOUR GPS.", {"mood": "happy"}]
+   ]
+  },
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "happy"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "end": "IN THE WATCH?!",
+   "lines": [
+    ["clyde", "BET. BYE, WATCH!"],
+    ["cenzo", "WAIT. WHERE ARE THE PAGES?", {"mood": "focus"}],
+    ["clyde", "OK. CONFESSION. THEY'RE IN THE WAT-", {"mood": "shock"}]
+   ]
+  },
+  {
+   "set": "trainnight",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "FAMOUS LAST WORDS FROM CLYDE:"]
+   ]
+  }
+ ],
+ "vote": [
+  "Jump off",
+  "Pull the brake"
+ ]
+}

@@ -462,6 +462,24 @@
     "Wait for him"
    ],
    "punchline_technique": "RECEIPT (Solo's pen)"
+  },
+  {
+   "ep": 24,
+   "date": "2026-11-20",
+   "time": "20:00",
+   "set": "trainnight",
+   "rule": "Looking rich costs more than money (punchline: 'It costs cash, sleep... and your GPS.')",
+   "cliffhanger": "Day 4/80. They hid the pages and ran from the Collector all night on the night train to Bulawayo (ep 23 vote A, chosen for the story; no votes yet). Clyde refuses to take off the tracker watch because it makes him look rich; Solo: 'You look rich. And easy to find.' (score SOLO 2, US 3). Clyde throws the watch out of the train window, then Cenzo asks where the pages are: 'OK. Confession. They're in the wat-' (cut). Ep 25 (REVELATION) opens on the pages flying away inside the watch box out of the window; follow ep 24's A/B vote (Jump off / Pull the brake).",
+   "structure": "night-train argument + show-off confession, sentence loop (outro 'FAMOUS LAST WORDS FROM CLYDE:' -> 'I'M NEVER TAKING OFF THIS WATCH.')",
+   "cliffhanger_type": "CONFESSION",
+   "secret": "IN THE / WATCH BOX? / COMMENT 77",
+   "vote": [
+    "Jump off",
+    "Pull the brake"
+   ],
+   "solo_score": "SOLO 2, US 3 (Solo roasts Clyde)",
+   "punchline_technique": "ESCALATION + BUTTON (Clyde throws the watch, which triggers the cliffhanger)",
+   "no_votes_note": "Eps 22-23 not yet published when ep 24 was made; story followed option A (hide the pages: they hid them and ran)."
   }
  ],
  "masterplan": {
@@ -648,6 +666,10 @@
     {
      "ep": 23,
      "hint": "The Collector's 'free' gold watch on Clyde's wrist: he saw through the fake page and knows where they are (the watch is a tracker; pay off in 24)."
+    },
+    {
+     "ep": 24,
+     "hint": "Clyde hid the pages in the gold watch's box and threw the watch (with its box) out of the night-train window near Bulawayo; whoever finds it gets the pages AND the tracker (pay off in 25)."
     }
    ],
    "payoff_ep": 100,
@@ -668,7 +690,7 @@
   },
   {
    "date": "2026-11-17",
-   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3)."
+   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29."
   }
  ],
  "cliffhanger_plan": {
@@ -746,6 +768,16 @@
     "size": "small",
     "opened": 23,
     "pays_off_by": 24,
+    "status": "closed",
+    "closed_ep": 24,
+    "note": "They hid the pages and fled on the night train; the Collector never caught them."
+   },
+   {
+    "id": "pages_out_window",
+    "question": "Clyde threw the tracker watch out of the train, and the pages were hidden in it: where do they land and who finds them first? (ep 24 vote Jump off / Pull the brake)",
+    "size": "small",
+    "opened": 24,
+    "pays_off_by": 25,
     "status": "open"
    }
   ]
