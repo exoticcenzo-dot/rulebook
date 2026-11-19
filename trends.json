@@ -214,7 +214,7 @@
   "creative_center": {
     "checked": "2026-11-19",
     "region": "US, last 7 days",
-    "source": "TikTok Creative Center (TikTok One trends page, logged in, Claude built-in browser), read by the PC task",
+    "source": "TikTok Creative Center (hashtags, creators, video trends; read by the PC task) + tokchart.com free charts (songs)",
     "hashtags": [
       {
         "rank": 1,
@@ -400,8 +400,219 @@
         "status": "Education, 1.4M views. Fits countdown episodes."
       }
     ],
-    "songs": [],
-    "songs_note": "for manual posting only; never put songs in the rendered video. None collected: the music page no longer exists.",
+    "songs": [
+      {
+        "chart": "Worldwide",
+        "rank": 1,
+        "title": "Rechazame",
+        "artist": "Prince Royce",
+        "status": "+46,048 videos/day, +29.9% in 7 days"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 2,
+        "title": "Pujaan Hatiku",
+        "artist": "Jummalik",
+        "status": "NEW, +6,053 videos/day, +72.4% in 7 days"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 3,
+        "title": "Bonito, Bonito",
+        "artist": "Thiago Navarro Music",
+        "status": "+42,726 videos/day, +79.0% in 7 days"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 4,
+        "title": "Dilruba Dilnasheen",
+        "artist": "Siddhant Kaushal, Rito Riba",
+        "status": "+44,847 videos/day, +27.9% in 7 days"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 5,
+        "title": "Time",
+        "artist": "Pink Floyd",
+        "status": "+38,252 videos/day, +19.3% in 7 days"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 6,
+        "title": "BbY WOW",
+        "artist": "Rusowsky, KAROL G, Judeline",
+        "status": "+15,145 videos/day, +57.8% in 7 days"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 7,
+        "title": "All I Want for Christmas Is You",
+        "artist": "Mariah Carey",
+        "status": "+47,210 videos/day, +29.6% in 7 days; seasonal (Christmas), good for December eps"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 8,
+        "title": "NONA KAKA SAYANG",
+        "artist": "IKI DANO",
+        "status": "+25,627 videos/day, +52.0% in 7 days"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 9,
+        "title": "Last Christmas",
+        "artist": "Wham!",
+        "status": "+28,632 videos/day, +37.8% in 7 days; seasonal (Christmas), good for December eps"
+      },
+      {
+        "chart": "Worldwide",
+        "rank": 10,
+        "title": "AkpakO Bum Bum",
+        "artist": "Terry G",
+        "status": "+6,570 videos/day, +62.3% in 7 days"
+      },
+      {
+        "chart": "United States",
+        "rank": 1,
+        "title": "Time",
+        "artist": "Pink Floyd",
+        "status": "+37,002 videos/day, +40.5% in 7 days; #1 US and top 5 worldwide: safest manual-post sound for dramatic countdown eps"
+      },
+      {
+        "chart": "United States",
+        "rank": 2,
+        "title": "Nocturne",
+        "artist": "Feinberg",
+        "status": "+17,999 videos/day, +2.2% in 7 days; calm/orchestral, fits emotional rule beats"
+      },
+      {
+        "chart": "United States",
+        "rank": 3,
+        "title": "All I Want for Christmas Is You",
+        "artist": "Mariah Carey",
+        "status": "+16,140 videos/day, +0.0% in 7 days; seasonal (Christmas), good for December eps"
+      },
+      {
+        "chart": "United States",
+        "rank": 4,
+        "title": "Housewife",
+        "artist": "Tate McRae",
+        "status": "+47,429 videos/day, +6.1% in 7 days"
+      },
+      {
+        "chart": "United States",
+        "rank": 5,
+        "title": "Doja",
+        "artist": "Central Cee",
+        "status": "+14,470 videos/day, +30.7% in 7 days"
+      },
+      {
+        "chart": "United States",
+        "rank": 6,
+        "title": "Futile Devices (Orchestral Version)",
+        "artist": "Adonai Michel",
+        "status": "+42,179 videos/day, +21.6% in 7 days; calm/orchestral, fits emotional rule beats"
+      },
+      {
+        "chart": "United States",
+        "rank": 7,
+        "title": "Last Christmas",
+        "artist": "Wham!",
+        "status": "+23,040 videos/day, +23.4% in 7 days; seasonal (Christmas), good for December eps"
+      },
+      {
+        "chart": "United States",
+        "rank": 8,
+        "title": "Rechazame",
+        "artist": "Prince Royce",
+        "status": "+40,241 videos/day, +55.0% in 7 days"
+      },
+      {
+        "chart": "United States",
+        "rank": 9,
+        "title": "Vibin",
+        "artist": "Wxoda",
+        "status": "+43,762 videos/day, +28.8% in 7 days"
+      },
+      {
+        "chart": "United States",
+        "rank": 10,
+        "title": "Paper Moon Static",
+        "artist": "nedizini",
+        "status": "+38,310 videos/day, +68.5% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 1,
+        "title": "INFERNO",
+        "artist": "Zlatan, Shoday, Peruzzi",
+        "status": "+13,201 videos/day, +34.4% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 2,
+        "title": "Kat Slater (Native Remedies Remix)",
+        "artist": "Tim Duzit",
+        "status": "+20,052 videos/day, +19.9% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 3,
+        "title": "KIJE DANI",
+        "artist": "Umar M Shareef",
+        "status": "+40,855 videos/day, +36.1% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 4,
+        "title": "Oga Adviser (feat. Zoro)",
+        "artist": "Prime-M",
+        "status": "+11,614 videos/day, +45.2% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 5,
+        "title": "NAMUTU KOKODAI DA RAINA",
+        "artist": "ISHAQB SOUND",
+        "status": "+22,557 videos/day, +27.8% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 6,
+        "title": "DRTY",
+        "artist": "Ruger",
+        "status": "+6,744 videos/day, +39.3% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 7,
+        "title": "Mushin",
+        "artist": "Terry Apala",
+        "status": "+33,179 videos/day, +84.3% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 8,
+        "title": "Christmas Present",
+        "artist": "Dadaman, Gipa Entertainment, Mellow & Sleazy",
+        "status": "+36,458 videos/day, +49.9% in 7 days; seasonal (Christmas), good for December eps"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 9,
+        "title": "Dare Daya",
+        "artist": "Naziru Sarkin Waka",
+        "status": "+21,161 videos/day, +51.3% in 7 days"
+      },
+      {
+        "chart": "Nigeria (Africa)",
+        "rank": 10,
+        "title": "Back 2 U",
+        "artist": "Seyi Vibez",
+        "status": "+6,716 videos/day, +20.6% in 7 days"
+      }
+    ],
+    "songs_note": "for manual posting only; never put songs in the rendered video. From tokchart.com free charts (videos/day + 7-day growth), updated 18 Nov 2026; Creative Center no longer has a songs page. No Zimbabwe or South Africa chart on the free tier, so Nigeria is the Africa chart.",
     "creators": [
       {
         "rank": 1,
@@ -532,10 +743,10 @@
     ],
     "trend_videos_note": "Descriptions matched from page captions; mostly sponsored content. Takeaway: deadpan skits with sequels (Matt Hyams has 2 in the top 7) and 'guess how many' quiz hooks are winning formats.",
     "blocked": [
-      "songs: music page no longer exists",
-      "creators: Creator tab 'Coming soon'",
-      "Zimbabwe: not offered as a region (South Africa used as proxy)",
-      "Worldwide: no global option (built from 5 markets)"
+      "Zimbabwe and South Africa song charts: not on tokchart free tier (404)",
+      "Zimbabwe hashtags: not a Creative Center region (South Africa used as proxy)",
+      "Creative Center Creator tab: 'Coming soon' (US creators from video ranking)",
+      "Creative Center songs page: no longer exists"
     ],
     "blocked_note": "No login wall this run.",
     "story_fits": [
@@ -605,7 +816,7 @@
     "regions_mix": {
       "period": "Last 7 days",
       "markets": "US, GB, BR, ZA (Zimbabwe proxy), EG",
-      "note": "Second pass on 2026-11-19. Creative Center has no Zimbabwe and no worldwide view; South Africa is the nearest proxy for the Zimbabwe audience. 'World' = tags trending in 2+ of the 5 markets. The US 'hashtags', creators and trend_videos above are from the earlier run today and are kept."
+      "note": "Second pass on 2026-11-19. Creative Center has no Zimbabwe and no worldwide view; South Africa is the nearest proxy for the Zimbabwe audience. 'World' = tags trending in 2+ of the 5 markets. The US 'hashtags', creators and trend_videos above are from the earlier run today and are kept. Third pass (same day): songs added from tokchart Worldwide / US / Nigeria charts; hashtags unchanged."
     },
     "hashtags_world": [
       {
