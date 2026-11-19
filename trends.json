@@ -214,13 +214,13 @@
   "creative_center": {
     "checked": "2026-11-19",
     "region": "US, last 7 days",
-    "source": "TikTok Creative Center / TikTok One trends page, read logged out in the Claude built-in browser by the PC task",
+    "source": "TikTok Creative Center (TikTok One trends page, logged in, Claude built-in browser), read by the PC task",
     "hashtags": [
       {
         "rank": 1,
         "tag": "#marvelrivalss11",
         "posts": "139.2K",
-        "status": "Games, 25.2M views. Skip for story: copyrighted characters. Generic 'new season / skin shopping' format only."
+        "status": "Games, 25.2M views. Skip: copyrighted characters."
       },
       {
         "rank": 2,
@@ -232,112 +232,373 @@
         "rank": 3,
         "tag": "#outlook",
         "posts": "15.8K",
-        "status": "News & Entertainment, 109.8M views. Topic text not visible; usable only as a wordplay/inbox gag."
+        "status": "News & Entertainment, 109.8M views. Tied to the Microsoft outage wave; usable as an inbox/email gag only."
+      },
+      {
+        "rank": 4,
+        "tag": "#veteransday",
+        "posts": "76.4K",
+        "status": "News & Entertainment, 157M views. Skip for story: national/military remembrance, not a comedy topic."
+      },
+      {
+        "rank": 5,
+        "tag": "#mymoonmyman",
+        "posts": "70.1K",
+        "status": "News & Entertainment, 134M views. Romance meme; skip unless a light 'my person' gag fits."
+      },
+      {
+        "rank": 6,
+        "tag": "#faa",
+        "posts": "20.6K",
+        "status": "News & Entertainment, Travel, 211.8M views. Flight-delay news; generic 'flight delayed' travel gag only, no real agency."
+      },
+      {
+        "rank": 7,
+        "tag": "#microsoft",
+        "posts": "19.4K",
+        "status": "News & Entertainment, 166.3M views. Real company; use only the generic 'everything is down' outage format."
+      },
+      {
+        "rank": 8,
+        "tag": "#streamerawards",
+        "posts": "17.3K",
+        "status": "Games, 575.5M views. Skip: real people/awards show. Generic 'awards night' format possible."
+      },
+      {
+        "rank": 9,
+        "tag": "#thebody",
+        "posts": "20.9K",
+        "status": "News & Entertainment, 239.6M views. Topic unclear; skip."
+      },
+      {
+        "rank": 10,
+        "tag": "#mymoon",
+        "posts": "21.7K",
+        "status": "News & Entertainment, 20.9M views. Same romance meme as #mymoonmyman; skip."
+      },
+      {
+        "rank": 11,
+        "tag": "#happyveteransday",
+        "posts": "8.9K",
+        "status": "News & Entertainment, 10.6M views. Skip (see #veteransday)."
+      },
+      {
+        "rank": 12,
+        "tag": "#friday13",
+        "posts": "7.7K",
+        "status": "News & Entertainment, 19.3M views. Fits: superstition/bad-luck episode (no horror-film characters)."
+      },
+      {
+        "rank": 13,
+        "tag": "#gummybear",
+        "posts": "7.3K",
+        "status": "News & Entertainment, 41M views. Snack/meme; possible prop gag."
+      },
+      {
+        "rank": 14,
+        "tag": "#microsoftoutage",
+        "posts": "7.3K",
+        "status": "Business Services, 62.4M views. Generic outage format only; no real company named on screen."
+      },
+      {
+        "rank": 15,
+        "tag": "#wuwacreator",
+        "posts": "54.6K",
+        "status": "Games, 14.7M views. Skip: game characters."
+      },
+      {
+        "rank": 16,
+        "tag": "#merabdvalishvili",
+        "posts": "8.6K",
+        "status": "Sports, 140.7M views. Skip: real celebrity."
+      },
+      {
+        "rank": 17,
+        "tag": "#fridaythe13",
+        "posts": "13.6K",
+        "status": "News & Entertainment, 48.4M views. Same wave as #friday13."
+      },
+      {
+        "rank": 18,
+        "tag": "#outage",
+        "posts": "6.3K",
+        "status": "News & Entertainment, 84.9M views. Fits: 'wifi/phone down' scene, no brand."
+      },
+      {
+        "rank": 19,
+        "tag": "#yellabeezy",
+        "posts": "10.7K",
+        "status": "News & Entertainment, 158M views. Skip: real celebrity."
+      },
+      {
+        "rank": 20,
+        "tag": "#fridaythe13th",
+        "posts": "18.5K",
+        "status": "News & Entertainment, 61.7M views. Same wave as #friday13."
       }
     ],
+    "hashtags_status_note": "New/rising status is not shown as text on the page; status here = industry, views and story verdict.",
     "hashtags_education": [
       {
         "rank": 1,
         "tag": "#mastersdegree",
         "posts": "2.6K",
-        "status": "Education, 9.7M views. Fits comparison episodes."
+        "status": "Education, 9.7M views. Fits comparison/showing-off episodes."
       },
       {
         "rank": 2,
         "tag": "#sigmagammarho",
         "posts": "1.2K",
-        "status": "News & Entertainment, Education, 2.7M views. Skip: real organisation."
+        "status": "Education, 2.7M views. Skip: real organisation."
       },
       {
         "rank": 3,
         "tag": "#week10",
         "posts": "1.3K",
         "status": "Education, 7.9M views. Fits countdown/grind episodes."
+      },
+      {
+        "rank": 4,
+        "tag": "#sgrho",
+        "posts": "1.1K",
+        "status": "Education, 4M views. Skip: real organisation."
+      },
+      {
+        "rank": 5,
+        "tag": "#grades",
+        "posts": "9.1K",
+        "status": "Education, 31.5M views. Fits 'report card / receipts' gags; usable caption tag."
+      },
+      {
+        "rank": 6,
+        "tag": "#attendance",
+        "posts": "792",
+        "status": "Education, 1.4M views. Small; 'showing up' gag."
+      },
+      {
+        "rank": 7,
+        "tag": "#goodgrades",
+        "posts": "741",
+        "status": "Education, 1.9M views. Small."
+      },
+      {
+        "rank": 8,
+        "tag": "#viralworldcupfoodinspiration",
+        "posts": "930",
+        "status": "Education, 695.4K views. Skip: looks like tag-stuffing."
+      },
+      {
+        "rank": 9,
+        "tag": "#bachelor",
+        "posts": "644",
+        "status": "Education, 7.7M views. Ambiguous (degree vs TV show); skip."
+      },
+      {
+        "rank": 10,
+        "tag": "#finalsweek",
+        "posts": "699",
+        "status": "Education, 1.4M views. Fits countdown episodes."
       }
     ],
     "songs": [],
     "songs_note": "for manual posting only; never put songs in the rendered video. None collected this run: the music page no longer exists.",
-    "creators": [],
-    "trend_videos": [
+    "creators": [
       {
         "rank": 1,
-        "creator": "sebin",
+        "name": "sebin",
         "followers": "116K",
         "video_views": "55M"
       },
       {
         "rank": 2,
-        "creator": "Meg Ann Co.",
+        "name": "Meg Ann Co.",
         "followers": "265.3K",
         "video_views": "36.7M"
       },
       {
         "rank": 3,
-        "creator": "Matt Hyams",
+        "name": "Matt Hyams",
         "followers": "96.2K",
-        "video_views": "36.5M"
+        "video_views": "36.5M",
+        "flag": "storytelling skits"
+      },
+      {
+        "rank": 4,
+        "name": "Gabby Eniclerico",
+        "followers": "4M",
+        "video_views": "31.4M"
+      },
+      {
+        "rank": 5,
+        "name": "Alexandra Lourdes",
+        "followers": "4.5M",
+        "video_views": "23.4M"
+      },
+      {
+        "rank": 6,
+        "name": "MiniSuperHeroesToday",
+        "followers": "354.7K",
+        "video_views": "23.2M",
+        "flag": "character/storytelling"
+      },
+      {
+        "rank": 7,
+        "name": "frida",
+        "followers": "53.1K",
+        "video_views": "19.8M",
+        "flag": "animation/mixed media"
+      },
+      {
+        "rank": 8,
+        "name": "Natasha Mathurent",
+        "followers": "371.2K",
+        "video_views": "16.7M"
+      },
+      {
+        "rank": 9,
+        "name": "Jaz Saini",
+        "followers": "164.9K",
+        "video_views": "16.5M"
+      },
+      {
+        "rank": 10,
+        "name": "Graciela Avalos",
+        "followers": "387.8K",
+        "video_views": "16.1M"
+      }
+    ],
+    "creators_note": "From the Video trends ranking (highest video views); the Creator tab shows 'Coming soon'. Like counts not shown.",
+    "trend_videos": [
+      {
+        "rank": 1,
+        "creator": "sebin",
+        "views": "55M",
+        "desc": "sponsored city glam/jewelry clip"
+      },
+      {
+        "rank": 2,
+        "creator": "Meg Ann Co.",
+        "views": "36.7M",
+        "desc": "small-business origin story: spare room to own shop"
+      },
+      {
+        "rank": 3,
+        "creator": "Matt Hyams",
+        "views": "36.5M",
+        "desc": "deadpan husband skit about 'helping' entrepreneur wife"
       },
       {
         "rank": 4,
         "creator": "Gabby Eniclerico",
-        "followers": "4M",
-        "video_views": "31.4M",
-        "industry": "Food & Beverage"
+        "views": "31.4M",
+        "desc": "food clip, pronunciation joke"
+      },
+      {
+        "rank": 5,
+        "creator": "Alexandra Lourdes",
+        "views": "23.4M",
+        "desc": "'how many did you guess right' quiz format"
+      },
+      {
+        "rank": 6,
+        "creator": "MiniSuperHeroesToday",
+        "views": "23.2M",
+        "desc": "TV show reaction/commentary"
+      },
+      {
+        "rank": 7,
+        "creator": "Matt Hyams",
+        "views": "22.1M",
+        "desc": "sequel skit: 'first rule of entrepreneur wife husband club'"
+      },
+      {
+        "rank": 8,
+        "creator": "frida",
+        "views": "19.8M",
+        "desc": "mixed-media animation: photos, sketches, vectors in one piece"
+      },
+      {
+        "rank": 9,
+        "creator": "Natasha Mathurent",
+        "views": "16.7M",
+        "desc": "music festival day vlog"
+      },
+      {
+        "rank": 10,
+        "creator": "Jaz Saini",
+        "views": "16.5M",
+        "desc": "family get-together comedy skit"
       }
     ],
-    "trend_videos_note": "Sorted by highest video views. The page shows creator and views only, no topic text, so no video-format fits were taken from it.",
+    "trend_videos_note": "Descriptions matched from page captions; mostly sponsored content. Takeaway: deadpan skits with sequels (Matt Hyams has 2 in the top 7) and 'guess how many' quiz hooks are winning formats.",
     "blocked": [
-      "hashtags beyond rank 3: 'View more' redirects to login wall (not signed in)",
-      "Education hashtags beyond rank 3: same login wall",
       "songs: music page no longer exists; old URL redirects to hashtag trends",
-      "creators: Creator tab shows 'Coming soon'",
-      "trend videos beyond 4 and video topics: login wall",
-      "Claude in Chrome: Creative Center page froze the renderer on 3 attempts (built-in browser used instead)"
+      "creators: Creator tab shows 'Coming soon' (used video-ranking creators instead)"
     ],
+    "blocked_note": "No login wall this run.",
     "story_fits": [
       {
-        "trend": "#week10 (school-term grind countdown posts)",
-        "chapter": "3 (eps 21-30), ep 23 is the COUNTDOWN cliffhanger, Day 3/80",
-        "scene": "Clyde makes a colour-coded '80-DAY GLOW-UP PLAN' poster for the race against the Collector, posts it, and by Day 3 has done only the 'buy new trainers' line. The gold-ring account likes the plan post (pays toward gold_ring_follower and delete_or_bait).",
+        "trend": "#week10 / #finalsweek (term-grind countdown posts)",
+        "chapter": "3 (eps 21-30); ep 23 is the COUNTDOWN cliffhanger, Day 3/80",
+        "scene": "Clyde makes a colour-coded '80-DAY PLAN' poster for the race against the Collector, posts it, and by Day 3 has done only the 'buy new trainers' line. The gold-ring account likes the plan post (pays toward gold_ring_follower and delete_or_bait).",
         "lesson": "Announcing a plan feels like doing it; the work starts on the boring day.",
         "rule_line": "PLANS ARE FREE. DAY 3 IS WHERE THEY CHARGE YOU.",
         "technique": "MISDIRECT",
         "button": "Clyde: 'BET. NEW PLAN. STARTS DAY 4.'"
       },
       {
-        "trend": "#mastersdegree (graduation and degree flex posts)",
-        "chapter": "3: comparison, showing off",
-        "scene": "In Bulawayo a cousin's graduation photos are everywhere; Clyde rents a gown and mortarboard just for a selfie so he doesn't look behind. Solo admits he compares his pages to the Collector's every night.",
-        "lesson": "Comparing your start to someone else's middle only makes you rush.",
-        "rule_line": "HE'S ON PAGE 300. YOU CAN'T FIND PAGE 23.",
+        "trend": "Deadpan sequel skit 'first rule of ___ club' (Matt Hyams, 2 videos in top 7)",
+        "chapter": "3: showing off, lifestyle traps",
+        "scene": "Clyde starts the 'PARTNERS OF A FAMOUS STICKMAN CLUB' with Zeke after Ep 22's 4K likes, with rules on a whiteboard. Rule 1: post everything. Solo joins and quietly writes Rule 2: the Collector reads rule 1. Works as a repeatable sequel format.",
+        "lesson": "The people loudest about your business are rarely the ones helping it.",
+        "rule_line": "RULE ONE OF THE CLUB: THE ENEMY IS A MEMBER.",
+        "technique": "CALLBACK",
+        "button": "Clyde: 'NEW MEMBER JUST JOINED.' Profile pic: a gold ring."
+      },
+      {
+        "trend": "#friday13 / #fridaythe13th (bad-luck day)",
+        "chapter": "3: greed, showing off",
+        "scene": "Clyde blames Friday the 13th for losing his wallet, his phone charger and the page-23 clue, but every 'bad luck' item was something he left out to flex in a photo. Mtoriro lists them back like a receipt. No horror characters, only superstition.",
+        "lesson": "Most bad luck is a habit with a calendar excuse.",
+        "rule_line": "IT'S NOT FRIDAY THE 13TH. IT'S YOU, EVERY DAY.",
+        "technique": "ESCALATION",
+        "button": "Clyde knocks on wood. It's the table holding the pages; they fall out the window."
+      },
+      {
+        "trend": "Small-business origin story (Meg Ann Co., 36.7M)",
+        "chapter": "3: comparison, Bulawayo before Dubai",
+        "scene": "A Bulawayo shopkeeper who started selling from a spare room shows her 10-year 'before' photo; Clyde wants to skip straight to 'after' and orders a Dubai-sized shop sign for a stall that doesn't exist. The shopkeeper turns out to know the Prof (clue toward the_prof).",
+        "lesson": "Everyone's 'after' photo cost years you didn't see.",
+        "rule_line": "SHE STARTED IN A SPARE ROOM. YOU STARTED IN A SIGN SHOP.",
         "technique": "RECEIPT",
-        "button": "Clyde returns the gown late and pays the fine: 'WORTH IT. 40 LIKES.'"
+        "button": "The sign arrives. It's spelled wrong."
       },
       {
-        "trend": "#outlook (inbox wordplay; topic text not visible)",
-        "chapter": "3: greed, Dubai lifestyle traps",
-        "scene": "Clyde's inbox: 'YOU WON A FREE DUBAI TRIP! Just send your passport + the pages.' Signed with a gold-ring emoji. Clyde has already packed. Ties the Collector to the Dubai leg without showing him.",
-        "lesson": "If a deal is too good, you are what's being sold.",
-        "rule_line": "FREE TRIP TO DUBAI. THE PRICE IS YOU.",
-        "technique": "MISDIRECT",
-        "button": "Clyde: 'IT SAYS FIRST CLASS THOUGH.' (callback to ep 21)"
+        "trend": "#outage / #microsoftoutage (everything is down; no brand on screen)",
+        "chapter": "3: comparison, lifestyle traps; also delete_or_bait",
+        "scene": "All phones in Harare go down for an hour. Clyde panics because he can't check his likes, then has the best hour of the trip: they find a clue on a real map. When the network returns, the gold-ring account's last message loads: 'NICE MAP.'",
+        "lesson": "The hour you can't compare is the hour you actually live.",
+        "rule_line": "WIFI WENT DOWN. YOUR LIFE CAME BACK ONLINE.",
+        "technique": "REVERSAL (Cenzo also kept refreshing)",
+        "button": "Network back. Clyde: 'POSTING HOW PEACEFUL THAT WAS.'"
       },
       {
-        "trend": "Game new-season wave (#marvelrivalss11), generic format only, no game or characters shown",
-        "chapter": "3: lifestyle traps, showing off",
-        "scene": "Clyde spends his travel money on a shiny gold outfit 'skin' in a made-up phone game so his avatar looks like the gold-ring guy. He still loses the first round.",
-        "lesson": "Buying the look doesn't buy the skill.",
-        "rule_line": "NEW SKIN. SAME PLAYER.",
-        "technique": "REVERSAL",
-        "button": "EXOTICCENZO checks his own phone: he bought the matching hat."
+        "trend": "'How many did you guess right?' quiz format (Alexandra Lourdes, 23.4M)",
+        "chapter": "3: comparison",
+        "scene": "Solo quizzes the crew on what things in Dubai cost; Clyde's guesses are all 'cheap' because influencers made it look easy. Can open an episode as a comment-bait hook: 'How many did YOU get right?'",
+        "lesson": "A feed shows the price of the photo, not the price of the life.",
+        "rule_line": "0 OUT OF 5. BUT YOUR SELFIE GOT 5 OUT OF 5.",
+        "technique": "RECEIPT",
+        "button": "Clyde books the Dubai hotel anyway: 'IT LOOKED SMALLER ONLINE.'"
       }
     ],
     "caption_hashtags": [
       "#week10",
-      "#mastersdegree",
+      "#grades",
+      "#friday13",
       "#liferules",
       "#adulting"
     ],
-    "caption_hashtags_note": "Only #week10 and #mastersdegree came from Creative Center; use each only on the episode that matches it (countdown/grind, comparison/degree). #liferules and #adulting are the series' evergreen tags. No Marvel, #fyp, #viral, trading or betting tags."
+    "caption_hashtags_note": "#week10/#grades are trending Education tags that fit a life-lessons series; use #friday13 only on a bad-luck episode posted that week. #liferules/#adulting are the series' standing tags. Never #fyp, #viral, trading or betting tags."
   }
 }
