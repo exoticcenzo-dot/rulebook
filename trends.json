@@ -210,5 +210,134 @@
       "https://tokchart.com/trending/US/hashtags",
       "https://www.trendsmcp.ai/trending/tiktok-hashtags-trending-november-13-2026"
     ]
+  },
+  "creative_center": {
+    "checked": "2026-11-19",
+    "region": "US, last 7 days",
+    "source": "TikTok Creative Center / TikTok One trends page, read logged out in the Claude built-in browser by the PC task",
+    "hashtags": [
+      {
+        "rank": 1,
+        "tag": "#marvelrivalss11",
+        "posts": "139.2K",
+        "status": "Games, 25.2M views. Skip for story: copyrighted characters. Generic 'new season / skin shopping' format only."
+      },
+      {
+        "rank": 2,
+        "tag": "#marvelrivalsdoomsday",
+        "posts": "133.3K",
+        "status": "Games, 25.1M views. Skip: copyrighted characters."
+      },
+      {
+        "rank": 3,
+        "tag": "#outlook",
+        "posts": "15.8K",
+        "status": "News & Entertainment, 109.8M views. Topic text not visible; usable only as a wordplay/inbox gag."
+      }
+    ],
+    "hashtags_education": [
+      {
+        "rank": 1,
+        "tag": "#mastersdegree",
+        "posts": "2.6K",
+        "status": "Education, 9.7M views. Fits comparison episodes."
+      },
+      {
+        "rank": 2,
+        "tag": "#sigmagammarho",
+        "posts": "1.2K",
+        "status": "News & Entertainment, Education, 2.7M views. Skip: real organisation."
+      },
+      {
+        "rank": 3,
+        "tag": "#week10",
+        "posts": "1.3K",
+        "status": "Education, 7.9M views. Fits countdown/grind episodes."
+      }
+    ],
+    "songs": [],
+    "songs_note": "for manual posting only; never put songs in the rendered video. None collected this run: the music page no longer exists.",
+    "creators": [],
+    "trend_videos": [
+      {
+        "rank": 1,
+        "creator": "sebin",
+        "followers": "116K",
+        "video_views": "55M"
+      },
+      {
+        "rank": 2,
+        "creator": "Meg Ann Co.",
+        "followers": "265.3K",
+        "video_views": "36.7M"
+      },
+      {
+        "rank": 3,
+        "creator": "Matt Hyams",
+        "followers": "96.2K",
+        "video_views": "36.5M"
+      },
+      {
+        "rank": 4,
+        "creator": "Gabby Eniclerico",
+        "followers": "4M",
+        "video_views": "31.4M",
+        "industry": "Food & Beverage"
+      }
+    ],
+    "trend_videos_note": "Sorted by highest video views. The page shows creator and views only, no topic text, so no video-format fits were taken from it.",
+    "blocked": [
+      "hashtags beyond rank 3: 'View more' redirects to login wall (not signed in)",
+      "Education hashtags beyond rank 3: same login wall",
+      "songs: music page no longer exists; old URL redirects to hashtag trends",
+      "creators: Creator tab shows 'Coming soon'",
+      "trend videos beyond 4 and video topics: login wall",
+      "Claude in Chrome: Creative Center page froze the renderer on 3 attempts (built-in browser used instead)"
+    ],
+    "story_fits": [
+      {
+        "trend": "#week10 (school-term grind countdown posts)",
+        "chapter": "3 (eps 21-30), ep 23 is the COUNTDOWN cliffhanger, Day 3/80",
+        "scene": "Clyde makes a colour-coded '80-DAY GLOW-UP PLAN' poster for the race against the Collector, posts it, and by Day 3 has done only the 'buy new trainers' line. The gold-ring account likes the plan post (pays toward gold_ring_follower and delete_or_bait).",
+        "lesson": "Announcing a plan feels like doing it; the work starts on the boring day.",
+        "rule_line": "PLANS ARE FREE. DAY 3 IS WHERE THEY CHARGE YOU.",
+        "technique": "MISDIRECT",
+        "button": "Clyde: 'BET. NEW PLAN. STARTS DAY 4.'"
+      },
+      {
+        "trend": "#mastersdegree (graduation and degree flex posts)",
+        "chapter": "3: comparison, showing off",
+        "scene": "In Bulawayo a cousin's graduation photos are everywhere; Clyde rents a gown and mortarboard just for a selfie so he doesn't look behind. Solo admits he compares his pages to the Collector's every night.",
+        "lesson": "Comparing your start to someone else's middle only makes you rush.",
+        "rule_line": "HE'S ON PAGE 300. YOU CAN'T FIND PAGE 23.",
+        "technique": "RECEIPT",
+        "button": "Clyde returns the gown late and pays the fine: 'WORTH IT. 40 LIKES.'"
+      },
+      {
+        "trend": "#outlook (inbox wordplay; topic text not visible)",
+        "chapter": "3: greed, Dubai lifestyle traps",
+        "scene": "Clyde's inbox: 'YOU WON A FREE DUBAI TRIP! Just send your passport + the pages.' Signed with a gold-ring emoji. Clyde has already packed. Ties the Collector to the Dubai leg without showing him.",
+        "lesson": "If a deal is too good, you are what's being sold.",
+        "rule_line": "FREE TRIP TO DUBAI. THE PRICE IS YOU.",
+        "technique": "MISDIRECT",
+        "button": "Clyde: 'IT SAYS FIRST CLASS THOUGH.' (callback to ep 21)"
+      },
+      {
+        "trend": "Game new-season wave (#marvelrivalss11), generic format only, no game or characters shown",
+        "chapter": "3: lifestyle traps, showing off",
+        "scene": "Clyde spends his travel money on a shiny gold outfit 'skin' in a made-up phone game so his avatar looks like the gold-ring guy. He still loses the first round.",
+        "lesson": "Buying the look doesn't buy the skill.",
+        "rule_line": "NEW SKIN. SAME PLAYER.",
+        "technique": "REVERSAL",
+        "button": "EXOTICCENZO checks his own phone: he bought the matching hat."
+      }
+    ],
+    "caption_hashtags": [
+      "#week10",
+      "#mastersdegree",
+      "#liferules",
+      "#adulting"
+    ],
+    "caption_hashtags_note": "Only #week10 and #mastersdegree came from Creative Center; use each only on the episode that matches it (countdown/grind, comparison/degree). #liferules and #adulting are the series' evergreen tags. No Marvel, #fyp, #viral, trading or betting tags."
   }
 }
