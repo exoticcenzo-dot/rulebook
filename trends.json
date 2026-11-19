@@ -213,1100 +213,1100 @@
   },
   "creative_center": {
     "checked": "2026-11-19",
-    "region": "US, last 7 days",
-    "source": "TikTok Creative Center (hashtags, creators, video trends; read by the PC task) + tokchart.com free charts (songs)",
+    "region": "MIX: World, Africa, US, last 7 days (South Africa is the proxy for Zimbabwe, which Creative Center does not offer)",
+    "source": "TikTok Creative Center (hashtags, trend videos; read by the PC task) + tokchart.com free charts (songs)",
     "hashtags": [
       {
         "rank": 1,
-        "tag": "#marvelrivalss11",
-        "posts": "139.2K",
-        "status": "Games, 25.2M views. Skip: copyrighted characters."
-      },
-      {
-        "rank": 2,
-        "tag": "#marvelrivalsdoomsday",
-        "posts": "133.3K",
-        "status": "Games, 25.1M views. Skip: copyrighted characters."
-      },
-      {
-        "rank": 3,
-        "tag": "#outlook",
-        "posts": "15.8K",
-        "status": "News & Entertainment, 109.8M views. Tied to the Microsoft outage wave; usable as an inbox/email gag only."
-      },
-      {
-        "rank": 4,
-        "tag": "#veteransday",
-        "posts": "76.4K",
-        "status": "News & Entertainment, 157M views. Skip for story: national/military remembrance, not a comedy topic."
-      },
-      {
-        "rank": 5,
         "tag": "#mymoonmyman",
-        "posts": "70.1K",
-        "status": "News & Entertainment, 134M views. Romance meme; skip unless a light 'my person' gag fits."
-      },
-      {
-        "rank": 6,
-        "tag": "#faa",
-        "posts": "20.6K",
-        "status": "News & Entertainment, Travel, 211.8M views. Flight-delay news; generic 'flight delayed' travel gag only, no real agency."
-      },
-      {
-        "rank": 7,
-        "tag": "#microsoft",
-        "posts": "19.4K",
-        "status": "News & Entertainment, 166.3M views. Real company; use only the generic 'everything is down' outage format."
-      },
-      {
-        "rank": 8,
-        "tag": "#streamerawards",
-        "posts": "17.3K",
-        "status": "Games, 575.5M views. Skip: real people/awards show. Generic 'awards night' format possible."
-      },
-      {
-        "rank": 9,
-        "tag": "#thebody",
-        "posts": "20.9K",
-        "status": "News & Entertainment, 239.6M views. Topic unclear; skip."
-      },
-      {
-        "rank": 10,
-        "tag": "#mymoon",
-        "posts": "21.7K",
-        "status": "News & Entertainment, 20.9M views. Same romance meme as #mymoonmyman; skip."
-      },
-      {
-        "rank": 11,
-        "tag": "#happyveteransday",
-        "posts": "8.9K",
-        "status": "News & Entertainment, 10.6M views. Skip (see #veteransday)."
-      },
-      {
-        "rank": 12,
-        "tag": "#friday13",
-        "posts": "7.7K",
-        "status": "News & Entertainment, 19.3M views. Fits: superstition/bad-luck episode (no horror-film characters)."
-      },
-      {
-        "rank": 13,
-        "tag": "#gummybear",
-        "posts": "7.3K",
-        "status": "News & Entertainment, 41M views. Snack/meme; possible prop gag."
-      },
-      {
-        "rank": 14,
-        "tag": "#microsoftoutage",
-        "posts": "7.3K",
-        "status": "Business Services, 62.4M views. Generic outage format only; no real company named on screen."
-      },
-      {
-        "rank": 15,
-        "tag": "#wuwacreator",
-        "posts": "54.6K",
-        "status": "Games, 14.7M views. Skip: game characters."
-      },
-      {
-        "rank": 16,
-        "tag": "#merabdvalishvili",
-        "posts": "8.6K",
-        "status": "Sports, 140.7M views. Skip: real celebrity."
-      },
-      {
-        "rank": 17,
-        "tag": "#fridaythe13",
-        "posts": "13.6K",
-        "status": "News & Entertainment, 48.4M views. Same wave as #friday13."
-      },
-      {
-        "rank": 18,
-        "tag": "#outage",
-        "posts": "6.3K",
-        "status": "News & Entertainment, 84.9M views. Fits: 'wifi/phone down' scene, no brand."
-      },
-      {
-        "rank": 19,
-        "tag": "#yellabeezy",
-        "posts": "10.7K",
-        "status": "News & Entertainment, 158M views. Skip: real celebrity."
-      },
-      {
-        "rank": 20,
-        "tag": "#fridaythe13th",
-        "posts": "18.5K",
-        "status": "News & Entertainment, 61.7M views. Same wave as #friday13."
-      }
-    ],
-    "hashtags_status_note": "New/rising status is not shown as text on the page; status here = industry, views and story verdict.",
-    "hashtags_education": [
-      {
-        "rank": 1,
-        "tag": "#mastersdegree",
-        "posts": "2.6K",
-        "status": "Education, 9.7M views. Fits comparison/showing-off episodes."
+        "markets": {
+          "GB": 3,
+          "BR": 3,
+          "ZA": 14
+        },
+        "status": "Romance meme; skip unless a light 'my person' gag fits."
       },
       {
         "rank": 2,
-        "tag": "#sigmagammarho",
-        "posts": "1.2K",
-        "status": "Education, 2.7M views. Skip: real organisation."
+        "tag": "#microsoft",
+        "markets": {
+          "GB": 4,
+          "US": 6,
+          "ZA": 12
+        },
+        "status": "Outage news (Microsoft/Outlook). Real company: use only a generic 'everything is down' gag.",
+        "note": "Microsoft/Outlook outage news; related US #outlook 3, #outage 10, #microsoftoutage 13"
       },
       {
         "rank": 3,
-        "tag": "#week10",
-        "posts": "1.3K",
-        "status": "Education, 7.9M views. Fits countdown/grind episodes."
+        "tag": "Marvel Rivals Season 11",
+        "markets": {
+          "US": 1,
+          "GB": 1
+        },
+        "status": "Skip: copyrighted characters.",
+        "variants": [
+          "#marvelrivalss11",
+          "#marvelrivalsdoomsday"
+        ]
       },
       {
         "rank": 4,
-        "tag": "#sgrho",
-        "posts": "1.1K",
-        "status": "Education, 4M views. Skip: real organisation."
+        "tag": "Wuthering Waves",
+        "markets": {
+          "BR": 1,
+          "US": 16
+        },
+        "status": "Skip: copyrighted game characters.",
+        "variants": [
+          "#wutheringwaves",
+          "#wuwacreator"
+        ]
       },
       {
         "rank": 5,
-        "tag": "#grades",
-        "posts": "9.1K",
-        "status": "Education, 31.5M views. Fits 'report card / receipts' gags; usable caption tag."
+        "tag": "#outlook",
+        "markets": {
+          "US": 3,
+          "GB": 9
+        },
+        "status": "Same outage story as #microsoft; generic inbox/outage gag only.",
+        "note": "Outlook outage, same story as #microsoft"
       },
       {
         "rank": 6,
-        "tag": "#attendance",
-        "posts": "792",
-        "status": "Education, 1.4M views. Small; 'showing up' gag."
+        "tag": "Friday the 13th",
+        "markets": {
+          "BR": 4,
+          "US": 11
+        },
+        "status": "Date superstition; usable as a luck/excuses gag (no horror-film characters).",
+        "variants": [
+          "#friday13",
+          "#fridaythe13",
+          "#sextafeira13"
+        ]
       },
       {
         "rank": 7,
-        "tag": "#goodgrades",
-        "posts": "741",
-        "status": "Education, 1.9M views. Small."
+        "tag": "#thebody",
+        "markets": {
+          "US": 5,
+          "GB": 5
+        },
+        "status": "Unclear news/entertainment topic; skip."
       },
       {
         "rank": 8,
-        "tag": "#viralworldcupfoodinspiration",
-        "posts": "930",
-        "status": "Education, 695.4K views. Skip: looks like tag-stuffing."
-      },
-      {
-        "rank": 9,
-        "tag": "#bachelor",
-        "posts": "644",
-        "status": "Education, 7.7M views. Ambiguous (degree vs TV show); skip."
-      },
-      {
-        "rank": 10,
-        "tag": "#finalsweek",
-        "posts": "699",
-        "status": "Education, 1.4M views. Fits countdown episodes."
+        "tag": "#pubgmobileflash",
+        "markets": {
+          "EG": 7,
+          "ZA": 7
+        },
+        "status": "Game event; skip (real game brand).",
+        "variants": [
+          "#pubgmobileflash",
+          "#pubgmflash"
+        ]
       }
     ],
+    "hashtags_by_region": {
+      "US_top20": [
+        {
+          "rank": 1,
+          "tag": "#marvelrivalss11",
+          "industry": "Games",
+          "posts": "139.7K",
+          "views": "26.7M"
+        },
+        {
+          "rank": 2,
+          "tag": "#marvelrivalsdoomsday",
+          "industry": "Games",
+          "posts": "133.8K",
+          "views": "26.7M"
+        },
+        {
+          "rank": 3,
+          "tag": "#outlook",
+          "industry": "News & Entertainment",
+          "posts": "16K",
+          "views": "111.8M"
+        },
+        {
+          "rank": 4,
+          "tag": "#faa",
+          "industry": "Travel/News & Entertainment",
+          "posts": "22.1K",
+          "views": "228.9M"
+        },
+        {
+          "rank": 5,
+          "tag": "#thebody",
+          "industry": "News & Entertainment",
+          "posts": "26.9K",
+          "views": "305.7M"
+        },
+        {
+          "rank": 6,
+          "tag": "#microsoft",
+          "industry": "News & Entertainment",
+          "posts": "20.1K",
+          "views": "180.9M"
+        },
+        {
+          "rank": 7,
+          "tag": "#streamerawards",
+          "industry": "Games/News & Entertainment",
+          "posts": "18K",
+          "views": "603.6M"
+        },
+        {
+          "rank": 8,
+          "tag": "#veteransday",
+          "industry": "News & Entertainment",
+          "posts": "73.5K",
+          "views": "153.5M"
+        },
+        {
+          "rank": 9,
+          "tag": "#happyveteransday",
+          "industry": "News & Entertainment",
+          "posts": "8.8K",
+          "views": "11.1M"
+        },
+        {
+          "rank": 10,
+          "tag": "#outage",
+          "industry": "News & Entertainment",
+          "posts": "7.7K",
+          "views": "102.2M"
+        },
+        {
+          "rank": 11,
+          "tag": "#friday13",
+          "industry": "News & Entertainment",
+          "posts": "7.7K",
+          "views": "19.6M"
+        },
+        {
+          "rank": 12,
+          "tag": "#gummybear",
+          "industry": "News & Entertainment",
+          "posts": "7.3K",
+          "views": "41.6M"
+        },
+        {
+          "rank": 13,
+          "tag": "#microsoftoutage",
+          "industry": "News & Entertainment/Business Services",
+          "posts": "7.4K",
+          "views": "64.1M"
+        },
+        {
+          "rank": 14,
+          "tag": "#merabdvalishvili",
+          "industry": "Sports & Outdoor",
+          "posts": "9K",
+          "views": "149.3M"
+        },
+        {
+          "rank": 15,
+          "tag": "#gilla",
+          "industry": null,
+          "posts": "10.1K",
+          "views": "41.5M"
+        },
+        {
+          "rank": 16,
+          "tag": "#wuwacreator",
+          "industry": "News & Entertainment/Games",
+          "posts": "54.9K",
+          "views": "15.1M"
+        },
+        {
+          "rank": 17,
+          "tag": "#yellabeezy",
+          "industry": "News & Entertainment",
+          "posts": "11.4K",
+          "views": "168.8M"
+        },
+        {
+          "rank": 18,
+          "tag": "#redcupday",
+          "industry": "Food & Beverage",
+          "posts": "6K",
+          "views": "19.9M"
+        },
+        {
+          "rank": 19,
+          "tag": "#fridaythe13",
+          "industry": "News & Entertainment",
+          "posts": "13.5K",
+          "views": "48.9M"
+        },
+        {
+          "rank": 20,
+          "tag": "#groundstop",
+          "industry": "Travel",
+          "posts": "6.3K",
+          "views": "69.3M"
+        }
+      ],
+      "US_education_top10": [
+        {
+          "rank": 1,
+          "tag": "#mastersdegree",
+          "industry": "Education",
+          "posts": "3.5K",
+          "views": "10.9M"
+        },
+        {
+          "rank": 2,
+          "tag": "#week10",
+          "industry": "Education",
+          "posts": "1.3K",
+          "views": "7.7M"
+        },
+        {
+          "rank": 3,
+          "tag": "#sigmagammarho",
+          "industry": "News & Entertainment/Education",
+          "posts": "1.2K",
+          "views": "2.6M"
+        },
+        {
+          "rank": 4,
+          "tag": "#sgrho",
+          "industry": "Education/News & Entertainment",
+          "posts": "1.1K",
+          "views": "4.2M"
+        },
+        {
+          "rank": 5,
+          "tag": "#attendance",
+          "industry": "News & Entertainment/Education",
+          "posts": "792",
+          "views": "1.6M"
+        },
+        {
+          "rank": 6,
+          "tag": "#finalsweek",
+          "industry": "News & Entertainment/Education",
+          "posts": "810",
+          "views": "1.5M"
+        },
+        {
+          "rank": 7,
+          "tag": "#viralworldcupfoodinspiration",
+          "industry": "Food & Beverage/Education",
+          "posts": "930",
+          "views": "800.7K"
+        },
+        {
+          "rank": 8,
+          "tag": "#bachelor",
+          "industry": "Education",
+          "posts": "663",
+          "views": "8.4M"
+        },
+        {
+          "rank": 9,
+          "tag": "#goodgrades",
+          "industry": "Education",
+          "posts": "717",
+          "views": "1.9M"
+        },
+        {
+          "rank": 10,
+          "tag": "#fcc",
+          "industry": "News & Entertainment/Education",
+          "posts": "562",
+          "views": "20.9M"
+        }
+      ],
+      "GB_top10": [
+        {
+          "rank": 1,
+          "tag": "#marvelrivalss11",
+          "industry": "Games",
+          "posts": "71.3K",
+          "views": "24.4M"
+        },
+        {
+          "rank": 2,
+          "tag": "#marvelrivalsdoomsday",
+          "industry": "Games",
+          "posts": "69K",
+          "views": "23M"
+        },
+        {
+          "rank": 3,
+          "tag": "#mymoonmyman",
+          "industry": "News & Entertainment",
+          "posts": "22.2K",
+          "views": "44.8M"
+        },
+        {
+          "rank": 4,
+          "tag": "#microsoft",
+          "industry": "News & Entertainment",
+          "posts": "7.1K",
+          "views": "46.1M"
+        },
+        {
+          "rank": 5,
+          "tag": "#thebody",
+          "industry": "News & Entertainment",
+          "posts": "8.5K",
+          "views": "75.3M"
+        },
+        {
+          "rank": 6,
+          "tag": "#imacelebritygetmeoutofhere",
+          "industry": "News & Entertainment",
+          "posts": "4.5K",
+          "views": "42.6M"
+        },
+        {
+          "rank": 7,
+          "tag": "#marvelrivals",
+          "industry": "Games",
+          "posts": "75.1K",
+          "views": "42.3M"
+        },
+        {
+          "rank": 8,
+          "tag": "#imaceleb",
+          "industry": "News & Entertainment",
+          "posts": "4.3K",
+          "views": "91M"
+        },
+        {
+          "rank": 9,
+          "tag": "#outlook",
+          "industry": "News & Entertainment",
+          "posts": "3.7K",
+          "views": "28.5M"
+        },
+        {
+          "rank": 10,
+          "tag": "#jamesbond",
+          "industry": "News & Entertainment",
+          "posts": "5.6K",
+          "views": "53.3M"
+        }
+      ],
+      "ZA_zimbabwe_proxy_top20": [
+        {
+          "rank": 1,
+          "tag": "#sun",
+          "industry": "News & Entertainment",
+          "posts": "5.1K",
+          "views": "10.2M"
+        },
+        {
+          "rank": 2,
+          "tag": "#sunhalo",
+          "industry": null,
+          "posts": "4.3K",
+          "views": "9.2M"
+        },
+        {
+          "rank": 3,
+          "tag": "#shorts",
+          "industry": "News & Entertainment",
+          "posts": "36.5K",
+          "views": "384.2M"
+        },
+        {
+          "rank": 4,
+          "tag": "#short",
+          "industry": "News & Entertainment",
+          "posts": "10.2K",
+          "views": "95.7M"
+        },
+        {
+          "rank": 5,
+          "tag": "#solarhalo",
+          "industry": "News & Entertainment",
+          "posts": "2.1K",
+          "views": "6.2M"
+        },
+        {
+          "rank": 6,
+          "tag": "#bafanabafana",
+          "industry": "Sports & Outdoor",
+          "posts": "4.7K",
+          "views": "59.1M"
+        },
+        {
+          "rank": 7,
+          "tag": "#pubgmflash",
+          "industry": "Games",
+          "posts": "2.2K",
+          "views": "3.7M"
+        },
+        {
+          "rank": 8,
+          "tag": "#pubgmobileflash",
+          "industry": "Games",
+          "posts": "2.2K",
+          "views": "3.6M"
+        },
+        {
+          "rank": 9,
+          "tag": "#gucciman",
+          "industry": "Apparel & Accessories",
+          "posts": "1.7K",
+          "views": "9.6M"
+        },
+        {
+          "rank": 10,
+          "tag": "#misssouthafrica",
+          "industry": "News & Entertainment",
+          "posts": "1.9K",
+          "views": "47.5M"
+        },
+        {
+          "rank": 11,
+          "tag": "#gta6",
+          "industry": "Games",
+          "posts": "5.8K",
+          "views": "70.4M"
+        },
+        {
+          "rank": 12,
+          "tag": "#microsoft",
+          "industry": "News & Entertainment",
+          "posts": "1.5K",
+          "views": "10.4M"
+        },
+        {
+          "rank": 13,
+          "tag": "#gec",
+          "industry": "News & Entertainment",
+          "posts": "1.8K",
+          "views": "17.4M"
+        },
+        {
+          "rank": 14,
+          "tag": "#mymoonmyman",
+          "industry": "News & Entertainment",
+          "posts": "1.6K",
+          "views": "5.7M"
+        },
+        {
+          "rank": 15,
+          "tag": "#halo",
+          "industry": "Games/News & Entertainment",
+          "posts": "1.3K",
+          "views": "2.2M"
+        },
+        {
+          "rank": 16,
+          "tag": "#smile",
+          "industry": "News & Entertainment",
+          "posts": "3.8K",
+          "views": "7.9M"
+        },
+        {
+          "rank": 17,
+          "tag": "#likesandviewsontiktok",
+          "industry": "News & Entertainment",
+          "posts": "1.3K",
+          "views": "1.3M"
+        },
+        {
+          "rank": 18,
+          "tag": "#nalediaphiwe",
+          "industry": "News & Entertainment",
+          "posts": "1.2K",
+          "views": "9.2M"
+        },
+        {
+          "rank": 19,
+          "tag": "#misssa",
+          "industry": "News & Entertainment",
+          "posts": "1.4K",
+          "views": "37.9M"
+        },
+        {
+          "rank": 20,
+          "tag": "#bafanabafana🇿🇦",
+          "industry": "Sports & Outdoor",
+          "posts": "1.6K",
+          "views": "9.4M"
+        }
+      ],
+      "EG_top10": [
+        {
+          "rank": 1,
+          "tag": "#الشعب_العراقي_ماله_حل😂😂",
+          "industry": "News & Entertainment",
+          "posts": "33.8K",
+          "views": "59.2M",
+          "gloss": "'Iraqi people are hopeless' (joke meme, 😂)"
+        },
+        {
+          "rank": 2,
+          "tag": "#الشعب_المصري_ماله_حل😂😂",
+          "industry": "News & Entertainment",
+          "posts": "34.2K",
+          "views": "61.6M",
+          "gloss": "'Egyptian people are hopeless' (joke meme)"
+        },
+        {
+          "rank": 3,
+          "tag": "#animetowatch",
+          "industry": "News & Entertainment",
+          "posts": "9K",
+          "views": "10M"
+        },
+        {
+          "rank": 4,
+          "tag": "#الشعب_الصيني_مال_حال😂😂",
+          "industry": "News & Entertainment",
+          "posts": "6.4K",
+          "views": "19.2M",
+          "gloss": "'Chinese people are hopeless' (meme variant)"
+        },
+        {
+          "rank": 5,
+          "tag": "#الشعب_الصيني_ماله_",
+          "industry": "News & Entertainment",
+          "posts": "9.3K",
+          "views": "11.9M",
+          "gloss": "'Chinese people are hopeless' (meme variant, truncated)"
+        },
+        {
+          "rank": 6,
+          "tag": "#دولة_التلاوة",
+          "industry": "News & Entertainment",
+          "posts": "6.2K",
+          "views": "113.5M",
+          "gloss": "'State of Recitation' (Quran recitation talent show)"
+        },
+        {
+          "rank": 7,
+          "tag": "#pubgmobileflash",
+          "industry": "Games",
+          "posts": "2.8K",
+          "views": "26.9M"
+        },
+        {
+          "rank": 8,
+          "tag": "#الشعب",
+          "industry": "News & Entertainment",
+          "posts": "25.5K",
+          "views": "43.6M",
+          "gloss": "'The people' (same meme family)"
+        },
+        {
+          "rank": 9,
+          "tag": "#محمد_هاني",
+          "industry": "Sports & Outdoor",
+          "posts": "1.6K",
+          "views": "28.1M",
+          "gloss": "Mohamed Hany (Al Ahly footballer)"
+        },
+        {
+          "rank": 10,
+          "tag": "#حدوته",
+          "industry": "News & Entertainment",
+          "posts": "1.6K",
+          "views": "11.6M",
+          "gloss": "'Little story / tale' (storytelling)"
+        }
+      ],
+      "BR_top10": [
+        {
+          "rank": 1,
+          "tag": "#wutheringwaves",
+          "industry": "Games/News & Entertainment",
+          "posts": "30.2K",
+          "views": "12.4M"
+        },
+        {
+          "rank": 2,
+          "tag": "#wuwacreator",
+          "industry": "News & Entertainment/Games",
+          "posts": "29.4K",
+          "views": "10.8M"
+        },
+        {
+          "rank": 3,
+          "tag": "#mymoonmyman",
+          "industry": "News & Entertainment",
+          "posts": "7.6K",
+          "views": "23.7M"
+        },
+        {
+          "rank": 4,
+          "tag": "#sextafeira13",
+          "industry": "News & Entertainment",
+          "posts": "11.3K",
+          "views": "25.8M",
+          "gloss": "'Friday the 13th' (Portuguese)"
+        }
+      ]
+    },
     "songs": [
       {
-        "chart": "Worldwide",
-        "rank": 1,
-        "title": "Rechazame",
-        "artist": "Prince Royce",
-        "status": "+46,048 videos/day, +29.9% in 7 days"
+        "chart": "Tokchart Worldwide (updated 18 Nov 2026)",
+        "items": [
+          {
+            "rank": 1,
+            "title": "Rechazame",
+            "artist": "Prince Royce",
+            "videos_day": "+46,048",
+            "growth_7d": "+29.9%",
+            "status": "same"
+          },
+          {
+            "rank": 2,
+            "title": "Pujaan Hatiku",
+            "artist": "Jummalik",
+            "videos_day": "+6,053",
+            "growth_7d": "+72.4%",
+            "status": "NEW"
+          },
+          {
+            "rank": 3,
+            "title": "Bonito, Bonito",
+            "artist": "Thiago Navarro Music",
+            "videos_day": "+42,726",
+            "growth_7d": "+79.0%",
+            "status": "up 3"
+          },
+          {
+            "rank": 4,
+            "title": "Dilruba Dilnasheen",
+            "artist": "Siddhant Kaushal, Rito Riba",
+            "videos_day": "+44,847",
+            "growth_7d": "+27.9%",
+            "status": "down 2"
+          },
+          {
+            "rank": 5,
+            "title": "Time",
+            "artist": "Pink Floyd",
+            "videos_day": "+38,252",
+            "growth_7d": "+19.3%",
+            "status": "up 2"
+          },
+          {
+            "rank": 6,
+            "title": "BbY WOW",
+            "artist": "Rusowsky, KAROL G, Judeline",
+            "videos_day": "+15,145",
+            "growth_7d": "+57.8%",
+            "status": "down 3"
+          },
+          {
+            "rank": 7,
+            "title": "All I Want for Christmas Is You",
+            "artist": "Mariah Carey",
+            "videos_day": "+47,210",
+            "growth_7d": "+29.6%",
+            "status": "up 1"
+          },
+          {
+            "rank": 8,
+            "title": "NONA KAKA SAYANG",
+            "artist": "IKI DANO",
+            "videos_day": "+25,627",
+            "growth_7d": "+52.0%",
+            "status": "down 3"
+          },
+          {
+            "rank": 9,
+            "title": "Last Christmas",
+            "artist": "Wham!",
+            "videos_day": "+28,632",
+            "growth_7d": "+37.8%",
+            "status": "same"
+          },
+          {
+            "rank": 10,
+            "title": "AkpakO Bum Bum",
+            "artist": "Terry G",
+            "videos_day": "+6,570",
+            "growth_7d": "+62.3%",
+            "status": "up 2"
+          }
+        ]
       },
       {
-        "chart": "Worldwide",
-        "rank": 2,
-        "title": "Pujaan Hatiku",
-        "artist": "Jummalik",
-        "status": "NEW, +6,053 videos/day, +72.4% in 7 days"
+        "chart": "Tokchart United States",
+        "items": [
+          {
+            "rank": 1,
+            "title": "Time",
+            "artist": "Pink Floyd",
+            "videos_day": "+37,002",
+            "growth_7d": "+40.5%",
+            "status": "same"
+          },
+          {
+            "rank": 2,
+            "title": "Nocturne",
+            "artist": "Feinberg",
+            "videos_day": "+17,999",
+            "growth_7d": "+2.2%",
+            "status": "same"
+          },
+          {
+            "rank": 3,
+            "title": "All I Want for Christmas Is You",
+            "artist": "Mariah Carey",
+            "videos_day": "+16,140",
+            "growth_7d": "+0.0%",
+            "status": "up 1"
+          },
+          {
+            "rank": 4,
+            "title": "Housewife",
+            "artist": "Tate McRae",
+            "videos_day": "+47,429",
+            "growth_7d": "+6.1%",
+            "status": "up 6"
+          },
+          {
+            "rank": 5,
+            "title": "Doja",
+            "artist": "Central Cee",
+            "videos_day": "+14,470",
+            "growth_7d": "+30.7%",
+            "status": "up 2"
+          },
+          {
+            "rank": 6,
+            "title": "Futile Devices (Orchestral Version)",
+            "artist": "Adonai Michel",
+            "videos_day": "+42,179",
+            "growth_7d": "+21.6%",
+            "status": "down 3"
+          },
+          {
+            "rank": 7,
+            "title": "Last Christmas",
+            "artist": "Wham!",
+            "videos_day": "+23,040",
+            "growth_7d": "+23.4%",
+            "status": "up 1"
+          },
+          {
+            "rank": 8,
+            "title": "Rechazame",
+            "artist": "Prince Royce",
+            "videos_day": "+40,241",
+            "growth_7d": "+55.0%",
+            "status": "down 2"
+          },
+          {
+            "rank": 9,
+            "title": "Vibin",
+            "artist": "Wxoda",
+            "videos_day": "+43,762",
+            "growth_7d": "+28.8%",
+            "status": "up 16"
+          },
+          {
+            "rank": 10,
+            "title": "Paper Moon Static",
+            "artist": "nedizini",
+            "videos_day": "+38,310",
+            "growth_7d": "+68.5%",
+            "status": "up 8"
+          }
+        ]
       },
       {
-        "chart": "Worldwide",
-        "rank": 3,
-        "title": "Bonito, Bonito",
-        "artist": "Thiago Navarro Music",
-        "status": "+42,726 videos/day, +79.0% in 7 days"
-      },
-      {
-        "chart": "Worldwide",
-        "rank": 4,
-        "title": "Dilruba Dilnasheen",
-        "artist": "Siddhant Kaushal, Rito Riba",
-        "status": "+44,847 videos/day, +27.9% in 7 days"
-      },
-      {
-        "chart": "Worldwide",
-        "rank": 5,
-        "title": "Time",
-        "artist": "Pink Floyd",
-        "status": "+38,252 videos/day, +19.3% in 7 days"
-      },
-      {
-        "chart": "Worldwide",
-        "rank": 6,
-        "title": "BbY WOW",
-        "artist": "Rusowsky, KAROL G, Judeline",
-        "status": "+15,145 videos/day, +57.8% in 7 days"
-      },
-      {
-        "chart": "Worldwide",
-        "rank": 7,
-        "title": "All I Want for Christmas Is You",
-        "artist": "Mariah Carey",
-        "status": "+47,210 videos/day, +29.6% in 7 days; seasonal (Christmas), good for December eps"
-      },
-      {
-        "chart": "Worldwide",
-        "rank": 8,
-        "title": "NONA KAKA SAYANG",
-        "artist": "IKI DANO",
-        "status": "+25,627 videos/day, +52.0% in 7 days"
-      },
-      {
-        "chart": "Worldwide",
-        "rank": 9,
-        "title": "Last Christmas",
-        "artist": "Wham!",
-        "status": "+28,632 videos/day, +37.8% in 7 days; seasonal (Christmas), good for December eps"
-      },
-      {
-        "chart": "Worldwide",
-        "rank": 10,
-        "title": "AkpakO Bum Bum",
-        "artist": "Terry G",
-        "status": "+6,570 videos/day, +62.3% in 7 days"
-      },
-      {
-        "chart": "United States",
-        "rank": 1,
-        "title": "Time",
-        "artist": "Pink Floyd",
-        "status": "+37,002 videos/day, +40.5% in 7 days; #1 US and top 5 worldwide: safest manual-post sound for dramatic countdown eps"
-      },
-      {
-        "chart": "United States",
-        "rank": 2,
-        "title": "Nocturne",
-        "artist": "Feinberg",
-        "status": "+17,999 videos/day, +2.2% in 7 days; calm/orchestral, fits emotional rule beats"
-      },
-      {
-        "chart": "United States",
-        "rank": 3,
-        "title": "All I Want for Christmas Is You",
-        "artist": "Mariah Carey",
-        "status": "+16,140 videos/day, +0.0% in 7 days; seasonal (Christmas), good for December eps"
-      },
-      {
-        "chart": "United States",
-        "rank": 4,
-        "title": "Housewife",
-        "artist": "Tate McRae",
-        "status": "+47,429 videos/day, +6.1% in 7 days"
-      },
-      {
-        "chart": "United States",
-        "rank": 5,
-        "title": "Doja",
-        "artist": "Central Cee",
-        "status": "+14,470 videos/day, +30.7% in 7 days"
-      },
-      {
-        "chart": "United States",
-        "rank": 6,
-        "title": "Futile Devices (Orchestral Version)",
-        "artist": "Adonai Michel",
-        "status": "+42,179 videos/day, +21.6% in 7 days; calm/orchestral, fits emotional rule beats"
-      },
-      {
-        "chart": "United States",
-        "rank": 7,
-        "title": "Last Christmas",
-        "artist": "Wham!",
-        "status": "+23,040 videos/day, +23.4% in 7 days; seasonal (Christmas), good for December eps"
-      },
-      {
-        "chart": "United States",
-        "rank": 8,
-        "title": "Rechazame",
-        "artist": "Prince Royce",
-        "status": "+40,241 videos/day, +55.0% in 7 days"
-      },
-      {
-        "chart": "United States",
-        "rank": 9,
-        "title": "Vibin",
-        "artist": "Wxoda",
-        "status": "+43,762 videos/day, +28.8% in 7 days"
-      },
-      {
-        "chart": "United States",
-        "rank": 10,
-        "title": "Paper Moon Static",
-        "artist": "nedizini",
-        "status": "+38,310 videos/day, +68.5% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 1,
-        "title": "INFERNO",
-        "artist": "Zlatan, Shoday, Peruzzi",
-        "status": "+13,201 videos/day, +34.4% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 2,
-        "title": "Kat Slater (Native Remedies Remix)",
-        "artist": "Tim Duzit",
-        "status": "+20,052 videos/day, +19.9% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 3,
-        "title": "KIJE DANI",
-        "artist": "Umar M Shareef",
-        "status": "+40,855 videos/day, +36.1% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 4,
-        "title": "Oga Adviser (feat. Zoro)",
-        "artist": "Prime-M",
-        "status": "+11,614 videos/day, +45.2% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 5,
-        "title": "NAMUTU KOKODAI DA RAINA",
-        "artist": "ISHAQB SOUND",
-        "status": "+22,557 videos/day, +27.8% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 6,
-        "title": "DRTY",
-        "artist": "Ruger",
-        "status": "+6,744 videos/day, +39.3% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 7,
-        "title": "Mushin",
-        "artist": "Terry Apala",
-        "status": "+33,179 videos/day, +84.3% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 8,
-        "title": "Christmas Present",
-        "artist": "Dadaman, Gipa Entertainment, Mellow & Sleazy",
-        "status": "+36,458 videos/day, +49.9% in 7 days; seasonal (Christmas), good for December eps"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 9,
-        "title": "Dare Daya",
-        "artist": "Naziru Sarkin Waka",
-        "status": "+21,161 videos/day, +51.3% in 7 days"
-      },
-      {
-        "chart": "Nigeria (Africa)",
-        "rank": 10,
-        "title": "Back 2 U",
-        "artist": "Seyi Vibez",
-        "status": "+6,716 videos/day, +20.6% in 7 days"
+        "chart": "Tokchart Nigeria (Africa proxy)",
+        "items": [
+          {
+            "rank": 1,
+            "title": "INFERNO",
+            "artist": "Zlatan, Shoday, Peruzzi",
+            "videos_day": "+13,201",
+            "growth_7d": "+34.4%",
+            "status": "same"
+          },
+          {
+            "rank": 2,
+            "title": "Kat Slater (Native Remedies Remix)",
+            "artist": "Tim Duzit",
+            "videos_day": "+20,052",
+            "growth_7d": "+19.9%",
+            "status": "same"
+          },
+          {
+            "rank": 3,
+            "title": "KIJE DANI",
+            "artist": "Umar M Shareef",
+            "videos_day": "+40,855",
+            "growth_7d": "+36.1%",
+            "status": "up 1"
+          },
+          {
+            "rank": 4,
+            "title": "Oga Adviser (feat. Zoro)",
+            "artist": "Prime-M",
+            "videos_day": "+11,614",
+            "growth_7d": "+45.2%",
+            "status": "down 1"
+          },
+          {
+            "rank": 5,
+            "title": "NAMUTU KOKODAI DA RAINA",
+            "artist": "ISHAQB SOUND",
+            "videos_day": "+22,557",
+            "growth_7d": "+27.8%",
+            "status": "up 1"
+          },
+          {
+            "rank": 6,
+            "title": "DRTY",
+            "artist": "Ruger",
+            "videos_day": "+6,744",
+            "growth_7d": "+39.3%",
+            "status": "up 1"
+          },
+          {
+            "rank": 7,
+            "title": "Mushin",
+            "artist": "Terry Apala",
+            "videos_day": "+33,179",
+            "growth_7d": "+84.3%",
+            "status": "down 2"
+          },
+          {
+            "rank": 8,
+            "title": "Christmas Present",
+            "artist": "Dadaman, Gipa Entertainment, Mellow & Sleazy",
+            "videos_day": "+36,458",
+            "growth_7d": "+49.9%",
+            "status": "same"
+          },
+          {
+            "rank": 9,
+            "title": "Dare Daya",
+            "artist": "Naziru Sarkin Waka",
+            "videos_day": "+21,161",
+            "growth_7d": "+51.3%",
+            "status": "same"
+          },
+          {
+            "rank": 10,
+            "title": "Back 2 U",
+            "artist": "Seyi Vibez",
+            "videos_day": "+6,716",
+            "growth_7d": "+20.6%",
+            "status": "same"
+          }
+        ]
       }
     ],
-    "songs_note": "for manual posting only; never put songs in the rendered video. From tokchart.com free charts (videos/day + 7-day growth), updated 18 Nov 2026; Creative Center no longer has a songs page. No Zimbabwe or South Africa chart on the free tier, so Nigeria is the Africa chart.",
+    "songs_note": "for manual posting only; never put songs in the rendered video",
     "creators": [
       {
-        "rank": 1,
-        "name": "sebin",
-        "followers": "116K",
-        "video_views": "55M"
+        "creator": "sebin🌟",
+        "followers": "116.1K",
+        "top_video_views": "55M"
       },
       {
-        "rank": 2,
-        "name": "Meg Ann Co.",
-        "followers": "265.3K",
-        "video_views": "36.7M"
+        "creator": "Meg Ann Co.",
+        "followers": "265.5K",
+        "top_video_views": "36.7M",
+        "flag": "storytelling (founder story)"
       },
       {
-        "rank": 3,
-        "name": "Matt Hyams",
-        "followers": "96.2K",
-        "video_views": "36.5M",
-        "flag": "storytelling skits"
+        "creator": "Matt Hyams",
+        "followers": "96.3K",
+        "top_video_views": "36.5M",
+        "flag": "comedy skit/storytelling"
       },
       {
-        "rank": 4,
-        "name": "Gabby Eniclerico",
+        "creator": "Gabby Eniclerico",
         "followers": "4M",
-        "video_views": "31.4M"
+        "top_video_views": "31.4M"
       },
       {
-        "rank": 5,
-        "name": "Alexandra Lourdes",
+        "creator": "Alexandra Lourdes",
         "followers": "4.5M",
-        "video_views": "23.4M"
+        "top_video_views": "23.4M"
       },
       {
-        "rank": 6,
-        "name": "MiniSuperHeroesToday",
+        "creator": "MiniSuperHeroesToday",
         "followers": "354.7K",
-        "video_views": "23.2M",
-        "flag": "character/storytelling"
+        "top_video_views": "23.2M",
+        "flag": "commentary"
       },
       {
-        "rank": 7,
-        "name": "frida",
+        "creator": "frida",
         "followers": "53.1K",
-        "video_views": "19.8M",
-        "flag": "animation/mixed media"
+        "top_video_views": "19.8M",
+        "flag": "ANIMATION / mixed-media art"
       },
       {
-        "rank": 8,
-        "name": "Natasha Mathurent",
+        "creator": "Natasha Mathurent",
         "followers": "371.2K",
-        "video_views": "16.7M"
+        "top_video_views": "16.7M"
       },
       {
-        "rank": 9,
-        "name": "Jaz Saini",
-        "followers": "164.9K",
-        "video_views": "16.5M"
-      },
-      {
-        "rank": 10,
-        "name": "Graciela Avalos",
-        "followers": "387.8K",
-        "video_views": "16.1M"
+        "creator": "Jaz Saini",
+        "followers": "165K",
+        "top_video_views": "16.5M",
+        "flag": "comedy skit"
       }
     ],
-    "creators_note": "From the Video trends ranking (highest video views); the Creator tab shows 'Coming soon'. Like counts not shown.",
     "trend_videos": [
       {
         "rank": 1,
-        "creator": "sebin",
+        "creator": "sebin🌟",
+        "followers": "116.1K",
         "views": "55M",
-        "desc": "sponsored city glam/jewelry clip"
+        "format": "Paid ad (#AD) - jewelry/diamond 'sparkling through the city' showcase"
       },
       {
         "rank": 2,
         "creator": "Meg Ann Co.",
+        "followers": "265.5K",
         "views": "36.7M",
-        "desc": "small-business origin story: spare room to own shop"
+        "format": "Small-business founder story (spare room to commercial spa)",
+        "flag": "storytelling (founder story)"
       },
       {
         "rank": 3,
         "creator": "Matt Hyams",
+        "followers": "96.3K",
         "views": "36.5M",
-        "desc": "deadpan husband skit about 'helping' entrepreneur wife"
+        "format": "Comedic husband skit about wife's entrepreneur life (sponsored)",
+        "flag": "comedy skit/storytelling"
       },
       {
         "rank": 4,
         "creator": "Gabby Eniclerico",
+        "followers": "4M",
         "views": "31.4M",
-        "desc": "food clip, pronunciation joke"
+        "format": "Sponsored food/pronunciation bit (Kraft mac & cheese, cacio e pepe)",
+        "industry": "Food & Beverage"
       },
       {
         "rank": 5,
         "creator": "Alexandra Lourdes",
+        "followers": "4.5M",
         "views": "23.4M",
-        "desc": "'how many did you guess right' quiz format"
+        "format": "Disney+ ad - 'how many did you guess right' guessing game",
+        "industry": "Food & Beverage"
       },
       {
         "rank": 6,
         "creator": "MiniSuperHeroesToday",
+        "followers": "354.7K",
         "views": "23.2M",
-        "desc": "TV show reaction/commentary"
+        "format": "TV commentary on The Paper season 2 finale",
+        "flag": "commentary"
       },
       {
         "rank": 7,
         "creator": "Matt Hyams",
+        "followers": "96.3K",
         "views": "22.1M",
-        "desc": "sequel skit: 'first rule of entrepreneur wife husband club'"
+        "format": "Comedic husband skit, 'entrepreneur wife husband club' (Shopify ad)",
+        "flag": "comedy skit/storytelling"
       },
       {
         "rank": 8,
         "creator": "frida",
+        "followers": "53.1K",
         "views": "19.8M",
-        "desc": "mixed-media animation: photos, sketches, vectors in one piece"
+        "format": "Mixed-media art: photos, sketches, vectors and animation (Adobe ad)",
+        "flag": "ANIMATION / mixed-media art"
       },
       {
         "rank": 9,
         "creator": "Natasha Mathurent",
+        "followers": "371.2K",
         "views": "16.7M",
-        "desc": "music festival day vlog"
+        "format": "Festival vlog with M&M'S POP'd Caramel (sponsored)",
+        "industry": "Music & Entertainment"
       },
       {
         "rank": 10,
         "creator": "Jaz Saini",
+        "followers": "165K",
         "views": "16.5M",
-        "desc": "family get-together comedy skit"
+        "format": "Family comedy skit (Samsung Galaxy Z Fold8 ad)",
+        "flag": "comedy skit"
       }
     ],
-    "trend_videos_note": "Descriptions matched from page captions; mostly sponsored content. Takeaway: deadpan skits with sequels (Matt Hyams has 2 in the top 7) and 'guess how many' quiz hooks are winning formats.",
     "blocked": [
-      "Zimbabwe and South Africa song charts: not on tokchart free tier (404)",
-      "Zimbabwe hashtags: not a Creative Center region (South Africa used as proxy)",
-      "Creative Center Creator tab: 'Coming soon' (US creators from video ranking)",
-      "Creative Center songs page: no longer exists"
+      "Brazil (BR) Creative Center hashtag list showed only 4 rows after reload and scrolling; BR_top10 has 4 items",
+      "Zimbabwe not offered in Creative Center; South Africa used as proxy",
+      "Creative Center Creator tab: 'Coming soon'; creators taken from top US trend videos",
+      "Creative Center no songs page; songs from Tokchart",
+      "Tokchart South Africa and Zimbabwe charts are paid-only",
+      "Tokchart free view shows top 10 only"
     ],
-    "blocked_note": "No login wall this run.",
+    "notes": [
+      "Near misses outside the top-10 cutoffs: #gta6 (ZA 11, EG 12, GB 13), #gilla (US 15, GB 18)",
+      "Most US trend videos this week are branded/sponsored content; the only animation-flagged one is frida (mixed-media art)"
+    ],
     "story_fits": [
       {
-        "trend": "#sunhalo / #solarhalo / #sun (ZA, Zimbabwe proxy: top 3 tags, 9M+7.4M views; everyone filming a ring around the sun)",
-        "chapter": "3 (eps 21-30), Bulawayo before Dubai; fits ep 23-24",
-        "scene": "A huge halo appears around the sun over Bulawayo. The whole street stops to film it. Clyde turns his back to it to film a selfie WITH the halo 'like a crown', misses the whole thing, and his clip is just his forehead. Mtoriro notices the halo's ring shape matches the circle drawn on page 23. In the crowd, one figure isn't filming the sky: he's filming Clyde, and his hand catches the light. Gold ring (gold_ring_follower, seen but not shown).",
-        "lesson": "Filming the moment for others means you don't get the moment yourself.",
+        "trend": "#microsoft / #outlook / #outage (US 6/3/10, GB 4/9, ZA 12: the one story in both African and US data)",
+        "chapter": "3 (eps 21-30), Bulawayo before Dubai; ep 23 COUNTDOWN, pays off delete_or_bait",
+        "scene": "The crew votes to delete Clyde's selfie post, but the whole internet goes down across town (generic outage, no brand names). Clyde runs around Bulawayo holding his phone up like a torch, trying to find signal to delete it. Kombi drivers, shopkeepers and gym regulars are all doing the same dance. When signal comes back, the post has doubled its views and the gold-ring account has saved it. So the post stays up as bait by accident. Day 3/80 ticks on screen.",
+        "lesson": "Once you post it, it's not yours to take back.",
+        "rule_line": "THE INTERNET WENT DOWN. YOUR POST DIDN'T.",
+        "technique": "REVERSAL",
+        "button": "Clyde: 'BET. NOW IT'S STRATEGY.' (posts a second selfie with the caption 'BAIT')"
+      },
+      {
+        "trend": "Christmas songs climbing on all three charts (Worldwide, US, Nigeria 'Christmas Present') plus #redcupday (US 18): the holiday-spending mood",
+        "chapter": "3: greed, showing off, lifestyle traps",
+        "scene": "Before Dubai, Clyde buys 'Dubai-level' gifts for the whole crew on credit to look rich. He gives Ruva a gift that is bigger than her. Mtoriro reads the receipt aloud like a horror story. Solo gives the cheapest gift, a pen, and it turns out to be the most useful (it writes in the dark, which helps decode page 23). Solo +1 point (solo_trust).",
+        "lesson": "Gifts you can't afford are a bill you're giving yourself.",
+        "rule_line": "GIFTS ON CREDIT. JANUARY SAYS HI.",
+        "technique": "MISDIRECT",
+        "button": "Clyde: 'RELAX, I PAID THE MINIMUM.' A card machine beeps somewhere offscreen."
+      },
+      {
+        "trend": "#sunhalo / #solarhalo / #sun (ZA, Zimbabwe proxy: ranks 1, 2, 5)",
+        "chapter": "3; fits ep 23-24",
+        "scene": "A halo rings the sun over Bulawayo and the whole street films it. Clyde turns his back to film a selfie with the halo 'like a crown' and only gets his forehead. Mtoriro sees that the ring matches the circle on page 23. In the crowd, one figure is filming Clyde instead of the sky, and his gold ring catches the light (gold_ring_follower: seen, never shown).",
+        "lesson": "If you film the moment for others, you miss it yourself.",
         "rule_line": "THE SKY DID A HALO. YOU DID A FOREHEAD.",
         "technique": "RECEIPT",
         "button": "Clyde: 'POSTING IT ANYWAY. CAPTION: GOD SAID I ATE.'"
       },
       {
-        "trend": "#zerotohero (BR, 7K posts, 19.7M views; before/after grind montage)",
-        "chapter": "3: comparison, lifestyle traps",
-        "scene": "Clyde wants a 'zero to hero' montage before Dubai and tries to fit 80 days of gym, savings and studying into one afternoon. Zeke times him. Each 'hero' shot is staged: borrowed watch, rented car, a dumbbell he can't lift. The Collector's account comments 'DAY 1 OF 80 ALREADY?' on the post (pays toward delete_or_bait).",
-        "lesson": "A glow-up you film in an afternoon isn't a glow-up.",
-        "rule_line": "ZERO TO HERO TAKES 80 DAYS. YOURS TOOK A RENTED CAR.",
+        "trend": "Friday the 13th (#friday13 US 11, #fridaythe13 US 19, #sextafeira13 BR 4)",
+        "chapter": "3; COUNTDOWN arc (Day x/80)",
+        "scene": "Clyde declares Friday the 13th 'unlucky' and refuses to leave the flat, the gym or even the sofa. He rearranges the 80-day plan so every 'unlucky' day is a rest day, until only 41 working days are left. Zeke counts every excuse on a tally board. Meanwhile the Collector's account posts 'DAY 13. THANKS FOR THE HEAD START.'",
+        "lesson": "Superstition is just an excuse in a costume.",
+        "rule_line": "FRIDAY 13 ISN'T UNLUCKY. YOU'RE JUST LAZY ON A SCHEDULE.",
         "technique": "ESCALATION",
-        "button": "The rental company calls. Clyde: 'THAT'S MY MANAGER.'"
+        "button": "Clyde: 'TOMORROW'S SATURDAY THE 14TH. SOUNDS SUS.'"
       },
       {
-        "trend": "#maths (ZA, Education, 12.9M views)",
-        "chapter": "3: greed; ep 23 COUNTDOWN (Day 3/80)",
-        "scene": "Mtoriro does the countdown maths on a chalkboard: 80 days, 7 missing pages, 2 flights, 1 Clyde. He shows they need a page every 11 days. Clyde 'checks' the maths on his phone calculator and adds the Dubai shopping budget to the days. Solo quietly corrects one number and nobody asks how he knew it (solo_trust).",
-        "lesson": "If the numbers scare you, that's the plan working, not failing.",
-        "rule_line": "THE MATHS IS EASY. IT'S THE CLYDE THAT DOESN'T ADD UP.",
-        "technique": "MISDIRECT",
-        "button": "Clyde: 'SO WE HAVE 80 DAYS. BET, DAY 1 IS A REST DAY.'"
-      },
-      {
-        "trend": "#week10 / #finalsweek (term-grind countdown posts)",
-        "chapter": "3 (eps 21-30); ep 23 is the COUNTDOWN cliffhanger, Day 3/80",
-        "scene": "Clyde makes a colour-coded '80-DAY PLAN' poster for the race against the Collector, posts it, and by Day 3 has done only the 'buy new trainers' line. The gold-ring account likes the plan post (pays toward gold_ring_follower and delete_or_bait).",
-        "lesson": "Announcing a plan feels like doing it; the work starts on the boring day.",
-        "rule_line": "PLANS ARE FREE. DAY 3 IS WHERE THEY CHARGE YOU.",
-        "technique": "MISDIRECT",
-        "button": "Clyde: 'BET. NEW PLAN. STARTS DAY 4.'"
-      },
-      {
-        "trend": "Deadpan sequel skit 'first rule of ___ club' (Matt Hyams, 2 videos in top 7)",
-        "chapter": "3: showing off, lifestyle traps",
-        "scene": "Clyde starts the 'PARTNERS OF A FAMOUS STICKMAN CLUB' with Zeke after Ep 22's 4K likes, with rules on a whiteboard. Rule 1: post everything. Solo joins and quietly writes Rule 2: the Collector reads rule 1. Works as a repeatable sequel format.",
-        "lesson": "The people loudest about your business are rarely the ones helping it.",
-        "rule_line": "RULE ONE OF THE CLUB: THE ENEMY IS A MEMBER.",
+        "trend": "Founder-story and 'entrepreneur husband' skit formats (US trend videos #2, #3, #7: 36.7M, 36.5M, 22.1M views)",
+        "chapter": "3: comparison, showing off",
+        "scene": "Clyde films a dramatic 'from my spare room to an empire' founder story for a business he started that morning (selling page-shaped bookmarks). Zeke plays the long-suffering 'business husband' in the background. The 'empire' is one table outside the gym. A real gogo selling vegetables next to him outsells him ten to one without filming anything.",
+        "lesson": "Building it beats filming yourself building it.",
+        "rule_line": "STARTED IN MY ROOM. STILL IN MY ROOM.",
         "technique": "CALLBACK",
-        "button": "Clyde: 'NEW MEMBER JUST JOINED.' Profile pic: a gold ring."
-      },
-      {
-        "trend": "#outage / #microsoftoutage (everything is down; no brand on screen)",
-        "chapter": "3: comparison, lifestyle traps; also delete_or_bait",
-        "scene": "All phones in Harare go down for an hour. Clyde panics because he can't check his likes, then has the best hour of the trip: they find a clue on a real map. When the network returns, the gold-ring account's last message loads: 'NICE MAP.'",
-        "lesson": "The hour you can't compare is the hour you actually live.",
-        "rule_line": "WIFI WENT DOWN. YOUR LIFE CAME BACK ONLINE.",
-        "technique": "REVERSAL (Cenzo also kept refreshing)",
-        "button": "Network back. Clyde: 'POSTING HOW PEACEFUL THAT WAS.'"
+        "button": "Clyde: 'PART 2 DROPS WHEN I SELL ONE.'"
       }
     ],
     "caption_hashtags": [
       "#sunhalo",
-      "#zerotohero",
-      "#maths",
-      "#liferules",
-      "#adulting"
+      "#friday13",
+      "#shorts",
+      "#finalsweek"
     ],
-    "caption_hashtags_note": "#sunhalo only on the halo episode, while the wave lasts (ZA/Zimbabwe-proxy trend); #zerotohero on a glow-up/grind episode; #maths on the countdown episode. #week10/#grades from the earlier US run still fit. #liferules/#adulting are standing series tags. Never #fyp, #viral, trading or betting tags.",
-    "regions_mix": {
-      "period": "Last 7 days",
-      "markets": "US, GB, BR, ZA (Zimbabwe proxy), EG",
-      "note": "Second pass on 2026-11-19. Creative Center has no Zimbabwe and no worldwide view; South Africa is the nearest proxy for the Zimbabwe audience. 'World' = tags trending in 2+ of the 5 markets. The US 'hashtags', creators and trend_videos above are from the earlier run today and are kept. Third pass (same day): songs added from tokchart Worldwide / US / Nigeria charts; hashtags unchanged."
-    },
-    "hashtags_world": [
-      {
-        "rank": 1,
-        "tag": "#mymoonmyman",
-        "posts": "n/a (markets: US5,GB1,BR4,ZA14)",
-        "status": "Romance meme; skip."
-      },
-      {
-        "rank": 2,
-        "tag": "#thebody",
-        "posts": "n/a (markets: US9,GB5,BR5)",
-        "status": "Topic unclear; skip."
-      },
-      {
-        "rank": 3,
-        "tag": "#microsoft",
-        "posts": "n/a (markets: US7,GB4,ZA11)",
-        "status": "Real company; generic 'everything is down' format only."
-      },
-      {
-        "rank": 4,
-        "tag": "#marvelrivalss11",
-        "posts": "n/a (markets: US1,GB2,BR8)",
-        "status": "Skip: copyrighted characters."
-      },
-      {
-        "rank": 5,
-        "tag": "#marvelrivalsdoomsday",
-        "posts": "n/a (markets: US2,GB3,BR9)",
-        "status": "Skip: copyrighted characters."
-      },
-      {
-        "rank": 6,
-        "tag": "#outlook",
-        "posts": "n/a (markets: US3,GB9)",
-        "status": "Inbox/outage gag only."
-      },
-      {
-        "rank": 7,
-        "tag": "#liveiseasy",
-        "posts": "n/a (markets: US24,BR7)",
-        "status": "Topic unclear; ironic 'life is easy' title possible, check videos first."
-      },
-      {
-        "rank": 8,
-        "tag": "#wuwacreator",
-        "posts": "n/a (markets: US15,BR2)",
-        "status": "Skip: game characters."
-      },
-      {
-        "rank": 9,
-        "tag": "#pubgmobileflash",
-        "posts": "n/a (markets: ZA7,EG8)",
-        "status": "Skip: game."
-      },
-      {
-        "rank": 10,
-        "tag": "#fridaythe13th / #friday13 / #sextafeira13",
-        "posts": "n/a (markets: US12,US17,US20,BR3)",
-        "status": "Date has passed (Fri 13 Nov); don't use now."
-      }
-    ],
-    "hashtags_by_region": {
-      "ZA_south_africa_zimbabwe_proxy": [
-        {
-          "rank": 1,
-          "tag": "#sun",
-          "posts": "5K",
-          "views": "9M",
-          "status": "Natural sky event; FITS (sun halo wave)."
-        },
-        {
-          "rank": 2,
-          "tag": "#sunhalo",
-          "posts": "4.1K",
-          "views": "7.4M",
-          "status": "FITS: everyone filming the sky. Standout for Zimbabwe audience."
-        },
-        {
-          "rank": 3,
-          "tag": "#shorts",
-          "posts": "27.7K",
-          "views": "317.5M",
-          "status": "Generic; skip."
-        },
-        {
-          "rank": 4,
-          "tag": "#short",
-          "posts": "7.8K",
-          "views": "75.1M",
-          "status": "Generic; skip."
-        },
-        {
-          "rank": 5,
-          "tag": "#solarhalo",
-          "posts": "2K",
-          "views": "3.9M",
-          "status": "Same wave as #sunhalo."
-        },
-        {
-          "rank": 6,
-          "tag": "#pubgmflash",
-          "posts": "1.9K",
-          "views": "3M",
-          "status": "Skip: game."
-        },
-        {
-          "rank": 7,
-          "tag": "#pubgmobileflash",
-          "posts": "1.9K",
-          "views": "2.9M",
-          "status": "Skip: game."
-        },
-        {
-          "rank": 8,
-          "tag": "#gucciman",
-          "posts": "1.5K",
-          "views": "9.1M",
-          "status": "Skip: brand."
-        },
-        {
-          "rank": 9,
-          "tag": "#bafanabafana",
-          "posts": "3.6K",
-          "views": "48.4M",
-          "status": "Skip: real national team."
-        },
-        {
-          "rank": 10,
-          "tag": "#misssouthafrica",
-          "posts": "1.7K",
-          "views": "40.3M",
-          "status": "Skip: real pageant/people."
-        },
-        {
-          "rank": 11,
-          "tag": "#microsoft",
-          "posts": "1.4K",
-          "views": "10.1M",
-          "status": "Generic outage only."
-        },
-        {
-          "rank": 12,
-          "tag": "#gec",
-          "posts": "1.8K",
-          "views": "16.8M",
-          "status": "Topic unclear; skip."
-        },
-        {
-          "rank": 13,
-          "tag": "#gta6",
-          "posts": "4.7K",
-          "views": "60.6M",
-          "status": "Skip: copyrighted game."
-        },
-        {
-          "rank": 14,
-          "tag": "#mymoonmyman",
-          "posts": "1.6K",
-          "views": "5.5M",
-          "status": "Skip."
-        },
-        {
-          "rank": 15,
-          "tag": "#smile",
-          "posts": "3.6K",
-          "views": "7.3M",
-          "status": "Possible caption tag on a feel-good ep."
-        },
-        {
-          "rank": 16,
-          "tag": "#halo",
-          "posts": "1.2K",
-          "views": "1.9M",
-          "status": "Same wave; avoid alone (game name)."
-        },
-        {
-          "rank": 17,
-          "tag": "#misssa",
-          "posts": "1.3K",
-          "views": "34.2M",
-          "status": "Skip: real pageant."
-        },
-        {
-          "rank": 18,
-          "tag": "#nalediaphiwe",
-          "posts": "1K",
-          "views": "8.6M",
-          "status": "Skip: real person."
-        },
-        {
-          "rank": 19,
-          "tag": "#maths",
-          "posts": "1.1K",
-          "views": "12.9M",
-          "status": "Education; FITS countdown/receipt maths gags."
-        },
-        {
-          "rank": 20,
-          "tag": "#sky",
-          "posts": "983",
-          "views": "2.2M",
-          "status": "Same wave."
-        }
-      ],
-      "GB_uk": [
-        {
-          "rank": 1,
-          "tag": "#mymoonmyman",
-          "posts": "19.7K",
-          "views": "40.7M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 2,
-          "tag": "#marvelrivalss11",
-          "posts": "71.3K",
-          "views": "24.1M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 3,
-          "tag": "#marvelrivalsdoomsday",
-          "posts": "68.9K",
-          "views": "22.8M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 4,
-          "tag": "#microsoft",
-          "posts": "7.1K",
-          "views": "45.3M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 5,
-          "tag": "#thebody",
-          "posts": "7K",
-          "views": "60.3M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 6,
-          "tag": "#marvelrivals",
-          "posts": "75.2K",
-          "views": "43.4M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 7,
-          "tag": "#almost",
-          "posts": "4.2K",
-          "views": "10.2M",
-          "status": "Topic unclear; skip."
-        },
-        {
-          "rank": 8,
-          "tag": "#davidwalliams",
-          "posts": "4.1K",
-          "views": "143.3M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 9,
-          "tag": "#outlook",
-          "posts": "3.7K",
-          "views": "28.2M",
-          "status": "Skip: real people, games or romance meme."
-        },
-        {
-          "rank": 10,
-          "tag": "#imacelebritygetmeoutofhere",
-          "posts": "3.7K",
-          "views": "33.7M",
-          "status": "Skip: real people, games or romance meme."
-        }
-      ],
-      "BR_brazil": [
-        {
-          "rank": 1,
-          "tag": "#wutheringwaves",
-          "posts": "30.2K",
-          "views": "12.8M",
-          "status": "Skip: games or unclear."
-        },
-        {
-          "rank": 2,
-          "tag": "#wuwacreator",
-          "posts": "29.4K",
-          "views": "11.2M",
-          "status": "Skip: games or unclear."
-        },
-        {
-          "rank": 3,
-          "tag": "#sextafeira13",
-          "posts": "11.2K",
-          "views": "24.8M",
-          "status": "Passed."
-        },
-        {
-          "rank": 4,
-          "tag": "#mymoonmyman",
-          "posts": "6K",
-          "views": "21.1M",
-          "status": "Skip: games or unclear."
-        },
-        {
-          "rank": 5,
-          "tag": "#thebody",
-          "posts": "5.6K",
-          "views": "75M",
-          "status": "Skip: games or unclear."
-        },
-        {
-          "rank": 6,
-          "tag": "#suzanevonrichthofen",
-          "posts": "4.5K",
-          "views": "201M",
-          "status": "Skip: real crime case."
-        },
-        {
-          "rank": 7,
-          "tag": "#liveiseasy",
-          "posts": "9.6K",
-          "views": "21M",
-          "status": "Unclear; check first."
-        },
-        {
-          "rank": 8,
-          "tag": "#marvelrivalss11",
-          "posts": "17.5K",
-          "views": "10.2M",
-          "status": "Skip: games or unclear."
-        },
-        {
-          "rank": 9,
-          "tag": "#marvelrivalsdoomsday",
-          "posts": "16.3K",
-          "views": "9.7M",
-          "status": "Skip: games or unclear."
-        },
-        {
-          "rank": 10,
-          "tag": "#zerotohero",
-          "posts": "7K",
-          "views": "19.7M",
-          "status": "FITS: glow-up/grind format."
-        }
-      ],
-      "EG_egypt": [
-        {
-          "rank": 1,
-          "tag": "#الشعب_العراقي_ماله_حل😂😂",
-          "posts": "31.4K",
-          "views": "46.5M",
-          "gloss": "'the Iraqi people are hopeless' joke meme",
-          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
-        },
-        {
-          "rank": 2,
-          "tag": "#الشعب_المصري_ماله_حل😂😂",
-          "posts": "31.5K",
-          "views": "50.8M",
-          "gloss": "'the Egyptian people are hopeless' joke meme",
-          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
-        },
-        {
-          "rank": 3,
-          "tag": "#animetowatch",
-          "posts": "8.5K",
-          "views": "7.7M",
-          "status": "Skip: anime IP."
-        },
-        {
-          "rank": 4,
-          "tag": "#الشعب_الصيني_مال_حال😂😂",
-          "posts": "5.7K",
-          "views": "15.8M",
-          "gloss": "same meme, Chinese people",
-          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
-        },
-        {
-          "rank": 5,
-          "tag": "#الشعب_الصيني_ماله_",
-          "posts": "8.7K",
-          "views": "10M",
-          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
-        },
-        {
-          "rank": 6,
-          "tag": "#دولة_التلاوة",
-          "posts": "5.6K",
-          "views": "100.8M",
-          "gloss": "Quran recitation show",
-          "status": "Skip: religious show."
-        },
-        {
-          "rank": 7,
-          "tag": "#الشعب",
-          "posts": "24.9K",
-          "views": "40.6M",
-          "gloss": "'the people'",
-          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
-        },
-        {
-          "rank": 8,
-          "tag": "#pubgmobileflash",
-          "posts": "2.3K",
-          "views": "21.7M",
-          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
-        },
-        {
-          "rank": 9,
-          "tag": "#محمد_هاني",
-          "posts": "1.6K",
-          "views": "26.5M",
-          "gloss": "footballer Mohamed Hany",
-          "status": "Skip: real person."
-        },
-        {
-          "rank": 10,
-          "tag": "#مارجرجس_الروماني",
-          "posts": "1.5K",
-          "views": "4.8M",
-          "status": "Skip: nationality-mocking meme, game, or religious/real-person topic."
-        }
-      ],
-      "US": [
-        {
-          "rank": 1,
-          "tag": "#marvelrivalss11",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 2,
-          "tag": "#marvelrivalsdoomsday",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 3,
-          "tag": "#outlook",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 4,
-          "tag": "#veteransday",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 5,
-          "tag": "#mymoonmyman",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 6,
-          "tag": "#faa",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 7,
-          "tag": "#microsoft",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 8,
-          "tag": "#streamerawards",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 9,
-          "tag": "#thebody",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        },
-        {
-          "rank": 10,
-          "tag": "#mymoon",
-          "posts": "n/a",
-          "status": "See US 'hashtags' list from earlier run."
-        }
-      ]
-    }
+    "caption_hashtags_note": "All seen trending this week (ZA, US/BR, ZA, US education). Pick 3 that match the episode; #friday13 only on a Friday-the-13th episode, #sunhalo only on the halo episode."
   }
 }
