@@ -480,6 +480,24 @@
    "solo_score": "SOLO 2, US 3 (Solo roasts Clyde)",
    "punchline_technique": "ESCALATION + BUTTON (Clyde throws the watch, which triggers the cliffhanger)",
    "no_votes_note": "Eps 22-23 not yet published when ep 24 was made; story followed option A (hide the pages: they hid them and ran)."
+  },
+  {
+   "ep": 25,
+   "date": "2026-11-22",
+   "time": "20:00",
+   "set": "trainnight, bulawayo",
+   "rule": "Run your race, not his dot (punchline: 'Refreshing is just cardio for thumbs.')",
+   "cliffhanger": "Day 5/80. CLYDE'S PLAN (Sunday): he pulled the train brake (ep 24 vote B chosen for the story; no votes yet), then found the watch on its tracker app and kept refreshing to see whose dot was closer, his or the Collector's. Solo just walked and found the watch box with the pages (score SOLO 3, US 3). Cenzo reads the engraving on the back of the watch: 'To Solo. Love, the Co-' (cut). Ep 26 (DANGER) opens on the engraving: the watch was once Solo's, a gift from the Collector; follow ep 25's A/B vote (Ask Solo now / Keep it secret).",
+   "structure": "Sunday CLYDE'S PLAN + phone-app comparison gag (refresh joke), train to roadside Bulawayo",
+   "cliffhanger_type": "REVELATION",
+   "secret": "TO SOLO / FROM WHO? / COMMENT 76",
+   "vote": [
+    "Ask Solo now",
+    "Keep it secret"
+   ],
+   "solo_score": "SOLO 3, US 3 (Solo found the box while Clyde refreshed)",
+   "punchline_technique": "CALLBACK + BUTTON (Clyde: 'Bet. One more refresh.')",
+   "no_votes_note": "Ep 24 not yet published when ep 25 was made; story followed option B (pull the brake) as best for Clyde's Plan."
   }
  ],
  "masterplan": {
@@ -670,6 +688,10 @@
     {
      "ep": 24,
      "hint": "Clyde hid the pages in the gold watch's box and threw the watch (with its box) out of the night-train window near Bulawayo; whoever finds it gets the pages AND the tracker (pay off in 25)."
+    },
+    {
+     "ep": 25,
+     "hint": "The Collector's tracker watch is engraved 'To Solo. Love, the Co-': it was the Collector's gift to Solo years ago, re-gifted to Clyde as bait. Sets up solo_trust (BETRAYAL ep 27, reversed in 28: Solo got the watch for his pages and was ashamed of it)."
     }
    ],
    "payoff_ep": 100,
@@ -690,7 +712,7 @@
   },
   {
    "date": "2026-11-17",
-   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29."
+   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29. Ep 25 was the Sunday CLYDE'S PLAN (not silent); the chapter 3 silent episode is still due in eps 26-29."
   }
  ],
  "cliffhanger_plan": {
@@ -778,6 +800,16 @@
     "size": "small",
     "opened": 24,
     "pays_off_by": 25,
+    "status": "closed",
+    "closed_ep": 25,
+    "note": "Clyde pulled the brake; Solo walked and found the watch box with the pages while Clyde refreshed the app."
+   },
+   {
+    "id": "engraved_watch",
+    "question": "Why is the Collector's watch engraved 'To Solo'? How well does Solo know the Collector?",
+    "size": "small",
+    "opened": 25,
+    "pays_off_by": "26 (answer), feeds solo_trust BETRAYAL 27-28",
     "status": "open"
    }
   ]

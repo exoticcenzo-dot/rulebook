@@ -1,0 +1,190 @@
+{
+ "ep": 25,
+ "chapter": "THE COLLECTOR",
+ "title": "CLYDE'S PLAN: TWO DOTS",
+ "lesson": "Stop watching their race, run yours",
+ "hook": "HE PULLED\nTHE BRAKE",
+ "caption": "Always checking who's ahead of you? THE RULE BOOK Ep 25 (Day 5/80): CLYDE'S PLAN. He pulled the train brake, then found the tracker watch on its app... and spent 10 minutes refreshing to see if the Collector's dot was closer than ours. Solo just walked and found it. Score: SOLO 3, US 3. Then Cenzo read the back of the watch. Drop a rule the book should have. What now? A) Ask Solo now B) Keep it secret. A or B? #liferules #comparison #stickman",
+ "secret": "TO SOLO\nFROM WHO?\nCOMMENT 76",
+ "shots": [
+  {
+   "set": "trainnight",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "angry"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "TRUST ME, I HAVE A PLAN."
+    ],
+    [
+     "cenzo",
+     "YOU THREW THE PAGES OUT A WINDOW!",
+     {
+      "mood": "angry"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "prop": "phone",
+   "phone_text": "2 DOTS",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "cenzo",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "IT HAS AN APP! HIS DOT'S CLOSER.",
+     {
+      "mood": "shock"
+     }
+    ],
+    [
+     "clyde",
+     "REFRESHING... STILL CLOSER."
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 280,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "zeke",
+     "x": 740,
+     "pose": "walk",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "YOU REFRESHED. I WALKED. FOUND IT.",
+     {
+      "mood": "happy"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 280,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "card": "RULE 25\nRUN YOUR RACE\nNOT HIS DOT",
+   "lines": [
+    [
+     "cenzo",
+     "REFRESHING IS JUST CARDIO FOR THUMBS.",
+     {
+      "mood": "happy"
+     }
+    ],
+    [
+     "clyde",
+     "BET. ONE MORE REFRESH."
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "zeke",
+     "x": 280,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "cenzo",
+     "x": 720,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "end": "TO SOLO?!",
+   "lines": [
+    [
+     "cenzo",
+     "IT'S ENGRAVED. 'TO SOLO. LOVE, THE CO-'",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "CLYDE HAS A PLAN? HIDE THE BRAKE."
+    ]
+   ]
+  }
+ ],
+ "vote": [
+  "Ask Solo now",
+  "Keep it secret"
+ ]
+}
