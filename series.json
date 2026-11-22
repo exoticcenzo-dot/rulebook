@@ -498,6 +498,25 @@
    "solo_score": "SOLO 3, US 3 (Solo found the box while Clyde refreshed)",
    "punchline_technique": "CALLBACK + BUTTON (Clyde: 'Bet. One more refresh.')",
    "no_votes_note": "Ep 24 not yet published when ep 25 was made; story followed option B (pull the brake) as best for Clyde's Plan."
+  },
+  {
+   "ep": 26,
+   "date": "2026-11-23",
+   "time": "20:00",
+   "set": "bulawayo",
+   "rule": "Shiny now, sorry later (punchline: 'Nice watch. Can't buy back 20 years.')",
+   "cliffhanger": "Day 6/80. Clyde asked Solo straight up (ep 25 vote A chosen for the story; no votes yet) who gave him the engraved watch: the Collector, in exchange for Solo's pages. Clyde: '...no cap, it IS a nice watch.' Cenzo: 'Nice watch. Can't buy back 20 years.' (score SOLO 3, US 4). Button: Clyde opens the tracker app to check what the watch is worth and sees the Collector's dot right behind them: 'We're cooked. His dot is behind u-' (cut). Ep 27 (BETRAYAL, reversed in 28) opens on whoever is behind them; follow ep 26's A/B vote (Split up / Hide in market).",
+   "structure": "interrogation / straight-question argument + phone-app button, outdoor Bulawayo roadside",
+   "cliffhanger_type": "DANGER",
+   "secret": "GOLD RING / RIGHT BEHIND / COMMENT 75",
+   "vote": [
+    "Split up",
+    "Hide in market"
+   ],
+   "solo_score": "SOLO 3, US 4 (Solo admits he sold out for a watch)",
+   "punchline_technique": "REVERSAL (the polished, smart rival is the one who failed the rule) + CALLBACK to ep 20's 20 years + BUTTON (Clyde checks the watch's price, which triggers the cliffhanger)",
+   "no_votes_note": "Ep 25 not yet published when ep 26 was made; story followed option A (ask Solo now).",
+   "trend": "POV: you're the villain but... (caption)"
   }
  ],
  "masterplan": {
@@ -692,6 +711,10 @@
     {
      "ep": 25,
      "hint": "The Collector's tracker watch is engraved 'To Solo. Love, the Co-': it was the Collector's gift to Solo years ago, re-gifted to Clyde as bait. Sets up solo_trust (BETRAYAL ep 27, reversed in 28: Solo got the watch for his pages and was ashamed of it)."
+    },
+    {
+     "ep": 26,
+     "hint": "Solo confirms the Collector paid him for his pages with the engraved watch; he never wore it. The tracker app shows the Collector's dot right behind the crew in Bulawayo (DANGER). Ep 27 BETRAYAL: Solo seems to hand the Collector something; ep 28 reverses it (he hands back the watch, not the pages)."
     }
    ],
    "payoff_ep": 100,
@@ -712,7 +735,7 @@
   },
   {
    "date": "2026-11-17",
-   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29. Ep 25 was the Sunday CLYDE'S PLAN (not silent); the chapter 3 silent episode is still due in eps 26-29."
+   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29. Ep 25 was the Sunday CLYDE'S PLAN (not silent); the chapter 3 silent episode is still due in eps 26-29. Ep 26 (DANGER) was not silent either; the chapter 3 silent episode is now due in eps 27-29 (ep 28 suggested)."
   }
  ],
  "cliffhanger_plan": {
@@ -725,10 +748,20 @@
   "24": "CONFESSION",
   "25": "REVELATION",
   "26": "DANGER",
-  "27": "BETRAYAL (reversed in 28)",
-  "28": "DECISION",
-  "29": "COUNTDOWN",
-  "30": "TWIST (chapter 3 finale)"
+  "27": "BETRAYAL (reversed in 28): the dot behind them is the Collector's black car; Solo seems to walk over and hand him something. Follow ep 26 vote.",
+  "28": "DECISION (Solo handed back the watch, not the pages; the crew must decide whether to keep trusting him). Also a candidate for the chapter 3 silent episode if 27 isn't.",
+  "29": "COUNTDOWN. VIEWER VOTE EPISODE (A/B/C). Thu 26 Nov: US Thanksgiving special per SPECIALS rule.",
+  "30": "TWIST (chapter 3 finale, Day 10/80, Fri 27 Nov Black Friday)",
+  "31": "ARRIVAL (chapter 4 opener: train from Bulawayo toward Victoria Falls; Mtoriro's family)",
+  "32": "MISTAKE",
+  "33": "CONFESSION",
+  "34": "DANGER (Victoria Falls spray/edge, funny-physical)",
+  "35": "REVELATION (the Prof's trail heats up)",
+  "36": "DECISION",
+  "37": "COUNTDOWN",
+  "38": "BETRAYAL (reversed in 39)",
+  "39": "DECISION. VIEWER VOTE EPISODE (A/B/C)",
+  "40": "TWIST (chapter 4 finale)"
  },
  "open_loops": {
   "how": "See CONTINUITY LEDGER. Each loop: id, question, size (small/medium/long), opened (ep), pays_off_by (ep or range), status open/closed, closed_ep.",
@@ -810,6 +843,16 @@
     "size": "small",
     "opened": 25,
     "pays_off_by": "26 (answer), feeds solo_trust BETRAYAL 27-28",
+    "status": "closed",
+    "closed_ep": 26,
+    "note": "Ep 26: the Collector gave Solo the watch as payment for his pages; why Solo kept it (shame) is left for ep 28."
+   },
+   {
+    "id": "dot_behind_us",
+    "question": "The Collector's dot is right behind them in Bulawayo: who is it and how do they get away? (ep 26 vote Split up / Hide in market)",
+    "size": "small",
+    "opened": 26,
+    "pays_off_by": 27,
     "status": "open"
    }
   ]

@@ -1,0 +1,70 @@
+{
+ "ep": 26,
+ "chapter": "THE COLLECTOR",
+ "title": "THE PRICE OF A WATCH",
+ "lesson": "Don't trade what's priceless for something shiny",
+ "hook": "HE SOLD IT\nFOR A WATCH",
+ "caption": "Ever traded something priceless for something shiny? THE RULE BOOK Ep 26 (Day 6/80): Clyde asked Solo straight up who engraved the watch. The Collector. Solo sold him his pages for it. Clyde: ok but... it IS a nice watch. Score: SOLO 3, US 4. Then Clyde checked the tracker app. POV: you're the villain but Clyde keeps checking your dot. A) Split up B) Hide in the market. A or B? Comment CAST ME to join the story. #liferules #greed #pov #stickman",
+ "secret": "GOLD RING\nRIGHT BEHIND\nCOMMENT 75",
+ "shots": [
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "walk", "face": "r", "mood": "angry"},
+    {"who": "zeke", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "WHO GAVE YOU THIS WATCH? SPEAK.", {"mood": "angry"}],
+    ["zeke", "THE COLLECTOR. FOR MY PAGES."]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "shock"},
+    {"who": "zeke", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "YOU SOLD THE BOOK FOR A WATCH?!", {"mood": "shock"}],
+    ["zeke", "IT WAS A REALLY NICE WATCH."],
+    ["clyde", "...NO CAP, IT IS A NICE WATCH.", {"mood": "smug"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "zeke", "x": 280, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "card": "RULE 26\nSHINY NOW\nSORRY LATER",
+   "lines": [
+    ["cenzo", "NICE WATCH. CAN'T BUY BACK 20 YEARS.", {"mood": "happy"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "prop": "phone",
+   "phone_text": "DOT: 10M",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "happy"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "end": "WHO'S BEHIND US?!",
+   "lines": [
+    ["clyde", "BET. LEMME CHECK WHAT IT'S WORTH."],
+    ["clyde", "WE'RE COOKED. HIS DOT IS BEHIND U-", {"mood": "shock"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "focus"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "TIP: DON'T TURN AROUND, CLYDE."]
+   ]
+  }
+ ],
+ "vote": ["Split up", "Hide in market"]
+}
