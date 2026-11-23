@@ -1,0 +1,79 @@
+{
+ "ep": 27,
+ "chapter": "THE COLLECTOR",
+ "title": "THE EMOTIONAL MANGO",
+ "lesson": "Shopping to calm your stress only spends your money",
+ "hook": "HIDING OR\nSHOPPING?",
+ "caption": "Stress shopping when life gets scary? THE RULE BOOK Ep 27 (Day 7/80): Hiding from the Collector in a Bulawayo market, Clyde bought a disguise hat, shades and one emotional mango. Solo: hiding is free, you paid ten. Score: SOLO 4, US 4. Then Solo walked straight to the Collector's black car... Did Solo just sell us out? A) He sold us B) He has a plan. A or B? Save this rule for later. #liferules #moneyhabits #whatispentinaday #stickman",
+ "secret": "SOLO'S HAND\nWASN'T EMPTY\nCOMMENT 74",
+ "shots": [
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "walk", "face": "r", "mood": "smug"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "angry"}
+   ],
+   "lines": [
+    ["clyde", "I'M NOT SHOPPING. I'M HIDING."],
+    ["cenzo", "FROM THE COLLECTOR. WITH FOUR BAGS?", {"mood": "angry"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "prop": "phone",
+   "phone_text": "SPENT: 10",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "HAT 5. SHADES 3. EMOTIONAL MANGO 2."]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 280, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "zeke", "x": 740, "pose": "walk", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["zeke", "HIDING IS FREE. YOU PAID TEN.", {"mood": "happy"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 280, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "card": "RULE 27\nSHOP STRESSED\nSTAY STRESSED",
+   "lines": [
+    ["cenzo", "THE STRESS STAYS. THE MANGO DOESN'T.", {"mood": "happy"}],
+    ["clyde", "BET. BUYING A BACKUP MANGO."]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "end": "SOLO SOLD US?!",
+   "lines": [
+    ["cenzo", "WAIT. WHERE'S SOLO?", {"mood": "focus"}],
+    ["clyde", "AT THE BLACK CAR. HANDING HIM TH-", {"mood": "shock"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "CLYDE... ARE YOU SHOPPING AGAIN?"]
+   ]
+  }
+ ],
+ "vote": ["He sold us", "He has a plan"]
+}

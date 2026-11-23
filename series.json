@@ -517,6 +517,25 @@
    "punchline_technique": "REVERSAL (the polished, smart rival is the one who failed the rule) + CALLBACK to ep 20's 20 years + BUTTON (Clyde checks the watch's price, which triggers the cliffhanger)",
    "no_votes_note": "Ep 25 not yet published when ep 26 was made; story followed option A (ask Solo now).",
    "trend": "POV: you're the villain but... (caption)"
+  },
+  {
+   "ep": 27,
+   "date": "2026-11-24",
+   "time": "20:00",
+   "set": "bulawayo",
+   "rule": "Shop stressed, stay stressed (punchline: 'The stress stays. The mango doesn't.')",
+   "cliffhanger": "Day 7/80. Hiding from the Collector's dot in a Bulawayo market (ep 26 vote B chosen for the story; no votes yet), Clyde stress-shops: hat 5, shades 3, emotional mango 2. Solo: 'Hiding is free. You paid ten.' (score SOLO 4, US 4). Cenzo: 'The stress stays. The mango doesn't.' Button: Clyde buys a backup mango. Then Cenzo notices Solo is gone; Clyde: 'At the black car. Handing him th-' (cut). Ep 28 (DECISION) reverses it: Solo handed the Collector back the engraved watch, not the pages; the crew decides whether to keep trusting him; follow ep 27's A/B vote (He sold us / He has a plan).",
+   "structure": "'what I spent in a day' list gag (phone notes prop) in a market hide-out, sentence loop (outro 'CLYDE... ARE YOU SHOPPING AGAIN?' -> hook 'HIDING OR SHOPPING?' -> 'I'M NOT SHOPPING. I'M HIDING.')",
+   "cliffhanger_type": "BETRAYAL",
+   "secret": "SOLO'S HAND / WASN'T EMPTY / COMMENT 74",
+   "vote": [
+    "He sold us",
+    "He has a plan"
+   ],
+   "solo_score": "SOLO 4, US 4 (Solo roasts Clyde's stress shopping)",
+   "punchline_technique": "CALLBACK (emotional mango) + MISDIRECT + BUTTON (Clyde buys a backup mango)",
+   "no_votes_note": "Ep 26 not yet published when ep 27 was made; story followed option B (hide in the market).",
+   "trend": "What I spent in a day (joke_bank)"
   }
  ],
  "masterplan": {
@@ -715,6 +734,10 @@
     {
      "ep": 26,
      "hint": "Solo confirms the Collector paid him for his pages with the engraved watch; he never wore it. The tracker app shows the Collector's dot right behind the crew in Bulawayo (DANGER). Ep 27 BETRAYAL: Solo seems to hand the Collector something; ep 28 reverses it (he hands back the watch, not the pages)."
+    },
+    {
+     "ep": 27,
+     "hint": "Secret frame 'SOLO'S HAND WASN'T EMPTY': Solo walks to the Collector's black car holding something small (the engraved watch, not the pages). Pay off in ep 28: he gave the watch back, saying 'I'm not for sale anymore'."
     }
    ],
    "payoff_ep": 100,
@@ -735,7 +758,7 @@
   },
   {
    "date": "2026-11-17",
-   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29. Ep 25 was the Sunday CLYDE'S PLAN (not silent); the chapter 3 silent episode is still due in eps 26-29. Ep 26 (DANGER) was not silent either; the chapter 3 silent episode is now due in eps 27-29 (ep 28 suggested)."
+   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29. Ep 25 was the Sunday CLYDE'S PLAN (not silent); the chapter 3 silent episode is still due in eps 26-29. Ep 26 (DANGER) was not silent either; the chapter 3 silent episode is now due in eps 27-29 (ep 28 suggested). Ep 27 (BETRAYAL, list gag) was not silent; the chapter 3 silent episode is now due in ep 28 or 29."
   }
  ],
  "cliffhanger_plan": {
@@ -853,6 +876,16 @@
     "size": "small",
     "opened": 26,
     "pays_off_by": 27,
+    "status": "closed",
+    "closed_ep": 27,
+    "note": "Ep 27: the dot was the Collector's black car; they hid in the market."
+   },
+   {
+    "id": "solo_at_the_car",
+    "question": "What did Solo hand the Collector at the black car? Did he sell the crew out? (ep 27 vote He sold us / He has a plan)",
+    "size": "small",
+    "opened": 27,
+    "pays_off_by": 28,
     "status": "open"
    }
   ]

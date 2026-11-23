@@ -6,7 +6,7 @@
  "cast": [],
  "ideas": [],
  "do_not_use": [],
- "last_read": "2026-11-22 08:50 CAT: Windsor returned 1 comment (already seen), no new comments; ep 25 not yet published (tonight 20:00), no votes",
+ "last_read": "2026-11-23 08:40 CAT: Windsor returned 1 comment (already seen), no new comments; ep 26 not yet published (tonight 20:00), no votes",
  "votes": {
   "19": {
    "options": [
@@ -64,6 +64,14 @@
    ],
    "tally": "no votes (ep 25 not yet published when ep 26 was made)",
    "used": "A (Clyde asked Solo straight up), chosen as best for the story"
+  },
+  "26": {
+   "options": [
+    "Split up",
+    "Hide in market"
+   ],
+   "tally": "no votes (ep 26 not yet published when ep 27 was made)",
+   "used": "B (they hid in the market), chosen as best for the story"
   }
  }
 }
