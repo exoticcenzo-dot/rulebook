@@ -8,14 +8,85 @@
  "secret": "SOLO'S HAND\nWASN'T EMPTY\nCOMMENT 74",
  "shots": [
   {
-   "set": "bulawayo",
+   "set": "station",
    "cast": [
-    {"who": "clyde", "x": 300, "pose": "walk", "face": "r", "mood": "smug"},
-    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "angry"}
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "walk",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 560,
+     "pose": "walk",
+     "face": "r",
+     "mood": "focus"
+    }
    ],
    "lines": [
-    ["clyde", "I'M NOT SHOPPING. I'M HIDING."],
-    ["cenzo", "FROM THE COLLECTOR. WITH FOUR BAGS?", {"mood": "angry"}]
+    [
+     "clyde",
+     "(A BLACK CAR ROLLS PAST. SLOWLY.)",
+     {
+      "beat": 2.2,
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "walk",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "angry"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "I'M NOT SHOPPING. I'M HIDING."
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "angry"
+    },
+    {
+     "who": "clyde",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "FROM THE COLLECTOR. WITH FOUR BAGS?",
+     {
+      "mood": "angry"
+     }
+    ]
    ]
   },
   {
@@ -23,57 +94,161 @@
    "prop": "phone",
    "phone_text": "SPENT: 10",
    "cast": [
-    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
-    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+    {
+     "who": "clyde",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    }
    ],
    "lines": [
-    ["clyde", "HAT 5. SHADES 3. EMOTIONAL MANGO 2."]
+    [
+     "clyde",
+     "HAT 5. SHADES 3. EMOTIONAL MANGO 2."
+    ]
    ]
   },
   {
    "set": "bulawayo",
    "cast": [
-    {"who": "clyde", "x": 280, "pose": "stand", "face": "r", "mood": "neutral"},
-    {"who": "zeke", "x": 740, "pose": "walk", "face": "l", "mood": "smug"}
+    {
+     "who": "clyde",
+     "x": 280,
+     "pose": "stand",
+     "face": "r",
+     "mood": "neutral"
+    },
+    {
+     "who": "zeke",
+     "x": 740,
+     "pose": "walk",
+     "face": "l",
+     "mood": "smug"
+    }
    ],
    "lines": [
-    ["zeke", "HIDING IS FREE. YOU PAID TEN.", {"mood": "happy"}]
+    [
+     "zeke",
+     "HIDING IS FREE. YOU PAID TEN.",
+     {
+      "mood": "happy"
+     }
+    ]
    ]
   },
   {
    "set": "bulawayo",
-   "cast": [
-    {"who": "clyde", "x": 280, "pose": "stand", "face": "r", "mood": "neutral"},
-    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
-   ],
    "card": "RULE 27\nSHOP STRESSED\nSTAY STRESSED",
-   "lines": [
-    ["cenzo", "THE STRESS STAYS. THE MANGO DOESN'T.", {"mood": "happy"}],
-    ["clyde", "BET. BUYING A BACKUP MANGO."]
-   ]
-  },
-  {
-   "set": "bulawayo",
    "cast": [
-    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
-    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "focus"}
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
    ],
-   "end": "SOLO SOLD US?!",
    "lines": [
-    ["cenzo", "WAIT. WHERE'S SOLO?", {"mood": "focus"}],
-    ["clyde", "AT THE BLACK CAR. HANDING HIM TH-", {"mood": "shock"}]
+    [
+     "cenzo",
+     "THE STRESS STAYS. THE MANGO DOESN'T.",
+     {
+      "mood": "happy"
+     }
+    ]
    ]
   },
   {
    "set": "bulawayo",
    "cast": [
-    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+    {
+     "who": "clyde",
+     "x": 520,
+     "pose": "walk",
+     "face": "r",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "BET. BUYING A BACKUP MANGO."
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "clyde",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "WAIT. WHERE'S SOLO?",
+     {
+      "mood": "focus"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "end": "SOLO SOLD US?!\nA OR B?",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 520,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "AT THE BLACK CAR. HANDING HIM TH-",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
    ],
    "outro": true,
    "lines": [
-    ["cenzo", "CLYDE... ARE YOU SHOPPING AGAIN?"]
+    [
+     "cenzo",
+     "CLYDE... ARE YOU SHOPPING AGAIN?"
+    ]
    ]
   }
  ],
- "vote": ["He sold us", "He has a plan"]
+ "vote": [
+  "He sold us",
+  "He has a plan"
+ ]
 }
