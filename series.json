@@ -536,6 +536,25 @@
    "punchline_technique": "CALLBACK (emotional mango) + MISDIRECT + BUTTON (Clyde buys a backup mango)",
    "no_votes_note": "Ep 26 not yet published when ep 27 was made; story followed option B (hide in the market).",
    "trend": "What I spent in a day (joke_bank)"
+  },
+  {
+   "ep": 28,
+   "date": "2026-11-25",
+   "time": "20:00",
+   "set": "bulawayo",
+   "rule": "Half a story is a rumor (card: 'HALF A STORY / IS A RUMOR'; button: Clyde had already told the group chat of 40)",
+   "cliffhanger": "Day 8/80. SILENT EPISODE (chapter 3): BETRAYAL reversed. Solo walked to the Collector's black car and gave back the engraved watch; the pages never left his pocket (ep 27 vote: no votes, B 'He has a plan' chosen for the story). Clyde offers Solo his emotional mango (callback ep 27); Solo takes it, no eye contact (score SOLO 5, US 4). Button: Clyde already told the group chat 'Solo sold us'. Solo holds out his hand; cut as Cenzo looks at it. Ep 29 (COUNTDOWN, viewer vote A/B/C, Thanksgiving) opens on the handshake decision; follow ep 28's A/B vote (Shake his hand / Walk away).",
+   "structure": "SILENT gag: one spoken line (Clyde's opening) plus the rule card; everything else silent 'beat' action captions, phone props and faces",
+   "cliffhanger_type": "DECISION",
+   "secret": "SOLO KEPT / THE BOX / COMMENT 73",
+   "vote": [
+    "Shake his hand",
+    "Walk away"
+   ],
+   "solo_score": "SOLO 5, US 4 (Solo outplayed the Collector)",
+   "punchline_technique": "MISDIRECT (betrayal set-up) + BUTTON (group chat)",
+   "no_votes_note": "Ep 27 not yet published when ep 28 was made; story followed option B (he has a plan).",
+   "silent": true
   }
  ],
  "masterplan": {
@@ -738,6 +757,10 @@
     {
      "ep": 27,
      "hint": "Secret frame 'SOLO'S HAND WASN'T EMPTY': Solo walks to the Collector's black car holding something small (the engraved watch, not the pages). Pay off in ep 28: he gave the watch back, saying 'I'm not for sale anymore'."
+    },
+    {
+     "ep": 28,
+     "hint": "Secret frame 'SOLO KEPT / THE BOX': Solo returned the watch but kept its box; inside the lid is 'LOT 80' (the Collector's auction paddle number). Pay off in eps 29-30."
     }
    ],
    "payoff_ep": 100,
@@ -758,7 +781,7 @@
   },
   {
    "date": "2026-11-17",
-   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29. Ep 25 was the Sunday CLYDE'S PLAN (not silent); the chapter 3 silent episode is still due in eps 26-29. Ep 26 (DANGER) was not silent either; the chapter 3 silent episode is now due in eps 27-29 (ep 28 suggested). Ep 27 (BETRAYAL, list gag) was not silent; the chapter 3 silent episode is now due in ep 28 or 29."
+   "note": "Chapter 2 (eps 11-20) had no silent episode; chapter 3 must include one (CREATOR PLAYBOOK 3). Ep 24 was not silent (renderer has no silent mode; shots need a line); the chapter 3 silent episode is still due in eps 25-29. Ep 25 was the Sunday CLYDE'S PLAN (not silent); the chapter 3 silent episode is still due in eps 26-29. Ep 26 (DANGER) was not silent either; the chapter 3 silent episode is now due in eps 27-29 (ep 28 suggested). Ep 27 (BETRAYAL, list gag) was not silent; the chapter 3 silent episode is now due in ep 28 or 29. Ep 28 was the chapter 3 silent episode: renderer now supports silent beats (line option {\"beat\": seconds} = on-screen action caption, no voice)."
   }
  ],
  "cliffhanger_plan": {
@@ -886,6 +909,24 @@
     "size": "small",
     "opened": 27,
     "pays_off_by": 28,
+    "status": "closed",
+    "closed_ep": 28,
+    "note": "Ep 28: he gave the watch back; pages still in his pocket."
+   },
+   {
+    "id": "handshake",
+    "question": "Do they shake Solo's hand and trust him again? (ep 28 vote Shake his hand / Walk away)",
+    "size": "small",
+    "opened": 28,
+    "pays_off_by": 29,
+    "status": "open"
+   },
+   {
+    "id": "the_box",
+    "question": "Solo gave back the watch but kept its box: why, and what is inside the lid?",
+    "size": "medium",
+    "opened": 28,
+    "pays_off_by": "29-30 (inside the lid: 'LOT 80', the Collector's auction paddle number; feeds the ch 3 finale TWIST)",
     "status": "open"
    }
   ]

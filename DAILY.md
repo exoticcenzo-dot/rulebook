@@ -52,3 +52,6 @@ Replaces CapCut/Canva/Picsart-style polish with code, no credits: warm colour gr
 - `open_loops` in series.json is the continuity ledger: cliffhangers come from it; close loops when paid off (CONTINUITY LEDGER rule). Callback to an earlier episode about every 3rd ep.
 - Optional script field `shoutout`: {"user": "...", "text": "..."} shows COMMENT OF THE DAY on the outro (COMMENT OF THE DAY rule).
 - Holiday specials (US Thanksgiving 26 Nov, Black Friday 27 Nov, Christmas, New Year) and a CLYDE TAKEOVER caption once a chapter (SPECIALS AND TAKEOVERS rule).
+
+## Silent beats (from Episode 28)
+For the chapter's silent episode, a line can take `{"beat": seconds}` (e.g. `["zeke", "(HOLDS OUT HIS HAND)", {"beat": 1.4, "mood": "neutral"}]`): no voice, the text shows as an on-screen action caption in the speaker's colour, and the mood still drives faces, punch-ins and SFX. A shot may have `"lines": []` when it only carries the rule `card`.

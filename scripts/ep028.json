@@ -1,0 +1,91 @@
+{
+ "ep": 28,
+ "chapter": "THE COLLECTOR",
+ "title": "THE SILENT HANDSHAKE",
+ "lesson": "Don't judge a friend off half the story",
+ "hook": "SOLD US OR\nSAVED US?",
+ "caption": "Ever judged a friend off half the story? THE RULE BOOK Ep 28 (Day 8/80), the silent episode: Solo walked to the Collector's black car... and gave the watch BACK. The pages never left his pocket. Clyde had already told the group chat. Score: SOLO 5, US 4. Now Solo wants a handshake. Would you trust him again? A) Shake his hand B) Walk away. A or B? Drop a rule the book should have. #liferules #friendship #stickman",
+ "secret": "SOLO KEPT\nTHE BOX\nCOMMENT 73",
+ "shots": [
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "walk", "face": "r", "mood": "angry"},
+    {"who": "zeke", "x": 740, "pose": "walk", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "YOU SOLD US OUT. FOR A WATCH?!", {"mood": "angry"}],
+    ["zeke", "(SHOWS HIS EMPTY WRIST)", {"beat": 1.3, "mood": "smug"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "prop": "phone",
+   "phone_text": "WATCH: GONE",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "zeke", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "(CHECKS THE TRACKER APP)", {"beat": 1.3, "mood": "focus"}],
+    ["zeke", "(PATS POCKET: PAGES. ALL OF THEM.)", {"beat": 1.5, "mood": "happy"}],
+    ["clyde", "(JAW ON THE FLOOR)", {"beat": 1.1, "mood": "shock"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "zeke", "x": 740, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "lines": [
+    ["clyde", "(OFFERS SOLO HIS EMOTIONAL MANGO)", {"beat": 1.4, "mood": "neutral"}],
+    ["zeke", "(TAKES IT. NO EYE CONTACT.)", {"beat": 1.2, "mood": "smug"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "clyde", "x": 280, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 720, "pose": "stand", "face": "l", "mood": "smug"}
+   ],
+   "card": "RULE 28\nHALF A STORY\nIS A RUMOR",
+   "lines": []
+  },
+  {
+   "set": "bulawayo",
+   "prop": "phone",
+   "phone_text": "SENT TO 40",
+   "cast": [
+    {"who": "clyde", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "neutral"}
+   ],
+   "lines": [
+    ["clyde", "(ALREADY TOLD THE GROUP CHAT)", {"beat": 1.5, "mood": "shock"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "zeke", "x": 300, "pose": "stand", "face": "r", "mood": "neutral"},
+    {"who": "cenzo", "x": 740, "pose": "stand", "face": "l", "mood": "focus"}
+   ],
+   "end": "TRUST SOLO AGAIN?",
+   "lines": [
+    ["zeke", "(HOLDS OUT HIS HAND)", {"beat": 1.4, "mood": "neutral"}],
+    ["cenzo", "(LOOKS AT THE HAND...)", {"beat": 1.0, "mood": "focus"}]
+   ]
+  },
+  {
+   "set": "bulawayo",
+   "cast": [
+    {"who": "cenzo", "x": 520, "pose": "stand", "face": "r", "mood": "happy"}
+   ],
+   "outro": true,
+   "lines": [
+    ["cenzo", "(SAID ZERO WORDS TODAY. STILL RIGHT.)", {"beat": 1.6, "mood": "happy"}]
+   ]
+  }
+ ],
+ "vote": ["Shake his hand", "Walk away"]
+}

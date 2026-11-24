@@ -922,9 +922,12 @@ class Show:
         for sh in s.e["shots"]:
             a = t; lines = []
             for ln in sh["lines"]:
-                x = V.say(ln[0], ln[1]); au = len(x) / 44100
+                # silent beat (silent episodes): {"beat": seconds} shows the text as an on-screen action caption, no voice
+                bt = ln[2].get("beat") if len(ln) > 2 and isinstance(ln[2], dict) else None
+                x = np.zeros(int(float(bt) * 44100), np.float32) if bt else V.say(ln[0], ln[1]); au = len(x) / 44100
                 d = au + .16; s.info[t] = (au, V.envelope(x))
-                s.sp.append((t + .08, x)); lines.append((t, t + d, ln)); t += d
+                if not bt: s.sp.append((t + .08, x))
+                lines.append((t, t + d, ln)); t += d
             card = end = None
             if sh.get("card"):
                 x = V.say("cenzo", sh["card"]); d = max(1.6, len(x) / 44100 + .4)
