@@ -408,8 +408,8 @@ def trainnight():
         rect(i, x - 110, FLOOR - 560, x + 110, FLOOR - 50, (34, 70, 120)); rect(i, x - 110, FLOOR - 172, x + 130, FLOOR - 60, (46, 90, 140))
     return i, None
 
-def station():
-    """Harare railway station concourse: arches onto the platform, departures board, lockers, ticket kiosk."""
+def station(city="HARARE"):
+    """Railway station concourse (Harare by default; set "bulawayo_station" for Bulawayo): arches onto the platform, departures board, lockers, ticket kiosk."""
     i = base((150, 190, 215), (120, 160, 190))
     rect(i, 0, 0, W, 300, (70, 86, 104))
     for x in range(0, W, 180): cv2.line(i, (x, 0), (x + 90, 300), (90, 106, 124), 6, cv2.LINE_AA)
@@ -420,11 +420,11 @@ def station():
         rect(i, ax, 940, ax + 260, 958, (40, 120, 70))
         rect(i, ax, 1000, ax + 260, 1010, (110, 110, 118))
     for px_ in (20, 380, 740, 1060): rect(i, px_ - 20, 420, px_ + 20, FLOOR, (190, 205, 215)); rect(i, px_ - 28, 420, px_ + 28, 446, (160, 175, 188))
-    label(i, "HARARE STATION", 390, 500, 1.3, (40, 40, 44), (230, 235, 240))
+    label(i, city + " STATION", 390, 500, 1.3, (40, 40, 44), (230, 235, 240))
     circle(i, (930, 360), 50, (240, 240, 240)); cv2.circle(i, (930, 360), 50, (40, 40, 44), 5, cv2.LINE_AA)
     cv2.line(i, (930, 360), (930, 326), (30, 30, 34), 5, cv2.LINE_AA); cv2.line(i, (930, 360), (954, 372), (30, 30, 34), 5, cv2.LINE_AA)
     rect(i, 60, 470, 360, 650, (30, 30, 34))
-    for k, (dst, tm) in enumerate((("BULAWAYO", "20:00"), ("MUTARE", "21:30"), ("VIC FALLS", "19:00"))):
+    for k, (dst, tm) in enumerate(((("HARARE" if city == "BULAWAYO" else "BULAWAYO"), "20:00"), ("MUTARE", "21:30"), ("VIC FALLS", "19:00"))):
         label(i, dst, 76, 520 + k * 50, .75, (60, 200, 250)); label(i, tm, 270, 520 + k * 50, .75, (60, 200, 250))
     lx = 560
     for k in range(8):
@@ -443,6 +443,7 @@ def station():
     return i, None
 
 BUILDERS.update(pariscafe=pariscafe, station=station, alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
+BUILDERS["bulawayo_station"] = lambda: station("BULAWAYO")
 
 def grade_bg(img):
     """Push backgrounds back so the white-headed cast pops (WCAG-style 3:1 separation):
@@ -588,15 +589,15 @@ def extras(img, sh, t, ep):
     """Everyday people who belong in this place; a different crowd each episode."""
     name = sh["set"]; shot_s = abs(hash(("x", name, ep, sh.get("card", "")))) % 100000
     r = random.Random(ep * 97 + shot_s)
-    outdoors = name in ("tokyo", "paris", "pariscafe", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station")
+    outdoors = name in ("tokyo", "paris", "pariscafe", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station", "bulawayo_station")
     want = sh.get("crowd", 0)
     style = LOCAL_STYLE.get(name, CLOTH)
-    pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo", "alley", "station") else SKIN + SKIN[3:]), r.choice(style), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
+    pick = lambda: (r.choice(SKIN if name in ("harare", "bulawayo", "alley", "station", "bulawayo_station") else SKIN + SKIN[3:]), r.choice(style), r.choice(CLOTH[5:8] + [(70, 60, 45)]))
     if outdoors:
         # crowd reacts to big moments: walkers freeze and turn toward the action, a few film it on their phones
         rt = REACT.get("t"); rx = REACT.get("x", 540)
         reacting = rt is not None and 0 <= t - rt < 1.1
-        for k in range(want or (r.randint(14, 22) if name in ("harare", "bulawayo", "station") else r.randint(12, 18))):
+        for k in range(want or (r.randint(14, 22) if name in ("harare", "bulawayo", "station", "bulawayo_station") else r.randint(12, 18))):
             skin, shirt, pants = pick(); layer = r.random()
             y = FLOOR - 22 - layer * 34; sc = .78 + (1 - layer) * .34; spd = r.uniform(26, 62) * r.choice((-1, 1)); x0 = r.uniform(0, W + 200)
             kind = r.choice(("walk", "walk", "walk", "stand")); hat = r.choice((None, None, r.choice(CLOTH))) if name != "alley" else (28, 28, 34)
@@ -656,7 +657,7 @@ class Cam2:
 CURRENT_EP = 1
 REACT = {}
 SIGNS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "signs.json")))
-OUTDOOR_SETS = ("tokyo", "paris", "pariscafe", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station")
+OUTDOOR_SETS = ("tokyo", "paris", "pariscafe", "dubai", "harare", "bulawayo", "port", "alley", "villa", "station", "bulawayo_station")
 
 def pun_sign(img, name, ep):
     """Running background gag: a sign whose joke changes every episode (Bob's Burgers 'store next door' style)."""
@@ -678,7 +679,7 @@ def pun_sign(img, name, ep):
 # Regulars: the same background people in the same places every episode (Simpsons-style), ready to be promoted later
 REGULARS = {
     "harare": [("tout", 160), ("aunty", 760)], "bulawayo": [("aunty", 220), ("vendor", 640)],
-    "station": [("tout", 330), ("vendor", 980)], "paris": [("baguette", 260)], "pariscafe": [("baguette", 980)],
+    "station": [("tout", 330), ("vendor", 980)], "bulawayo_station": [("tout", 330), ("vendor", 980)], "paris": [("baguette", 260)], "pariscafe": [("baguette", 980)],
 }
 def regular(img, kind, x, t, ep):
     y = FLOOR - 28
@@ -1165,7 +1166,9 @@ class Show:
     def words(s, img, cur, t):
         """Trending 2-3 word caption chunks; the word being spoken is coloured and pops."""
         a, b, ln = cur
-        ws = ln[1].split(); au = s.info.get(a, (b - a - .16, None))[0]
+        beat = len(ln) > 2 and isinstance(ln[2], dict) and ln[2].get("beat")
+        txt = ln[1].replace("(", "").replace(")", "").strip() if beat else ln[1]  # silent action lines: no brackets on screen
+        ws = txt.split(); au = s.info.get(a, (b - a - .16, None))[0]
         wt = [len(w_) + 2 for w_ in ws]; tot = sum(wt); acc = .08; k = 0
         for k, w_ in enumerate(wt):
             acc += au * w_ / tot
@@ -1178,6 +1181,7 @@ class Show:
         else:
             col = s.WORD_COLS[(hash_str(ln[1]) + s.n) % len(s.WORD_COLS)]
         if max(col) - min(col) < 25: col = s.WORD_COLS[1]
+        if beat: col = (235, 235, 235)  # action captions are neutral white, not a speaker's colour
         # group words into chunks of up to 3 words / 16 characters
         chunks, cu = [], []
         for i_, w_ in enumerate(ws):
