@@ -1,0 +1,204 @@
+{
+ "ep": 29,
+ "chapter": "THE COLLECTOR",
+ "title": "THANKFUL FOR A SPY",
+ "lesson": "Be thankful for people, not things",
+ "hook": "THANKFUL\nFOR WHAT?",
+ "caption": "Thankful for your stuff more than your people? THE RULE BOOK Ep 29 (Day 9/80), Thanksgiving special: Solo got the handshake AND a plate. Clyde was thankful for his watch... the tracker. Then Clyde spotted the watch box in Solo's bag. Score: SOLO 5, US 5. Inside the lid: LOT 80. Sold at midnight. It's 11:55. What should the crew do? A) Go to auction B) Call the Prof C) Let it go. Comment A, B or C. Send this to your Clyde. Comment CAST ME to join the story. #thanksgiving #liferules #gratitude #stickman",
+ "secret": "INSIDE THE LID\nLOT 80\nCOMMENT 72",
+ "shots": [
+  {
+   "set": "home",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 280,
+     "pose": "eat",
+     "face": "r",
+     "mood": "angry"
+    },
+    {
+     "who": "zeke",
+     "x": 560,
+     "pose": "eat",
+     "face": "l",
+     "mood": "smug"
+    },
+    {
+     "who": "cenzo",
+     "x": 800,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "HE SHOOK YOUR HAND. NOW HE EATS?!",
+     {
+      "mood": "angry"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "eat",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "zeke",
+     "x": 740,
+     "pose": "eat",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "THANKS? I'M THANKFUL FOR MY WATCH.",
+     {
+      "mood": "happy"
+     }
+    ],
+    [
+     "zeke",
+     "THE TRACKER? I GAVE IT BACK.",
+     {
+      "mood": "smug"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "prop": "book",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 460,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "zeke",
+     "x": 780,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "THEN WHY'S ITS BOX IN YOUR BAG?",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "card": "RULE 29\nTHANK PEOPLE\nNOT THINGS",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "THANK PEOPLE. YOUR WATCH WAS A SPY.",
+     {
+      "mood": "happy"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "prop": "book",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 460,
+     "pose": "stand",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "zeke",
+     "x": 780,
+     "pose": "stand",
+     "face": "l",
+     "mood": "focus"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "BET. THANK YOU, BOX."
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "end": "LOT 80: WHAT NOW?",
+   "cast": [
+    {
+     "who": "zeke",
+     "x": 520,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "zeke",
+     "THE LID. LOT 80. SOLD AT MIDNI-",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "home",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "EISH. GRAB THE CHICKEN. WE RUN."
+    ]
+   ]
+  }
+ ],
+ "vote": [
+  "Go to auction",
+  "Call the Prof",
+  "Let it go"
+ ]
+}

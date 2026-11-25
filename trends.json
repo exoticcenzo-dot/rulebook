@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-21",
+ "checked": "2026-11-25",
  "note": "Use a trend's format and joke inside the story. Life-rule lessons only from Ep 16. Do not put copyrighted songs in the video file.",
  "sources": [
   "https://newengen.com/insights/tiktok-trends/",
@@ -106,7 +106,7 @@
   "H4UNT - baldgirl"
  ],
  "joke_bank": {
-  "checked": "2026-11-21",
+  "checked": "2026-11-25",
   "how": "Ready jokes for eps 25-30 (Zimbabwe, the Collector chapter). Each line under 50 characters; rewrite freely.",
   "jokes": [
    {
@@ -161,6 +161,24 @@
      "CLYDE: DAY 6. BUS 2. SNACKS 3.",
      "CLYDE: 'PREMIUM' TRACKER APP: 15.",
      "CLYDE: I PAID TO WATCH A DOT."
+    ]
+   },
+   {
+    "trend": "He wanna pay full price",
+    "rule": "A deal on what you don't need is still spending",
+    "lines": [
+     "CLYDE: 70% OFF A TREADMILL!",
+     "CENZO: YOU HAVE NO ROOM.",
+     "CLYDE: IT'S A COAT RACK. AT FULL PRICE ENERGY."
+    ]
+   },
+   {
+    "trend": "POV: you're the villain but...",
+    "rule": "Don't brag before it's done",
+    "lines": [
+     "COLLECTOR (PHONE): POV: I ALREADY WON—",
+     "(CALL DROPS)",
+     "CLYDE: ZESA SAID NO."
     ]
    }
   ]
@@ -715,6 +733,51 @@
    "Same Spot Years Apart (Pink Floyd song)",
    "You Paid Me No Mind (celebrity meme)",
    "You're Under Arrest (ILLIT song)"
+  ]
+ },
+ "weekly_2026_11_25": {
+  "sources": [
+   "https://postdom.com/blog/tiktok-trends",
+   "https://virlo.ai/trends"
+  ],
+  "formats": [
+   {
+    "name": "He wanna pay full price",
+    "how": "Someone happily pays more than expected (rising fast, +24000%)",
+    "fit": "Black Friday ep 30: Clyde refuses the discount, or pays full price for a 'deal'. Do NOT use the SNL audio in the video; joke format only."
+   },
+   {
+    "name": "We felt the mog across the gym",
+    "how": "Being outclassed from across the room",
+    "fit": "Gym episode in ch 4: Cenzo's glow-up outclasses Clyde mid-rep; spoken as our own line, no audio clip"
+   },
+   {
+    "name": "POV: you're the villain but... (still rising)",
+    "how": "Villain monologue interrupted by a mishap",
+    "fit": "The Collector's phone call where his Wi-Fi drops"
+   },
+   {
+    "name": "In this town everybody goes out partying except me (fresh)",
+    "how": "Everyone out, you doing your niche thing",
+    "fit": "Crew guarding pages on a Friday night"
+   },
+   {
+    "name": "Expectation vs reality / Day 1 vs later (evergreen hooks)",
+    "how": "Split comparison",
+    "fit": "Day 1/80 vs Day 10/80 recap-free contrast in the ch 3 finale"
+   },
+   {
+    "name": "Christmas music is allowed now (from Nov 25-27)",
+    "how": "First day of festive season",
+    "fit": "From December: aunties and festive pressure; never use the song"
+   }
+  ],
+  "skipped": [
+   "My moon my man (copyrighted song)",
+   "Boom Clap confetti (copyrighted song)",
+   "I was just a normal girl (SZA song)",
+   "GTA 6 loading screen (copyrighted game)",
+   "Last Christmas edit (copyrighted song)"
   ]
  }
 }
