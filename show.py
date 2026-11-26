@@ -445,6 +445,52 @@ def station(city="HARARE"):
 BUILDERS.update(pariscafe=pariscafe, station=station, alley=alley, villa=villa, harare=harare, bulawayo=bulawayo, train=train, trainnight=trainnight, ship=ship, home=home)
 BUILDERS["bulawayo_station"] = lambda: station("BULAWAYO")
 
+def auction():
+    """Bulawayo auction house at midnight (Ep 30): wood panels, MIDNIGHT SALE banner, clock at 11:59,
+    LOT 80 easel, auctioneer's podium with gavel, rows of bidders seen from behind; one bidder (the Collector,
+    never seen fully) holds paddle 80 with a gold ring on his hand."""
+    i = base((40, 34, 70), (26, 22, 44))
+    for x in range(0, W, 180):
+        rect(i, x + 8, 330, x + 172, FLOOR - 260, (46, 40, 84)); rect(i, x + 20, 342, x + 160, FLOOR - 272, (54, 48, 96))
+    rect(i, 0, 300, W, 330, (30, 70, 130))
+    rect(i, 150, 120, 930, 240, (30, 30, 120)); rect(i, 160, 130, 920, 230, (40, 40, 150))
+    label(i, "BULAWAYO AUCTION HOUSE", 196, 176, 1.05, (120, 215, 245))
+    label(i, "MIDNIGHT SALE", 380, 218, .8, (235, 235, 240))
+    circle(i, (540, 400), 52, (235, 238, 240)); cv2.circle(i, (540, 400), 52, (40, 80, 140), 6, cv2.LINE_AA)
+    cv2.line(i, (540, 400), (530, 360), (30, 30, 34), 6, cv2.LINE_AA); cv2.line(i, (540, 400), (535, 354), (30, 30, 200), 3, cv2.LINE_AA)
+    label(i, "11:59", 498, 488, .8, (235, 235, 240))
+    # LOT 80 easel (left)
+    cv2.line(i, (110, FLOOR - 300), (70, FLOOR - 40), (40, 70, 110), 10, cv2.LINE_AA); cv2.line(i, (250, FLOOR - 300), (290, FLOOR - 40), (40, 70, 110), 10, cv2.LINE_AA)
+    rect(i, 50, 560, 310, 880, (40, 70, 110)); rect(i, 62, 572, 298, 868, (215, 232, 240))
+    label(i, "LOT 80", 104, 630, 1.1, (40, 40, 180))
+    rect(i, 110, 660, 250, 840, (170, 215, 235)); rect(i, 116, 666, 244, 834, (195, 230, 245))
+    for k in range(6): rect(i, 128, 690 + k * 22, 232 - (k % 3) * 18, 698 + k * 22, (110, 130, 150))
+    label(i, "?", 166, 820, .9, (40, 40, 180))
+    # podium + gavel (right, under the poster)
+    rect(i, 780, FLOOR - 330, 1030, FLOOR - 26, (40, 70, 110)); rect(i, 760, FLOOR - 350, 1050, FLOOR - 320, (30, 55, 90))
+    rect(i, 800, FLOOR - 300, 1010, FLOOR - 220, (60, 110, 160)); label(i, "SOLD", 852, FLOOR - 245, .9, (120, 215, 245))
+    cv2.line(i, (840, FLOOR - 362), (900, FLOOR - 380), (50, 90, 140), 9, cv2.LINE_AA); rect(i, 892, FLOOR - 398, 930, FLOOR - 366, (40, 75, 120))
+    i[FLOOR - 26:] = base((60, 70, 110), (26, 28, 44))[FLOOR - 26:]
+    for x in range(-200, W + 200, 160): cv2.line(i, (x, FLOOR - 26), (int(x * 1.5 - 270), H), (48, 54, 84), 2, cv2.LINE_AA)
+    # front row of bidders from behind, on chairs; paddle 80 + gold ring (the Collector)
+    r = random.Random(30)
+    for k, x in enumerate((120, 260, 400, 540, 680, 820, 960)):
+        rect(i, x - 52, FLOOR - 190, x + 52, FLOOR - 120, (40, 60, 110)); rect(i, x - 46, FLOOR - 120, x - 36, FLOOR - 40, (30, 40, 70)); rect(i, x + 36, FLOOR - 120, x + 46, FLOOR - 40, (30, 40, 70))
+        sh_ = (28, 28, 32) if k == 5 else r.choice(((90, 70, 60), (60, 90, 130), (120, 110, 100), (70, 110, 70)))
+        cv2.ellipse(i, (x, FLOOR - 200), (50, 40), 0, 180, 360, sh_, -1, cv2.LINE_AA)
+        circle(i, (x, FLOOR - 262), 30, (28, 28, 32) if k == 5 else r.choice(((40, 50, 70), (30, 36, 50), (50, 70, 100))))
+        if k in (1, 3):
+            rect(i, x + 30, FLOOR - 330, x + 70, FLOOR - 290, (235, 235, 240)); cv2.line(i, (x + 50, FLOOR - 290), (x + 40, FLOOR - 230), (200, 200, 205), 5, cv2.LINE_AA)
+            label(i, str(40 + k * 7), x + 34, FLOOR - 302, .5, (40, 40, 44))
+    x = 820
+    cv2.line(i, (x + 30, FLOOR - 230), (x + 60, FLOOR - 330), (28, 28, 32), 14, cv2.LINE_AA)
+    circle(i, (x + 62, FLOOR - 334), 12, (28, 28, 32)); cv2.circle(i, (x + 62, FLOOR - 340), 7, (40, 200, 245), 4, cv2.LINE_AA)
+    rect(i, x + 30, FLOOR - 420, x + 96, FLOOR - 350, (245, 245, 248)); cv2.line(i, (x + 63, FLOOR - 350), (x + 63, FLOOR - 338), (200, 200, 205), 5)
+    label(i, "80", x + 40, FLOOR - 372, .9, (30, 30, 34))
+    return i, None
+
+BUILDERS["auction"] = auction
+
 def grade_bg(img):
     """Push backgrounds back so the white-headed cast pops (WCAG-style 3:1 separation):
     mute saturation, lower value, and darken the ground band where captions and TikTok UI sit."""
@@ -644,7 +690,7 @@ def extras(img, sh, t, ep):
         for k in range(want or 9):
             skin, shirt, pants = pick(); x = (r.uniform(0, W) + r.uniform(-30, 30) * t) % W
             npc(img, x, FLOOR - 95 - r.uniform(0, 70), r.uniform(.7, .95), skin, shirt, pants, t * 3 + k, r.choice(("walk", "stand", "stand")))
-    elif name in ("mansion", "home", "gameroom", "desk"):
+    elif name in ("mansion", "home", "gameroom", "desk", "auction"):
         n_ = want or 2
         for k in range(n_):
             skin, shirt, pants = pick(); x = (70 if k % 2 == 0 else 1010) + r.uniform(-25, 25) + (k // 2) * (90 if k % 2 == 0 else -90)

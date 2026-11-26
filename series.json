@@ -577,6 +577,27 @@
    "trend": "Thanksgiving / Friendsgiving (joke_bank)",
    "special": "US Thanksgiving",
    "viewer_vote_episode": true
+  },
+  {
+   "ep": 30,
+   "date": "2026-11-27",
+   "time": "20:00",
+   "set": "auction",
+   "rule": "A deal you don't need is a bill (card: 'A DEAL YOU / DON'T NEED / IS A BILL'; punchline: '70% off. Still 100% your money.')",
+   "cliffhanger": "Day 10/80. CHAPTER 3 FINALE, BLACK FRIDAY. The crew went to the midnight auction for LOT 80 (ep 29 vote: no votes yet, A 'Go to auction' chosen for the story). Clyde waved at someone and won Lot 79, a 70%-off lamp that doesn't turn on; Solo: '70% off? It doesn't even turn on.' (score SOLO 6, US 5). Cenzo: 'Another page. Another rule. 70% off. Still 100% your money.' Button: Clyde asks who sells a plug. Paddle 80 (the Collector, gold ring, seen from behind) is in the front row. Solo reads the catalogue: 'Lot 80's seller is... the Pro-' (cut). Ep 31 (ARRIVAL, chapter 4 opener) opens on the twist: the Prof is the seller, using the auction to draw the Collector out; follow ep 30's A/B vote (Outbid Collector / Find the Prof).",
+   "structure": "auction-room accidental-bid gag (new auction set), Black Friday special, sentence loop (outro 'CLYDE... DON'T WAVE.' -> hook 'ONE WAVE. ONE LAMP.' -> 'I WAVED HI. NOW I OWN A LAMP.')",
+   "cliffhanger_type": "TWIST",
+   "secret": "WHO SELLS / HIS OWN PAGE? / COMMENT 71",
+   "vote": [
+    "Outbid Collector",
+    "Find the Prof"
+   ],
+   "solo_score": "SOLO 6, US 5 (Solo roasts Clyde's lamp)",
+   "punchline_technique": "RECEIPT (70% off / 100% your money) + BUTTON (Clyde wants a plug)",
+   "no_votes_note": "Ep 29 not yet published when ep 30 was made; story followed option A (go to auction).",
+   "trend": "Black Friday deals (joke_bank)",
+   "special": "Black Friday",
+   "chapter_finale": true
   }
  ],
  "masterplan": {
@@ -787,6 +808,10 @@
     {
      "ep": 29,
      "hint": "Watch box lid reads 'LOT 80. Sold at midnight' (secret frame 'INSIDE THE LID / LOT 80'): an auction lot the Collector is bidding on with paddle 80. Pay off in ep 30."
+    },
+    {
+     "ep": 30,
+     "hint": "Auction room: the Collector sits in the front row from behind (black suit, gold ring, paddle 80). Secret frame 'WHO SELLS / HIS OWN PAGE?': the seller of Lot 80 is the Prof, using the sale to draw the Collector out. Pay off in ep 31."
     }
    ],
    "payoff_ep": 100,
@@ -955,8 +980,9 @@
     "size": "medium",
     "opened": 28,
     "pays_off_by": "29-30 (inside the lid: 'LOT 80', the Collector's auction paddle number; feeds the ch 3 finale TWIST)",
-    "status": "open",
-    "note": "Ep 29: Clyde caught the box in Solo's bag; the lid reads LOT 80, sold at midnight. Pay off in 30."
+    "status": "closed",
+    "note": "Ep 29: Clyde caught the box in Solo's bag; the lid reads LOT 80, sold at midnight. Pay off in 30. Ep 30: the lid led them to the midnight auction; Lot 80 is on sale.",
+    "closed_ep": 30
    },
    {
     "id": "lot_80",
@@ -964,8 +990,17 @@
     "size": "small",
     "opened": 29,
     "pays_off_by": 30,
-    "status": "open",
-    "note": "Suggested ep 30 TWIST: the seller of Lot 80 is the Prof himself, using the auction to draw the Collector into the open; Lot 80 is a Rule Book page. Follow the vote for how the crew gets there."
+    "status": "closed",
+    "note": "Ep 30: they went to the auction; Lot 80 is a Rule Book page; cut as Solo reads the seller is the Pro-.",
+    "closed_ep": 30
+   },
+   {
+    "id": "prof_seller",
+    "question": "Why is the Prof selling his own page as Lot 80, with the Collector (paddle 80) in the room? (ep 30 vote Outbid Collector / Find the Prof)",
+    "size": "medium",
+    "opened": 30,
+    "pays_off_by": "31-33 (the Prof is baiting the Collector into the open; the trail leads to Victoria Falls and Mtoriro's family)",
+    "status": "open"
    }
   ]
  }
