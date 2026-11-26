@@ -1,783 +1,869 @@
 {
- "checked": "2026-11-25",
- "note": "Use a trend's format and joke inside the story. Life-rule lessons only from Ep 16. Do not put copyrighted songs in the video file.",
- "sources": [
-  "https://newengen.com/insights/tiktok-trends/",
-  "https://ppl.studio/viral-formats/tiktok-trends",
-  "https://tryvolume.app/working",
-  "https://napoleoncat.com/blog/trending-memes/",
-  "https://www.epidemicsound.com/blog/latest-tiktok-trends/",
-  "https://ppl.studio/viral-formats/2026-11"
- ],
- "fits": [
-  {
-   "trend": "Black Friday / TikTok Shop deals (#tiktokshopblackfriday, #tiktokgoblackfriday rising)",
-   "use": "Clyde buys 'deals' he doesn't need (a 3-for-1 on umbrellas in dry season). Life rule: a discount on something you don't need is still spending. Use late Nov."
-  },
-  {
-   "trend": "Christmas / festive season (#christmas top 5)",
-   "use": "Zim December: everyone home, aunties asking questions, spending everything, then broke January. Rules about saying no to family pressure and planning for January. Use from early Dec."
-  },
-  {
-   "trend": "#meme (top 2, ~300M recent views)",
-   "use": "Make one frame per episode screenshot-worthy: a reaction face plus a short line people can repost as a meme."
-  },
-  {
-   "trend": "Word-for-word script for a dreaded moment (top cross-niche format, Nov 2026)",
-   "use": "Clyde has to say no to a friend or ask for money back; he says the wrong version, Cenzo gives the exact right sentence as the rule"
-  },
-  {
-   "trend": "Things I stopped doing (proven)",
-   "use": "Rule card as 'Things the Prof stopped doing'; Clyde reads one and immediately does it"
-  },
-  {
-   "trend": "What I spent in a day (proven money confession)",
-   "use": "Clyde's Paris spending list appears line by line; the total is the shock, the life rule is about where money goes"
-  },
-  {
-   "trend": "Me correcting myself (strong)",
-   "use": "Clyde says something big, then corrects himself twice, smaller each time; good for pride or honesty rules"
-  },
-  {
-   "trend": "Instead of saying this, say this (candidate)",
-   "use": "Two speech bubbles: Clyde's version crossed out, Cenzo's version under it"
-  },
-  {
-   "trend": "Overthinking spiral (same line, new face each repeat)",
-   "use": "Clyde rereads one text from Ruva three times with a new expression each time; rule about overthinking"
-  },
-  {
-   "trend": "Stickman survival serial, day-by-day beats ending on a choice (current)",
-   "use": "Matches our serial; end episodes on a clear choice viewers can answer in comments"
-  },
-  {
-   "trend": "Numbered rules on one image (strong)",
-   "use": "Rule card styled as the book page: 'Rule 16' with one line under it"
-  },
-  {
-   "trend": "I'm so sorry reveal (peaking)",
-   "use": "Build-up to Clyde's big moment, final reveal is a mess; caption I'm so sorry. Used ep 10."
-  },
-  {
-   "trend": "Paparazzi bow (rising)",
-   "use": "Clyde poses for a tourist's camera in Paris and bows dramatically; use the pose, not the song"
-  },
-  {
-   "trend": "Clapping cat handshake deal (peaking)",
-   "use": "Solo offers a too-good deal and shakes on it"
-  },
-  {
-   "trend": "Grr Mondays (still going)",
-   "use": "Monday episode opens on how Clyde's Monday should go vs how it goes; life rule about routines"
-  },
-  {
-   "trend": "Kinda chic to... (caption list)",
-   "use": "Outro: Cenzo lists 'kinda chic to' small wins from the episode (kinda chic to pay the rent first)"
-  },
-  {
-   "trend": "Bicep heart pose (since end of Oct)",
-   "use": "Gym scenes and glow-up moments: Cenzo does it, Clyde's arm makes a sad oval"
-  },
-  {
-   "trend": "Weird cafe furniture (sitting on the table)",
-   "use": "Paris cafe: Clyde sits on the steel table, a waiter puts the coffee on the stool"
-  },
-  {
-   "trend": "Passenger asleep, phone swinging (rising)",
-   "use": "Kombi or Paris taxi: Clyde asleep, his phone swinging, the clue is on the screen"
-  },
-  {
-   "trend": "Friends' trend dance, one living-room take (proven)",
-   "use": "Celebration beat at home when a page is found; one wide shot, everyone dancing badly"
-  },
-  {
-   "trend": "Fake-boyfriend text prank (rising)",
-   "use": "Clyde pranks Cenzo by text: 'I'm bringing someone home'; it's Solo"
-  },
-  {
-   "trend": "Deadpan list (proven)",
-   "use": "Cenzo's red-eyed deadpan delivery of the rule as a numbered list"
-  }
- ],
- "sounds_for_manual_posting": [
-  "original sound by secret (Coming Up Roses clip, used for I'm so sorry reveals)",
-  "Housewife - Tate McRae",
-  "Dame Hombro - Bulin 47",
-  "H4UNT - baldgirl"
- ],
- "joke_bank": {
   "checked": "2026-11-25",
-  "how": "Ready jokes for eps 25-30 (Zimbabwe, the Collector chapter). Each line under 50 characters; rewrite freely.",
-  "jokes": [
-   {
-    "trend": "POV: you're the villain but...",
-    "rule": "Don't make it easy for people to use you",
-    "lines": [
-     "COLLECTOR (PHONE): POV: I'M THE VILLAIN",
-     "COLLECTOR: BUT CLYDE SENDS ME HIS LOCATION",
-     "COLLECTOR: ...DAILY. WITH SELFIES."
-    ]
-   },
-   {
-    "trend": "Tsundere camera shy",
-    "rule": "Let people be proud of you",
-    "lines": [
-     "(SOLO TURNS AWAY FROM CLYDE'S PHONE)",
-     "(SOLO: NO. NO. ...ONE PHOTO.)",
-     "(SOLO DOES A TINY VICTORY DANCE)"
-    ]
-   },
-   {
-    "trend": "Everybody goes out partying except me",
-    "rule": "Your season isn't their season",
-    "lines": [
-     "CLYDE: ALL BULAWAYO IS PARTYING.",
-     "CLYDE: AND I'M GUARDING A BOX.",
-     "CENZO: THE BOX IS WORTH MORE THAN THE PARTY."
-    ]
-   },
-   {
-    "trend": "Friendsgiving / Thanksgiving",
-    "rule": "Say thank you to people, not things",
-    "lines": [
-     "CLYDE: I'M THANKFUL FOR MY WATCH.",
-     "CENZO: THE TRACKER?",
-     "CLYDE: ...AND FOR YOU GUYS. MOSTLY THE WATCH."
-    ]
-   },
-   {
-    "trend": "Black Friday deals",
-    "rule": "A deal on what you don't need is still spending",
-    "lines": [
-     "CLYDE: 3 UMBRELLAS FOR THE PRICE OF 1!",
-     "CENZO: IT HASN'T RAINED IN 4 MONTHS.",
-     "CLYDE: SO I'M EARLY. BIG W."
-    ]
-   },
-   {
-    "trend": "What I spent in a day",
-    "rule": "Know where your money goes",
-    "lines": [
-     "CLYDE: DAY 6. BUS 2. SNACKS 3.",
-     "CLYDE: 'PREMIUM' TRACKER APP: 15.",
-     "CLYDE: I PAID TO WATCH A DOT."
-    ]
-   },
-   {
-    "trend": "He wanna pay full price",
-    "rule": "A deal on what you don't need is still spending",
-    "lines": [
-     "CLYDE: 70% OFF A TREADMILL!",
-     "CENZO: YOU HAVE NO ROOM.",
-     "CLYDE: IT'S A COAT RACK. AT FULL PRICE ENERGY."
-    ]
-   },
-   {
-    "trend": "POV: you're the villain but...",
-    "rule": "Don't brag before it's done",
-    "lines": [
-     "COLLECTOR (PHONE): POV: I ALREADY WON—",
-     "(CALL DROPS)",
-     "CLYDE: ZESA SAID NO."
-    ]
-   }
-  ]
- },
- "creative_center_check": {
-  "checked": "2026-11-16",
-  "note": "TikTok Creative Center itself could not be opened from here; data via trackers that mirror it (ignix.social US week of 16 Nov, tokchart worldwide, trendsmcp 13 Nov). No life-lesson, animation or Africa tags are in the top lists; the big waves are Black Friday / TikTok Shop, Christmas, #meme.",
+  "note": "Use a trend's format and joke inside the story. Life-rule lessons only from Ep 16. Do not put copyrighted songs in the video file.",
   "sources": [
-   "https://ignix.social/trends/hashtags/us",
-   "https://tokchart.com/trending/US/hashtags",
-   "https://www.trendsmcp.ai/trending/tiktok-hashtags-trending-november-13-2026"
-  ]
- },
- "creative_center": {
-  "checked": "2026-11-23",
-  "region": "MIX: World, Africa, US, last 7 days (South Africa is the proxy for Zimbabwe, which Creative Center does not offer; Nigeria is the Africa proxy on Tokchart)",
-  "source": "TikTok Creative Center (hashtags; logged out, top 3 per region only; read by the PC task) + tokchart.com free charts (songs)",
-  "hashtags": [
-   {
-    "rank": 1,
-    "tag": "#gta6",
-    "topic": "GTA 6 (video game)",
-    "variants": [
-     "#gta6",
-     "#gta"
-    ],
-    "markets": {
-     "EG": 1,
-     "ZA": 2,
-     "GB": 3
-    },
-    "status": "Copyrighted game: never show its name, logo or characters on screen; generic game-drop hype gag only."
-   },
-   {
-    "rank": 2,
-    "tag": "#lucia",
-    "topic": "Lucia (GTA 6 protagonist)",
-    "variants": [
-     "#lucia"
-    ],
-    "markets": {
-     "GB": 1,
-     "US": 3
-    },
-    "status": "Skip: copyrighted character."
-   },
-   {
-    "rank": 3,
-    "tag": "#huss",
-    "topic": "Huss",
-    "variants": [
-     "#huss",
-     "#husshusshuss"
-    ],
-    "markets": {
-     "US": 1,
-     "GB": 2
-    },
-    "status": "Meaning unclear; skip until understood."
-   }
+    "https://newengen.com/insights/tiktok-trends/",
+    "https://ppl.studio/viral-formats/tiktok-trends",
+    "https://tryvolume.app/working",
+    "https://napoleoncat.com/blog/trending-memes/",
+    "https://www.epidemicsound.com/blog/latest-tiktok-trends/",
+    "https://ppl.studio/viral-formats/2026-11"
   ],
-  "hashtags_by_region": {
-   "US_top20": [
+  "fits": [
     {
-     "rank": 1,
-     "tag": "#huss",
-     "industry": "Games",
-     "posts": "20.1K",
-     "views": "57.7M"
+      "trend": "Black Friday / TikTok Shop deals (#tiktokshopblackfriday, #tiktokgoblackfriday rising)",
+      "use": "Clyde buys 'deals' he doesn't need (a 3-for-1 on umbrellas in dry season). Life rule: a discount on something you don't need is still spending. Use late Nov."
     },
     {
-     "rank": 2,
-     "tag": "#husshusshuss",
-     "industry": "News & Entertainment; Travel",
-     "posts": "19.4K",
-     "views": "48M"
+      "trend": "Christmas / festive season (#christmas top 5)",
+      "use": "Zim December: everyone home, aunties asking questions, spending everything, then broke January. Rules about saying no to family pressure and planning for January. Use from early Dec."
     },
     {
-     "rank": 3,
-     "tag": "#lucia",
-     "industry": "Games",
-     "posts": "59.3K",
-     "views": "570.3M"
+      "trend": "#meme (top 2, ~300M recent views)",
+      "use": "Make one frame per episode screenshot-worthy: a reaction face plus a short line people can repost as a meme."
+    },
+    {
+      "trend": "Word-for-word script for a dreaded moment (top cross-niche format, Nov 2026)",
+      "use": "Clyde has to say no to a friend or ask for money back; he says the wrong version, Cenzo gives the exact right sentence as the rule"
+    },
+    {
+      "trend": "Things I stopped doing (proven)",
+      "use": "Rule card as 'Things the Prof stopped doing'; Clyde reads one and immediately does it"
+    },
+    {
+      "trend": "What I spent in a day (proven money confession)",
+      "use": "Clyde's Paris spending list appears line by line; the total is the shock, the life rule is about where money goes"
+    },
+    {
+      "trend": "Me correcting myself (strong)",
+      "use": "Clyde says something big, then corrects himself twice, smaller each time; good for pride or honesty rules"
+    },
+    {
+      "trend": "Instead of saying this, say this (candidate)",
+      "use": "Two speech bubbles: Clyde's version crossed out, Cenzo's version under it"
+    },
+    {
+      "trend": "Overthinking spiral (same line, new face each repeat)",
+      "use": "Clyde rereads one text from Ruva three times with a new expression each time; rule about overthinking"
+    },
+    {
+      "trend": "Stickman survival serial, day-by-day beats ending on a choice (current)",
+      "use": "Matches our serial; end episodes on a clear choice viewers can answer in comments"
+    },
+    {
+      "trend": "Numbered rules on one image (strong)",
+      "use": "Rule card styled as the book page: 'Rule 16' with one line under it"
+    },
+    {
+      "trend": "I'm so sorry reveal (peaking)",
+      "use": "Build-up to Clyde's big moment, final reveal is a mess; caption I'm so sorry. Used ep 10."
+    },
+    {
+      "trend": "Paparazzi bow (rising)",
+      "use": "Clyde poses for a tourist's camera in Paris and bows dramatically; use the pose, not the song"
+    },
+    {
+      "trend": "Clapping cat handshake deal (peaking)",
+      "use": "Solo offers a too-good deal and shakes on it"
+    },
+    {
+      "trend": "Grr Mondays (still going)",
+      "use": "Monday episode opens on how Clyde's Monday should go vs how it goes; life rule about routines"
+    },
+    {
+      "trend": "Kinda chic to... (caption list)",
+      "use": "Outro: Cenzo lists 'kinda chic to' small wins from the episode (kinda chic to pay the rent first)"
+    },
+    {
+      "trend": "Bicep heart pose (since end of Oct)",
+      "use": "Gym scenes and glow-up moments: Cenzo does it, Clyde's arm makes a sad oval"
+    },
+    {
+      "trend": "Weird cafe furniture (sitting on the table)",
+      "use": "Paris cafe: Clyde sits on the steel table, a waiter puts the coffee on the stool"
+    },
+    {
+      "trend": "Passenger asleep, phone swinging (rising)",
+      "use": "Kombi or Paris taxi: Clyde asleep, his phone swinging, the clue is on the screen"
+    },
+    {
+      "trend": "Friends' trend dance, one living-room take (proven)",
+      "use": "Celebration beat at home when a page is found; one wide shot, everyone dancing badly"
+    },
+    {
+      "trend": "Fake-boyfriend text prank (rising)",
+      "use": "Clyde pranks Cenzo by text: 'I'm bringing someone home'; it's Solo"
+    },
+    {
+      "trend": "Deadpan list (proven)",
+      "use": "Cenzo's red-eyed deadpan delivery of the rule as a numbered list"
     }
-   ],
-   "US_education_top10": [
-    {
-     "rank": 1,
-     "tag": "#mastersdegree",
-     "industry": "Education",
-     "posts": "4.4K",
-     "views": "11.2M"
-    },
-    {
-     "rank": 2,
-     "tag": "#internationalmensday",
-     "industry": "News & Entertainment; Games; Education",
-     "posts": "1K",
-     "views": "3.1M"
-    },
-    {
-     "rank": 3,
-     "tag": "#mba",
-     "industry": "Education",
-     "posts": "729",
-     "views": "3.3M"
-    }
-   ],
-   "GB_top10": [
-    {
-     "rank": 1,
-     "tag": "#lucia",
-     "industry": "Games",
-     "posts": "18.6K",
-     "views": "125.1M"
-    },
-    {
-     "rank": 2,
-     "tag": "#huss",
-     "industry": "Games",
-     "posts": "7.4K",
-     "views": "13M"
-    },
-    {
-     "rank": 3,
-     "tag": "#gta6",
-     "industry": "Games",
-     "posts": "321.9K",
-     "views": "1.5B"
-    }
-   ],
-   "ZA_zimbabwe_proxy_top20": [
-    {
-     "rank": 1,
-     "tag": "#sun",
-     "industry": "News & Entertainment",
-     "posts": "5.2K",
-     "views": "11.3M"
-    },
-    {
-     "rank": 2,
-     "tag": "#gta6",
-     "industry": "Games",
-     "posts": "27.1K",
-     "views": "255.9M"
-    },
-    {
-     "rank": 3,
-     "tag": "#sunhalo",
-     "industry": "",
-     "posts": "4.4K",
-     "views": "11.1M"
-    }
-   ],
-   "EG_top10": [
-    {
-     "rank": 1,
-     "tag": "#gta6",
-     "industry": "Games",
-     "posts": "13.6K",
-     "views": "225.4M"
-    },
-    {
-     "rank": 2,
-     "tag": "#carsoftiktok",
-     "industry": "Vehicle & Transportation",
-     "posts": "5K",
-     "views": "14.8M"
-    },
-    {
-     "rank": 3,
-     "tag": "#gta",
-     "industry": "Games",
-     "posts": "6.5K",
-     "views": "118.8M"
-    }
-   ],
-   "BR_top10": [
-    {
-     "rank": 1,
-     "tag": "#gabrielfelix",
-     "industry": "",
-     "posts": "24.1K",
-     "views": "222.5M",
-     "gloss": "a person's name (Brazilian creator/celebrity)"
-    },
-    {
-     "rank": 2,
-     "tag": "#xsbel",
-     "industry": "Apparel & Accessories",
-     "posts": "19K",
-     "views": "187.6M",
-     "gloss": "unclear (likely a creator/brand name)"
-    },
-    {
-     "rank": 3,
-     "tag": "#feriado",
-     "industry": "News & Entertainment",
-     "posts": "11.4K",
-     "views": "27.2M",
-     "gloss": "holiday (public holiday)"
-    }
-   ]
+  ],
+  "sounds_for_manual_posting": [
+    "original sound by secret (Coming Up Roses clip, used for I'm so sorry reveals)",
+    "Housewife - Tate McRae",
+    "Dame Hombro - Bulin 47",
+    "H4UNT - baldgirl"
+  ],
+  "joke_bank": {
+    "checked": "2026-11-25",
+    "how": "Ready jokes for eps 25-30 (Zimbabwe, the Collector chapter). Each line under 50 characters; rewrite freely.",
+    "jokes": [
+      {
+        "trend": "POV: you're the villain but...",
+        "rule": "Don't make it easy for people to use you",
+        "lines": [
+          "COLLECTOR (PHONE): POV: I'M THE VILLAIN",
+          "COLLECTOR: BUT CLYDE SENDS ME HIS LOCATION",
+          "COLLECTOR: ...DAILY. WITH SELFIES."
+        ]
+      },
+      {
+        "trend": "Tsundere camera shy",
+        "rule": "Let people be proud of you",
+        "lines": [
+          "(SOLO TURNS AWAY FROM CLYDE'S PHONE)",
+          "(SOLO: NO. NO. ...ONE PHOTO.)",
+          "(SOLO DOES A TINY VICTORY DANCE)"
+        ]
+      },
+      {
+        "trend": "Everybody goes out partying except me",
+        "rule": "Your season isn't their season",
+        "lines": [
+          "CLYDE: ALL BULAWAYO IS PARTYING.",
+          "CLYDE: AND I'M GUARDING A BOX.",
+          "CENZO: THE BOX IS WORTH MORE THAN THE PARTY."
+        ]
+      },
+      {
+        "trend": "Friendsgiving / Thanksgiving",
+        "rule": "Say thank you to people, not things",
+        "lines": [
+          "CLYDE: I'M THANKFUL FOR MY WATCH.",
+          "CENZO: THE TRACKER?",
+          "CLYDE: ...AND FOR YOU GUYS. MOSTLY THE WATCH."
+        ]
+      },
+      {
+        "trend": "Black Friday deals",
+        "rule": "A deal on what you don't need is still spending",
+        "lines": [
+          "CLYDE: 3 UMBRELLAS FOR THE PRICE OF 1!",
+          "CENZO: IT HASN'T RAINED IN 4 MONTHS.",
+          "CLYDE: SO I'M EARLY. BIG W."
+        ]
+      },
+      {
+        "trend": "What I spent in a day",
+        "rule": "Know where your money goes",
+        "lines": [
+          "CLYDE: DAY 6. BUS 2. SNACKS 3.",
+          "CLYDE: 'PREMIUM' TRACKER APP: 15.",
+          "CLYDE: I PAID TO WATCH A DOT."
+        ]
+      },
+      {
+        "trend": "He wanna pay full price",
+        "rule": "A deal on what you don't need is still spending",
+        "lines": [
+          "CLYDE: 70% OFF A TREADMILL!",
+          "CENZO: YOU HAVE NO ROOM.",
+          "CLYDE: IT'S A COAT RACK. AT FULL PRICE ENERGY."
+        ]
+      },
+      {
+        "trend": "POV: you're the villain but...",
+        "rule": "Don't brag before it's done",
+        "lines": [
+          "COLLECTOR (PHONE): POV: I ALREADY WON—",
+          "(CALL DROPS)",
+          "CLYDE: ZESA SAID NO."
+        ]
+      }
+    ]
   },
-  "songs": [
-   {
-    "chart": "Worldwide (Tokchart)",
-    "items": [
-     {
-      "rank": 1,
-      "title": "Rechazame",
-      "artist": "Prince Royce",
-      "videos_day": "+36,916",
-      "growth_7d": "+62.1%",
-      "status": "NEW"
-     },
-     {
-      "rank": 2,
-      "title": "Tu Me Estas Enamorando",
-      "artist": "La Piedra Urbana",
-      "videos_day": "+20,465",
-      "growth_7d": "+75.0%",
-      "status": "up 8"
-     },
-     {
-      "rank": 3,
-      "title": "Pujaan Hatiku",
-      "artist": "Jummalik",
-      "videos_day": "+12,978",
-      "growth_7d": "+38.4%",
-      "status": "up 4"
-     },
-     {
-      "rank": 4,
-      "title": "Mooo!",
-      "artist": "Doja Cat",
-      "videos_day": "+4,859",
-      "growth_7d": "+72.5%",
-      "status": "up 5"
-     },
-     {
-      "rank": 5,
-      "title": "Baby",
-      "artist": "Ludacris, Justin Bieber",
-      "videos_day": "+7,224",
-      "growth_7d": "+23.5%",
-      "status": "up 13"
-     },
-     {
-      "rank": 6,
-      "title": "Dilruba Dilnasheen",
-      "artist": "Siddhant Kaushal, Rito Riba",
-      "videos_day": "+26,109",
-      "growth_7d": "+14.0%",
-      "status": "NEW"
-     },
-     {
-      "rank": 7,
-      "title": "All I Want for Christmas Is You",
-      "artist": "Mariah Carey",
-      "videos_day": "+2,878",
-      "growth_7d": "+17.0%",
-      "status": "down 4"
-     },
-     {
-      "rank": 8,
-      "title": "Bonito, Bonito",
-      "artist": "Thiago Navarro Music",
-      "videos_day": "+48,527",
-      "growth_7d": "+59.8%",
-      "status": "NEW"
-     },
-     {
-      "rank": 9,
-      "title": "NONA KAKA SAYANG",
-      "artist": "IKI DANO",
-      "videos_day": "+31,564",
-      "growth_7d": "+41.2%",
-      "status": "down 28"
-     },
-     {
-      "rank": 10,
-      "title": "Last Christmas",
-      "artist": "Wham!",
-      "videos_day": "+3,050",
-      "growth_7d": "+30.3%",
-      "status": "up 26"
-     }
+  "creative_center_check": {
+    "checked": "2026-11-16",
+    "note": "TikTok Creative Center itself could not be opened from here; data via trackers that mirror it (ignix.social US week of 16 Nov, tokchart worldwide, trendsmcp 13 Nov). No life-lesson, animation or Africa tags are in the top lists; the big waves are Black Friday / TikTok Shop, Christmas, #meme.",
+    "sources": [
+      "https://ignix.social/trends/hashtags/us",
+      "https://tokchart.com/trending/US/hashtags",
+      "https://www.trendsmcp.ai/trending/tiktok-hashtags-trending-november-13-2026"
     ]
-   },
-   {
-    "chart": "United States (Tokchart)",
-    "items": [
-     {
-      "rank": 1,
-      "title": "Flower In A Hurricane (feat. Tame Impala, SZA, King Gizzard & the Lizard Wizard) [from GTAVI]",
-      "artist": "The Lizard Wizard, Justice, Tame Impala, SZA, King Gizzard",
-      "videos_day": "+40,062",
-      "growth_7d": "+36.1%",
-      "status": "up 14"
-     },
-     {
-      "rank": 2,
-      "title": "Living in the Dark (Evil Larry Version)",
-      "artist": "Myuu",
-      "videos_day": "+39,739",
-      "growth_7d": "+64.2%",
-      "status": "down 3"
-     },
-     {
-      "rank": 3,
-      "title": "Numbers",
-      "artist": "TEMPOREX",
-      "videos_day": "+48,504",
-      "growth_7d": "+88.0%",
-      "status": "up 21"
-     },
-     {
-      "rank": 4,
-      "title": "Boom Clap",
-      "artist": "Charli xcx",
-      "videos_day": "+43,313",
-      "growth_7d": "+22.5%",
-      "status": "up 26"
-     },
-     {
-      "rank": 5,
-      "title": "03' Bonnie & Clyde (feat. Beyoncé Knowles)",
-      "artist": "JAŸ-Z",
-      "videos_day": "+28,914",
-      "growth_7d": "+66.3%",
-      "status": "NEW"
-     },
-     {
-      "rank": 6,
-      "title": "Shotta's.",
-      "artist": "Season 25",
-      "videos_day": "+12,599",
-      "growth_7d": "+56.0%",
-      "status": "up 3"
-     },
-     {
-      "rank": 7,
-      "title": "All I Want for Christmas Is You",
-      "artist": "Mariah Carey",
-      "videos_day": "+46,964",
-      "growth_7d": "+44.6%",
-      "status": "down 1"
-     },
-     {
-      "rank": 8,
-      "title": "Normal Girl",
-      "artist": "SZA",
-      "videos_day": "+9,413",
-      "growth_7d": "+71.4%",
-      "status": "up 23"
-     },
-     {
-      "rank": 9,
-      "title": "Last Christmas",
-      "artist": "Wham!",
-      "videos_day": "+24,838",
-      "growth_7d": "+80.4%",
-      "status": "up 29"
-     },
-     {
-      "rank": 10,
-      "title": "Strange Bit [Bonus Track]",
-      "artist": "Desi Dude",
-      "videos_day": "+29,738",
-      "growth_7d": "+18.1%",
-      "status": "up 12"
-     }
+  },
+  "creative_center": {
+    "checked": "2026-11-26",
+    "region": "MIX: World, Africa, US, last 7 days (South Africa is the proxy for Zimbabwe, which Creative Center does not offer; Nigeria is the Africa proxy on Tokchart)",
+    "source": "TikTok Creative Center (hashtags; logged out, top 3 per region only; read by the PC task) + tokchart.com free charts (songs)",
+    "hashtags": [
+      {
+        "rank": 1,
+        "tag": "#husshusshuss / #huss",
+        "markets": {
+          "US": 2,
+          "GB": 2
+        },
+        "status": "Meaning still unclear (News & Entertainment); skip until understood."
+      },
+      {
+        "rank": 2,
+        "tag": "#lucia",
+        "markets": {
+          "US": 3,
+          "GB": 3
+        },
+        "status": "Skip: copyrighted game character."
+      },
+      {
+        "rank": 3,
+        "tag": "#gta6",
+        "markets": {
+          "ZA": 3,
+          "EG": 3
+        },
+        "status": "Copyrighted game: never show its name, logo or characters; game-drop hype gag already used (ep 30 fit)."
+      }
+    ],
+    "hashtags_by_region": {
+      "US_top20": [
+        {
+          "rank": 1,
+          "tag": "#actionsceneedits",
+          "industry": [],
+          "posts": "24.1K",
+          "views": "132.3M"
+        },
+        {
+          "rank": 2,
+          "tag": "#husshusshuss",
+          "industry": [
+            "News & Entertainment"
+          ],
+          "posts": "31.3K",
+          "views": "81.5M"
+        },
+        {
+          "rank": 3,
+          "tag": "#lucia",
+          "industry": [
+            "Games"
+          ],
+          "posts": "92.7K",
+          "views": "847.6M"
+        }
+      ],
+      "US_education_top10": [
+        {
+          "rank": 1,
+          "tag": "#triviagame",
+          "industry": [
+            "Games",
+            "Education"
+          ],
+          "posts": "2.5K",
+          "views": "42.6M"
+        },
+        {
+          "rank": 2,
+          "tag": "#hus",
+          "industry": [
+            "Education"
+          ],
+          "posts": "853",
+          "views": "799.4K"
+        },
+        {
+          "rank": 3,
+          "tag": "#japaneselanguage",
+          "industry": [
+            "Education"
+          ],
+          "posts": "931",
+          "views": "1M"
+        }
+      ],
+      "GB_top10": [
+        {
+          "rank": 1,
+          "tag": "#husshusshuss",
+          "industry": [
+            "News & Entertainment"
+          ],
+          "posts": "6.7K",
+          "views": "16.3M"
+        },
+        {
+          "rank": 2,
+          "tag": "#huss",
+          "industry": [
+            "Games",
+            "News & Entertainment"
+          ],
+          "posts": "10.7K",
+          "views": "21.5M"
+        },
+        {
+          "rank": 3,
+          "tag": "#lucia",
+          "industry": [
+            "Games"
+          ],
+          "posts": "26.5K",
+          "views": "182M"
+        }
+      ],
+      "ZA_zimbabwe_proxy_top20": [
+        {
+          "rank": 1,
+          "tag": "#cyanboujee",
+          "industry": [
+            "News & Entertainment"
+          ],
+          "posts": "7K",
+          "views": "142.7M"
+        },
+        {
+          "rank": 2,
+          "tag": "#carlingblacklabelcup",
+          "industry": [
+            "Sports & Outdoor"
+          ],
+          "posts": "4.5K",
+          "views": "48.6M"
+        },
+        {
+          "rank": 3,
+          "tag": "#gta6",
+          "industry": [
+            "Games"
+          ],
+          "posts": "32K",
+          "views": "348.5M"
+        }
+      ],
+      "EG_top10": [
+        {
+          "rank": 1,
+          "tag": "#carsoftiktok",
+          "industry": [
+            "Vehicle & Transportation"
+          ],
+          "posts": "10.2K",
+          "views": "27.5M"
+        },
+        {
+          "rank": 2,
+          "tag": "#بيراميدز",
+          "industry": [
+            "Sports & Outdoor"
+          ],
+          "posts": "8.9K",
+          "views": "81.7M",
+          "gloss": "Pyramids (Pyramids FC, Egyptian football club)"
+        },
+        {
+          "rank": 3,
+          "tag": "#gta6",
+          "industry": [
+            "Games"
+          ],
+          "posts": "17.7K",
+          "views": "325.2M"
+        }
+      ],
+      "BR_top10": [
+        {
+          "rank": 1,
+          "tag": "#gabrielfelix",
+          "industry": [],
+          "posts": "29.7K",
+          "views": "347.3M"
+        },
+        {
+          "rank": 2,
+          "tag": "#xsbel",
+          "industry": [
+            "Apparel & Accessories"
+          ],
+          "posts": "22.8K",
+          "views": "278.6M"
+        },
+        {
+          "rank": 3,
+          "tag": "#bel",
+          "industry": [
+            "News & Entertainment"
+          ],
+          "posts": "7.2K",
+          "views": "85.2M"
+        }
+      ]
+    },
+    "songs": [
+      {
+        "chart": "Tokchart Worldwide",
+        "items": [
+          {
+            "rank": 1,
+            "title": "Rechazame",
+            "artist": "Prince Royce",
+            "videos_day": "+16,886",
+            "growth_7d": "+34.1%",
+            "status": "↑10"
+          },
+          {
+            "rank": 2,
+            "title": "BbY WOW",
+            "artist": "Rusowsky, KAROL G, Judeline",
+            "videos_day": "+30,515",
+            "growth_7d": "+89.0%",
+            "status": "↓23"
+          },
+          {
+            "rank": 3,
+            "title": "All I Want for Christmas Is You",
+            "artist": "Mariah Carey",
+            "videos_day": "+23,792",
+            "growth_7d": "+89.6%",
+            "status": "NEW"
+          },
+          {
+            "rank": 4,
+            "title": "Last Christmas",
+            "artist": "Wham!",
+            "videos_day": "+25,017",
+            "growth_7d": "+31.7%",
+            "status": "↑4"
+          },
+          {
+            "rank": 5,
+            "title": "Dilruba Dilnasheen",
+            "artist": "Siddhant Kaushal, Rito Riba",
+            "videos_day": "+19,706",
+            "growth_7d": "+35.5%",
+            "status": "↓28"
+          },
+          {
+            "rank": 6,
+            "title": "H Dollars",
+            "artist": "Mariam Ba LAGARÉ",
+            "videos_day": "+3,135",
+            "growth_7d": "+68.8%",
+            "status": "NEW"
+          },
+          {
+            "rank": 7,
+            "title": "Bonito, Bonito",
+            "artist": "Thiago Navarro Music",
+            "videos_day": "+30,844",
+            "growth_7d": "+17.4%",
+            "status": "↓13"
+          },
+          {
+            "rank": 8,
+            "title": "Tu Me Estas Enamorando",
+            "artist": "La Piedra Urbana",
+            "videos_day": "+25,293",
+            "growth_7d": "+21.8%",
+            "status": "↓7"
+          },
+          {
+            "rank": 9,
+            "title": "Mooo!",
+            "artist": "Doja Cat",
+            "videos_day": "+30,350",
+            "growth_7d": "+19.6%",
+            "status": "↑25"
+          },
+          {
+            "rank": 10,
+            "title": "Cochita Consentida",
+            "artist": "Nico Salas",
+            "videos_day": "+43,994",
+            "growth_7d": "+66.1%",
+            "status": "↓23"
+          }
+        ]
+      },
+      {
+        "chart": "Tokchart United States",
+        "items": [
+          {
+            "rank": 1,
+            "title": "03' Bonnie & Clyde",
+            "artist": "Jay-Z",
+            "videos_day": "+20,947",
+            "growth_7d": "+49.8%",
+            "status": "↓22"
+          },
+          {
+            "rank": 2,
+            "title": "Numbers",
+            "artist": "TEMPOREX",
+            "videos_day": "+44,566",
+            "growth_7d": "+53.3%",
+            "status": "↑19"
+          },
+          {
+            "rank": 3,
+            "title": "Living in the Dark (Evil Larry Version)",
+            "artist": "Myuu",
+            "videos_day": "+48,213",
+            "growth_7d": "+50.3%",
+            "status": "↓21"
+          },
+          {
+            "rank": 4,
+            "title": "Normal Girl",
+            "artist": "SZA",
+            "videos_day": "+23,068",
+            "growth_7d": "+52.6%",
+            "status": "↓8"
+          },
+          {
+            "rank": 5,
+            "title": "Boom Clap",
+            "artist": "Charli xcx",
+            "videos_day": "+47,839",
+            "growth_7d": "+48.0%",
+            "status": "↓22"
+          },
+          {
+            "rank": 6,
+            "title": "Flower In A Hurricane [from GTAVI]",
+            "artist": "Justice, Tame Impala, SZA, King Gizzard & the Lizard Wizard",
+            "videos_day": "+5,018",
+            "growth_7d": "+70.7%",
+            "status": "↓15"
+          },
+          {
+            "rank": 7,
+            "title": "Last Christmas",
+            "artist": "Wham!",
+            "videos_day": "+26,201",
+            "growth_7d": "+46.5%",
+            "status": "NEW"
+          },
+          {
+            "rank": 8,
+            "title": "Strange Bit [Bonus Track]",
+            "artist": "Desi Dude",
+            "videos_day": "+39,720",
+            "growth_7d": "+3.3%",
+            "status": "↑25"
+          },
+          {
+            "rank": 9,
+            "title": "All I Want for Christmas Is You",
+            "artist": "Mariah Carey",
+            "videos_day": "+38,251",
+            "growth_7d": "+75.5%",
+            "status": "↑25"
+          },
+          {
+            "rank": 10,
+            "title": "Shotta's.",
+            "artist": "Season 25",
+            "videos_day": "+30,369",
+            "growth_7d": "+26.8%",
+            "status": "↑18"
+          }
+        ]
+      },
+      {
+        "chart": "Tokchart Nigeria",
+        "items": [
+          {
+            "rank": 1,
+            "title": "Ikon Jallah",
+            "artist": "Arab Maiduguri",
+            "videos_day": "+44,232",
+            "growth_7d": "+59.9%",
+            "status": "↑1"
+          },
+          {
+            "rank": 2,
+            "title": "INFERNO",
+            "artist": "Zlatan, Shoday, Peruzzi",
+            "videos_day": "+47,629",
+            "growth_7d": "+14.8%",
+            "status": "NEW"
+          },
+          {
+            "rank": 3,
+            "title": "Jaiye (feat. FOLA)",
+            "artist": "Olamide",
+            "videos_day": "+11,342",
+            "growth_7d": "+88.2%",
+            "status": "↓18"
+          },
+          {
+            "rank": 4,
+            "title": "Ogundabede",
+            "artist": "Kennyblazzy Sabiboy",
+            "videos_day": "+14,983",
+            "growth_7d": "+81.1%",
+            "status": "NEW"
+          },
+          {
+            "rank": 5,
+            "title": "Ukpor Culture",
+            "artist": "MALAWI",
+            "videos_day": "+16,836",
+            "growth_7d": "+36.5%",
+            "status": "↑13"
+          },
+          {
+            "rank": 6,
+            "title": "Dare Daya",
+            "artist": "Naziru Sarkin Waka",
+            "videos_day": "+32,897",
+            "growth_7d": "+63.4%",
+            "status": "NEW"
+          },
+          {
+            "rank": 7,
+            "title": "Zeenatu",
+            "artist": "Abdul Hassan",
+            "videos_day": "+29,506",
+            "growth_7d": "+78.0%",
+            "status": "↑26"
+          },
+          {
+            "rank": 8,
+            "title": "Excellency",
+            "artist": "Uluvawesome",
+            "videos_day": "+18,419",
+            "growth_7d": "+41.2%",
+            "status": "NEW"
+          },
+          {
+            "rank": 9,
+            "title": "Pretty Girls",
+            "artist": "Joeboy",
+            "videos_day": "+8,752",
+            "growth_7d": "+0.6%",
+            "status": "↑2"
+          },
+          {
+            "rank": 10,
+            "title": "Love Is Wicked",
+            "artist": "Brick & Lace",
+            "videos_day": "+44,987",
+            "growth_7d": "+17.5%",
+            "status": "↓4"
+          }
+        ]
+      }
+    ],
+    "songs_note": "For manual posting only; never put songs in the rendered video. Christmas songs (Mariah Carey, Wham!) are surging on both Worldwide and US charts.",
+    "creators": [
+      {
+        "rank": 1,
+        "name": "sebin🌟",
+        "followers": "117.6K",
+        "views": "48.7M",
+        "format": "Sponsored jewelry/city lifestyle clip (#ad, #thediamondcollective)",
+        "animation_or_story": false
+      },
+      {
+        "rank": 2,
+        "name": "Meg Ann Co.",
+        "followers": "271.9K",
+        "views": "42.4M",
+        "format": "Small-business origin story, talking/montage",
+        "animation_or_story": true,
+        "flag": "storytelling"
+      },
+      {
+        "rank": 3,
+        "name": "Matt Hyams",
+        "followers": "98.9K",
+        "views": "36.3M",
+        "format": "Comedy skit about supporting his wife's business",
+        "animation_or_story": true,
+        "flag": "comedic storytelling"
+      },
+      {
+        "rank": 4,
+        "name": "MiniSuperHeroesToday",
+        "followers": "355.4K",
+        "views": "29.2M",
+        "format": "TV commentary on 'The Paper' season 2 finale",
+        "animation_or_story": false
+      }
+    ],
+    "trend_videos": [
+      {
+        "rank": 1,
+        "name": "sebin🌟",
+        "followers": "117.6K",
+        "views": "48.7M",
+        "format": "Sponsored jewelry/city lifestyle clip (#ad, #thediamondcollective)",
+        "animation_or_story": false
+      },
+      {
+        "rank": 2,
+        "name": "Meg Ann Co.",
+        "followers": "271.9K",
+        "views": "42.4M",
+        "format": "Small-business origin story, talking/montage",
+        "animation_or_story": true,
+        "flag": "storytelling"
+      },
+      {
+        "rank": 3,
+        "name": "Matt Hyams",
+        "followers": "98.9K",
+        "views": "36.3M",
+        "format": "Comedy skit about supporting his wife's business",
+        "animation_or_story": true,
+        "flag": "comedic storytelling"
+      },
+      {
+        "rank": 4,
+        "name": "MiniSuperHeroesToday",
+        "followers": "355.4K",
+        "views": "29.2M",
+        "format": "TV commentary on 'The Paper' season 2 finale",
+        "animation_or_story": false
+      }
+    ],
+    "blocked": [
+      "Creative Center logged out in the built-in browser: 'View more' opens a login dialog, so only top 3 hashtags per region/filter and top 4 trend videos were visible (did not sign in)",
+      "Trend videos: only 4 shown logged out; creator handles/follower data as shown on cards",
+      "Creator tab: 'Coming soon'",
+      "Zimbabwe not offered in Creative Center; South Africa used as proxy",
+      "Tokchart South Africa and Zimbabwe charts are paid-only"
+    ],
+    "story_fits": [
+      {
+        "trend": "#actionsceneedits (US #1, 132.3M views)",
+        "chapter": "4, ep 34 DANGER (Victoria Falls spray/edge, funny-physical)",
+        "scene": "At Victoria Falls a page blows toward the edge. Clyde narrates his own slow-mo 'action scene' (dramatic dive, spray, hero pose) and misses it by a metre. Mtoriro, who does the same boring stretch every morning, simply steps on it. Cut on the spray hiding something on the far bank.",
+        "lesson": "Boring routines beat dramatic effort.",
+        "rule_line": "SLOW-MO LOOKS COOL. STRETCHING CATCHES PAGES.",
+        "card": "DRAMA FADES\nROUTINE\nCATCHES IT",
+        "technique": "RECEIPT (the one metre he missed by)",
+        "button": "Clyde: 'BET. RUN IT BACK IN SLOW-MO.' and slips into the spray."
+      },
+      {
+        "trend": "Christmas songs surging worldwide and US (All I Want for Christmas Is You, Last Christmas): festive family mood",
+        "chapter": "4, eps 31-33 (Mtoriro's family; family pressure)",
+        "scene": "On the train toward Victoria Falls, Mtoriro's aunties video-call for an early festive check-in: 'Still no wife? Still chasing paper?' Clyde tries to help by answering for him and promises the aunties a wedding by Christmas.",
+        "lesson": "Love your family without letting their plans run your life.",
+        "rule_line": "RESPECT YOUR AUNTIES. THEIR PLANS AREN'T A GROUP VOTE.",
+        "card": "LOVE THEM\nNOT EVERY\nPLAN",
+        "technique": "MISDIRECT (starts warm, ends savage)",
+        "button": "Clyde: 'TOO LATE. I ALREADY SENT A SAVE THE DATE.'",
+        "safety": "No song in the video; manual posting only."
+      },
+      {
+        "trend": "Trend videos #2-3: small-business origin story and a comedy skit about supporting a partner's business (storytelling formats)",
+        "chapter": "4, ep 33 CONFESSION (keeping promises)",
+        "scene": "A tuck-shop owner at Bulawayo station reminds Clyde he promised to support her shop. He proudly shows the 40 posts he shared; he never bought one thing. He confesses he hasn't paid since ep 31's bun.",
+        "lesson": "Real support means keeping your promise, not just hyping.",
+        "rule_line": "40 SHARES. ZERO BUNS BOUGHT. LIKES DON'T PAY RENT.",
+        "card": "SUPPORT\nMEANS\nBUYING",
+        "technique": "RECEIPT (40 shares)",
+        "button": "Clyde: 'BET. CAN I PAY IN EXPOSURE?'"
+      },
+      {
+        "trend": "#triviagame (US Education #1, 42.6M views)",
+        "chapter": "4, ep 32 MISTAKE (Mtoriro's family; family pressure, promises)",
+        "scene": "Mtoriro's grandmother quizzes the crew in a family trivia game before she shares what she knows about the Prof. Clyde, who swore he knows Mtoriro 'like a brother', gets every question wrong, including Mtoriro's real first name. The last question is about the Prof, and only Gogo knows the answer.",
+        "lesson": "If you say someone matters, prove it by paying attention.",
+        "rule_line": "BEST FRIENDS KNOW BIRTHDAYS. YOU KNOW HIS WIFI PASSWORD.",
+        "card": "PAY\nATTENTION\nNOT LIP",
+        "technique": "ESCALATION (three questions, third absurd)",
+        "button": "Clyde: 'PHONE A FRIEND?' and calls Mtoriro, who is standing next to him."
+      }
+    ],
+    "caption_hashtags": [
+      "#triviagame",
+      "#actionsceneedits",
+      "#carsoftiktok"
+    ],
+    "caption_hashtags_note": "Use only when the episode matches: #triviagame for the family quiz episode, #actionsceneedits for the Victoria Falls slow-mo episode, #carsoftiktok for a kombi or train episode. Never #fyp, #viral, trading or betting tags."
+  },
+  "weekly_2026_11_21": {
+    "sources": [
+      "https://virlo.ai/trending-on-tiktok-this-week",
+      "https://www.socialpilot.co/blog/tiktok-trends"
+    ],
+    "formats": [
+      {
+        "name": "Tsundere 'camera shy' (#tsundere)",
+        "how": "Act grumpy/shy at the camera, then give in and dance",
+        "fit": "Silent episode: Solo refuses to look at the camera, then does a tiny victory shuffle when he scores a point"
+      },
+      {
+        "name": "POV: you're the villain but...",
+        "how": "POV hook from the villain's side (rising, +400%)",
+        "fit": "Outro or caption from the Collector's side: 'POV: you're the villain but Clyde keeps refreshing your dot'"
+      },
+      {
+        "name": "In this town everybody goes out partying except me",
+        "how": "Everyone else out, you stuck in (new this week)",
+        "fit": "Day-count gag: everyone in Bulawayo partying except the crew guarding pages"
+      },
+      {
+        "name": "Thanksgiving / Friendsgiving (#friendsgiving), Black Friday (#tiktokshopblackfriday)",
+        "how": "Event wave Nov 26-27",
+        "fit": "SPECIALS rule: ep 29 (Thu 26 Nov) thankful-for dinner, ep 30 (Fri 27 Nov) Clyde's deals"
+      }
+    ],
+    "skipped": [
+      "My Moon My Man (Finneas song)",
+      "Same Spot Years Apart (Pink Floyd song)",
+      "You Paid Me No Mind (celebrity meme)",
+      "You're Under Arrest (ILLIT song)"
     ]
-   },
-   {
-    "chart": "Nigeria (Tokchart, Africa proxy)",
-    "items": [
-     {
-      "rank": 1,
-      "title": "Love Is Wicked",
-      "artist": "Brick & Lace",
-      "videos_day": "+37,541",
-      "growth_7d": "+57.6%",
-      "status": "down 3"
-     },
-     {
-      "rank": 2,
-      "title": "INFERNO",
-      "artist": "Zlatan, Shoday, Peruzzi",
-      "videos_day": "+16,608",
-      "growth_7d": "+21.1%",
-      "status": "down 26"
-     },
-     {
-      "rank": 3,
-      "title": "Zeenatu",
-      "artist": "Abdul Hassan",
-      "videos_day": "+48,291",
-      "growth_7d": "+66.1%",
-      "status": "down 2"
-     },
-     {
-      "rank": 4,
-      "title": "Sauti",
-      "artist": "Adam a Zango",
-      "videos_day": "+3,178",
-      "growth_7d": "+87.2%",
-      "status": "down 7"
-     },
-     {
-      "rank": 5,
-      "title": "Ogundabede",
-      "artist": "Kennyblazzy Sabiboy",
-      "videos_day": "+28,713",
-      "growth_7d": "+43.4%",
-      "status": "NEW"
-     },
-     {
-      "rank": 6,
-      "title": "Kat Slater (Native Remedies Remix)",
-      "artist": "Tim Duzit",
-      "videos_day": "+18,028",
-      "growth_7d": "+54.1%",
-      "status": "down 30"
-     },
-     {
-      "rank": 7,
-      "title": "Pretty Girls",
-      "artist": "Joeboy",
-      "videos_day": "+17,455",
-      "growth_7d": "+46.7%",
-      "status": "down 16"
-     },
-     {
-      "rank": 8,
-      "title": "Jogor",
-      "artist": "Olamide",
-      "videos_day": "+36,318",
-      "growth_7d": "+51.1%",
-      "status": "down 24"
-     },
-     {
-      "rank": 9,
-      "title": "Living in the Dark (Evil Larry Version)",
-      "artist": "Myuu",
-      "videos_day": "+33,181",
-      "growth_7d": "+72.1%",
-      "status": "down 10"
-     },
-     {
-      "rank": 10,
-      "title": "Oga Adviser (feat. Zoro)",
-      "artist": "Prime-M",
-      "videos_day": "+43,312",
-      "growth_7d": "+43.0%",
-      "status": "up 24"
-     }
+  },
+  "weekly_2026_11_25": {
+    "sources": [
+      "https://postdom.com/blog/tiktok-trends",
+      "https://virlo.ai/trends"
+    ],
+    "formats": [
+      {
+        "name": "He wanna pay full price",
+        "how": "Someone happily pays more than expected (rising fast, +24000%)",
+        "fit": "Black Friday ep 30: Clyde refuses the discount, or pays full price for a 'deal'. Do NOT use the SNL audio in the video; joke format only."
+      },
+      {
+        "name": "We felt the mog across the gym",
+        "how": "Being outclassed from across the room",
+        "fit": "Gym episode in ch 4: Cenzo's glow-up outclasses Clyde mid-rep; spoken as our own line, no audio clip"
+      },
+      {
+        "name": "POV: you're the villain but... (still rising)",
+        "how": "Villain monologue interrupted by a mishap",
+        "fit": "The Collector's phone call where his Wi-Fi drops"
+      },
+      {
+        "name": "In this town everybody goes out partying except me (fresh)",
+        "how": "Everyone out, you doing your niche thing",
+        "fit": "Crew guarding pages on a Friday night"
+      },
+      {
+        "name": "Expectation vs reality / Day 1 vs later (evergreen hooks)",
+        "how": "Split comparison",
+        "fit": "Day 1/80 vs Day 10/80 recap-free contrast in the ch 3 finale"
+      },
+      {
+        "name": "Christmas music is allowed now (from Nov 25-27)",
+        "how": "First day of festive season",
+        "fit": "From December: aunties and festive pressure; never use the song"
+      }
+    ],
+    "skipped": [
+      "My moon my man (copyrighted song)",
+      "Boom Clap confetti (copyrighted song)",
+      "I was just a normal girl (SZA song)",
+      "GTA 6 loading screen (copyrighted game)",
+      "Last Christmas edit (copyrighted song)"
     ]
-   }
-  ],
-  "songs_note": "for manual posting only; never put songs in the rendered video",
-  "creators": [],
-  "trend_videos": [],
-  "blocked": [
-   "Creative Center logged out: the built-in browser was not signed in to TikTok Creative Center this run; only the top 3 hashtags per region were visible ('View more' requires login). Did not sign in.",
-   "Creative Center Video trends (US) showed only loading placeholders and 'Go to TikTok One to view more rankings' while logged out: no trend videos or creators collected.",
-   "Creator tab: 'Coming soon'.",
-   "Tokchart South Africa and Zimbabwe charts are paid-only; Nigeria used as Africa proxy. Tokchart free view shows top 10 of 20.",
-   "Zimbabwe not offered in Creative Center; South Africa (ZA) used as proxy."
-  ],
-  "story_fits": [
-   {
-    "trend": "GTA 6 hype (#gta6 EG 1, ZA 2, GB 3; #lucia US 3; a GTA VI song is US #1 on Tokchart): the only topic in African, UK and US data",
-    "chapter": "3 finale, ep 30 TWIST (Day 10/80, Fri 27 Nov Black Friday), Dubai lifestyle-trap theme",
-    "scene": "Black Friday in Bulawayo: Clyde is in a queue for 'the biggest game drop in 12 years' (never named, no logo, no characters), paying with the crew's train-ticket money for Victoria Falls. Cenzo finds him third in line with a camping chair. Clyde: 'I WAITED 12 YEARS. I CAN WAIT 12 HOURS.' As the shop opens, the person first in the queue turns around: a gold ring catches the light (the Collector, seen, never shown).",
-    "lesson": "Hype makes you spend money you already promised to something else.",
-    "rule_line": "WAITED 12 YEARS FOR A GAME. CAN'T WAIT 12 DAYS FOR PAYDAY.",
-    "card": "BUY THE GAME\nNOT THE DEBT",
-    "technique": "CALLBACK (reuses Clyde's '12 years' brag)",
-    "button": "Clyde: 'BET. PREORDERING PAYDAY.' then the gold ring at the front of the queue = TWIST cliffhanger.",
-    "safety": "No game name, logo, characters or footage on screen; caption may use #gta6 only because the episode is about game-drop hype."
-   },
-   {
-    "trend": "#carsoftiktok (EG 2, Africa)",
-    "chapter": "3, ep 28 DECISION (pays off solo_at_the_car)",
-    "scene": "Hidden behind the mango stall, Clyde can't stop reviewing the Collector's black car like a car influencer ('tinted windows, rims clean, villain spec'). Solo comes back: he handed the Collector his watch back, not the pages. The car drives off; Clyde waves goodbye to it.",
-    "lesson": "Don't admire the thing that's chasing you.",
-    "rule_line": "NICE CAR. STILL CHASING YOU.",
-    "card": "NICE RIMS\nBAD INTENT",
-    "technique": "MISDIRECT (starts as a compliment, ends savage)",
-    "button": "Clyde: 'FIVE STARS. WOULD GET CHASED AGAIN.'"
-   },
-   {
-    "trend": "Song mood: 'Love Is Wicked' (Nigeria #1) and 'Living in the Dark (Evil Larry Version)' (US 2, Nigeria 9): villain/betrayal meme mood in both African and US charts",
-    "chapter": "3, ep 28 DECISION (BETRAYAL reversed), solo_trust loop",
-    "scene": "Clyde narrates Solo walking to the black car like a villain edit; he builds a whole 'evil' story in his head. Then Solo opens his hand: the engraved 'To Solo' watch is gone, the pages are still in his coat. Use the sound only when posting manually.",
-    "lesson": "Judge people by what they do, not by the story you made up about them.",
-    "rule_line": "YOU WROTE HIM A VILLAIN ARC. HE WAS RETURNING A WATCH.",
-    "card": "HE LOOKED SUS\nHE WAS DECENT",
-    "technique": "REVERSAL (Clyde, the accuser, is the one who got it wrong)",
-    "button": "Clyde: 'STILL SUS. FOR VIBES.'",
-    "note": "Songs are for manual posting only; never in the rendered video."
-   },
-   {
-    "trend": "#mastersdegree / #mba (US Education 1 and 3)",
-    "chapter": "3, ep 29 COUNTDOWN + Thanksgiving special (Thu 26 Nov), showing-off/comparison theme",
-    "scene": "At a Thanksgiving-style shared dinner with Mtoriro's family, Solo lists his two degrees and his MBA to impress the gogo. She just points at the dishes. Clyde, with no degree, has already washed everything and is drying the plates.",
-    "lesson": "Respect comes from what you do for people, not what's on your CV.",
-    "rule_line": "TWO DEGREES. ONE MBA. ZERO DISHES.",
-    "card": "CV IS LOUD\nHELP IS LOUDER",
-    "technique": "ESCALATION (third item absurd)",
-    "button": "Solo: 'I'LL WASH THEM. STRATEGICALLY.' (Countdown cut: DAY 9/80 on the phone)"
-   }
-  ],
-  "caption_hashtags": [
-   "#gta6",
-   "#carsoftiktok",
-   "#mba"
-  ],
-  "caption_hashtags_note": "Use each only on the episode it fits: #gta6 on the ep 30 game-drop-hype episode, #carsoftiktok on ep 28 (car review gag), #mba on ep 29 (degrees at dinner). Logged-out data gave only 3 tags per region, so this list is short."
- },
- "weekly_2026_11_21": {
-  "sources": [
-   "https://virlo.ai/trending-on-tiktok-this-week",
-   "https://www.socialpilot.co/blog/tiktok-trends"
-  ],
-  "formats": [
-   {
-    "name": "Tsundere 'camera shy' (#tsundere)",
-    "how": "Act grumpy/shy at the camera, then give in and dance",
-    "fit": "Silent episode: Solo refuses to look at the camera, then does a tiny victory shuffle when he scores a point"
-   },
-   {
-    "name": "POV: you're the villain but...",
-    "how": "POV hook from the villain's side (rising, +400%)",
-    "fit": "Outro or caption from the Collector's side: 'POV: you're the villain but Clyde keeps refreshing your dot'"
-   },
-   {
-    "name": "In this town everybody goes out partying except me",
-    "how": "Everyone else out, you stuck in (new this week)",
-    "fit": "Day-count gag: everyone in Bulawayo partying except the crew guarding pages"
-   },
-   {
-    "name": "Thanksgiving / Friendsgiving (#friendsgiving), Black Friday (#tiktokshopblackfriday)",
-    "how": "Event wave Nov 26-27",
-    "fit": "SPECIALS rule: ep 29 (Thu 26 Nov) thankful-for dinner, ep 30 (Fri 27 Nov) Clyde's deals"
-   }
-  ],
-  "skipped": [
-   "My Moon My Man (Finneas song)",
-   "Same Spot Years Apart (Pink Floyd song)",
-   "You Paid Me No Mind (celebrity meme)",
-   "You're Under Arrest (ILLIT song)"
-  ]
- },
- "weekly_2026_11_25": {
-  "sources": [
-   "https://postdom.com/blog/tiktok-trends",
-   "https://virlo.ai/trends"
-  ],
-  "formats": [
-   {
-    "name": "He wanna pay full price",
-    "how": "Someone happily pays more than expected (rising fast, +24000%)",
-    "fit": "Black Friday ep 30: Clyde refuses the discount, or pays full price for a 'deal'. Do NOT use the SNL audio in the video; joke format only."
-   },
-   {
-    "name": "We felt the mog across the gym",
-    "how": "Being outclassed from across the room",
-    "fit": "Gym episode in ch 4: Cenzo's glow-up outclasses Clyde mid-rep; spoken as our own line, no audio clip"
-   },
-   {
-    "name": "POV: you're the villain but... (still rising)",
-    "how": "Villain monologue interrupted by a mishap",
-    "fit": "The Collector's phone call where his Wi-Fi drops"
-   },
-   {
-    "name": "In this town everybody goes out partying except me (fresh)",
-    "how": "Everyone out, you doing your niche thing",
-    "fit": "Crew guarding pages on a Friday night"
-   },
-   {
-    "name": "Expectation vs reality / Day 1 vs later (evergreen hooks)",
-    "how": "Split comparison",
-    "fit": "Day 1/80 vs Day 10/80 recap-free contrast in the ch 3 finale"
-   },
-   {
-    "name": "Christmas music is allowed now (from Nov 25-27)",
-    "how": "First day of festive season",
-    "fit": "From December: aunties and festive pressure; never use the song"
-   }
-  ],
-  "skipped": [
-   "My moon my man (copyrighted song)",
-   "Boom Clap confetti (copyrighted song)",
-   "I was just a normal girl (SZA song)",
-   "GTA 6 loading screen (copyrighted game)",
-   "Last Christmas edit (copyrighted song)"
-  ]
- }
+  }
 }
