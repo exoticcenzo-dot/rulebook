@@ -48,7 +48,11 @@
   "announced": [
     "first_comment",
     "total_likes:50",
-    "video:7711428407560588562:views:100"
+    "video:7711428407560588562:views:100",
+    "followers:10",
+    "total_likes:100",
+    "video:7712170840644668693:views:100",
+    "video:7712542015652744469:views:100"
   ],
   "alerted_comment_ids": [
     "7708342797313655558"
