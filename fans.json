@@ -6,7 +6,7 @@
  "cast": [],
  "ideas": [],
  "do_not_use": [],
- "last_read": "2026-11-26 08:40 CAT: Windsor returned 1 comment (already seen), no new comments; ep 29 not yet published (tonight 20:00), no votes",
+ "last_read": "2026-11-27 08:45 CAT: Windsor returned 1 comment (already seen), no new comments; ep 30 not yet published (tonight 20:00), no votes",
  "votes": {
   "19": {
    "options": [
@@ -97,6 +97,14 @@
    ],
    "tally": "no votes (ep 29 not yet published when ep 30 was made)",
    "used": "A (they went to the midnight auction), chosen as best for the story"
+  },
+  "30": {
+   "options": [
+    "Outbid Collector",
+    "Find the Prof"
+   ],
+   "tally": "no votes (ep 30 not yet published when ep 31 was made)",
+   "used": "B (the trail to the Prof's party at Victoria Falls), chosen as best for the story"
   }
  }
 }

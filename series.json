@@ -598,6 +598,26 @@
    "trend": "Black Friday deals (joke_bank)",
    "special": "Black Friday",
    "chapter_finale": true
+  },
+  {
+   "ep": 31,
+   "date": "2026-11-28",
+   "time": "20:00",
+   "set": "train",
+   "rule": "Promises need feet, not wifi (card: 'PROMISES / NEED FEET, / NOT WIFI'; punchline: ''OMW' from bed is a lie with wifi.')",
+   "cliffhanger": "Day 11/80. CHAPTER 4 OPENER. The Prof was Lot 80's seller and sold the Collector a BLANK page for 80K (ep 30 vote: no votes yet, B 'Find the Prof' chosen for the story). On the day train from Bulawayo to Victoria Falls, Mtoriro reads the Prof's text: 'See you at Mom's party' (Sunday). Clyde: 'I keep promises too.' Cenzo shows Clyde texted his aunty 'OMW' 3 days ago. Someone boards; Mtoriro: 'Wait. Is that... my mo-' (cut). Ep 32 (Sunday CLYDE'S PLAN, MISTAKE) opens on who got on; follow ep 31's A/B vote (His mom / The Prof).",
+   "structure": "text-message receipt gag on the day train (phone prop), not a sentence loop",
+   "cliffhanger_type": "ARRIVAL",
+   "secret": "SHE BAKES / FOR TWO / COMMENT 70",
+   "vote": [
+    "His mom",
+    "The Prof"
+   ],
+   "solo_score": "SOLO 6, US 6 (the Prof texted the crew, not Solo; Solo mentioned in caption only)",
+   "punchline_technique": "RECEIPT (OMW, 3 days ago); button shot cut to keep runtime at 26 s",
+   "no_votes_note": "Ep 30 not yet published when ep 31 was made; story followed option B (find the Prof).",
+   "trend": "'OMW' from bed text meme (#meme)",
+   "chapter_opener": true
   }
  ],
  "masterplan": {
@@ -816,6 +836,19 @@
    ],
    "payoff_ep": 100,
    "paid_off": false
+  },
+  {
+   "chapter": 4,
+   "expect": "Meet the Prof at his sister's (Mtoriro's mom's) birthday party at Victoria Falls; he promised he'd come.",
+   "twist": "Planned for eps 39-40 (can change): the Prof has kept his promise every single year: he has been at every one of his sister's birthdays in disguise, and he has been quietly watching over the crew the whole search. Candidate: he is Bucket Hat Guy (pays off bucket_hat_guy). Links to a Victoria Falls page.",
+   "hints": [
+    {
+     "ep": 31,
+     "hint": "Secret frame 'SHE BAKES / FOR TWO': Mtoriro's mom bakes two cakes every birthday, one for her missing brother, and the second cake is always eaten by morning."
+    }
+   ],
+   "payoff_ep": 40,
+   "paid_off": false
   }
  ],
  "illus_from": 15,
@@ -1000,6 +1033,24 @@
     "size": "medium",
     "opened": 30,
     "pays_off_by": "31-33 (the Prof is baiting the Collector into the open; the trail leads to Victoria Falls and Mtoriro's family)",
+    "status": "closed",
+    "closed_ep": 31,
+    "note": "Ep 31: the Prof sold the Collector a blank page for 80K (bait) and texted Mtoriro he'll be at his mom's birthday party on Sunday at Victoria Falls."
+   },
+   {
+    "id": "who_got_on",
+    "question": "Who just got on the Victoria Falls train? (ep 31 vote His mom / The Prof)",
+    "size": "small",
+    "opened": 31,
+    "pays_off_by": 32,
+    "status": "open"
+   },
+   {
+    "id": "moms_party",
+    "question": "Will the Prof really keep his promise and show up at his sister's birthday party?",
+    "size": "medium",
+    "opened": 31,
+    "pays_off_by": "33-36",
     "status": "open"
    }
   ]

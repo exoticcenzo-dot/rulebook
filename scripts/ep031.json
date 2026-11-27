@@ -1,0 +1,172 @@
+{
+ "ep": 31,
+ "chapter": "THE PROF'S TRAIL",
+ "title": "OMW FROM BED",
+ "lesson": "A promise needs action, not a text",
+ "hook": "80K FOR A\nBLANK PAGE",
+ "caption": "Ever texted 'on my way' from bed? THE RULE BOOK Ep 31 (Day 11/80), chapter 4 starts: the Prof sold the Collector a BLANK page for 80K, then texted Mtoriro he'll be at his mom's birthday. Clyde says he keeps promises too... he texted his aunty 'OMW' three days ago. Score: SOLO 6, US 6 (the Prof texted us, not Solo). Then someone got on the train to Victoria Falls. Who is it? A) His mom B) The Prof. A or B? Save this rule for later. #liferules #adulting #meme #stickman",
+ "secret": "SHE BAKES\nFOR TWO\nCOMMENT 70",
+ "shots": [
+  {
+   "set": "train",
+   "cast": [
+    {
+     "who": "nia",
+     "x": 300,
+     "pose": "walk",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 740,
+     "pose": "seat",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "nia",
+     "MY UNCLE SOLD A BLANK PAGE FOR 80K.",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "cast": [
+    {
+     "who": "nia",
+     "x": 280,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    },
+    {
+     "who": "clyde",
+     "x": 740,
+     "pose": "seat",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "nia",
+     "NOW HE TEXTS: SEE YOU AT MOM'S PARTY.",
+     {
+      "mood": "focus"
+     }
+    ],
+    [
+     "clyde",
+     "BET. I KEEP PROMISES TOO. NO CAP."
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "prop": "phone",
+   "phone_text": "OMW 3 DAYS",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "seat",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "cenzo",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "YOU TEXTED AUNTY 'OMW'. 3 DAYS AGO.",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "card": "PROMISES\nNEED FEET,\nNOT WIFI",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "ANOTHER PAGE. ANOTHER RULE."
+    ],
+    [
+     "cenzo",
+     "'OMW' FROM BED IS A LIE WITH WIFI.",
+     {
+      "mood": "happy"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "end": "WHO JUST GOT ON?",
+   "cast": [
+    {
+     "who": "nia",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "nia",
+     "WAIT. IS THAT... MY MO-",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "focus"
+    }
+   ],
+   "outro": true,
+   "lines": [
+    [
+     "cenzo",
+     "EISH. EVERYBODY ACT NORMAL."
+    ]
+   ]
+  }
+ ],
+ "vote": [
+  "His mom",
+  "The Prof"
+ ]
+}
