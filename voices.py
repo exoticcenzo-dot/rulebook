@@ -4,7 +4,7 @@ import numpy as np
 MODEL = "/home/claude/tts/kokoro-v1.0.onnx"; VOICES = "/home/claude/tts/voices-v1.0.bin"
 CACHE = os.path.dirname(os.path.abspath(__file__)) + "/out/tts"; os.makedirs(CACHE, exist_ok=True)
 SPEAK = {"cenzo": ("am_michael", 1.02), "clyde": ("am_puck", 1.08), "nia": ("am_eric", 1.0),
-         "zeke": ("bm_george", .97), "maya": ("am_liam", 1.08), "ruva": ("af_heart", 1.04), "gogo": ("bf_emma", .9), "moyo": ("bm_daniel", .9), "tino": ("af_sarah", .98), "antoine": ("bm_lewis", .95), "narrator": ("am_onyx", .96)}
+         "zeke": ("bm_george", .97), "maya": ("am_liam", 1.08), "ruva": ("af_heart", 1.04), "gogo": ("bf_emma", .9), "moyo": ("bm_daniel", .9), "tino": ("af_sarah", .98), "antoine": ("bm_lewis", .95), "grace": ("af_bella", .98), "narrator": ("am_onyx", .96)}
 # Character pitch: >1 higher, <1 deeper. Speech speed is compensated so pacing stays the same.
 # Makes each friend a distinct cartoon voice instead of a plain stock TTS read.
 PITCH = {"antoine": .96, "cenzo": .92, "clyde": 1.12, "zeke": .88, "narrator": .94, "gogo": 1.06, "moyo": .93}

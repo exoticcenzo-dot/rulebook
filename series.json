@@ -226,6 +226,25 @@
    ],
    "hair": "neat",
    "voice": 140
+  },
+  "grace": {
+   "name": "MAMA GRACE",
+   "bio": "Mtoriro's mom and the Prof's big sister, from Victoria Falls. Loves loudly, posts everything on Facebook, bakes two cakes every birthday.",
+   "suit": [
+    250,
+    235,
+    225
+   ],
+   "accent": [
+    200,
+    60,
+    90
+   ],
+   "gear": [
+    "scarf"
+   ],
+   "hair": "bun",
+   "voice": 290
   }
  },
  "episodes_log": [
@@ -618,6 +637,26 @@
    "no_votes_note": "Ep 30 not yet published when ep 31 was made; story followed option B (find the Prof).",
    "trend": "'OMW' from bed text meme (#meme)",
    "chapter_opener": true
+  },
+  {
+   "ep": 32,
+   "date": "2026-11-29",
+   "time": "20:00",
+   "set": "train",
+   "rule": "The truth is cheaper than a lie to family (card: 'THE TRUTH / IS CHEAPER / THAN A CEO'; punchline: 'Tell Mom the truth. Aunties screenshot.')",
+   "cliffhanger": "Day 12/80. SUNDAY CLYDE'S PLAN. Who got on the train was Mtoriro's mom, MAMA GRACE (ep 31 vote: no votes yet, A 'His mom' chosen for the story), angry he hasn't called in 3 months. Clyde's plan: 'He's lowkey a CEO.' Mom: 'Then he pays for my party!' Cenzo's rule. Mom posts 'MY SON THE CEO' (button: proves aunties screenshot). Mtoriro: 'Mom... who's GOLDRING80?' (cut). Ep 33 (CONFESSION) opens on the Collector having liked mom's post (he now knows where the party is); follow ep 32's A/B vote (Tell the truth / Keep the CEO act).",
+   "structure": "Sunday CLYDE'S PLAN, family-lie escalation on the day train (phone prop on the cliffhanger)",
+   "cliffhanger_type": "MISTAKE",
+   "secret": "SHE POSTED / THE ADDRESS / COMMENT 69",
+   "vote": [
+    "Tell the truth",
+    "Keep the CEO act"
+   ],
+   "solo_score": "SOLO 6, US 6 (Solo mentioned in caption only)",
+   "punchline_technique": "MISDIRECT (soft 'tell Mom the truth' -> 'aunties screenshot') + BUTTON (mom posts it)",
+   "no_votes_note": "Ep 31 not yet published when ep 32 was made; story followed option A (his mom).",
+   "trend": "#meme (mom posting you on Facebook; reaction face frame)",
+   "new_character": "grace (MAMA GRACE)"
   }
  ],
  "masterplan": {
@@ -845,6 +884,10 @@
     {
      "ep": 31,
      "hint": "Secret frame 'SHE BAKES / FOR TWO': Mtoriro's mom bakes two cakes every birthday, one for her missing brother, and the second cake is always eaten by morning."
+    },
+    {
+     "ep": 32,
+     "hint": "Secret frame 'SHE POSTED / THE ADDRESS': Mama Grace's public post gives away the party place; GOLDRING80 liked it. The Prof will have to come in disguise."
     }
    ],
    "payoff_ep": 40,
@@ -1043,7 +1086,9 @@
     "size": "small",
     "opened": 31,
     "pays_off_by": 32,
-    "status": "open"
+    "status": "closed",
+    "closed_ep": 32,
+    "note": "Ep 32: it was Mtoriro's mom, Mama Grace."
    },
    {
     "id": "moms_party",
@@ -1051,6 +1096,14 @@
     "size": "medium",
     "opened": 31,
     "pays_off_by": "33-36",
+    "status": "open"
+   },
+   {
+    "id": "goldring80",
+    "question": "GOLDRING80 (the Collector) liked Mama Grace's 'MY SON THE CEO' post: now he knows where and when the party is. What does the crew do? (ep 32 vote Tell the truth / Keep the CEO act)",
+    "size": "small",
+    "opened": 32,
+    "pays_off_by": "33 (feeds the ep 34 DANGER at the Falls)",
     "status": "open"
    }
   ]

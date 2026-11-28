@@ -1,0 +1,162 @@
+{
+ "ep": 32,
+ "chapter": "THE PROF'S TRAIL",
+ "title": "CLYDE'S PLAN: MY SON THE CEO",
+ "lesson": "A lie to dodge family pressure only gets bigger",
+ "hook": "MY SON\nTHE CEO?!",
+ "caption": "Lying to your family so they stop asking? THE RULE BOOK Ep 32 (Day 12/80): CLYDE'S PLAN. Mtoriro's mom got on the train and he hadn't called in 3 months. Clyde told her he's a CEO now. Now he's paying for her whole birthday party... and she already posted it. Solo would never. Score: SOLO 6, US 6. Then someone with a gold ring liked the post. What should Mtoriro do? A) Tell mom the truth B) Keep the CEO act. A or B? Drop a rule the book should have. Comment CAST ME to join the story. #liferules #family #meme #stickman",
+ "secret": "SHE POSTED\nTHE ADDRESS\nCOMMENT 69",
+ "vote": [
+  "Tell the truth",
+  "Keep the CEO act"
+ ],
+ "shots": [
+  {
+   "set": "train",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "grace",
+     "x": 740,
+     "pose": "walk",
+     "face": "l",
+     "mood": "angry"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "TRUST ME, I HAVE A PLAN."
+    ],
+    [
+     "grace",
+     "3 MONTHS. NOT ONE CALL, MTORIRO!",
+     {
+      "mood": "angry"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "cast": [
+    {
+     "who": "clyde",
+     "x": 300,
+     "pose": "stand",
+     "face": "r",
+     "mood": "smug"
+    },
+    {
+     "who": "grace",
+     "x": 740,
+     "pose": "stand",
+     "face": "l",
+     "mood": "neutral"
+    }
+   ],
+   "lines": [
+    [
+     "clyde",
+     "HE CAN'T CALL. HE'S LOWKEY A CEO."
+    ],
+    [
+     "grace",
+     "A CEO? THEN HE PAYS FOR MY PARTY!",
+     {
+      "mood": "happy"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "card": "THE TRUTH\nIS CHEAPER\nTHAN A CEO",
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "l",
+     "mood": "smug"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "TELL MOM THE TRUTH. AUNTIES SCREENSHOT.",
+     {
+      "mood": "happy"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "prop": "phone",
+   "phone_text": "MY SON CEO!",
+   "end": "WHO LIKED IT?",
+   "cast": [
+    {
+     "who": "grace",
+     "x": 230,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    },
+    {
+     "who": "clyde",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "shock"
+    },
+    {
+     "who": "nia",
+     "x": 810,
+     "pose": "stand",
+     "face": "l",
+     "mood": "shock"
+    }
+   ],
+   "lines": [
+    [
+     "grace",
+     "POSTED IT: MY SON THE CEO!"
+    ],
+    [
+     "nia",
+     "MOM... WHO'S 'GOLDRING80'?",
+     {
+      "mood": "shock"
+     }
+    ]
+   ]
+  },
+  {
+   "set": "train",
+   "outro": true,
+   "cast": [
+    {
+     "who": "cenzo",
+     "x": 520,
+     "pose": "stand",
+     "face": "r",
+     "mood": "happy"
+    }
+   ],
+   "lines": [
+    [
+     "cenzo",
+     "CEO OF WHAT? HE CAN'T AFFORD DATA."
+    ]
+   ]
+  }
+ ]
+}
